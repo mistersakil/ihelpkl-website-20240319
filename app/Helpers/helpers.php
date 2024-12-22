@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\Facades\Route;
 
 /**
@@ -386,8 +387,22 @@ if (!function_exists('_parse_url')) {
 
             ## Display the route name
             return !empty($routeName) && $route->getName() === $routeName;
-        } catch (\Throwable $th) {           
+        } catch (\Throwable $th) {
             return $routeName === 'web.home' ? true : false;
         }
+    }
+}
+
+
+/**
+ * _getFaviconPath get meta favicon path
+ * @return string 
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
+
+if (!function_exists('_getFaviconPath')) {
+    function _getFaviconPath()
+    {
+        return Vite::asset('resources/images/favicon.png');
     }
 }
