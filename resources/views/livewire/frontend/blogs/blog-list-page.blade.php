@@ -1,4 +1,6 @@
 <main>
+    <x-slot:metaTitle> {{ __($metaTitle) }} </x-slot:metaTitle>
+    
     <x-slot:innerBanner>
         <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
     </x-slot:innerBanner>
@@ -22,13 +24,13 @@
                                                         <i class='bx bx-user'></i> {{ $item['author'] }}</a>
                                                 </li>
                                                 <li>
-                                                    <i class='bx bx-calendar'></i> 
-                                                    {{ $item['date'] }} 
+                                                    <i class='bx bx-calendar'></i>
+                                                    {{ $item['date'] }}
                                                 </li>
                                                 <li>
-                                                    
+
                                                     <a href="javascript:void(0)">
-                                                        <i class='bx bx-comment-dots'></i> 
+                                                        <i class='bx bx-comment-dots'></i>
                                                         {{ ucfirst($item['category']) }}
                                                     </a>
                                                 </li>
@@ -58,13 +60,14 @@
                                             <article class="item">
                                                 <a href="javascript:void(0)" class="thumb">
                                                     <span class="full-image cover" role="img">
-                                                        <img src="{{ $item['img_thumb'] }}" alt=" {{  $item['title'] }}">
+                                                        <img src="{{ $item['img_thumb'] }}"
+                                                            alt=" {{ $item['title'] }}">
                                                     </span>
                                                 </a>
                                                 <div class="info">
                                                     <h4 class="title-text">
                                                         <a href="javascript:void(0)">
-                                                            {{  $item['title'] }}
+                                                            {{ $item['title'] }}
                                                         </a>
                                                     </h4>
 
