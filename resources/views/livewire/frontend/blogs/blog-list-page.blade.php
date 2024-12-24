@@ -21,16 +21,16 @@
                                             <ul>
                                                 <li>
                                                     <a href="{{ $item['slug'] }}">
-                                                        <i class='bx bx-user'></i> {{ $item['author'] }}</a>
+                                                        <i class="{{ _icons('user') }}"></i> {{ $item['author'] }}</a>
                                                 </li>
                                                 <li>
-                                                    <i class='bx bx-calendar'></i>
+                                                    <i class="{{ _icons('calendar') }}"></i>
                                                     {{ $item['date'] }}
                                                 </li>
                                                 <li>
 
                                                     <a href="javascript:void(0)">
-                                                        <i class='bx bx-comment-dots'></i>
+                                                        <i class="{{ _icons('category') }}"></i>
                                                         {{ ucfirst($item['category']) }}
                                                     </a>
                                                 </li>

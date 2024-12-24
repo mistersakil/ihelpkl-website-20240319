@@ -19,25 +19,25 @@ class BlogService
     {
         $dataList = [
             [
-                'title' => "Getting Started with iHelpKL's Custom website",
+                'title' => "Custom CRM Software Development Services by iHelpKL",
                 'slug' => "javascript:void(0)",                
                 'img_featured' => Vite::imageWeb('custom-website-benefits.png'),
                 'img_thumb' => Vite::imageWeb('custom-website-benefits.png'),
-                'author' => 'Mamunur Rashid',
+                'author' => 'Mamunur',
                 'date' => Carbon::now()->format('d M Y'),
-                'category' => 'software',
+                'category' => 'web design',
                 'tags' => 'website, crm, custom website, website development, crm customization'
 
 
             ],
             [
-                'title' => 'Understanding Web Development',
+                'title' => 'Key Skills and Insights - Comprehensive Guide to Web Development',
                 'slug' => "javascript:void(0)",                
                 'img_featured' => Vite::imageWeb('what-is-web-dev.png'),
                 'img_thumb' => Vite::imageWeb('what-is-web-dev.png'),
-                'author' => 'Mamunur Rashid',
+                'author' => 'Khalid',
                 'date' => Carbon::now()->subDays(2)->format('d M Y'),
-                'category' => 'software',
+                'category' => 'web development',
                 'tags' => 'website, crm, custom website, website development, crm customization'
 
 
