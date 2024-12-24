@@ -39,7 +39,8 @@ class BlogService
                 <p>
                     Though there are many pre-built CRM software options available, custom CRM development will allow you to fashion the system based on your business specific needs. It can capture every detail about your leads, customers, and interactions, and will provide a 360-degree view of your customer base. And the data you can use to  improve  sales, marketing, and customer service efforts.
                 </p>
-                '
+                ',
+                'blogSubTitle' => 'Custom CRM Software Regulate with Your Goals',
 
 
             ],

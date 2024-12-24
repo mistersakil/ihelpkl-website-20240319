@@ -43,7 +43,7 @@
                         </div>
 
                         <div class="article-content-area">
-                            <h2>Beneficial Strategies</h2>
+                            <h2 class="blogSubTitle">Beneficial Strategies</h2>
                             <blockquote class="blockquote">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
