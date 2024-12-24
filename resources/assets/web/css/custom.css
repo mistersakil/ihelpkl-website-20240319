@@ -68,11 +68,7 @@
     padding: 10px 20px;
     border-radius: 10px;
 }
-/* .blog-article .listTitle {
-    display: block;
-    font-size: 16px;
-    color: var(--greenColor);
-} */
+
 .blog-benefit-content ul li .listTitle {
     display: block;
     font-size: 16px;
