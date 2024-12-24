@@ -68,9 +68,9 @@
                                     <ul class="my-3">
                                         @foreach ($itemDetails['benefit_content']['items'] as $benefitKey => $benefitItem)
                                             <li>
-                                                {{ $benefitItem['title'] }}
+                                                <h3 class="listTitle">{{ $benefitItem['title'] }}</h3>
                                                 <blockquote class="quote">
-                                                    {{ $benefitItem['details'] }}
+                                                    {!! $benefitItem['details'] !!}
                                                 </blockquote>
                                             </li>
                                         @endforeach

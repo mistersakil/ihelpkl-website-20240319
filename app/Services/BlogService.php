@@ -40,7 +40,7 @@ class BlogService
                     Though there are many pre-built CRM software options available, custom CRM development will allow you to fashion the system based on your business specific needs. It can capture every detail about your leads, customers, and interactions, and will provide a 360-degree view of your customer base. And the data you can use to  improve  sales, marketing, and customer service efforts.
                 </p>
                 ',
-                
+
                 'article_content' => [
                     'title' => 'Custom CRM Software Regulate with Your Goals',
                     'details' => '
@@ -94,13 +94,11 @@ class BlogService
                     ]
                 ]
 
-
-
-
             ],
             [
-                'title' => 'Key Skills and Insights - Comprehensive Guide to Web Development',
-                'meta_description' => "Explore web development basics, including front-end, back-end, e-commerce, SEO, and tools. Learn how to create responsive and secure online platforms",
+                'title' => 'The Comprehensive Guide to Web Development: Crafting Exceptional Digital Experiences',
+                'meta_description' => "Explore web development basics, including front-end, back-end, e-commerce, SEO, and tools. Learn how to create responsive and secure online platforms. Web development blends front-end interfaces, back-end logic, and responsive design to create engaging digital experiences. Tools like CMS platforms, frameworks, and SEO strategies boost visibility and business growth. Key processes include planning, coding, testing, and maintaining, with specialized areas like e-commerce, mobile apps, and security driving demand. Collaboration and learning thrive in developer communities.
+",
                 'slug' => route('web.blogs.details', ['slug' => 'key-skills-and-insights-comprehensive-guid-to-web-development']),
                 'img_featured' => Vite::imageWeb('what-is-web-dev.png'),
                 'img_thumb' => Vite::imageWeb('what-is-web-dev.png'),
@@ -108,6 +106,42 @@ class BlogService
                 'date' => Carbon::now()->subDays(2)->format('d M Y'),
                 'category' => 'web development',
                 'tags' => 'website, crm, custom website, website development, crm customization',
+                'details' => '<p>In the fast-paced digital era, web development is the backbone of creating engaging and functional online platforms. It combines creativity with technical expertise, offering limitless opportunities to build digital experiences that captivate users and drive business success.
+                </p>',
+                'article_content' => [
+                    'title' => 'Why Web Development Matters',
+                    'details' => '
+                       <p>
+                          With more than half of the global population online, web development is critical for communication, education, commerce, and entertainment. This thriving field is set to grow significantly, with rising demand for developers skilled in creating seamless digital ecosystems.
+
+                        </p>   
+                    ',
+                ],
+
+                'benefit_content' => [
+                    'title' => 'Core Areas of Web Development',
+                    'details' => "",
+                    'items' => [
+                        [
+                            'title' => 'Front-End Development',
+                            'details' => 'Focused on the user-facing elements like layout, navigation, and interactivity. Key technologies include:
+                                <ul>
+                                    <li><strong>HTML</strong> for structuring content.</li>
+                                    <li><strong>CSS</strong> for styling and responsive design.</li>
+                                    <li><strong>JavaScript</strong> for dynamic features.</li>
+                                </ul>
+                            ',
+                        ],
+                        [
+                            'title' => 'Back-End Development',
+                            'details' => 'Manages server-side operations, databases, and APIs. Popular languages include Python, PHP, and Node.js.',
+                        ],
+                        [
+                            'title' => 'Full-Stack Development',
+                            'details' => 'Combines front-end and back-end expertise, enabling holistic application development.',
+                        ],
+                    ]
+                ]
 
 
             ],
