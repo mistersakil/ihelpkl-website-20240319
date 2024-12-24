@@ -1,6 +1,6 @@
 <main>
     <x-slot:metaTitle> {{ __($metaTitle) }} </x-slot:metaTitle>
-    
+
     <x-slot:innerBanner>
         <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
     </x-slot:innerBanner>
@@ -42,11 +42,15 @@
                                             </h3>
                                             <a href="{{ $item['slug'] }}" class="read-btn">Read More</a>
                                         </div>
+                                        <!-- /.content -->
                                     </div>
+                                    <!-- /.blog-card-two -->
                                 </div>
+                                <!-- /.col -->
                             @endforeach
 
                         </div>
+                        <!-- /.row -->
                     </div>
                     <!-- /.col -->
 
@@ -79,6 +83,7 @@
                                     @endif
                                 </div>
                             </div>
+                            <!-- /.side-bar-widget -->
 
                             <div class="side-bar-widget side-bar-categories">
                                 <h3 class="title">Categories</h3>
@@ -92,7 +97,7 @@
 
                                 </ul>
                             </div>
-
+                            <!-- /.side-bar-widget -->
 
                             <div class="side-bar-widget">
                                 <h3 class="title">Tags</h3>
@@ -100,7 +105,9 @@
                                     <li><a href="javascript:void(0)">Employee</a></li>
                                 </ul>
                             </div>
+                            <!-- /.side-bar-widget -->
                         </div>
+                        <!-- /.side-bar-area -->
                     </div>
                     <!-- /.col -->
                 </div>

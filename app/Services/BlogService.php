@@ -13,15 +13,20 @@ class BlogService
 
     /**
      * Get static models
-     * @return \array
+     * 
+     * @param string $slug
+     * @param int $limit
+     * @return array
      */
     public function getStaticModels(string $slug = '', int $limit = 5)
     {
+
         $dataList = [
             [
                 'title' => "Custom CRM Software Development Services by iHelpKL",
-                'slug' => "javascript:void(0)",                
-                'img_featured' => Vite::imageWeb('custom-website-benefits.png'),
+                'meta_description' => "Tailored iHelpKLs CRM solutions and optimize sales, enhance customer service, and smooth operations with custom CRM software designed for your business",
+                'slug' => route('web.blogs.details', ['slug' => 'custom-crm-software-development-services']),                
+                'img_featured' => Vite::imageWeb('custom-website-benefits---featured.png'),
                 'img_thumb' => Vite::imageWeb('custom-website-benefits.png'),
                 'author' => 'Mamunur',
                 'date' => Carbon::now()->format('d M Y'),
@@ -32,7 +37,8 @@ class BlogService
             ],
             [
                 'title' => 'Key Skills and Insights - Comprehensive Guide to Web Development',
-                'slug' => "javascript:void(0)",                
+                'meta_description' => "Explore web development basics, including front-end, back-end, e-commerce, SEO, and tools. Learn how to create responsive and secure online platforms",
+                'slug' => route('web.blogs.details', ['slug' => 'key-skills-and-insights-comprehensive-guid-to-web-development']),                           
                 'img_featured' => Vite::imageWeb('what-is-web-dev.png'),
                 'img_thumb' => Vite::imageWeb('what-is-web-dev.png'),
                 'author' => 'Khalid',
@@ -47,11 +53,11 @@ class BlogService
         ];
 
         if (!empty($slug)) {
-            $filteredProducts = array_filter($dataList, function ($product) use ($slug) {
-                return $product['slug'] == $slug;
+            $filteredItems = array_filter($dataList, function ($model) use ($slug) {
+                return $model['slug'] == $slug;
             });
-            $firstProduct = reset($filteredProducts);
-            return $firstProduct !== false ? $firstProduct : [];
+            $firstModel = reset($filteredItems);
+            return $firstModel !== false ? $firstModel : [];
         }
 
         return collect($dataList)->take($limit)->toArray();

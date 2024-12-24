@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <a wire:navigate href="{{ route($goBackRoute) }}" type="button"
+    <a wire:navigate href="{{ $goBackRoute }}" type="button"
         class="btn btn-outline-danger text-dark d-flex align-items-center justify-content-center">
         <i class="{{ _icons('back') }} "></i> {{ __('go back') }}
     </a>

@@ -3,12 +3,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<title>{{ $metaTitle ?? __('meta title')  }} | {{ env('APP_NAME') }}</title>
-
-<!-- Dynamic Meta Tags -->
-<meta name="keywords" content="{{ $metaKeywords ?? __('meta keywords') }}">
-<meta name="description" content="{{ $metaDescription ?? __('meta description')  }}">
 <meta name="author" content="{{ $metaAuthor ?? __('meta author') }}">
+
+
+<!-- Required Meta Tags -->
+<title>{{ $metaTitle ?? __('meta title')  }} | {{ env('APP_NAME') }}</title>
+<meta name="description" content="{{ $metaDescription ?? __('meta description')  }}">
+<meta name="keywords" content="{{ $metaKeywords ?? __('meta keywords') }}">
+
 
 <!-- Canonical Tag -->
 <link rel="canonical" href="{{ $metaCanonical ?? url()->current() }}">

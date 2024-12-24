@@ -9,19 +9,19 @@ use Illuminate\Contracts\View\View;
 
 class ProductDetailsPage extends Component
 {
-    ## Meta data
+    ## Component props
     public string $metaTitle = 'product details';
     public string $module = 'products';
-
-    ## Route params
     public string $slug;
-
-    ## Component props
     public array $itemDetails;
-
-    ## Services
     private ProductService $productService;
 
+
+    /**
+     * Boot on every request
+     *
+     * @return void
+     */
     public function boot()
     {
         $this->productService = new ProductService;
@@ -34,8 +34,8 @@ class ProductDetailsPage extends Component
     public function mount(string $slug): void
     {
         $this->slug = $slug;
-        $slugToFilter = route('web.products.details', ['slug' => $slug]);
-        $this->itemDetails = $this->productService->getStaticModels($slugToFilter);
+        $generateModelUrl = route('web.products.details', ['slug' => $slug]);
+        $this->itemDetails = $this->productService->getStaticModels($generateModelUrl);
     }
 
     /**

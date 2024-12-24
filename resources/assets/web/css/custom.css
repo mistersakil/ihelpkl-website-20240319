@@ -45,3 +45,15 @@
 .services-area-bg {    
     background-image: url(@imgWeb/service-bg.jpg);
 }
+
+.blog-article-content img {
+    border-radius: 20px;
+    padding: 1px;
+    background: lightgray;
+}
+
+.blog-article-content .content .blogTitle {
+    margin-top: 12px;
+    margin-bottom: 10px;
+    font-size: 28px;
+}

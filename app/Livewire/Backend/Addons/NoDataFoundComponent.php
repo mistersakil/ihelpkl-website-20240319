@@ -14,11 +14,12 @@ class NoDataFoundComponent extends Component
 
     /**
      * Create a new component instance.
+     * 
      * @return void
      */
-    public function mount($goBackRoute): void
+    public function mount($goBackRoute = 'web.home'): void
     {
-        $this->goBackRoute = $goBackRoute;
+        $this->goBackRoute = route($goBackRoute);
     }
 
     /**

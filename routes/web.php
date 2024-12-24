@@ -11,6 +11,7 @@ use App\Http\Middleware\AdminLocaleMiddleware;
 use App\Livewire\Frontend\Contact\ContactPage;
 use App\Livewire\Backend\Sliders\SliderEditPage;
 use App\Livewire\Backend\Sliders\SliderListPage;
+use App\Livewire\Frontend\Blogs\BlogDetailsPage;
 use App\Livewire\Backend\Dashboard\DashboardPage;
 use App\Livewire\Backend\Sliders\SliderCreatePage;
 use App\Livewire\Frontend\About\PrivacyPolicyPage;
@@ -26,6 +27,7 @@ Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function 
     Route::get('/about-us', AboutPage::class)->name('about');
     Route::get('/contact-us', ContactPage::class)->name('contact');
     Route::get('/blogs', BlogListPage::class)->name('blogs');
+    Route::get('/blogs/{slug}', BlogDetailsPage::class)->name('blogs.details');
     Route::get('/products', ProductListPage::class)->name('products');
     Route::get('/products/{slug}', ProductDetailsPage::class)->name('products.details');
     Route::get('/solutions', SolutionListPage::class)->name('solutions');
