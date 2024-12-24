@@ -6,7 +6,7 @@
         <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
     </x-slot:innerBanner>
 
-    {{-- @dump($itemDetails) --}}
+    {{-- @dd($itemDetails) --}}
 
     <div class="container">
         @if (isset($itemDetails) && is_array($itemDetails) && count($itemDetails))
@@ -38,46 +38,46 @@
                                 <h1 class="blogTitle">
                                     {{ $itemDetails['title'] }}
                                 </h1>
-                                {!! $itemDetails['details'] !!}
+                                @isset($itemDetails['details'])
+                                    {!! $itemDetails['details'] !!}
+                                @endisset
                             </div>
                         </div>
-
-                        <div class="article-content-area">
-                            <h2 class="blogSubTitle">Beneficial Strategies</h2>
-                            <blockquote class="blockquote">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                    gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                                </p>
-                                <i class='bx bxs-quote-right'></i>
-                            </blockquote>
-                        </div>
-
-                        <div class="blog-benefit-content">
-                            <h3>Beneficial Strategies</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                gravida.
-                                Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem Ipsum is simply
-                                dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                industry's
-                                standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                                type and scrambled it to make a type specimen book. It has survived not only five
-                                centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged. It
-                                was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                                Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including
-                                versions of Lorem Ipsum.
-                            </p>
-                            <ul>
-                                <li>At vero eos et accusam et justo duo dolores et ea rebum. </li>
-                                <li>Eirmod tempor invidunt ut labore et dolore magna</li>
-                                <li>Stet clita kasd gubergren, no sea takimata sanctus.</li>
-                            </ul>
-                        </div>
+                        @if (isset($itemDetails['article_content']))
+                            <div class="article-content-area">
+                                <h2 class="blogSubTitle">
+                                    {{ $itemDetails['article_content']['title'] }}
+                                </h2>
+                                <blockquote class="blockquote">
+                                    @if (isset($itemDetails['article_content']['details']))
+                                        {!! $itemDetails['article_content']['details'] !!}
+                                    @endif
+                                    <i class="{{ _icons('quote') }} " style="transform: rotate(180deg)"></i>
+                                </blockquote>
+                            </div>
+                        @endif
+                        @if (isset($itemDetails['benefit_content']))
+                            <div class="blog-benefit-content">
+                                <h2 class="blogSubTitle">
+                                    {{ $itemDetails['benefit_content']['title'] ?? '' }}
+                                </h2>
+                                @if (isset($itemDetails['benefit_content']['details']))
+                                    {!! $itemDetails['benefit_content']['details'] !!}
+                                @endif
+                                @if (isset($itemDetails['benefit_content']['items']))
+                                    <ul class="my-3">
+                                        @foreach ($itemDetails['benefit_content']['items'] as $benefitKey => $benefitItem)
+                                            <li>
+                                                {{ $benefitItem['title'] }}
+                                                <blockquote class="quote">
+                                                    {{ $benefitItem['details'] }}
+                                                </blockquote>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </div>
+                        @endif
 
                         <div class="article-share">
                             <div class="row align-items-center">

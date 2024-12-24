@@ -58,7 +58,13 @@
     font-size: 28px;
 }
 
-.blog-benefit-content .blogSubTitle {
+.blog-benefit-content .blogSubTitle, .article-content-area .blogSubTitle{
     margin-bottom: 15px;
     font-size: 22px;
+}
+
+.blog-article .quote {
+    background: lightgoldenrodyellow;
+    padding: 10px 20px;
+    border-radius: 10px;
 }

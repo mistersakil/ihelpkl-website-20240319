@@ -40,7 +40,61 @@ class BlogService
                     Though there are many pre-built CRM software options available, custom CRM development will allow you to fashion the system based on your business specific needs. It can capture every detail about your leads, customers, and interactions, and will provide a 360-degree view of your customer base. And the data you can use to  improve  sales, marketing, and customer service efforts.
                 </p>
                 ',
-                'blogSubTitle' => 'Custom CRM Software Regulate with Your Goals',
+                
+                'article_content' => [
+                    'title' => 'Custom CRM Software Regulate with Your Goals',
+                    'details' => '
+                       <p>
+                            Custom CRM development is a key strategic asset for businesses, helping to manage and automate customer interactions. By streamlining tasks and tracking customer data, CRM systems reduce time and effort in customer management, optimize sales cycles, and uncover upselling opportunities.
+                        </p>
+                        <br/>
+                        <p>
+                            iHelpKL Software specializes in helping global companies develop, migrate, and adopt custom CRM solutions. Our services enable businesses to maximize the use of customer data, enhance customer retention, and graceful internal communication—all through a unified interface.
+                        </p>     
+                    '
+                ],
+                'benefit_content' => [
+                    'title' => 'Our CRM Development Services',
+                    'details' => "iHelpKL Software is a comprehensive CRM development company focused on providing top-tier client management solutions. Their expertise ensures that businesses receive high-quality CRM systems designed to deliver substantial value and drive growth.",
+                    'items' => [
+                        [
+                            'title' => 'Expert CRM Advisory Services',
+                            'details' => 'iHelpKL Software offers expert guidance throughout the CRM adoption process, including platform selection, system development, and performance optimization. Their consultants analyze your business ecosystem and workflows to develop a tailored, actionable strategy that addresses your specific needs and limitations.',
+                        ],
+                        [
+                            'title' => 'Comprehensive End-to-End CRM Development',
+                            'details' => 'iHelpKL Software manages the entire CRM system development process, focusing on your business priorities and challenges. Their developers create and deploy feature-rich CRM platforms that offer robust capabilities and seamless integration, ensuring effective data interoperability and enhanced communication.',
+                        ],
+                        [
+                            'title' => 'Smooth CRM Implementation Service',
+                            'details' => 'iHelpKL Software ensures a seamless transition to new CRM systems by aiding your team in adopting new workflows. Their experts provide workshops, manage data reserves, and refine the CRM solution to align with your internal processes, maximizing the effectiveness of the new system.',
+                        ],
+                        [
+                            'title' => 'Mobile Client Management Solutions',
+                            'details' => 'iHelpKL Software offers mobile client management solutions that keep critical data accessible on the go. Their portable CRM platforms enable real-time knowledge sharing and collaboration, allowing team members to access client data via smartphones, tablets, and other mobile devices, ensuring a comprehensive CRM experience anywhere.',
+                        ],
+                        [
+                            'title' => 'CRM Integration for Enhanced Business Efficiency',
+                            'details' => 'iHelpKL Software maximizes your CRM system’s potential by integrating it with other business applications. They transform data silos into a cohesive solution through automatic data synchronization and updates. Whether integrating with ERM systems or marketing automation tools, these integrations promote a streamlined sales funnel and ensure data consistency.',
+                        ],
+                        [
+                            'title' => 'CRM Migration Services',
+                            'details' => 'iHelpKL Software facilitates a smooth transition to new CRM systems by replacing outdated, high-maintenance software with advanced solutions. Their team manages the entire migration process, including risk assessment, data import strategy, and system testing, ensuring a seamless upgrade and enhanced client experience.',
+                        ],
+                        [
+                            'title' => 'Tailored CRM Customization Services',
+                            'details' => 'iHelpKL Software aligns your CRM tools with your business strategy by customizing existing solutions to fit your specific objectives. Their team enhances the value of your digital assets through personalized data collection, reporting, dashboards, workflows, and other critical elements, optimizing your marketing and sales efforts.',
+                        ],
+                        [
+                            'title' => 'Comprehensive CRM Support and Maintenance',
+                            'details' => 'iHelpKL Software’s support team ensures your CRM solution operates efficiently with a full range of maintenance services. This includes performance optimization, data backups, system monitoring, and more. They guarantee the reliability and continuous availability of all CRM components, enhancing overall system performance and value.',
+                        ]
+
+
+                    ]
+                ]
+
+
 
 
             ],
@@ -53,7 +107,7 @@ class BlogService
                 'author' => 'Khalid',
                 'date' => Carbon::now()->subDays(2)->format('d M Y'),
                 'category' => 'web development',
-                'tags' => 'website, crm, custom website, website development, crm customization'
+                'tags' => 'website, crm, custom website, website development, crm customization',
 
 
             ],
