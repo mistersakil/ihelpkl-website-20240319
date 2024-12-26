@@ -96,17 +96,21 @@ class BlogService
 
             ],
             [
-                'title' => 'The Comprehensive Guide to Web Development: Crafting Exceptional Digital Experiences',
-                'meta_description' => "Explore web development basics, including front-end, back-end, e-commerce, SEO, and tools. Learn how to create responsive and secure online platforms. Web development blends front-end interfaces, back-end logic, and responsive design to create engaging digital experiences. Tools like CMS platforms, frameworks, and SEO strategies boost visibility and business growth. Key processes include planning, coding, testing, and maintaining, with specialized areas like e-commerce, mobile apps, and security driving demand. Collaboration and learning thrive in developer communities.
-",
-                'slug' => route('web.blogs.details', ['slug' => 'key-skills-and-insights-comprehensive-guid-to-web-development']),
+                'title' => 'Key Skills and Insights - Comprehensive Guide to Web Development',
+                'meta_description' => "Explore web development basics, including front-end, back-end, e-commerce, SEO, and tools. Learn how to create responsive and secure online platforms.",
+                'slug' => route('web.blogs.details', ['slug' => 'web-development']),
                 'img_featured' => Vite::imageWeb('what-is-web-dev.png'),
                 'img_thumb' => Vite::imageWeb('what-is-web-dev.png'),
                 'author' => 'Khalid',
                 'date' => Carbon::now()->subDays(2)->format('d M Y'),
                 'category' => 'web development',
                 'tags' => 'website, crm, custom website, website development, crm customization',
-                'details' => '<p>In the fast-paced digital era, web development is the backbone of creating engaging and functional online platforms. It combines creativity with technical expertise, offering limitless opportunities to build digital experiences that captivate users and drive business success.
+                'details' => '
+                <p>
+                    Web development blends front-end interfaces, back-end logic, and responsive design to create engaging digital experiences. Tools like CMS platforms, frameworks, and SEO strategies boost visibility and business growth. Key processes include planning, coding, testing, and maintaining, with specialized areas like e-commerce, mobile apps, and security driving demand. Collaboration and learning thrive in developer communities.
+                </p>
+                <p>
+                    In the fast-paced digital era, web development is the backbone of creating engaging and functional online platforms. It combines creativity with technical expertise, offering limitless opportunities to build digital experiences that captivate users and drive business success.
                 </p>',
                 'article_content' => [
                     'title' => 'Why Web Development Matters',
