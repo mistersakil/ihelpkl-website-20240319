@@ -117,6 +117,7 @@ if (!function_exists('_icons')) {
             'order_direction'           => 'bi bi-sort-alpha-down',
             'portfolio'                 => 'bi bi-briefcase',
             'products'                  => 'bi bi-boxes',
+            'pinterest'                 => 'bi bi-pinterest',
             'per_page'                  => 'bi bi-sort-numeric-up',
             'phone'                     => 'bi bi-telephone-outbound',
             'phone2'                    => 'bi bi-telephone',
@@ -160,6 +161,7 @@ if (!function_exists('_icons')) {
             'tools'                     => 'bi bi-tools',
             'title'                     => 'bi bi-signpost',
             'tv'                        => 'bi bi-tv',
+            'tiktok'                    => 'bi bi-tiktok',
             'upload'                    => 'bi bi-cloud-upload',
             'user'                      => 'bi bi-person',
             'users'                     => 'bi bi-people',
@@ -355,7 +357,11 @@ if (!function_exists('_social_media_links')) {
     {
         $links = [
             'facebook' => 'https://www.facebook.com/ihelpkl',
-            'map' => 'https://maps.app.goo.gl/imJJudRDhreKyuam7'
+            'map' => 'https://maps.app.goo.gl/imJJudRDhreKyuam7',
+            'linkedin' => 'https://www.linkedin.com/company/ihelpkl',
+            'tiktok' => 'https://www.tiktok.com/@ihelpkl',
+            'pinterest' => 'https://www.pinterest.com/ihelpkl',
+            'instagram' => 'https://www.instagram.com/ihelpkl',
         ];
         if (!empty($brand) && array_key_exists($brand, $links)) {
             return $links[$brand];

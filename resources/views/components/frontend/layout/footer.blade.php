@@ -67,18 +67,23 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/" target="_blank">
+                                <a href="{{ _social_media_links('linkedin') }}" target="_blank">
                                     <i class="icon {{ _icons('linkedin') }}"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/" target="_blank">
-                                    <i class="icon {{ _icons('youtube') }}"></i>
+                                <a href="{{ _social_media_links('pinterest') }}" target="_blank">
+                                    <i class="icon {{ _icons('pinterest') }}"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/" target="_blank">
+                                <a href="{{ _social_media_links('instagram') }}" target="_blank">
                                     <i class="icon {{ _icons('instagram') }}"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ _social_media_links('tiktok') }}" target="_blank">
+                                    <i class="icon {{ _icons('tiktok') }}"></i>
                                 </a>
                             </li>
                         </ul>
