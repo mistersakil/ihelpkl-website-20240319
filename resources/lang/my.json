@@ -21,5 +21,11 @@
     "slider title": "Tajuk peluncur",
     "minimum character length": ":attribute Panjang aksara minimum :min",
     "slider title required": "Tajuk peluncur diperlukan",
-    "maximum character length": ":attribute Panjang aksara maksimum :max"
+    "maximum character length": ":attribute Panjang aksara maksimum :max",
+    "body": "Badan",
+    "cancel": "Batal",
+    "uploading": "Memuat naik",
+    "slider body": "Badan peluncur",
+    "slider link text": "Teks pautan peluncur",
+    "slider link": "Pautan peluncur"
 }
