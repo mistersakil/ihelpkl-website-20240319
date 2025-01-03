@@ -16,5 +16,10 @@
     "terms and conditions": "Terma & Syarat",
     "meet our team": "Temui pasukan kami",
     "copyright": "Hakcipta",
-    "all rights reserved by": "Semua hak terpelihara oleh"
+    "all rights reserved by": "Semua hak terpelihara oleh",
+    "title": "Tajuk",
+    "slider title": "Tajuk peluncur",
+    "minimum character length": ":attribute Panjang aksara minimum :min",
+    "slider title required": "Tajuk peluncur diperlukan",
+    "maximum character length": ":attribute Panjang aksara maksimum :max"
 }
