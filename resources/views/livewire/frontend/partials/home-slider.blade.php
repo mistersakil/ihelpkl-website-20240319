@@ -31,5 +31,6 @@
             </div>
             <!-- /.banner-slider -->
         </div>
+        <!-- /.banner-area-two -->
     @endif
 </main>
