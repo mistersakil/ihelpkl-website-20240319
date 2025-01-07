@@ -4,10 +4,6 @@
     {{-- <livewire:frontend.partials.home-banner /> --}}
     {{-- <livewire:frontend.partials.home-projects /> --}}
 
-    {{-- @if (array_key_exists('about', $data))
-        <livewire:frontend.partials.home-about-section :item="$data['about']" />
-    @endif --}}
-
     <livewire:frontend.partials.solutions-section sectionTitle="solutions" sectionSubTitle="Our provided best solutions"
         :limit="5" />
 

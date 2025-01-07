@@ -6,6 +6,7 @@ use Exception;
 use App\Models\Slider;
 use Illuminate\Validation\Rule;
 use App\Services\FileUploadService;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\Validation\Rules\File;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
@@ -336,5 +337,31 @@ class SliderService
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());
         }
+    }
+
+
+    /**
+     * Get static models
+     * 
+     * @param int $limit
+     * @return array
+     */
+    public function getStaticModels(int $limit = 5)
+    {
+
+        return [
+            [
+                'title' => "Advanced CRM, Ticketing, and Lead Management Tools",
+                'slider_image' => Vite::imageWeb('home-two-img1.jpg'),
+            ],
+            [
+                'title' => "Effortless application integration to Boost your business",
+                'slider_image' => Vite::imageWeb('home-two-img2.jpg'),
+            ],
+            [
+                'title' => "Top Custom Web Development Solutions",
+                'slider_image' => Vite::imageWeb('home-two-img3.jpg'),
+            ],
+        ] ?? [];
     }
 }

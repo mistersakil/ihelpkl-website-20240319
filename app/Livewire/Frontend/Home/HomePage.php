@@ -14,7 +14,6 @@ class HomePage extends Component
 {
     ## Meta props
     public string $metaTitle = 'home';
-    public array $data = [];
 
 
     /**
@@ -23,24 +22,6 @@ class HomePage extends Component
      */
     public function mount(): void
     {
-        $this->data = [
-            'about' => [
-                'title' => 'About Project Management',
-                'subTitle' => 'Project Management section subtitle',
-                'img' => Vite::imageWeb('service-img1.jpg'),
-                'items' => [
-                    'point number one. point number one. point number one. ',
-                    'point number two. point number two. point number two',
-                    'point number three. point number three. point number three',
-                    'point number four. point number four. point number four',
-                    'point number five. point number five. point number five',
-                    'point number six. point number six. point number six',
-                    'point number seven. point number seven. point number seven',
-                    'point number eight. point number eight. point number eight',
-                    'point number nine. point number nine. point number nine',
-                ]
-            ]
-        ];
     }
 
     /**

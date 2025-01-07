@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Frontend\Partials;
 
+use App\Services\SliderService;
 use Livewire\Component;
 use Illuminate\Contracts\View\View;
 
@@ -10,6 +11,22 @@ use Illuminate\Contracts\View\View;
  */
 class HomeSlider extends Component
 {
+    ## Component props
+    private SliderService $sliderService;
+    public array $sliders;
+
+    /**
+     * Initialize on component every render
+     *
+     * @return void
+     */
+    public function boot():void{
+        $this->sliderService = new SliderService();
+    }
+
+    public function mount():void{
+        $this->sliders = $this->sliderService->getStaticModels() ;
+    }
     /**
      * Render view
      *
