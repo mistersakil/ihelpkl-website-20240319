@@ -74,12 +74,12 @@ class Navbar extends Component
             [
                 'title' => __('learning'),
                 'link' => "javascript:void(0)",
-                'isActive' => _parse_url('web.blogs') ? 'active' : '',
+                'isActive' => _parse_url('web.blogs') || _parse_url('web.blogs.details') ? 'active' : '',
                 'children' => [
                     [
                         'title' => __('blog'),
                         'link' => route('web.blogs'),
-                        'isActive' => _parse_url('web.blogs') ? 'active' : '',
+                        'isActive' => _parse_url('web.blogs') || _parse_url('web.blogs.details')  ? 'active' : '',
 
                     ],
                 ]
