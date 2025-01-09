@@ -7,6 +7,11 @@ use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Vite;
 
+/**
+ * Navbar Component
+ * 
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
 class Navbar extends Component
 {
     ## Component props

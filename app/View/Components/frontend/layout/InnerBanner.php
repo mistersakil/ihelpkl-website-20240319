@@ -6,6 +6,11 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
+/**
+ * InnerBanner Component
+ * 
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
 class InnerBanner extends Component
 {
     /**

@@ -56,33 +56,9 @@
 
                     <div class="col-lg-4">
                         <div class="side-bar-area pl-20">
-                            <div class="side-bar-widget">
-                                <h3 class="title">Recent Post</h3>
-                                <div class="widget-popular-post">
-                                    @if (is_array($dataList) && count($dataList))
-                                        @foreach ($dataList as $key => $item)
-                                            <article class="item">
-                                                <a href="javascript:void(0)" class="thumb">
-                                                    <span class="full-image cover" role="img">
-                                                        <img src="{{ $item['img_thumb'] }}"
-                                                            alt=" {{ $item['title'] }}">
-                                                    </span>
-                                                </a>
-                                                <div class="info">
-                                                    <h4 class="title-text">
-                                                        <a href="javascript:void(0)">
-                                                            {{ $item['title'] }}
-                                                        </a>
-                                                    </h4>
 
-                                                    <a href="javascript:void(0)" class="read-btn" target="_blank">Read
-                                                        More</a>
-                                                </div>
-                                            </article>
-                                        @endforeach
-                                    @endif
-                                </div>
-                            </div>
+                            <x-frontend.partials.recent-data-sidebar-widget title="recent blogs" :dataList="$dataList" />
+                      
                             <!-- /.side-bar-widget -->
 
                             <div class="side-bar-widget side-bar-categories">

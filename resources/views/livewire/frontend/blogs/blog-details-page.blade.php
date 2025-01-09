@@ -126,7 +126,9 @@
                 </div>
 
                 <div class="col-lg-4">
-
+                    <div class="side-bar-area pl-20">
+                        <x-frontend.partials.recent-data-sidebar-widget title="recent blogs" />
+                    </div>
                 </div>
             </div>
         @else
