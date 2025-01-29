@@ -13,6 +13,7 @@ class WhyChooseUsSectionTwo extends Component
     ## Component props
     public string $title;
     public string $subTitle;
+    public string $shortDetails;
     public array $items;
     public string $img;
     public bool $isDisplaySection = true;
@@ -39,6 +40,7 @@ class WhyChooseUsSectionTwo extends Component
         // dump($model );
         $this->title = isset($model['title']) ? __($model['title']) : '';
         $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
+        $this->shortDetails = isset($model['shortDetails']) ? __($model['shortDetails']) : '';
         $this->items = isset($model['items']) ? $model['items'] : [];
         $this->imgFeatured = isset($model['imgFeatured']) ? $model['imgFeatured'] : '';
         $this->imgThumb = isset($model['imgThumb']) ? $model['imgThumb'] : '';

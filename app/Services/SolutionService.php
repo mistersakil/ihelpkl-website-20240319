@@ -31,7 +31,7 @@ class SolutionService
                 'characteristics' => [
                     'title' => 'What to Look for When Choosing',
                     'subTitle' => 'Best CRM System',
-                    'shotDetails' => 'Here are some important factors to consider when choosing a CRM solution for your company',
+                    'shortDetails' => 'Here are some important factors to consider when choosing a CRM solution for your company',
                     'items' => [
                         [
                             'heading' => 'Customer Support',
@@ -53,7 +53,7 @@ class SolutionService
                 'services2' => [
                     'title' => 'The Best CRM Solutions in Malaysia',
                     'subTitle' => 'Features that Set Them Apart',
-                    'shotDetails' => 'When considering the best CRM system for your business, look for a solution that offers',
+                    'shortDetails' => 'When considering the best CRM system for your business, look for a solution that offers',
                     'items' => [
                         [
                             'heading' => 'Customizable Features',
@@ -77,6 +77,16 @@ class SolutionService
                         ],
                     ]
                 ],
+                'choose2' => [
+                    'title' => '',
+                    'subTitle' => 'Why CRM Solutions in Malaysia Stand Out',
+                    'shortDetails' => "Many businesses in Malaysia are turning to CRM tools to stay competitive in the global marketplace. The best CRM systems available are not only tailored to local business needs but also offer global integrations, ensuring smooth communication with customers around the world. Whether you need an example of a CRM tool for managing sales pipelines or are looking to evaluate different CRM solutions, there's a system for every business size and type.",
+                    'imgFeatured' => Vite::imageWeb('choose-img2.jpg'),
+                    'imgThumb' => null,
+                    'imgFrame' => Vite::imageWeb('choose-line.png'),
+            
+
+                ],
                 'faqs' => [
                     'title' => 'FAQ',
                     'subTitle' => "Learn more",
@@ -99,34 +109,7 @@ class SolutionService
                         ]
                     ]
                 ],
-                'articles' => [
-                    [
-                        'title' => 'CRM Benefits',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img4.jpg'),
-                        'items' => [
-
-                            'Boost sales and customer satisfaction',
-                            'Streamline operations, cut costs',
-                            'Make data-driven decisions.',
-                            'Improve team collaboration.',
-
-                        ]
-                    ],
-                    [
-                        'title' => 'Cloud CRM Advantages',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img5.jpg'),
-                        'items' => [
-
-                            'Boost sales and customer satisfaction',
-                            'Streamline operations, cut costs',
-                            'Make data-driven decisions.',
-                            'Improve team collaboration.',
-
-                        ]
-                    ]
-                ]
+       
 
             ],
 

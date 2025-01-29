@@ -14,7 +14,7 @@ class ServicesTwo extends Component
     ## Component props
     public string $title;
     public string $subTitle;
-    public string $shotDetails;
+    public string $shortDetails;
     public array $items;
     public string $img;
     public string $img2;
@@ -34,7 +34,7 @@ class ServicesTwo extends Component
         }
         $this->title = isset($model['title']) ? __($model['title']) : '';
         $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
-        $this->shotDetails = isset($model['shotDetails']) ? __($model['shotDetails']) : '';
+        $this->shortDetails = isset($model['shortDetails']) ? __($model['shortDetails']) : '';
         $this->items = isset($model['items']) ? $model['items'] : [];
         $this->img = Vite::imageWeb('services-top.png') ;
         $this->img2 = Vite::imageWeb('services-top2.png') ;

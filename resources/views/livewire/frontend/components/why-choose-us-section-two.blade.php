@@ -7,11 +7,14 @@
                         <div class="choose-content-left">
                             <div class="section-title">
                                 @if (isset($title))
-                                    <span class="sp-title">{{ $title }}</span>
+                                    <h1 class="sp-title">{{ $title }}</h1>
                                 @endif
                                 @if (isset($subTitle))
                                     <h2>{{ ucwords($subTitle) }}</h2>
                                 @endif
+                                @if (isset($shortDetails))
+                                <p>{{ ucwords($shortDetails) }}</p>
+                            @endif
                             </div>
 
                             <div class="row">

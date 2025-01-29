@@ -10,9 +10,9 @@
                     @if (isset($subTitle))
                         <h2>{{ $subTitle }}</h2>
                     @endif
-                    @if (isset($shotDetails))
-                    <p class="form-text">{{ ucwords($shotDetails) }}</p>
-                @endif
+                    @if (isset($shortDetails))
+                        <p class="form-text">{{ ucwords($shortDetails) }}</p>
+                    @endif
                 </div>
                 <!-- /.section-title -->
 

@@ -5,8 +5,8 @@
                 <div class="section-title text-center">
                     <h1 class="sp-title2">{{ $title }}</h1>
                     <h2>{{ $subTitle }}</h2>
-                    @if (isset($shotDetails))
-                        <p class="form-text">{{ ucwords($shotDetails) }}</p>
+                    @if (isset($shortDetails))
+                        <p class="form-text">{{ ucwords($shortDetails) }}</p>
                     @endif
                 </div>
                 <!-- /.section-title -->
