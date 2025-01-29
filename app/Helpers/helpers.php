@@ -113,6 +113,7 @@ if (!function_exists('_icons')) {
             'laptop'                    => 'bi bi-laptop',
             'messages'                  => 'bi bi-chat-dots',
             'mobile'                    => 'bi bi-phone',
+            'money'                     => 'bi bi-cash-coin',
             'order_by'                  => 'bi bi-boxes',
             'order_direction'           => 'bi bi-sort-alpha-down',
             'portfolio'                 => 'bi bi-briefcase',

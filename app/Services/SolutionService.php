@@ -28,46 +28,25 @@ class SolutionService
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
                 'keyPoints' => [],
 
-                'projects' => [
-                    'title' => 'The Best CRM Solutions in Malaysia',
-                    'subTitle' => 'Features that Set Them Apart',
-                    'shotDetails' => 'When considering the best CRM system for your business, look for a solution that offers',
-                    'items' => [
-                        [
-                            'heading' => '',
-                            'body' => 'Boost Your Business with IHELP CRM.',
-                            'img' =>  Vite::imageWeb('project-style1.jpg'),
-                        ],
-                        [
-                            'heading' => '',
-                            'body' => 'Experience smarter customer relationship management across multiple chains with our CRM system, delivering real-time insights for informed business decisions and personalized customer interactions.',
-                            'img' =>  Vite::imageWeb('project-style2.jpg'),
-                        ],
-                        [
-                            'heading' => '',
-                            'body' => "Simplify your operations with our IHELP CRM. Centralize data, automate tasks, and uncover customer trends for efficient, sustainable growth. ",
-                            'img' =>  Vite::imageWeb('project-style3.jpg'),
-                        ]
-                    ]
-                ],
                 'characteristics' => [
-                    'title' => 'How we feel',
-                    'subTitle' => 'Unified Success',
+                    'title' => 'What to Look for When Choosing',
+                    'subTitle' => 'Best CRM System',
+                    'shotDetails' => 'Here are some important factors to consider when choosing a CRM solution for your company',
                     'items' => [
                         [
-                            'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
-                            'icon' =>  _icons('database_gear'),
+                            'heading' => 'Customer Support',
+                            'body' => 'Ensure that your CRM provider offers 24/7 support to address any issues promptly.',
+                            'icon' =>  _icons('agent'),
                         ],
                         [
-                            'heading' => 'Real-Time Integration',
-                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
-                            'icon' =>  _icons('realtime'),
+                            'heading' => 'Pricing',
+                            'body' => 'Compare prices to find a CRM system that offers the best value for your business.',
+                            'icon' =>  _icons('money'),
                         ],
                         [
-                            'heading' => 'Data Security and Compliances',
+                            'heading' => 'Security',
                             'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
-                            'icon' =>  _icons('database_lock'),
+                            'icon' =>  _icons('lock'),
                         ]
                     ]
                 ],
