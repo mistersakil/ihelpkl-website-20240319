@@ -20,6 +20,9 @@
                                 <h2>{{ $subTitle }}</h2>
                             </div>
                             <!-- /.section-title -->
+                            <p>
+                                {{ $body }}
+                            </p>
 
                             @if (count($items))
                                 <ul class="about-list">

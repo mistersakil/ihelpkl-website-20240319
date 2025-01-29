@@ -13,6 +13,7 @@ class AboutPageAboutSection extends Component
     ## Component props
     public string $title;
     public string $subTitle;
+    public string $body;
     public array $items;
     public string $img;
     public bool $isDisplaySection = true;
@@ -30,6 +31,7 @@ class AboutPageAboutSection extends Component
             $model = $item['about'];
         }
         $this->title = isset($model['title']) ? __($model['title']) : '';
+        $this->body = isset($model['body']) ? $model['body'] : '';
         $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
         $this->items = isset($model['items']) ? $model['items'] : [];
         $this->img = isset($model['img']) ? $model['img'] : '';

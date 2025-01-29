@@ -4,7 +4,6 @@ namespace App\Livewire\Frontend\About;
 
 use Livewire\Component;
 
-use Livewire\Attributes\Title;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Vite;
 
@@ -14,6 +13,7 @@ use Illuminate\Support\Facades\Vite;
 class AboutPage extends Component
 {
     public string $metaTitle = 'about us';
+    public string $metaDescription = 'about us';
     public string $module = 'about';
 
     public array $data = [];
@@ -38,14 +38,9 @@ class AboutPage extends Component
         $this->data['about'] = [
             'title' => 'Who Are We?',
             'subTitle' => 'About iHelpKL',
+            'body' => 'iHelpKL, with over 12 years of experience through our parent company iHelpBD in Bangladesh, is introducing cutting-edge products and solutions in Malaysia. Our offerings include POS software, CRM systems, task and complaint management solutions, custom CRM development, web development, application integration, and AI-powered services.',
             'imgThumb' => Vite::imageWeb('about-img1.jpg'),
             'items' => [
-                "Website design, CRM solutions, web-based software, and more",
-                "Over 15 years of experience in custom software development.",
-                "High-quality outcomes for projects of all sizes.",
-                "Budget-friendly options without compromising quality.",
-                "Projects completed on schedule.",
-                "Elevate your business with tailored technology solutions.",
             ]
         ];
 
@@ -55,17 +50,15 @@ class AboutPage extends Component
             'items' => [
                 [
                     'heading' => 'Vision',
-                    'body' => 'To become a premier software development company delivering innovative solutions that enhance business operations and drive success, while inspiring and empowering individuals to realize their full potential.',
+                    'body' => 'To be the leading provider of technology-driven business solutions in Malaysia, helping companies succeed in an increasingly digital world.',
                     'img' =>  Vite::imageWeb('project-style1.jpg'),
                 ],
                 [
                     'heading' => 'Mission',
-                    'body' => "Our mission is to create maintainable code and intuitive software that streamlines your business processes for greater efficiency.
-                    
-                    To meet our clients' needs, we excel at customizing processes. Our experience and resources equip us to tackle challenges, even when projects include new features and unique requirements. ",
+                    'body' => "To empower businesses by delivering innovative, tailored software solutions that Simplify operations and enhance customer experiences. ",
                     'img' =>  Vite::imageWeb('project-style2.jpg'),
                 ],
-                
+
             ]
         ];
     }
@@ -76,7 +69,6 @@ class AboutPage extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
-    #[Title('About Us')]
     public function render(): View
     {
         return view('livewire.frontend.about.about-page');
