@@ -98,24 +98,49 @@ class SolutionService
 
                 ],
                 'faqs' => [
-                    'title' => 'FAQ',
+                    'title' => 'Ready to take your business to the next level with CRM software in Malaysia?',
                     'subTitle' => "Learn more",
                     'items' => [
                         [
-                            'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                            'heading' => 'What is the best CRM software for small businesses in Malaysia?',
+                            'body' => 'The best CRM solution for small businesses in Malaysia depends on features like ease of use, automation capabilities, and scalability. Many solutions allow businesses to optimize customer interactions and sales processes, making them ideal for smaller teams looking to improve efficiency.
+',
                         ],
                         [
-                            'heading' => 'Real-Time Integration',
-                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                            'heading' => 'How can CRM systems help improve customer service in Malaysia?',
+                            'body' => 'CRM systems improve customer service by centralizing customer data and interactions, allowing businesses to resolve queries faster, personalize responses, and build stronger relationships with customers. ',
                         ],
                         [
-                            'heading' => 'Data Security and Compliances',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                            'heading' => 'Can you provide an example of a CRM tool used in Malaysia?',
+                            'body' => 'A popular CRM tool in Malaysia integrates with local business systems, allowing companies to manage sales leads, track customer communications, and automate follow-ups. ',
                         ],
                         [
-                            'heading' => 'Data Security and Compliances two',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                            'heading' => 'What are the key features of a good CRM solution in Malaysia?',
+                            'body' => 'A good CRM solution in Malaysia should offer customization options, an intuitive interface, automation features, and scalability. These features make it easier for businesses to track customer interactions, enhance engagement, and improve sales efficiency.',
+                        ],
+                        [
+                            'heading' => 'Why is it important to choose the right CRM system for your business in Malaysia?',
+                            'body' => 'Selecting the right CRM system helps businesses manage customer relationships effectively, improve lead tracking, and enhance sales strategies.',
+                        ],
+                        [
+                            'heading' => 'How can CRM software samples assist in making the right choice?',
+                            'body' => 'Exploring CRM software samples allows businesses to assess different features, interfaces, and pricing structures before committing to a system. ',
+                        ],
+                        [
+                            'heading' => 'What sets CRM solutions in Malaysia apart from others?',
+                            'body' => 'CRM solutions in Malaysia are designed to cater to local business needs, offering integration with regional tools and compliance with local regulations. These solutions are also scalable, ensuring they can grow alongside your business without requiring major system changes.',
+                        ],
+                        [
+                            'heading' => 'How does a CRM system boost sales efficiency in Malaysia?',
+                            'body' => 'The system enhances sales efficiency by automating tasks such as lead follow-ups and customer reminders. With real-time data and efficient workflows, sales teams can focus more on building relationships and closing deals effectively.',
+                        ],
+                        [
+                            'heading' => 'How does CRM software improve customer data management in Malaysia?',
+                            'body' => 'This software centralizes all customer data, making it easier for businesses in Malaysia to track interactions, gain insights into customer behavior, and personalize communication. This results in better decision-making and stronger customer relationships.',
+                        ],
+                        [
+                            'heading' => 'Can CRM applications help manage social media interactions in Malaysia?',
+                            'body' => 'Yes, many CRM applications in Malaysia integrate with social media platforms, allowing businesses to track and respond to customer inquiries and feedback directly through these channels. This feature improves engagement and strengthens the brand’s relationship with customers.',
                         ]
                     ]
                 ],
