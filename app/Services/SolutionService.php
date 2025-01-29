@@ -78,10 +78,20 @@ class SolutionService
                     ]
                 ],
                 'choose2' => [
-                    'title' => '',
+                    'title' => 'Versatile CRM Solutions',
                     'subTitle' => 'Why CRM Solutions in Malaysia Stand Out',
                     'shortDetails' => "Many businesses in Malaysia are turning to CRM tools to stay competitive in the global marketplace. The best CRM systems available are not only tailored to local business needs but also offer global integrations, ensuring smooth communication with customers around the world. Whether you need an example of a CRM tool for managing sales pipelines or are looking to evaluate different CRM solutions, there's a system for every business size and type.",
                     'imgFeatured' => Vite::imageWeb('choose-img2.jpg'),
+                    'imgThumb' => null,
+                    'imgFrame' => Vite::imageWeb('choose-line.png'),
+            
+
+                ],
+                'imageOne' => [
+                    'title' => 'Effective sales strategies',
+                    'subTitle' => 'Get Started with the Best CRM Solutions in Malaysia',
+                    'shortDetails' => "Investing in a CRM solution will help you track customer interactions, improve sales strategies, and enhance overall business performance. Take the time to explore different options available and find the right CRM system that suits your needs.",
+                    'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
                     'imgThumb' => null,
                     'imgFrame' => Vite::imageWeb('choose-line.png'),
             
