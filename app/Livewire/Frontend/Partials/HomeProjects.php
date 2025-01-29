@@ -13,6 +13,7 @@ class HomeProjects extends Component
     ## Component props
     public string $title;
     public string $subTitle;
+    public string $shotDetails;
     public array $items;
     public string $img;
     public bool $isDisplaySection = true;
@@ -31,6 +32,7 @@ class HomeProjects extends Component
         }
         $this->title = isset($model['title']) ? __($model['title']) : '';
         $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
+        $this->shotDetails = isset($model['shotDetails']) ? __($model['shotDetails']) : '';
         $this->items = isset($model['items']) ? $model['items'] : [];
         $this->img = isset($model['img']) ? $model['img'] : '';
     }

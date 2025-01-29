@@ -4,11 +4,15 @@
             <div class="container">
                 <div class="section-title text-center">
                     @if (isset($title))
-                        <span class="sp-title2">{{ $title }}</span>
+                        <h1 class="sp-title2">{{ $title }}</h1>
                     @endif
                     @if (isset($subTitle))
                         <h2>{{ ucwords($subTitle) }}</h2>
                     @endif
+                    @if (isset($shotDetails))
+                        <p class="form-text">{{ ucwords($shotDetails) }}</p>
+                    @endif
+
                 </div>
                 <!-- /.section-title -->
 

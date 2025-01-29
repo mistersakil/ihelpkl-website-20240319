@@ -3,8 +3,11 @@
         <div class="services-area-two services-area-bg pt-100 pb-70">
             <div class="container">
                 <div class="section-title text-center">
-                    <span class="sp-title2">{{ $title }}</span>
+                    <h1 class="sp-title2">{{ $title }}</h1>
                     <h2>{{ $subTitle }}</h2>
+                    @if (isset($shotDetails))
+                        <p class="form-text">{{ ucwords($shotDetails) }}</p>
+                    @endif
                 </div>
                 <!-- /.section-title -->
 

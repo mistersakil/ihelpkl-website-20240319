@@ -26,12 +26,12 @@ class SolutionService
                 'short_details' => "In today's competitive business environment, choosing the right CRM system is crucial for enhancing customer relationships and driving growth. Whether you're a small startup or a large enterprise, the right CRM solution can streamline your processes, improve customer service, and boost sales efficiency.",
                 'img_featured' => Vite::imageWeb('blog-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
-                'keyPoints' => [
-                ],
+                'keyPoints' => [],
 
                 'projects' => [
-                    'title' => 'Projects',
-                    'subTitle' => 'Our recent projects',
+                    'title' => 'The Best CRM Solutions in Malaysia',
+                    'subTitle' => 'Features that Set Them Apart',
+                    'shotDetails' => 'When considering the best CRM system for your business, look for a solution that offers',
                     'items' => [
                         [
                             'heading' => '',
@@ -69,6 +69,33 @@ class SolutionService
                             'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
                             'icon' =>  _icons('database_lock'),
                         ]
+                    ]
+                ],
+                'services2' => [
+                    'title' => 'The Best CRM Solutions in Malaysia',
+                    'subTitle' => 'Features that Set Them Apart',
+                    'shotDetails' => 'When considering the best CRM system for your business, look for a solution that offers',
+                    'items' => [
+                        [
+                            'heading' => 'Customizable Features',
+                            'body' => 'A CRM application that adapts to your business needs ensures you can tailor it for maximum efficiency.',
+                            'icon' =>  _icons('database_gear'),
+                        ],
+                        [
+                            'heading' => 'User-friendly Interface',
+                            'body' => 'Simplicity is key in any CRM platform, ensuring that your team can easily access and manage customer data.',
+                            'icon' =>  _icons('display'),
+                        ],
+                        [
+                            'heading' => 'Automation Tools',
+                            'body' => 'From lead management to follow-up reminders, a great CRM solution automates routine tasks, freeing up time for your team to focus on building relationships.',
+                            'icon' =>  _icons('setting'),
+                        ],
+                        [
+                            'heading' => 'Scalability',
+                            'body' => 'As your business grows, your CRM should grow with it, accommodating more contacts and complex workflows.',
+                            'icon' =>  _icons('api'),
+                        ],
                     ]
                 ],
                 'faqs' => [

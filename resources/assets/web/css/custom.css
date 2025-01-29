@@ -88,3 +88,7 @@
 .blog-article .quote ul li::before {
     background-color: transparent;
 }
+
+.services-area-two .section-title h2 {
+    max-width: fit-content;;
+}
