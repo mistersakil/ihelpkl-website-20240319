@@ -4,7 +4,6 @@ namespace App\Livewire\Frontend\Blogs;
 
 use Livewire\Component;
 use App\Services\BlogService;
-use Livewire\Attributes\Title;
 use Illuminate\Contracts\View\View;
 
 /**
@@ -44,7 +43,6 @@ class BlogListPage extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
-    #[Title('Blog List')]
     public function render(): View
     {
         return view('livewire.frontend.blogs.blog-list-page');

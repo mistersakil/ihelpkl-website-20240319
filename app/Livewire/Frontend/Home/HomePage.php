@@ -3,9 +3,7 @@
 namespace App\Livewire\Frontend\Home;
 
 use Livewire\Component;
-use Livewire\Attributes\Title;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Vite;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -13,23 +11,14 @@ use Illuminate\Support\Facades\Vite;
 class HomePage extends Component
 {
     ## Meta props
-    public string $metaTitle = 'home';
-
-
-    /**
-     * Create a new component instance.
-     * @return void
-     */
-    public function mount(): void
-    {
-    }
+    public string $metaTitle = "Custom CRM, Web Development & Application Integration";
+    public string $metaDescription = " For Malaysia's business, iHelpKL offers custom CRM, web development, and application integration solutions to enhance your business efficiency and growth";
 
     /**
      * Render view
      *
      * @return  \Illuminate\Contracts\View\View
      */
-    #[Title("Home")]
     public function render(): View
     {
         return view('livewire.frontend.home.home-page');
