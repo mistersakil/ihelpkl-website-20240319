@@ -15,12 +15,15 @@
                     <div class="about-content pl-20">
                         <div class="section-title">
                             @if ($title)
-                                <span class="sp-title2">{{ $title }}</span>
+                                <h1 class="sp-title2">{{ $title }}</h1>
                             @endif
                             @if ($subTitle)
                                 <h2>{{ $subTitle }}</h2>
                             @endif
                         </div>
+                        @if ($shortDetails)
+                            {{ $shortDetails }}
+                        @endif
                         @if (count($items))
                             <ul class="about-list">
                                 @foreach ($items as $item)

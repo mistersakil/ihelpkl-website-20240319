@@ -17,18 +17,16 @@ class SolutionService
     {
         $dataList = [
             [
+                'meta_title' => 'Best CRM Software in Malaysia: Top Solutions for Your Business',
+                'meta_description' => ' Discover the best CRM software in Malaysia to boost your business. Explore tailored CRM solutions with powerful features for enhanced customer management',
                 'title' => 'Custom CRM Development',
-                'subTitle' => 'Discover the Power of CRM Platform ',
-                'slug' => route('web.solutions.details', ['slug' => 'crm']),
+                'subTitle' => 'Discover the Best CRM Software in Malaysia: Tailored Solutions for Your Business',
+                'slug' => route('web.solutions.details', ['slug' => 'best-crm-software-malaysia']),
                 'body' => "Discover the Power of CRM Platform",
+                'short_details' => "In today's competitive business environment, choosing the right CRM system is crucial for enhancing customer relationships and driving growth. Whether you're a small startup or a large enterprise, the right CRM solution can streamline your processes, improve customer service, and boost sales efficiency.",
                 'img_featured' => Vite::imageWeb('blog-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
                 'keyPoints' => [
-                    'Maximize Customer Value with an Exceptional CRM Platform',
-                    'Maintaining customer relationships through diligent tracking of interactions',
-                    'A Vital Asset for Every Business to Excel in Customer Relations',
-                    'Make informed decisions with real-time data',
-                    'Effortless Integration with Your Existing Platforms',
                 ],
 
                 'projects' => [

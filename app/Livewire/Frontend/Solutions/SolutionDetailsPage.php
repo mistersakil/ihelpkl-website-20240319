@@ -4,13 +4,13 @@ namespace App\Livewire\Frontend\Solutions;
 
 use App\Services\SolutionService;
 use Livewire\Component;
-use Livewire\Attributes\Title;
 use Illuminate\Contracts\View\View;
 
 class SolutionDetailsPage extends Component
 {
     ## Meta data
-    public string $metaTitle = 'solution details';
+    public string $metaTitle;
+    public string $metaDescription;
     public string $module = 'solutions';
 
     ## Route params
@@ -34,10 +34,20 @@ class SolutionDetailsPage extends Component
      */
     public function mount(string $slug): void
     {
+        $this->metaTitle = 'blog details';
+        $this->metaDescription = __('meta description');
+
         $this->slug = $slug;
         $slugString = route('web.solutions.details', ['slug' => $slug]);
         $this->itemDetails = $this->solutionService->getStaticModels($slugString);
         $this->solutionList = $this->solutionService->getStaticModels();
+
+        if ($this->itemDetails && isset($this->itemDetails['meta_title'])) {
+            $this->metaTitle = $this->itemDetails['meta_title'];
+        }
+        if ($this->itemDetails && isset($this->itemDetails['meta_description'])) {
+            $this->metaDescription = $this->itemDetails['meta_description'];
+        }
     }
 
     /**
@@ -45,7 +55,6 @@ class SolutionDetailsPage extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
-    #[Title('Solution Details')]
     public function render(): View
     {
         return view('livewire.frontend.solutions.solution-details-page');

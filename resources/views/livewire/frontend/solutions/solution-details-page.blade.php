@@ -1,7 +1,7 @@
 <main>
-    <x-slot:innerBanner>
-
-    </x-slot:innerBanner>
+    <x-slot:innerBanner :show="false"></x-slot:innerBanner>
+    <x-slot:metaTitle> {{ __($metaTitle) }} </x-slot:metaTitle>
+    <x-slot:metaDescription> {{ __($metaDescription) }} </x-slot:metaDescription>
 
     <livewire:frontend.partials.home-about-section :item="$itemDetails" />
 
