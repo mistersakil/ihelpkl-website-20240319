@@ -162,8 +162,9 @@ class SolutionService
                 ],
 
                 'services2' => [
-                    'title' => 'Grow your business',
-                    'subTitle' => 'How can we help you?',
+                    'title' => 'Why Choose Us',
+                    'subTitle' => 'As Your Web Development Partner?',
+                    'shortDetails' => 'We specialize in creating a wide range of websites tailored to different business objectives',
                     'items' => [
                         [
                             'heading' => 'Corporate Websites',
