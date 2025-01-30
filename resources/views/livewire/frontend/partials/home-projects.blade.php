@@ -18,7 +18,7 @@
 
                 @if (count($items))
                     <div class="row pt-45">
-                        <div class="col-lg-7">
+                        <div class="col-lg-6">
                             <div class="project-slider-two owl-carousel owl-theme" data-slider-id="1">
                                 @foreach ($items as $item)
                                     <div class="project-slider-img">
@@ -29,14 +29,14 @@
                         </div>
                         <!-- /.col-->
 
-                        <div class="col-lg-5">
+                        <div class="col-lg-6">
                             <div class="thumbs-wrap">
                                 <div class="owl-thumbs project-area-thumb" data-slider-id="1">
                                     @foreach ($items as $item)
                                         <div class="owl-thumb-item">
                                             <div class="content">
                                                 @if (isset($item['heading']))
-                                                    <h3> {{ ucfirst($item['heading']) }}</h3>
+                                                    <h3> {{ ucfirst($item['title']) }}</h3>
                                                 @endif
                                                 <p> {{ ucfirst($item['body']) }}</p>
                                             </div>

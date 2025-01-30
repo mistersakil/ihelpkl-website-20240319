@@ -158,8 +158,7 @@ class SolutionService
                 'short_details' => "At our web development company in Malaysia, we provide innovative and customized solutions to meet the unique needs of businesses across various industries. With years of expertise, our team of skilled Malaysia website developers is dedicated to delivering websites that are not only visually appealing but also highly functional, ensuring maximum impact for your business",
                 'img_featured' => Vite::imageWeb('blog-img2.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
-                'keyPoints' => [
-                ],
+                'keyPoints' => [],
 
                 'services2' => [
                     'title' => 'Why Choose Us',
@@ -186,7 +185,7 @@ class SolutionService
                             'body' => 'Expand your business with a robust online store, complete with secure payment gateways and inventory management.',
                             'icon' =>  _icons('cart'),
                         ],
-                        
+
                     ],
                     'characteristics' => [],
                 ],
@@ -216,6 +215,28 @@ class SolutionService
                         ]
                     ]
                 ],
+                'projects' => [
+                    'title' => 'Cutting-Edge Technology For Global Standard Solutions',
+                    'subTitle' => 'Scalable and Future-Ready',
+                    'shortDetails' => '',
+                    'items' => [
+                        [
+                            'title' => 'Local Expertise, Global Standards',
+                            'body' => 'As a leading website company in Malaysia, we combine local market insights with global best practices to deliver websites that resonate with your audience while adhering to international standards.',
+                            'img' => Vite::imageWeb('solution-slider-3.jpg'),
+                        ],
+                        [
+                            'title' => 'Scalable and Future-Ready Solutions',
+                            'body' => "Whether you're a startup or an established enterprise, our website development services in Malaysia are designed to scale with your business. From small websites to complex platforms, we ensure your website evolves as your needs grow.",
+                            'img' => Vite::imageWeb('solution-slider-2.jpg'),
+                        ],
+                        [
+                            'title' => 'Cutting-Edge Technology',
+                            'body' => 'We leverage the latest web development technologies to build secure, fast, and responsive websites that provide an exceptional user experience. Our tools and platforms are ideal for building : E-commerce Websites, Corporate Websites, Membership Platforms.',
+                            'img' => Vite::imageWeb('solution-slider-1.jpg'),
+                        ]
+                    ]
+                ]
 
 
             ],
