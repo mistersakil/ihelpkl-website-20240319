@@ -35,6 +35,7 @@
                             @foreach ($dataList as $tabContentindex => $data)
                                 <div class="tabs_item {{ $loop->first ? 'current' : '' }}"
                                     wire:key="tab_content_{{ $tabContentindex }}">
+                                    
                                     <div class="row align-items-center">
                                         <div class="col-lg-6">
                                             <div class="services-tab-img">
@@ -47,21 +48,11 @@
                                         <div class="col-lg-6">
                                             <div class="services-tab-content pl-20">
                                                 <h2>{{ ucwords($data['subTitle']) }}</h2>
+                                                
                                                 <p>
-                                                    Key Characterstics
+                                                    {{ ucwords($data['short_details']) }}
                                                 </p>
-                                                @if(isset($data['keyPoints']) && count($data['keyPoints']))
-                                                
-                                                <ul class="services-tab-list">
-                                                @foreach (collect($data['keyPoints'])->take(4) as $inexKeyPoints => $keyPoint)
-                                                    <li>
-                                                        <i class="{{ _icons('arrow_right') }}"></i> 
-                                                        {{ $keyPoint }}
-                                                    </li>
-                                                    @endforeach
-                                                </ul>
-                                                
-                                                @endif
+                                     
                                                 <a wire:navigate href="{{ $data['slug'] }}"
                                                     class="default-btn border-radius-5">
                                                     {{ __('read more') }}

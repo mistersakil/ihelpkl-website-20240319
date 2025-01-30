@@ -303,7 +303,7 @@ class SolutionService
                 'title' => 'Application integration',
                 'subTitle' => 'Effortless application integration to Boost your business',
                 'slug' => route('web.solutions.details', ['slug' => 'application-integration']),
-                'body' => "",
+                'short_details' => "In today’s competitive market, staying ahead requires seamless workflows, intelligent tools, and enhanced customer experiences. At the core of this transformation lies the application of integration and AI-driven technologies, helping businesses achieve efficiency, scalability, and innovation.",
                 'img_featured' => Vite::imageWeb('blog-img3.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
 
