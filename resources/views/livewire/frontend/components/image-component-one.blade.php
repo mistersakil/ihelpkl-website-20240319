@@ -1,23 +1,23 @@
 <main>
     @if ($isDisplaySection)
-        <div class="testimonial-area-one pb-70">
+        <div class="testimonial-area-one pb-70 pt-70">
             <div class="container">
                 <div class="testimonial-slider-one owl-carousel owl-theme owl-loaded ">
                     <div class="testimonial-item-one">
                         <div class="row align-items-center">
-                            <div class="col-lg-5">
+                            <div class="col-lg-4">
                                 <div class="testimonial-item-img">
                                     <div class="testimonial-item-box">
-                                        <img src="{{ $imgFeatured }}" alt="Images">
+                                        <img src="{{ $imgFeatured }}" alt="{{ $title }}">
                                     </div>
 
                                     <div class="testimonial-shape">
-                                        <img src="{{ $imgFrame }}" alt="Images">
+                                        <img src="{{ $imgFrame }}" alt="frame">
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-7">
+                            <div class="col-lg-7 offset-lg-1">
                                 <div class="testimonial-item-content pl-20">
                                     <div class="section-title">
                                         @if (isset($title))

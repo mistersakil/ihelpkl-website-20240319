@@ -20,7 +20,7 @@ class SolutionService
                 'meta_title' => 'Best CRM Software in Malaysia: Top Solutions for Your Business',
                 'meta_description' => ' Discover the best CRM software in Malaysia to boost your business. Explore tailored CRM solutions with powerful features for enhanced customer management',
                 'title' => 'Custom CRM Development',
-                'subTitle' => 'Discover the Best CRM Software in Malaysia: Tailored Solutions for Your Business',
+                'subTitle' => 'Tailored Solutions for Your Business',
                 'slug' => route('web.solutions.details', ['slug' => 'best-crm-software-malaysia']),
                 'body' => "Discover the Power of CRM Platform",
                 'short_details' => "In today's competitive business environment, choosing the right CRM system is crucial for enhancing customer relationships and driving growth. Whether you're a small startup or a large enterprise, the right CRM solution can streamline your processes, improve customer service, and boost sales efficiency.",

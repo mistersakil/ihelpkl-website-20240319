@@ -3,7 +3,7 @@
         <div class="choose-area-two pt-100 pb-70">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 ">
                         <div class="choose-content-left">
                             <div class="section-title">
                                 @if (isset($title))
@@ -47,7 +47,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-5  offset-lg-1">
                         <div class="choose-img-three">
                             <img src="{{ $imgFeatured }}" alt="Images">
                             <div class="line">
