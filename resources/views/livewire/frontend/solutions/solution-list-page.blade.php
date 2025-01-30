@@ -1,7 +1,7 @@
 <main>
-    <x-slot:innerBanner>
-        {{-- <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" /> --}}
-    </x-slot:innerBanner>
+    <x-slot:metaTitle> {{ __($metaTitle) }} </x-slot:metaTitle>    
+
+    <x-slot:innerBanner :show="false"></x-slot:innerBanner>
 
     <livewire:frontend.partials.solutions-section sectionTitle="solutions"
         sectionSubTitle="Our provided best solutions" />

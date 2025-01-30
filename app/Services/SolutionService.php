@@ -18,8 +18,9 @@ class SolutionService
         $dataList = [
             [
                 'meta_title' => 'Best CRM Software in Malaysia: Top Solutions for Your Business',
-                'meta_description' => ' Discover the best CRM software in Malaysia to boost your business. Explore tailored CRM solutions with powerful features for enhanced customer management',
-                'title' => 'Custom CRM Development',
+                'meta_description' => 'Discover the best CRM software in Malaysia to boost your business. Explore tailored CRM solutions with powerful features for enhanced customer management',
+                'meta_keywords' => 'crm software, CRM software Malaysia, crm software sample',
+                'title' => 'Best CRM Software in Malaysia',
                 'subTitle' => 'Tailored Solutions for Your Business',
                 'slug' => route('web.solutions.details', ['slug' => 'best-crm-software-malaysia']),
                 'body' => "Discover the Power of CRM Platform",
@@ -84,7 +85,7 @@ class SolutionService
                     'imgFeatured' => Vite::imageWeb('choose-img2.jpg'),
                     'imgThumb' => null,
                     'imgFrame' => Vite::imageWeb('choose-line.png'),
-            
+
 
                 ],
                 'imageOne' => [
@@ -94,7 +95,7 @@ class SolutionService
                     'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
                     'imgThumb' => null,
                     'imgFrame' => Vite::imageWeb('choose-line.png'),
-            
+
 
                 ],
                 'faqs' => [
@@ -103,8 +104,7 @@ class SolutionService
                     'items' => [
                         [
                             'heading' => 'What is the best CRM software for small businesses in Malaysia?',
-                            'body' => 'The best CRM solution for small businesses in Malaysia depends on features like ease of use, automation capabilities, and scalability. Many solutions allow businesses to optimize customer interactions and sales processes, making them ideal for smaller teams looking to improve efficiency.
-',
+                            'body' => 'The best CRM solution for small businesses in Malaysia depends on features like ease of use, automation capabilities, and scalability. Many solutions allow businesses to optimize customer interactions and sales processes, making them ideal for smaller teams looking to improve efficiency.',
                         ],
                         [
                             'heading' => 'How can CRM systems help improve customer service in Malaysia?',
@@ -144,21 +144,21 @@ class SolutionService
                         ]
                     ]
                 ],
-       
+
 
             ],
 
             [
-                'title' => 'Web Development',
-                'subTitle' => 'Top Custom Web Development Solutions',
-                'slug' => route('web.solutions.details', ['slug' => 'web-development']),
-                'body' => "IHELP delivers innovative web applications for global leaders and startups. With a proven track record in enterprise development, we are committed to excellence and high-quality outcomes",
+                'meta_title' => 'Top Web Development Solutions in Malaysia for Your Business Growth',
+                'meta_description' => 'Discover innovative web development solutions in Malaysia. From corporate to e-commerce websites, we deliver tailored, scalable, and future-ready designs',
+                'meta_keywords' => 'Web Development, malaysia website developer, website developer in malaysia, company for website design',
+                'title' => 'Web Solutions in Malaysia ',
+                'subTitle' => 'Web Development Solutions Tailored for Your Business',
+                'slug' => route('web.solutions.details', ['slug' => 'web-development-solutions-malaysia']),
+                'short_details' => "At our web development company in Malaysia, we provide innovative and customized solutions to meet the unique needs of businesses across various industries. With years of expertise, our team of skilled Malaysia website developers is dedicated to delivering websites that are not only visually appealing but also highly functional, ensuring maximum impact for your business",
                 'img_featured' => Vite::imageWeb('blog-img2.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
                 'keyPoints' => [
-                    'Industry Expertise',
-                    'Cutting-Edge Technology',
-                    'Client-Centric Approach',
                 ],
 
                 'services2' => [
@@ -166,56 +166,26 @@ class SolutionService
                     'subTitle' => 'How can we help you?',
                     'items' => [
                         [
-                            'heading' => 'Responsive Design',
-                            'body' => 'Ensure the website is mobile-friendly and adapts seamlessly to various screen sizes.',
-                            'icon' =>  _icons('laptop'),
+                            'heading' => 'Corporate Websites',
+                            'body' => 'Build credibility and showcase your brand identity with a professional corporate website.',
+                            'icon' =>  _icons('corporate'),
                         ],
                         [
-                            'heading' => 'User-Friendly Navigation',
-                            'body' => 'Implement intuitive navigation to enhance user experience and accessibility.',
-                            'icon' =>  _icons('tracking'),
+                            'heading' => 'Portfolio Websites',
+                            'body' => 'Highlight your work and achievements with visually stunning portfolio designs.',
+                            'icon' =>  _icons('portfolio'),
                         ],
                         [
-                            'heading' => 'SEO Optimization',
-                            'body' => 'Integrate SEO best practices to improve visibility on search engines and attract organic traffic.',
-                            'icon' =>  _icons('search'),
+                            'heading' => 'Membership Websites',
+                            'body' => 'Enable exclusive content access and enhance user engagement with secure membership platforms.',
+                            'icon' =>  _icons('money'),
                         ],
                         [
-                            'heading' => 'Content Management System (CMS)',
-                            'body' => 'Provide a robust CMS for easy content updates and management without technical expertise.',
-                            'icon' =>  _icons('collection'),
-                        ],
-                        [
-                            'heading' => 'E-commerce Functionality',
-                            'body' => 'Include secure payment gateways, shopping carts, and inventory management for online stores.',
+                            'heading' => 'E-commerce Websites',
+                            'body' => 'Expand your business with a robust online store, complete with secure payment gateways and inventory management.',
                             'icon' =>  _icons('cart'),
                         ],
-                        [
-                            'heading' => 'Analytics and Reporting Tools',
-                            'body' => 'Incorporate tools for tracking user behavior and website performance for data-driven decision-making.',
-                            'icon' =>  _icons('reports'),
-                        ],
-                        [
-                            'heading' => 'Fast Loading Speed',
-                            'body' => 'Optimize website performance to ensure quick loading times, enhancing user satisfaction.',
-                            'icon' =>  _icons('speedometer'),
-                        ],
-                        [
-                            'heading' => 'Security Features',
-                            'body' => 'Implement SSL certificates, data encryption, and regular security updates to protect user data.',
-                            'icon' =>  _icons('lock'),
-                        ],
-                        [
-                            'heading' => 'Customizable Templates',
-                            'body' => "Offer customizable design templates to reflect the brand's identity and meet specific business needs.",
-                            'icon' =>  _icons('sidebar'),
-                        ],
-                        [
-                            'heading' => 'Integration with Third-Party Services',
-                            'body' => "Facilitate integration with various APIs and services, such as CRM, email marketing, and social media platforms.",
-                            'icon' =>  _icons('website'),
-                        ]
-
+                        
                     ],
                     'characteristics' => [],
                 ],

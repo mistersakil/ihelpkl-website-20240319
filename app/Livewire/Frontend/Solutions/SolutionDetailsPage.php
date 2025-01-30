@@ -11,6 +11,7 @@ class SolutionDetailsPage extends Component
     ## Meta data
     public string $metaTitle;
     public string $metaDescription;
+    public string $metaKeywords;
     public string $module = 'solutions';
 
     ## Route params
@@ -47,6 +48,9 @@ class SolutionDetailsPage extends Component
         }
         if ($this->itemDetails && isset($this->itemDetails['meta_description'])) {
             $this->metaDescription = $this->itemDetails['meta_description'];
+        }
+        if ($this->itemDetails && isset($this->itemDetails['meta_keywords'])) {
+            $this->metaKeywords = $this->itemDetails['meta_keywords'];
         }
     }
 

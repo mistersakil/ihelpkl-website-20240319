@@ -3,7 +3,6 @@
 namespace App\Livewire\Frontend\Solutions;
 
 use Livewire\Component;
-use Livewire\Attributes\Title;
 use Illuminate\Contracts\View\View;
 
 /**
@@ -20,7 +19,6 @@ class SolutionListPage extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
-    #[Title('Solutions')]
     public function render(): View
     {
         return view('livewire.frontend.solutions.solution-list-page');

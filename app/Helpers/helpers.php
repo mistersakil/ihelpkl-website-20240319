@@ -67,6 +67,7 @@ if (!function_exists('_icons')) {
             'calendar'                  => 'bi bi-calendar-day',
             'collection'                => 'bi bi-collection',
             'cart'                      => 'bi bi-cart',
+            'corporate'                 => 'bi bi-buildings',
             'category'                  => 'bi bi-trophy',
             'customer'                  => 'bi bi-person-standing',
             'dashboard'                 => 'bi bi-speedometer2',
