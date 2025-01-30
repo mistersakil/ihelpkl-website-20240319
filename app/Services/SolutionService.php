@@ -190,31 +190,6 @@ class SolutionService
                     'characteristics' => [],
                 ],
 
-                'articles' => [
-                    [
-                        'title' => 'Web Solutions We Build',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img4.jpg'),
-                        'items' => [
-                            'Corporate Website',
-                            'Portfolio Website ',
-                            'Membership Website',
-                            'E-commerce',
-                            'Member Database',
-                        ]
-                    ],
-                    [
-                        'title' => 'More On Web Solutions',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img5.jpg'),
-                        'items' => [
-                            'Reward Points',
-                            'Payment Gateway',
-                            'Web Design & development',
-                            'Web application Design & development',
-                        ]
-                    ]
-                ],
                 'projects' => [
                     'title' => 'Cutting-Edge Technology For Global Standard Solutions',
                     'subTitle' => 'Scalable and Future-Ready',
@@ -235,6 +210,89 @@ class SolutionService
                             'body' => 'We leverage the latest web development technologies to build secure, fast, and responsive websites that provide an exceptional user experience. Our tools and platforms are ideal for building : E-commerce Websites, Corporate Websites, Membership Platforms.',
                             'img' => Vite::imageWeb('solution-slider-1.jpg'),
                         ]
+                    ]
+                ],
+                'characteristics' => [
+                    'title' => 'What to Look for When Choosing',
+                    'subTitle' => 'Features That Set Us Apart',
+                    'shortDetails' => 'Here are some important factors to consider when choosing a CRM solution for your company',
+                    'items' => [
+                        [
+                            'heading' => 'Custom Design',
+                            'body' => 'Unique, user-centric designs that align with your brand identity.',
+                            'icon' =>  _icons('settings'),
+                        ],
+                        [
+                            'heading' => 'Responsive Websites',
+                            'body' => 'Optimized for seamless performance across all devices.',
+                            'icon' =>  _icons('display'),
+                        ],
+                        [
+                            'heading' => 'SEO-Optimized',
+                            'body' => "Boost your website's visibility on search engines.",
+                            'icon' =>  _icons('search'),
+                        ],
+                        [
+                            'heading' => ' Fast Loading Speed',
+                            'body' => 'Minimize bounce rates with quick-loading web pages.',
+                            'icon' =>  _icons('dashboard'),
+                        ],
+                        [
+                            'heading' => '24/7 Support',
+                            'body' => 'Dedicated customer support to ensure uninterrupted website performance.',
+                            'icon' =>  _icons('agent'),
+                        ]
+                    ]
+                ],
+                'choose2' => [
+                    'title' => 'Web development solutions in Malaysia',
+                    'subTitle' => 'Ready to Transform Your Online Presence?',
+                    'shortDetails' => "Let us help you create a website that drives results. Whether you're looking for a corporate website, a portfolio website, or an e-commerce platform, our team is here to turn your vision into reality. Contact us today to learn more about our web development solutions in Malaysia and discover how we can take your business to the next level!.",
+                    'imgFeatured' => Vite::imageWeb('choose-img2.jpg'),
+                    'imgThumb' => null,
+                    'imgFrame' => Vite::imageWeb('choose-line.png'),
+
+
+                ],
+                'imageOne' => [
+                    'title' => 'Website development company in Malaysia',
+                    'subTitle' => 'Why Malaysian Businesses Trust Us',
+                    'shortDetails' => "As one of the top 3 developers in Malaysia, we have established ourselves as a trusted partner for businesses looking to grow their digital presence. Our ability to deliver customized solutions, coupled with a client-first approach, has made us a go-to website development company in Malaysia.",
+                    'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
+                    'imgThumb' => null,
+                    'imgFrame' => Vite::imageWeb('choose-line.png'),
+
+
+                ],
+                'faqs' => [
+                    'title' => 'Ready to take your business to the next level with CRM software in Malaysia?',
+                    'subTitle' => "Learn more",
+                    'items' => [
+                        [
+                            'heading' => 'What is web development and why is it important for my business?',
+                            'body' => 'Web development is the process of designing, building, and maintaining websites. A well-developed website can significantly enhance your online presence, attract more customers, improve user experience, and drive sales, making it a crucial aspect of any modern business strategy.',
+                        ],
+                        [
+                            'heading' => 'Why should I choose a web development company in Malaysia?',
+                            'body' => 'Choosing a web development company in Malaysia allows businesses to benefit from local expertise and market understanding. A Malaysia-based team can provide custom website solutions that meet both global standards and local preferences, while also offering cost-effective services.',
+                        ],
+                        [
+                            'heading' => 'What types of websites can a professional website developer create?',
+                            'body' => 'A skilled website developer can create various types of websites, including corporate sites, portfolio showcases, membership platforms, and online stores (e-commerce). These websites are designed to meet the unique needs of businesses across different industries.',
+                        ],
+                        [
+                            'heading' => 'How do I select the right website development company? ',
+                            'body' => 'When choosing a website development company, look for a proven track record, strong portfolio, positive client reviews, and a deep understanding of your business needs. A reliable team will work with you to design and develop a website that aligns with your goals and provides value to your audience.',
+                        ],
+                        [
+                            'heading' => 'What are the advantages of having an e-commerce website for my business?',
+                            'body' => "An e-commerce website helps you sell products or services online, reaching a global audience. It accelerates sales with features like secure payment processing, inventory management, and customer tracking, ultimately improving your business's efficiency and growth potential.",
+                        ],
+                        [
+                            'heading' => 'What sets top web development companies apart from others?',
+                            'body' => "Leading web development companies stand out through their expertise in innovative design, attention to detail, excellent customer service, and ability to deliver high-quality websites on time. They focus on creating user-friendly, responsive websites that contribute to the success of your business.",
+                        ],
+                      
                     ]
                 ]
 
