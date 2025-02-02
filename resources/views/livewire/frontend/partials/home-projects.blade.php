@@ -35,7 +35,7 @@
                                     @foreach ($items as $item)
                                         <div class="owl-thumb-item">
                                             <div class="content">
-                                                @if (isset($item['heading']))
+                                                @if (isset($item['title']))
                                                     <h3> {{ ucfirst($item['title']) }}</h3>
                                                 @endif
                                                 <p> {{ ucfirst($item['body']) }}</p>

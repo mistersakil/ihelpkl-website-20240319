@@ -30,6 +30,7 @@ class HomeProjects extends Component
         } else {
             $model = $item['projects'];
         }
+        
         $this->title = isset($model['title']) ? __($model['title']) : '';
         $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
         $this->shortDetails = isset($model['shortDetails']) ? __($model['shortDetails']) : '';

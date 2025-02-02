@@ -49,14 +49,14 @@ class AboutPage extends Component
             'subTitle' => 'Our Goals',
             'items' => [
                 [
-                    'heading' => 'Vision',
+                    'title' => 'Vision',
                     'body' => 'To be the leading provider of technology-driven business solutions in Malaysia, helping companies succeed in an increasingly digital world.',
-                    'img' =>  Vite::imageWeb('project-style1.jpg'),
+                    'img' =>  Vite::imageWeb('about_mission.jpg'),
                 ],
                 [
-                    'heading' => 'Mission',
-                    'body' => "To empower businesses by delivering innovative, tailored software solutions that Simplify operations and enhance customer experiences. ",
-                    'img' =>  Vite::imageWeb('project-style2.jpg'),
+                    'title' => 'Mission',
+                    'body' => "To empower businesses by delivering innovative, tailored software solutions that Simplify operations and enhance customer experiences.",
+                    'img' =>  Vite::imageWeb('about_vision.jpg'),
                 ],
 
             ]

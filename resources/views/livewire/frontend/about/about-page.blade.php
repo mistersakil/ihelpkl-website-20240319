@@ -6,7 +6,9 @@
         <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
     </x-slot:innerBanner>
 
-    <livewire:frontend.components.about-page-about-section :item="$data" />
+    {{-- <livewire:frontend.components.about-page-about-section :item="$data" /> --}}
+
+    <livewire:frontend.partials.home-about-section :item="$data" />
 
 
     <livewire:frontend.partials.home-projects :item="$data" />
