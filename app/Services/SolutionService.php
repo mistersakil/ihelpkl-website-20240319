@@ -292,7 +292,7 @@ class SolutionService
                             'heading' => 'What sets top web development companies apart from others?',
                             'body' => "Leading web development companies stand out through their expertise in innovative design, attention to detail, excellent customer service, and ability to deliver high-quality websites on time. They focus on creating user-friendly, responsive websites that contribute to the success of your business.",
                         ],
-                      
+
                     ]
                 ]
 
@@ -338,42 +338,71 @@ class SolutionService
                         ],
                         [
                             'heading' => 'AI in Applications',
-                            'body' => "Whether it's powering application development for WhatsApp, integrating email systems, or designing cutting-edge",
+                            'body' => "Whether it’s powering application development for WhatsApp, integrating email systems, or designing cutting-edge CRM solutions, we ensure your tools are smarter and future-ready.",
                             'icon' =>  _icons('robot'),
                         ],
                     ]
                 ],
-                'articles' => [],
-                'faqs' => [],
-                'projects' => [],
+
                 'characteristics' => [
-                    'title' => 'We Feel Your Need',
-                    'subTitle' => 'Seamless Integration Solutions',
+                    'title' => 'Choose us for quality, satisfaction, and innovation',
+                    'subTitle' => 'Why Choose Us?',
+                    'shortDetails' => '',
                     'items' => [
                         [
-                            'heading' => 'Boost Efficiency',
-                            'body' => 'Simplify and automate intricate tasks within your business, reducing the time and effort needed for manual data entry and system switching. This frees up valuable time for your team to concentrate on strategic tasks.',
-                            'icon' =>  _icons('boost'),
+                            'heading' => 'Efficiency & Automation',
+                            'body' => 'Simplify workflows and save time by automating key processes',
+                            'icon' =>  _icons('agent'),
                         ],
                         [
-                            'heading' => 'Efficient IT Management',
-                            'body' => 'Benefit from a centralized control center for easier management of interconnected systems, leading to fewer technical issues, quicker problem resolution, and cost savings through streamlined operations.',
-                            'icon' =>  _icons('services'),
+                            'heading' => 'Future-Ready Technology',
+                            'body' => 'Stay ahead with AI and integration solutions tailored to your business goals.',
+                            'icon' =>  _icons('money'),
                         ],
                         [
-                            'heading' => 'Real-Time Insights',
-                            'body' => 'Access real-time data and analytics from integrated systems for a comprehensive view of business operations, including sales tracking, inventory monitoring, and customer insights.',
-                            'icon' =>  _icons('realtime'),
+                            'heading' => 'Data-Driven Insights',
+                            'body' => 'Make informed decisions with real-time analytics powered by AI',
+                            'icon' =>  _icons('lock'),
                         ],
                         [
-                            'heading' => 'Scalability',
-                            'body' => 'Easily accommodate higher data volumes, more users, and increased demands without major disruptions Empowers your business to evolve and meet future needs.',
-                            'icon' =>  _icons('layers'),
+                            'heading' => 'Enhanced Customer Experiences',
+                            'body' => 'Deliver personalized, professional support that keeps customers engaged and satisfied.',
+                            'icon' =>  _icons('lock'),
                         ],
                         [
-                            'heading' => 'Data Accuracy',
-                            'body' => 'Effortlessly handle larger data volumes, more users, and growing demands with minimal disruptions. Empower your business to adapt and fulfill future requirements seamlessly.',
-                            'icon' =>  _icons('database_lock'),
+                            'heading' => 'Localized Expertise',
+                            'body' => 'With deep knowledge of artificial intelligence in Malaysia, we cater to local business needs while staying aligned with global standards.',
+                            'icon' =>  _icons('lock'),
+                        ],
+                    ]
+                ],
+                'faqs' => [
+                    'title' => 'Ready to take your business to the next level with  AI & Application Integration in Malaysia?',
+                    'subTitle' => "Learn more",
+                    'items' => [
+                        [
+                            'heading' => 'What is application integration?',
+                            'body' => 'Application integration connects multiple software systems, enabling unified communication and consistent workflows.',
+                        ],
+                        [
+                            'heading' => 'How does AI integration improve business operations?',
+                            'body' => 'AI integration automates tasks, enhances decision-making, and personalized customer interactions for improved efficiency and growth.',
+                        ],
+                        [
+                            'heading' => 'What are omnichannel solutions?',
+                            'body' => 'Omnichannel solutions allow businesses to manage customer interactions across multiple platforms, like WhatsApp, email, and voice calls, in one unified system.',
+                        ],
+                        [
+                            'heading' => 'How is artificial intelligence used in Malaysia?',
+                            'body' => 'AI is transforming industries in Malaysia by automating processes, delivering predictive insights, and improving customer engagement in sectors like retail, finance, and customer service.',
+                        ],
+                        [
+                            'heading' => 'What is the role of APIs in integration?',
+                            'body' => 'APIs (Application Programming Interfaces) enable different software systems to communicate, ensuring data is shared efficiently between applications.',
+                        ],
+                        [
+                            'heading' => 'Why invest in AI-powered call center tools?',
+                            'body' => 'AI-powered call centers automate routine tasks, provide 24/7 support, and enhance customer satisfaction through smarter, faster interactions.',
                         ],
                     ]
                 ],
