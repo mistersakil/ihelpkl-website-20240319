@@ -300,24 +300,17 @@ class SolutionService
             ],
 
             [
+                'meta_title' => "Innovate Your Business with AI & Application Integration",
+                'meta_description' => ' Ascertain cohesive application integration and AI-powered solutions to enhance workflows, boost efficiency, and deliver personalized customer experiences.',
+                'meta_keywords' => 'application integration framework,integration in malay, artificial intelligence in malaysia, artificial intelligence integration, application development',
                 'title' => 'Application integration',
-                'subTitle' => 'Effortless application integration to Boost your business',
-                'slug' => route('web.solutions.details', ['slug' => 'application-integration']),
+                'subTitle' => ' Modern Solutions with AI and Application Integration',
+                'slug' => route('web.solutions.details', ['slug' => 'ai-application-integration-solution']),
+                'body' => "Discover the Power of CRM Platform",
                 'short_details' => "In today’s competitive market, staying ahead requires seamless workflows, intelligent tools, and enhanced customer experiences. At the core of this transformation lies the application of integration and AI-driven technologies, helping businesses achieve efficiency, scalability, and innovation.",
                 'img_featured' => Vite::imageWeb('blog-img3.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
-
-                'keyPoints' => [
-                    "Showcase Professionalism: Instill trust with a quality design",
-                    "Unique Online Presence: Differentiate yourself from competitors",
-                    "Lasting Impressions: Create memorable visuals and content",
-                    "Transform Ideas: Develop tailored web solutions for your vision",
-                    "Drive Business Growth: Implement SEO strategies for visibility",
-                    "Analytics Insights: Use data to improve engagement",
-                    "Enhance Online Presence: Integrate social media for broader reach",
-                    "Responsive Design: Ensure accessibility on all devices",
-
-                ],
+                'keyPoints' => [],
                 'services2' => [
                     'title' => 'Integration Services',
                     'subTitle' => 'What  Services Included?',
