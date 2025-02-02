@@ -312,28 +312,34 @@ class SolutionService
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
                 'keyPoints' => [],
                 'services2' => [
-                    'title' => 'Integration Services',
-                    'subTitle' => 'What  Services Included?',
+                    'title' => 'Business Growth',
+                    'subTitle' => 'What We Offer?',
+                    'shortDetails' => '',
                     'items' => [
                         [
-                            'heading' => 'API Integration',
-                            'body' => 'API integration streamlines processes, reduces costs, enhances security, improves customer experience, and fosters collaboration. Embrace it to unlock opportunities and drive innovation for your business success.',
-                            'icon' =>  _icons('api'),
-                        ],
-                        [
-                            'heading' => 'Data Integration',
-                            'body' => 'Centralize data from diverse sources for better connectivity and consolidation. Data integration ensures accurate and accessible information for informed decisions in inventory management, marketing, and financial reporting in retail.',
+                            'heading' => 'Application Integration Framework',
+                            'body' => 'Our robust frameworks ensure all your software systems work together effortlessly. By connecting APIs and synchronizing data, we streamline your business operations for improved productivity.',
                             'icon' =>  _icons('database'),
                         ],
                         [
-                            'heading' => 'Cloud Integration',
-                            'body' => 'Cloud integration services offer secure document storage, ensuring universal access for all employees and enabling seamless data transfer between local and cloud environments for optimized efficiency.',
-                            'icon' =>  _icons('upload'),
+                            'heading' => "AI Integration for Business Growth",
+                            'body' => "Unlock the power of artificial intelligence integration to automate repetitive tasks, personalize customer interactions, and gain actionable insights. Whether it's enhancing your AI call systems or powering predictive analytics, we tailor AI solutions to meet your needs",
+                            'icon' =>  _icons('business'),
                         ],
                         [
-                            'heading' => 'E-commerce Integration',
-                            'body' => 'Integrating e-commerce platforms with inventory, payroll, and CRM systems enhances online shopping and backend operations, streamlining processes and improving efficiency.',
-                            'icon' =>  _icons('cart'),
+                            'heading' => 'Omnichannel Solutions',
+                            'body' => 'Manage customer interactions across multiple platforms, including WhatsApp, email, and more. With our omnichannel contact center software, deliver consistent and efficient support across all channels.',
+                            'icon' =>  _icons('magic'),
+                        ],
+                        [
+                            'heading' => 'Advanced Call Center Tools',
+                            'body' => 'From call recording and monitoring to intelligent missed-call forwarding and personalized greetings, our call center solutions redefine customer service excellence in Malaysia and beyond.',
+                            'icon' =>  _icons('headset'),
+                        ],
+                        [
+                            'heading' => 'AI in Applications',
+                            'body' => "Whether it's powering application development for WhatsApp, integrating email systems, or designing cutting-edge",
+                            'icon' =>  _icons('robot'),
                         ],
                     ]
                 ],

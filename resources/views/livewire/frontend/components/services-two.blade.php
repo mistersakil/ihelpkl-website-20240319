@@ -22,7 +22,7 @@
                                     {{ $item['heading'] }}
                                 </h3>
                                 <p>
-                                    {{ $item['body'] }}
+                                    {{ $item['body'] ?? ''}}
                                 </p>
                                 <div class="top">
                                     <img src="{{ $img }}" alt="services-top" />
