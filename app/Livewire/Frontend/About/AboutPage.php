@@ -38,9 +38,10 @@ class AboutPage extends Component
         $this->data['about'] = [
             'title' => 'Who Are We?',
             'subTitle' => 'About iHelpKL',
-            'body' => 'iHelpKL, with over 12 years of experience through our parent company iHelpBD in Bangladesh, is introducing cutting-edge products and solutions in Malaysia. Our offerings include POS software, CRM systems, task and complaint management solutions, custom CRM development, web development, application integration, and AI-powered services.',
-            'imgThumb' => Vite::imageWeb('about-img1.jpg'),
-            'items' => [
+            'body' => '',
+            'short_details' => 'iHelpKL, with over 12 years of experience through our parent company iHelpBD in Bangladesh, is introducing cutting-edge products and solutions in Malaysia. Our offerings include POS software, CRM systems, task and complaint management solutions, custom CRM development, web development, application integration, and AI-powered services.',
+            'img_featured' => Vite::imageWeb('about_hero.jpg'),
+            'keyPoints' => [
             ]
         ];
 
