@@ -12,6 +12,7 @@ use Illuminate\Contracts\View\View;
 class ContactPage extends Component
 {
     public string $metaTitle = 'contact us';
+    public string $metaDescription = 'contact us';
     public string $module = 'contact';
 
     /**
