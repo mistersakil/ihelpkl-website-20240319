@@ -4,7 +4,6 @@ namespace App\Livewire\Frontend\Products;
 
 use Livewire\Component;
 use Livewire\Attributes\Title;
-use App\Services\ProductService;
 
 use Illuminate\Contracts\View\View;
 

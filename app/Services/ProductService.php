@@ -55,6 +55,8 @@ class ProductService
             
         
             [
+                'meta_title' => 'Point Of Sale',
+                'meta_description' => 'The ultimate omni-channel approach to sales and customer management',
                 'title' => 'Point Of Sale',
                 'subTitle' => 'The ultimate omni-channel approach to sales and customer management',
                 'slug' => route('web.products.details', ['slug' => 'point-of-sale']),
@@ -213,6 +215,8 @@ class ProductService
             ],
 
             [
+                'meta_title' => 'Omni-channel Contact Center',
+                'meta_description' => 'Integrated Customer Communication: Omni-channel Contact Center Solution',
                 'title' => 'Omni-channel Contact Center',
                 'subTitle' => 'Integrated Customer Communication: Omni-channel Contact Center Solution',
                 'slug' => route('web.products.details', ['slug' => 'omni-channel']),
@@ -283,6 +287,8 @@ class ProductService
 
 
             [
+                'meta_title' => 'Task Management',
+                'meta_description' => 'The ultimate solution for task refinement and process improvement',
                 'title' => 'Task Management',
                 'subTitle' => 'The ultimate solution for task refinement and process improvement',
                 'slug' => route('web.products.details', ['slug' => 'task-management']),
@@ -414,6 +420,8 @@ class ProductService
             ],
             
             [
+                'meta_title' => 'Complain Management System',
+                'meta_description' => 'All-in-one solution for help desk and customer service operation',
                 'title' => 'Complain Management System',
                 'subTitle' => 'All-in-one solution for help desk and customer service operations',
                 'slug' => route('web.products.details', ['slug' => 'complain-management']),
