@@ -2,7 +2,7 @@
     (function($) {
         "use strict";
 
-        const navigationArros = [
+        const navigationArrows = [
             '<i class="{{ _icons('arrow_left2') }}"></i>',
             '<i class="{{ _icons('arrow_right2') }}"></i>',
         ];
@@ -66,7 +66,7 @@
             center: true,
             autoplay: true,
             autoplayHoverPause: true,
-            navText: navigationArros,
+            navText: navigationArrows,
 
         });
 
@@ -82,7 +82,7 @@
             center: true,
             autoplay: true,
             autoplayHoverPause: true,
-            navText: navigationArros,
+            navText: navigationArrows,
             responsive: {
                 0: {
                     items: 1,
@@ -113,7 +113,7 @@
             animateIn: 'fadeInUp',
             autoplay: true,
             autoplayHoverPause: true,
-            navText: navigationArros,
+            navText: navigationArrows,
             responsive: {
                 0: {
                     items: 1
@@ -140,9 +140,36 @@
             autoplay: true,
             smartSpeed: 1500,
             autoplayHoverPause: true,
-            navText: navigationArros,
+            navText: navigationArrows,
         })
 
+
+
+        // Project Slider
+        $("#homeProductsSlider").owlCarousel({
+            loop: true,
+            margin: 30,
+            autoHeight: true,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayHoverPause: true,
+            navText: navigationArrows,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                769: {
+                    items: 2,
+                },
+                1000: {
+                    items: 3,
+                },
+                1200: {
+                    items: 3,
+                },
+            },
+        });
 
         // Testimonial Slider
         $(".testimonial-slider").owlCarousel({
@@ -153,7 +180,7 @@
             dots: false,
             autoplay: true,
             autoplayHoverPause: true,
-            navText: navigationArros,
+            navText: navigationArrows,
             responsive: {
                 0: {
                     items: 1,
@@ -178,7 +205,7 @@
             dots: false,
             autoplay: true,
             autoplayHoverPause: true,
-            navText: navigationArros,
+            navText: navigationArrows,
         });
 
         // FAQ Accordion JS
