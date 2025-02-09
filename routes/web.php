@@ -13,14 +13,15 @@ use App\Livewire\Backend\Sliders\SliderEditPage;
 use App\Livewire\Backend\Sliders\SliderListPage;
 use App\Livewire\Frontend\Blogs\BlogDetailsPage;
 use App\Livewire\Backend\Dashboard\DashboardPage;
+use App\Livewire\Frontend\Others\RequestDemoPage;
 use App\Livewire\Backend\Sliders\SliderCreatePage;
 use App\Livewire\Frontend\About\PrivacyPolicyPage;
 use App\Livewire\Frontend\Errors\FourZeroFourPage;
 use App\Livewire\Frontend\About\TermsConditionPage;
+use App\Livewire\Frontend\Others\PriceQuotationPage;
 use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
 use App\Livewire\Frontend\Products\ProductDetailsPage;
-use App\Livewire\Frontend\Products\RequestDemoPage;
 use App\Livewire\Frontend\Solutions\SolutionDetailsPage;
 
 Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function () {
@@ -36,9 +37,9 @@ Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function 
     Route::get('/privacy-policy', PrivacyPolicyPage::class)->name('privacy.policy');
     Route::get('/terms-conditions', TermsConditionPage::class)->name('terms.conditions');
     Route::get('/request-demo', RequestDemoPage::class)->name('request.demo');
+    Route::get('/price-quotation', PriceQuotationPage::class)->name('price.quotation');
     Route::get('/404', FourZeroFourPage::class)->name('four.zero.four');
     Route::get('/clear/cache', Clear::class);
-    
 });
 
 ## Backend middleware group

@@ -1,20 +1,19 @@
 <?php
 
-namespace App\Livewire\Frontend\Products;
+namespace App\Livewire\Frontend\Others;
 
 use Livewire\Component;
-use Livewire\Attributes\Title;
 
 use Illuminate\Contracts\View\View;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
-class RequestDemoPage extends Component
+class PriceQuotationPage extends Component
 {
     ## Component props
-    public string $metaTitle = 'request demo';
-    public string $module = 'demo';
+    public string $metaTitle = 'get price quotation';
+    public string $module = 'quotation';
 
 
     /**
@@ -24,6 +23,6 @@ class RequestDemoPage extends Component
      */
     public function render(): View
     {
-        return view('livewire.frontend.products.request-demo-page');
+        return view('livewire.frontend.others.price-quotation-page');
     }
 }

@@ -79,7 +79,7 @@
     transition: var(--transition);
 }
 
-.blog-benefit-content ul li:hover .listTitle{
+.blog-benefit-content ul li:hover .listTitle {
     color: var(--greenColor);
 }
 .blog-article .quote ul li {
@@ -90,7 +90,7 @@
 }
 
 .services-area-two .section-title h2 {
-    max-width: fit-content;;
+    max-width: fit-content;
 }
 
 .nav-sidebar {
@@ -98,4 +98,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+}
+
+.desktop-nav .navbar .navbar-nav .nav-item a {
+    text-transform: capitalize;
 }

@@ -73,8 +73,10 @@ class Navbar extends Component
                         'isActive' => _parse_url('web.contact') ? 'active' : '',
 
                     ],
+
                 ]
             ],
+
 
             [
                 'title' => __('learning'),
@@ -88,6 +90,12 @@ class Navbar extends Component
 
                     ],
                 ]
+            ],
+            [
+                'title' => __('get price quotation'),
+                'link' => route('web.price.quotation'),
+                'isActive' => _parse_url('web.price.quotation') ? 'active' : '',
+
             ],
 
 
