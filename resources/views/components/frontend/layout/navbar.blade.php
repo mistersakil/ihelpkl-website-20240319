@@ -14,7 +14,8 @@
     </div>
     <!-- /.mobile-responsive-nav -->
 
-    <div class="desktop-nav nav-area desktop-nav-one" style="background: #f85f0a42;">
+    <div class="desktop-nav nav-area desktop-nav-one"
+        style="background: #eeeeee;    border-bottom: 1px dashed darkgray;">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-light ">
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -31,7 +32,8 @@
                                         <ul class="dropdown-menu">
                                             @foreach ($item['children'] as $childKey => $childItem)
                                                 <li class="nav-item">
-                                                    <a wire:navigate href="{{ $childItem['link'] }}" class="nav-link {{ $childItem['isActive'] }}">
+                                                    <a wire:navigate href="{{ $childItem['link'] }}"
+                                                        class="nav-link {{ $childItem['isActive'] }}">
                                                         {{ $childItem['title'] }}
                                                     </a>
                                                 </li>
@@ -39,7 +41,8 @@
                                             @endforeach
                                         </ul>
                                     @else
-                                        <a wire:navigate href="{{ $item['link'] }}" class="nav-link {{ $item['isActive'] }}">
+                                        <a wire:navigate href="{{ $item['link'] }}"
+                                            class="nav-link {{ $item['isActive'] }}">
                                             {{ $item['title'] }}
                                         </a>
                                     @endif
@@ -51,6 +54,10 @@
                     <!-- /.navbar-nav -->
 
                     <div class="nav-sidebar">
+                        {{-- <a href="contact.html" class="default-btn border-radius-5">
+                            <span>{{ __('request') }}</span>
+                            <span>{{ __('demo') }}</span>
+                        </a> --}}
 
                         <div class="nav-search">
                             <i id="search-btn" class="bx bx-search"></i>
@@ -68,17 +75,14 @@
                             <!-- /.search-overlay -->
                         </div>
                         <!-- /.nav-search -->
-                    </div>
-                    <!-- /.nav-sidebar -->
 
-                    <div class="mobile-nav-area">
-                        <div class="mobile-icon">
-                            <a href="#" class="burger-menu menu-icon-one d-in-line">
-                                <i class="flaticon-menu"></i>
+                        <div class="modal-icon">
+                            <a wire:navigate href="{{ route('web.request.demo') }}" class="default-btn border-radius-5">
+                                <span>{{ __('request demo') }}</span>
                             </a>
                         </div>
                     </div>
-                    <!-- /.mobile-nav-area -->
+                    <!-- /.nav-sidebar -->
                 </div>
                 <!-- /.navbar-collapse -->
             </nav>

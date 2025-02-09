@@ -23,8 +23,6 @@
 
     @includeIf('components.frontend.layout.meta')
 
-
-
     @vite(['resources/assets/web/web-js.js'])
 
     @livewireStyles

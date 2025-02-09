@@ -92,3 +92,10 @@
 .services-area-two .section-title h2 {
     max-width: fit-content;;
 }
+
+.nav-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
