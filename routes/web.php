@@ -20,6 +20,7 @@ use App\Livewire\Frontend\About\TermsConditionPage;
 use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
 use App\Livewire\Frontend\Products\ProductDetailsPage;
+use App\Livewire\Frontend\Products\RequestDemoPage;
 use App\Livewire\Frontend\Solutions\SolutionDetailsPage;
 
 Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function () {
@@ -34,8 +35,10 @@ Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function 
     Route::get('/solutions/{slug}', SolutionDetailsPage::class)->name('solutions.details');
     Route::get('/privacy-policy', PrivacyPolicyPage::class)->name('privacy.policy');
     Route::get('/terms-conditions', TermsConditionPage::class)->name('terms.conditions');
+    Route::get('/request-demo', RequestDemoPage::class)->name('request.demo');
     Route::get('/404', FourZeroFourPage::class)->name('four.zero.four');
     Route::get('/clear/cache', Clear::class);
+    
 });
 
 ## Backend middleware group

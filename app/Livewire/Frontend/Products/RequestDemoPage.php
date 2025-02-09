@@ -10,11 +10,11 @@ use Illuminate\Contracts\View\View;
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
-class ProductListPage extends Component
+class RequestDemoPage extends Component
 {
     ## Component props
-    public string $metaTitle = 'our products';
-    public string $module = 'products';
+    public string $metaTitle = 'request demo';
+    public string $module = 'demo';
 
 
     /**
@@ -24,6 +24,6 @@ class ProductListPage extends Component
      */
     public function render(): View
     {
-        return view('livewire.frontend.products.product-list-page');
+        return view('livewire.frontend.products.request-demo-page');
     }
 }

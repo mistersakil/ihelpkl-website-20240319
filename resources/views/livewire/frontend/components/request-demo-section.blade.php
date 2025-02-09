@@ -1,8 +1,8 @@
-<div class="contact-area">
+<div class="contact-area my-4">
     <div class="container">
         <div class="contact-form">
             <div class="section-title">
-                <span class="sp-title2">Request Demo</span>
+                <span class="sp-title2">{{ __('request demo') }}</span>
                 <h2> Unlock the Full Potential of Our Platform</h2>
             </div>
             <form  novalidate="true">
