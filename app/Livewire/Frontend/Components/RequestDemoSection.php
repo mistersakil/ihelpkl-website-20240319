@@ -17,7 +17,6 @@ class RequestDemoSection extends Component
     public string $sectionSubTitle;
     public string $isShowSectionHeader;
     public int $limit;
-
     public array $state;
 
     ## Services
@@ -66,7 +65,7 @@ class RequestDemoSection extends Component
      */
     public function render(): View
     {
-        $this->dataList = $this->productService->getStaticModels(limit: $this->limit);
+        $this->dataList = collect($this->productService->getStaticModels(limit: $this->limit))->pluck('title','id')->toArray();
         return view('livewire.frontend.components.request-demo-section');
     }
 }

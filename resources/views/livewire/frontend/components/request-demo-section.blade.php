@@ -1,16 +1,17 @@
 <div class="contact-area my-4">
+    {{-- @dump($dataList) --}}
     <div class="container">
         <div class="contact-form">
             <div class="section-title">
                 <span class="sp-title2">{{ __('request demo') }}</span>
-                <h2>{{ __('demo heading text') }}</h2>                
+                <h2>{{ __('demo heading text') }}</h2>
             </div>
             <form novalidate="true">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
                             <input type="text" name="name" id="name" class="form-control"
-                                placeholder="{{ __('your name') }}">
+                                placeholder="{{ __('your name') }}" />
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -27,7 +28,7 @@
 
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <select class="form-control" aria-label="Default select example">
+                            <select name="country_id" id="country_id" class="form-control">
                                 <option value="">{{ __('select your country') }}</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -46,19 +47,23 @@
                         </div>
                     </div>
                     <!-- /.col -->
-
-                    <div class="col-lg-6">
-                        <div class="form-group">
-                            <select class="form-control" aria-label="Default select example">
-                                <option selected>{{ __('select product') }}</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                            <div class="help-block with-errors"></div>
+                    @if (is_array($dataList) && count($dataList))
+                        <div class="col-12">
+                            <div class="form-group">
+                                <select class="form-control" name="product_id" id="product_id">
+                                    <option selected>{{ __('select product') }}</option>
+                                    @foreach ($dataList as $key => $value)
+                                        <option value="{{ $key }}">{{ $value }}</option>
+                                    @endforeach
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- /.col -->
+                        <!-- /.col -->
+
+
+                    @endif
+
 
                     <div class="col-lg-12 col-md-12">
                         <div class="form-group">
