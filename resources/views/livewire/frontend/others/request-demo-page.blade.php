@@ -5,6 +5,5 @@
         <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
     </x-slot:innerBanner>
 
-
     <livewire:frontend.components.request-demo-section sectionTitle="request demo" sectionSubTitle="our demos" />
 </main>

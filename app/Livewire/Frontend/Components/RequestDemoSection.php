@@ -18,6 +18,8 @@ class RequestDemoSection extends Component
     public string $isShowSectionHeader;
     public int $limit;
 
+    public array $state;
+
     ## Services
     private ProductService $productService;
 
@@ -41,6 +43,20 @@ class RequestDemoSection extends Component
         $this->isShowSectionHeader = (!empty($this->sectionTitle) || !empty($this->sectionSubTitle)) ? true : false;
 
         $this->limit = $limit;
+
+        $this->state = $this->getStateDefault();
+    }
+
+    private function getStateDefault(): array
+    {
+        return [
+            'name' => '',
+            'email' => '',
+            'country_id' => '',
+            'phone' => '',
+            'product_id' => '',
+            'message' => '',
+        ];
     }
 
     /**

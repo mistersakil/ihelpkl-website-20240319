@@ -3,67 +3,93 @@
         <div class="contact-form">
             <div class="section-title">
                 <span class="sp-title2">{{ __('request demo') }}</span>
-                <h2> Unlock the Full Potential of Our Platform</h2>
+                <h2>{{ __('demo heading text') }}</h2>                
             </div>
-            <form  novalidate="true">
+            <form novalidate="true">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <input type="text" name="name" id="name" class="form-control" required=""
-                                data-error="Please Enter Your Name" placeholder="Name">
+                            <input type="text" name="name" id="name" class="form-control"
+                                placeholder="{{ __('your name') }}">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
+                    <!-- /.col -->
 
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control" required=""
-                                data-error="Please Enter Your Email" placeholder="Email">
+                            <input type="email" name="email" id="email" class="form-control"
+                                placeholder="{{ __('your email') }}">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
+                    <!-- /.col -->
 
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <input type="text" name="phone_number" id="phone_number" required=""
-                                data-error="Please Enter Your number" class="form-control" placeholder="Phone Number">
+                            <select class="form-control" aria-label="Default select example">
+                                <option value="">{{ __('select your country') }}</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
+                    <!-- /.col -->
 
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                required="" data-error="Please Enter Your Subject" placeholder="Your Subject">
+                            <input type="text" name="mobile_number" id="mobile_number" class="form-control"
+                                placeholder="{{ __('your mobile number') }}">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
+                    <!-- /.col -->
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <select class="form-control" aria-label="Default select example">
+                                <option selected>{{ __('select product') }}</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
 
                     <div class="col-lg-12 col-md-12">
                         <div class="form-group">
                             <textarea name="message" class="form-control" id="message" cols="30" rows="5" required=""
-                                data-error="Write your message" placeholder="Your Message"></textarea>
+                                data-error="Write your message" placeholder="{{ __('your message') }}"></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
+                    <!-- /.col -->
 
                     <div class="col-lg-12 col-md-12">
                         <div class="agree-label form-text">
-                            <label>
-                                Experience the future of innovation with a personalized demo. Discover powerful features, seamless integrations, and an intuitive user experience.
-                            </label>
+                            {{ __('demo agree text') }}
                         </div>
                     </div>
+                    <!-- /.col -->
 
                     <div class="col-lg-12 col-md-12">
                         <button type="submit" class="default-btn disabled">
-                            Request Demo
+                            {{ __('request a demo') }}
                         </button>
                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                         <div class="clearfix"></div>
                     </div>
+                    <!-- /.col -->
                 </div>
+                <!-- /.row -->
             </form>
+            <!-- /form -->
         </div>
+        <!-- /.contact-form -->
     </div>
+    <!-- /.container -->
 </div>

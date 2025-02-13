@@ -143,5 +143,13 @@
     "recent blogs": "Recent blogs",
     "request demo": "Request demo",
     "demo": "Demo",
-    "get price quotation": "Get price quotation"
+    "get price quotation": "Get price quotation",
+    "your name":"Your name",
+    "your email":"Your email",
+    "your mobile number":"Your mobile number",
+    "your message":"Your message",
+    "select product": "Select product",
+    "select your country" :"Select your country",
+    "demo heading text" : "Unlock the full potential of our platform",
+    "demo agree text" : "Experience the future of innovation with a personalized demo. Discover powerful features, seamless integrations, and an intuitive user experience"
 }
