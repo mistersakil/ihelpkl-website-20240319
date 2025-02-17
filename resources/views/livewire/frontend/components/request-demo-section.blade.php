@@ -1,5 +1,6 @@
 <div class="contact-area my-4">
     {{-- @dump($dataList) --}}
+    {{-- @dump($countries) --}}
     <div class="container">
         <div class="contact-form">
             <div class="section-title">
@@ -26,18 +27,22 @@
                     </div>
                     <!-- /.col -->
 
-                    <div class="col-lg-6">
-                        <div class="form-group">
-                            <select name="country_id" id="country_id" class="form-control">
-                                <option value="">{{ __('select your country') }}</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                            <div class="help-block with-errors"></div>
+                    @if (count($countries))
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <select name="country_id" id="country_id" class="form-control">
+                                    <option value="">{{ __('select your country') }}</option>
+                                    @foreach ($countries as $key => $country)
+                                        <option value="{{ $country['id'] }}">{{ $country['name'] }}</option>
+                                    @endforeach
+
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- /.col -->
+                        <!-- /.col -->
+                    @endif
 
                     <div class="col-lg-6">
                         <div class="form-group">

@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend\Components;
 
 use Livewire\Component;
+use App\Services\CountryService;
 use App\Services\ProductService;
 use Illuminate\Contracts\View\View;
 
@@ -11,6 +12,7 @@ use Illuminate\Contracts\View\View;
  */
 class RequestDemoSection extends Component
 {
+
     ## Component props
     public array $dataList;
     public string $sectionTitle;
@@ -18,13 +20,16 @@ class RequestDemoSection extends Component
     public string $isShowSectionHeader;
     public int $limit;
     public array $state;
+    public array $countries;
 
     ## Services
     private ProductService $productService;
+    private CountryService $countryService;
 
     public function boot()
     {
         $this->productService = new ProductService;
+        $this->countryService = new CountryService;
     }
 
     /**
@@ -44,6 +49,8 @@ class RequestDemoSection extends Component
         $this->limit = $limit;
 
         $this->state = $this->getStateDefault();
+
+        $this->countries = $this->countryService->getCountries();
     }
 
     private function getStateDefault(): array
@@ -66,6 +73,9 @@ class RequestDemoSection extends Component
     public function render(): View
     {
         $this->dataList = collect($this->productService->getStaticModels(limit: $this->limit))->pluck('title','id')->toArray();
+        
+
+
         return view('livewire.frontend.components.request-demo-section');
     }
 }

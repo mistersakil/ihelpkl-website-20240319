@@ -31,6 +31,7 @@ return [
 		'de',
 		'en',
 		'es',
+		'fa',
 		'fr',
 		'hr',
 		'it',
@@ -55,7 +56,7 @@ return [
 		'cities' => true,
 		'timezones' => true,
 		'currencies' => true,
-		'languages' => false,
+		'languages' => true,
 	],
 	/*
 	|--------------------------------------------------------------------------
