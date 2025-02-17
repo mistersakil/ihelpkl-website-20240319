@@ -58,3 +58,9 @@ Route::middleware($backendMiddleware)->prefix('admin')->name('admin.')->group(fu
     ### Admin login
     Route::get('/login', LoginPage::class)->name('login')->withoutMiddleware([AuthCheckMiddleware::class]);;
 });
+
+
+
+
+
+

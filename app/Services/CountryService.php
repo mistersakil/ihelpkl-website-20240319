@@ -11,7 +11,7 @@ class CountryService
      */
     public function getCountries()
     {
-        $action =  World::countries();
+        $action =  World::countries(['fields' => 'id, name, phone_code']);
 
         if ($action->success) {
           $countries = $action->data;
