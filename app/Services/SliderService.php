@@ -352,7 +352,7 @@ class SliderService
         return [
             [
                 'title' => "Advanced CRM, Ticketing, and Lead Management Tools",
-                'slider_image' => Vite::imageWeb('home-two-img1.jpg'),
+                'slider_image' => Vite::imageWeb('best-crm-software-in-malaysia.png'),
             ],
             [
                 'title' => "Effortless application integration to Boost your business",
