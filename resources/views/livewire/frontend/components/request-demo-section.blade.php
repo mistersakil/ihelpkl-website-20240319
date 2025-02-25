@@ -1,6 +1,6 @@
 <div class="contact-area my-4">
     {{-- @dump($dataList) --}}
-    {{-- @dump($countries) --}}
+    @dump($countries)   
     <div class="container">
         <div class="contact-form">
             <div class="section-title">
@@ -8,7 +8,8 @@
                 <h2>{{ __('demo heading text') }}</h2>
             </div>
 
-            <form novalidate="true">
+            <form novalidate="true" wire.submit.prevent="request_demo">
+                @csrf
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">

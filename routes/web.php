@@ -24,9 +24,6 @@ use App\Livewire\Frontend\Solutions\SolutionListPage;
 use App\Livewire\Frontend\Products\ProductDetailsPage;
 use App\Livewire\Frontend\Solutions\SolutionDetailsPage;
 
-use App\Http\Controllers\DemoRequestController;
-
-
 
 Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function () {
     Route::get('/', HomePage::class)->name('home');
@@ -44,8 +41,6 @@ Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function 
     Route::get('/price-quotation', PriceQuotationPage::class)->name('price.quotation');
     Route::get('/404', FourZeroFourPage::class)->name('four.zero.four');
     Route::get('/clear/cache', Clear::class);
-    
-    Route::post('/request-demo', [DemoRequestController::class, 'store'])->name('demo.request.store');
 });
 
 ## Backend middleware group
