@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\DemoRequest;
+use App\Models\Lead;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -16,7 +16,7 @@ class LeadSeeder extends Seeder
 
         ## Truncate existing records
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
-        DemoRequest::truncate(); // Truncate the 'leads' table
+        Lead::truncate(); // Truncate the 'leads' table
 
         ## Starting progressbar
         $this->command->getOutput()->progressStart($total_records);
@@ -26,7 +26,7 @@ class LeadSeeder extends Seeder
         $product_ids = [1, 2, 3, 4]; // Example product IDs
 
         // Manually create a few leads
-        DemoRequest::create([
+        Lead::create([
             'name' => 'John Doe',
             'email' => 'john.doe@example.com',
             'country_id' => $country_ids[array_rand($country_ids)], // Random country_id
@@ -39,7 +39,7 @@ class LeadSeeder extends Seeder
 
         // Loop to create random leads
         for ($i = 0; $i < $total_records; $i++) {
-            DemoRequest::create([
+            Lead::create([
                 'name' => 'Lead ' . ($i + 1), // Example lead name
                 'email' => 'lead' . ($i + 1) . '@example.com',
                 'country_id' => $country_ids[array_rand($country_ids)], // Random country_id
