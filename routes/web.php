@@ -23,6 +23,7 @@ use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
 use App\Livewire\Frontend\Products\ProductDetailsPage;
 use App\Livewire\Frontend\Solutions\SolutionDetailsPage;
+use App\Livewire\Backend\Leads\LeadsListPage;
 
 
 Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function () {
@@ -56,12 +57,10 @@ Route::middleware($backendMiddleware)->prefix('admin')->name('admin.')->group(fu
     Route::get('/sliders', SliderListPage::class)->name('sliders.list');
     Route::get('/sliders/create', SliderCreatePage::class)->name('sliders.create');
     Route::get('/sliders/edit/{id}', SliderEditPage::class)->name('sliders.edit');
+
+    ### Leads
+    Route::get('/leads', LeadsListPage::class)->name('leads.list');
+
     ### Admin login
     Route::get('/login', LoginPage::class)->name('login')->withoutMiddleware([AuthCheckMiddleware::class]);;
 });
-
-
-
-
-
-

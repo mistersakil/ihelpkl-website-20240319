@@ -1,6 +1,6 @@
 <div class="contact-area my-4">
     {{-- @dump($dataList) --}}
-    @dump($countries)   
+    {{-- @dump($countries) --}}
     <div class="container">
         <div class="contact-form">
             <div class="section-title">
@@ -8,7 +8,7 @@
                 <h2>{{ __('demo heading text') }}</h2>
             </div>
 
-            <form novalidate="true" wire.submit.prevent="request_demo">
+            <form novalidate="true" wire.submit.prevent="submitForm">
                 @csrf
                 <div class="row">
                     <div class="col-lg-6">
@@ -45,9 +45,16 @@
                     <!-- /.col -->
                     @endif
 
+                    
                     <div class="col-lg-6">
                         <div class="form-group">
                             <select name="country_id" id="country_id" class="form-control">
+                                <!-- <option value="">{{ __('select your country') }}</option>
+                                @foreach ($countries as $key => $country)
+                                <option value="{{ $country['id'] }}">{{ $country['name'] }}</option>
+                                @endforeach -->
+
+
                                 <option value="">{{ __('select your country') }}</option>
                                 @foreach ($countries as $key => $country)
                                 <option value="{{ $country['id'] }}">{{ $country['name'] }}</option>
@@ -56,6 +63,7 @@
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
+       
 
                     <div class="col-lg-6">
                         <div class="form-group">
