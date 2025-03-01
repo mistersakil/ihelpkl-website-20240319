@@ -1,5 +1,21 @@
 <main>
     <x-backend.addons.card-component>
+        <x-slot:breadcrumb>
+            <x-backend.addons.breadcrumb-component :title="$module" :active-item="$activeItem">
+
+                {{-- @can('sliders-list') --}}
+                <x-slot:add_new>
+                    <livewire:backend.addons.add-new-btn-component title="add new" icon="add"
+                        route="admin.sliders.create" />
+                </x-slot:add_new>
+                {{-- @endcan --}}
+
+            </x-backend.addons.breadcrumb-component>
+        </x-slot:breadcrumb>
+        <!-- /:breadcrumb -->
+
+
+        
         <div class="row">
             <div class="col-sm-12 table-responsive">
 
@@ -19,29 +35,29 @@
 
                     <tbody>
                         @foreach ($leads as $index => $lead)
-                        <tr class="odd" wire:key="slider_key_{{ $lead->id }}">
-                            <td>
-                                {{ $index + 1 }}
-                            </td>
-                            <td>
-                                {{ $lead->name }}
-                            </td>
-                            <td>
-                                {{ $lead->email }}
-                            </td>
-                            <td>
-                                {{ $lead->country_id }}
-                            </td>
-                            <td>
-                                {{ $lead->mobile_number }}
-                            </td>
-                            <td>
-                                {{ $lead->product_id }}
-                            </td>
-                            <td>
-                                {{ $lead->message }}
-                            </td>
-                        </tr>
+                            <tr class="odd" wire:key="slider_key_{{ $lead->id }}">
+                                <td>
+                                    {{ $index + 1 }}
+                                </td>
+                                <td>
+                                    {{ $lead->name }}
+                                </td>
+                                <td>
+                                    {{ $lead->email }}
+                                </td>
+                                <td>
+                                    {{ $lead->country_id }}
+                                </td>
+                                <td>
+                                    {{ $lead->mobile_number }}
+                                </td>
+                                <td>
+                                    {{ $lead->product_id }}
+                                </td>
+                                <td>
+                                    {{ $lead->message }}
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>

@@ -2,7 +2,6 @@
 
 namespace App\Livewire\Backend\Leads;
 
-use Livewire\Component;
 use Livewire\Attributes\Url;
 use Livewire\Attributes\Title;
 use App\Services\LeadService;
@@ -17,14 +16,46 @@ class LeadsListPage extends BackendComponent
     use BackendPaginationTrait;
     use BackendFilterTrait;
 
-    // Services
+    # Module Props
+    public string $module;
+    public string $activeItem;
+
+    ## Filter properties
+    #[Url(as: 'query', except: '', history: true)]
+    public ?string $search = '';
+    public array $filter = [];
+
+
+    # Services
     private LeadService $leadService;
 
-    // Mount method to initialize leadService
-    public function mount(LeadService $leadService)
+    /**
+     * Create a new component instance
+     *
+     * @return void
+     */
+    public function boot(): void
     {
-        $this->leadService = $leadService;
+        // $this->sliderService = new SliderService();
+        $this->leadService = new leadService();
     }
+
+    /**
+     * Create a new component instance.
+     * @return void
+     */
+    public function mount()
+    {
+        $this->module = __('leads');
+        $this->activeItem = __('list');
+        $this->filter = $this->filterDefaultValues();
+    }
+
+
+    
+
+
+
 
     #[Layout('components.backend.layout.backend-layout')]
     #[Title('Leads List')]
