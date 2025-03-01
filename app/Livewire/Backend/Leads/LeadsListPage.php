@@ -51,12 +51,28 @@ class LeadsListPage extends BackendComponent
         $this->filter = $this->filterDefaultValues();
     }
 
+    /**
+     * Swap order between two model
+     *
+     * @param integer $modelId
+     * @param string $type
+     * @return void
+     */
+    public function swapOrder(int $modelId, string $type): void
+    {
+        $this->filter = [
+            ...$this->filter,
+            'orderBy' => 'order',
+            'orderDirection' => 'asc',
+        ];
+        $this->leadService->swapOrder(modelId: $modelId, type: $type);
+    }
 
-    
 
-
-
-
+    /**
+     * Render view
+     * @return \Illuminate\Contracts\View\View
+     */
     #[Layout('components.backend.layout.backend-layout')]
     #[Title('Leads List')]
     public function render()
@@ -64,6 +80,13 @@ class LeadsListPage extends BackendComponent
         // Correctly calling the method using the instance
         $leads = $this->leadService->getAll();
 
-        return view('livewire.backend.leads.leads-list-page', compact('leads'));
+        $models = $this->leadService->getFilteredModels(
+            [...$this->filter, 'searchText' => $this->search]
+        );
+        $countModel = $this->leadService->countAllModel();
+        $lowerOrderModel = $this->leadService->getOnlyModelByOrderDirection('asc');
+        $highestOrderModel = $this->leadService->getOnlyModelByOrderDirection('desc');
+
+        return view('livewire.backend.leads.leads-list-page', compact('leads', 'models', 'countModel', 'lowerOrderModel', 'highestOrderModel'));
     }
 }
