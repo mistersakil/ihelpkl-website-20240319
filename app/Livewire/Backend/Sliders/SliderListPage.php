@@ -96,6 +96,7 @@ class SliderListPage extends BackendComponent
     {
         $this->resetPage();
     }
+    
 
     /**
      * Render view

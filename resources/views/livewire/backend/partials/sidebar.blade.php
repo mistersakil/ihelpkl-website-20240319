@@ -48,9 +48,31 @@
                         </ul>
                     @endif
                 </li>
+
+                <li>
+                    <a class="has-arrow" href="javascript:void(0)">
+                        <div class="parent-icon">
+                            <i class="{{ $nav_link['nav_icon'] }}"></i>
+                        </div>
+                        <div class="menu-title text-capitalize">
+                            {{ $nav_link['nav_title'] }}
+                        </div>
+                    </a>
+                    @if ($nav_link['nav_has_children'])
+                        <ul>
+                            @foreach ($nav_link['nav_children'] as $nav_child)
+                                <li>
+                                    <a href="{{ $nav_child['url'] }}" class="text-capitalize">
+                                        <i class="{{ $icon_circle }}"></i>
+                                        {{ $nav_child['title'] }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </li>
             @endif
         @endforeach
-
     </ul>
     <!-- /.metismenu -->
 </div>

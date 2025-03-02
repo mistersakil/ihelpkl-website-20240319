@@ -19,7 +19,7 @@ class Sidebar extends Component
      */
     public function __construct()
     {
-        $this->logo = Vite::imageRoot('logo.png');
+        $this->logo = Vite::imageRoot('_logo.png');
         $this->nav_links = $this->get_nav_links();
         $this->icon_circle = _icons("circle");
     }
@@ -43,6 +43,14 @@ class Sidebar extends Component
                 'nav_url' => route('admin.sliders.list'),
                 'nav_icon' => _icons('sliders'),
                 'nav_title' => __('sliders'),
+                'nav_is_readonly' => false,
+                'nav_has_children' => false,
+                'nav_children' => false
+            ],
+            [
+                'nav_url' => route('admin.leads.list'),
+                'nav_icon' => _icons('lead'),
+                'nav_title' => __('leads'),
                 'nav_is_readonly' => false,
                 'nav_has_children' => false,
                 'nav_children' => false

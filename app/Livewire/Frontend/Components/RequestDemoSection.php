@@ -72,9 +72,9 @@ class RequestDemoSection extends Component
      */
     public function render(): View
     {
-        $this->dataList = collect($this->productService->getStaticModels(limit: $this->limit))->pluck('title','id')->toArray();
-        
+        $this->dataList = collect($this->productService->getStaticModels(limit: $this->limit))->pluck('title', 'id')->toArray();
 
+        $this->countries = $this->countryService->getCountries();
 
         return view('livewire.frontend.components.request-demo-section');
     }
