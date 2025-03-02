@@ -23,12 +23,12 @@
                     <span class="input-group-text"><i class="{{ _icons('per_page') }}"></i></span>
                     <select class="form-select" wire:model.live="filter.perPage">
                         @isset($filter['perPageList'])
-                            @foreach ($filter['perPageList'] as $key => $perPage)
-                                <option value="{{ $perPage['number'] }}" @if ($perPage['default']) selected @endif
-                                    wire:key="perPage_{{ $key }}">
-                                    {{ $perPage['label'] }}
-                                </option>
-                            @endforeach
+                        @foreach ($filter['perPageList'] as $key => $perPage)
+                        <option value="{{ $perPage['number'] }}" @if ($perPage['default']) selected @endif
+                            wire:key="perPage_{{ $key }}">
+                            {{ $perPage['label'] }}
+                        </option>
+                        @endforeach
                         @endisset
                     </select>
                 </div>
@@ -79,48 +79,51 @@
         <div class="row">
             <div class="col-sm-12 table-responsive">
                 @if ($models->count())
-                    <table id="example" class="table table-striped table-bordered dataTable" style="width: 100%;"
-                        role="grid" aria-describedby="example_info">
-                        <thead>
-                            <tr role="row">
-                                <th>SL</th>
-                                <th>{{ __('name') }}</th>
-                                <th>{{ __('email') }}</th>
-                                <th>{{ __('country_id') }}</th>
-                                <th class="text-center">{{ __('mobile_number') }}</th>
-                                <th>{{ __('product_id') }}</th>
-                                <th class="text-center">{{ __('message') }}</th>
-                            </tr>
-                        </thead>
+                <table id="example" class="table table-striped table-bordered dataTable" style="width: 100%;"
+                    role="grid" aria-describedby="example_info">
+                    <thead>
+                        <tr role="row">
+                            <th>SL</th>
+                            <th>{{ __('name') }}</th>
+                            <th>{{ __('email') }}</th>
+                            <th>{{ __('country id') }}</th>
+                            <th class="text-center">{{ __('mobile number') }}</th>
+                            <th>{{ __('product id') }}</th>
+                            <th class="text-center">{{ __('message') }}</th>
+                        </tr>
+                    </thead>
 
-                        <tbody>
-                            @foreach ($models as $index => $model)
-                                <tr class="odd" wire:key="slider_key_{{ $model->id }}">
-                                    <td>
-                                        {{ $models->firstItem() + $index }}
-                                    </td>
-                                    <td>
-                                        {{ $model->name }}
-                                    </td>
-                                    <td>
-                                        {{ $model->email }}
-                                    </td>
-                                    <td>
-                                        {{ $model->country_id }}
-                                    </td>
-                                    <td>
-                                        {{ $model->mobile_number }}
-                                    </td>
-                                    <td>
-                                        {{ $model->product_id }}
-                                    </td>
-                                    <td>
-                                        {{ $model->message }}
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <tbody>
+                        @foreach ($models as $index => $model)
+                        <tr class="odd" wire:key="slider_key_{{ $model->id }}">
+                            <td>
+                                {{ $models->firstItem() + $index }}
+                            </td>
+                            <td>
+                                {{ $model->name }}
+                            </td>
+                            <td>
+                                {{ $model->email }}
+                            </td>
+                            <td>
+                                {{ $model->country_id }}
+                            </td>
+                            <td>
+                                {{ $model->mobile_number }}
+                            </td>
+                            <td>
+                                {{ $model->product_id }}
+                            </td>
+                            <td>
+                                {{ $model->message }}
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+                {{ $models->links() }}
+                @else
+                <livewire:backend.addons.no-data-found-component goBackRoute="admin.leads.list" />
                 @endif
             </div>
         </div>
