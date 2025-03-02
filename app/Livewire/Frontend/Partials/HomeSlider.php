@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Frontend\Partials;
 
+use App\Models\Slider;
 use App\Services\SliderService;
 use Livewire\Component;
 use Illuminate\Contracts\View\View;
@@ -13,19 +14,22 @@ class HomeSlider extends Component
 {
     ## Component props
     private SliderService $sliderService;
-    public array $sliders;
+    // public array $sliders;
 
     /**
      * Initialize on component every render
      *
      * @return void
      */
-    public function boot():void{
+    public function boot(): void
+    {
         $this->sliderService = new SliderService();
     }
 
-    public function mount():void{
-        $this->sliders = $this->sliderService->getStaticModels() ;
+    public function mount(): void
+    {
+        // $this->sliders = $this->sliderService->getStaticModels() ;
+        // $this->sliders = Slider::where('is_active', 1)->orderBy('id', 'desc')->limit(2)->get()->toArray();
     }
     /**
      * Render view
@@ -34,6 +38,9 @@ class HomeSlider extends Component
      */
     public function render(): View
     {
-        return view('livewire.frontend.partials.home-slider');
+        // $sliders = Slider::where('is_active', 1)->orderBy('id', 'desc')->limit(2)->get()->toArray();
+        $sliders = Slider::orderBy('id', 'desc')->get()->toArray();
+        dd($sliders);
+        return view('livewire.frontend.partials.home-slider', ['sliders' =>  $sliders]);
     }
 }
