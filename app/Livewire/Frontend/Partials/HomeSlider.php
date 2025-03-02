@@ -39,8 +39,8 @@ class HomeSlider extends Component
     public function render(): View
     {
         // $sliders = Slider::where('is_active', 1)->orderBy('id', 'desc')->limit(2)->get()->toArray();
-        $sliders = Slider::orderBy('id', 'desc')->get()->toArray();
-        // dd($sliders);
+        $sliders = Slider::where(['is_active' => '1'])->orderBy('id', 'desc')->get()->toArray();
+        dd($sliders);
         return view('livewire.frontend.partials.home-slider', ['sliders' =>  $sliders]);
     }
 }
