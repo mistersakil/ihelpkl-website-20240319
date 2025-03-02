@@ -261,7 +261,7 @@ class SliderService
     public function validationRules(bool $isSometimes = false)
     {
         return [
-            'slider_title' => ['required', 'min:10', 'max:30'],
+            'slider_title' => ['required', 'min:10', 'max:100'],
             'slider_body' => ['required', 'min:10', 'max:100'],
             'slider_link' => ['nullable', 'min:10', 'max:100'],
             'order' => ['required'],
@@ -352,7 +352,7 @@ class SliderService
         return [
             [
                 'title' => "Advanced CRM, Ticketing, and Lead Management Tools",
-                'slider_image' => Vite::imageWeb('best-crm-software-in-malaysia.png'),
+                'slider_image' => Vite::imageWeb('slider-crm.png'),
             ],
             [
                 'title' => "Effortless application integration to Boost your business",

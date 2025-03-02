@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->enum('is_active', [0, 1])->default(1)->comment('1=active,0=inactive');
+            $table->boolean('is_active')->default(1)->comment('1=active,0=inactive');
             $table->rememberToken();
             $table->timestamps();
         });

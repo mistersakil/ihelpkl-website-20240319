@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('slider_link_text');
             $table->text('slider_image');
             $table->integer('order')->default(0);
-            $table->enum('is_active', ['0', '1'])->default(1)->comment('1=active,0=inactive');
+            $table->boolean('is_active')->default(1)->comment('1=active,0=inactive');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
