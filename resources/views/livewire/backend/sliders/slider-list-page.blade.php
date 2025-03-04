@@ -1,6 +1,7 @@
 <main>
     {{-- @dump($search) --}}
     {{-- @dump($filter) --}}
+    <x-slot:metaTitle> {{ __($metaTitle) }} </x-slot:metaTitle>
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
             <x-backend.addons.breadcrumb-component :title="$module" :active-item="$activeItem">

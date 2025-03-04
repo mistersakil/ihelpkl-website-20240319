@@ -3,7 +3,6 @@
 namespace App\Livewire\Backend\Sliders;
 
 use Livewire\Attributes\Url;
-use Livewire\Attributes\Title;
 use App\Services\SliderService;
 use Livewire\Attributes\Layout;
 use App\Traits\BackendFilterTrait;
@@ -19,8 +18,9 @@ class SliderListPage extends BackendComponent
     use BackendPaginationTrait;
     use BackendFilterTrait;
 
-    ## Module props
-    public string $module;
+    ## Component props
+    public string $metaTitle = 'sliders list';
+    public string $module = 'sliders';
     public string $activeItem;
 
     ## Filter properties
@@ -48,7 +48,6 @@ class SliderListPage extends BackendComponent
      */
     public function  mount(): void
     {
-        $this->module = __('sliders');
         $this->activeItem = __('list');
         $this->filter = $this->filterDefaultValues();
     }
@@ -103,7 +102,6 @@ class SliderListPage extends BackendComponent
      * @return \Illuminate\Contracts\View\View
      */
     #[Layout('components.backend.layout.backend-layout')]
-    #[Title('Sliders List')]
     public function render(): View
     {
         $models = $this->sliderService->getFilteredModels(

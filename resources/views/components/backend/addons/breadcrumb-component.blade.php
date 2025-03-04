@@ -1,6 +1,6 @@
 <main>
     <div class="page-breadcrumb d-flex align-items-center mb-3">
-        <div class="d-none d-sm-inline-block  breadcrumb-title pe-3 text-capitalize">{{ $title ?? __('dashboard') }}
+        <div class="d-none d-sm-inline-block  breadcrumb-title pe-3 text-capitalize">{{ $title }}
         </div>
         <div class="ps-3">
             <nav aria-label="breadcrumb">
