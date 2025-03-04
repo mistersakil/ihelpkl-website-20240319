@@ -32,12 +32,11 @@
                     @if (count($countries))
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <select name="country_id" id="country_id" class="form-control">
+                            <select name="country_id" id="country_id" class="form-control" wire:model="state.country_id">
                                 <option value="">{{ __('select your country') }}</option>
                                 @foreach ($countries as $key => $country)
                                 <option value="{{ $country['id'] }}">{{ $country['name'] }}</option>
                                 @endforeach
-
                             </select>
                             <div class="help-block with-errors"></div>
                         </div>
@@ -47,11 +46,20 @@
 
                     <div class="col-lg-6">
                         <div class="form-group">
+                            @if($phoneCode)
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">{{ $phoneCode }}</span>
+                            </div>
+                            @endif
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">{{ $phoneCode }}</span>
+                            </div>
                             <input type="text" name="mobile_number" id="mobile_number" class="form-control"
                                 placeholder="{{ __('your mobile number') }}">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
+
                     <!-- /.col -->
                     @if (is_array($dataList) && count($dataList))
                     <div class="col-12">
@@ -101,3 +109,4 @@
     </div>
     <!-- /.container -->
 </div>
+

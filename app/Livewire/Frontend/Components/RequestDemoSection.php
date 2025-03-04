@@ -21,6 +21,7 @@ class RequestDemoSection extends Component
     public int $limit;
     public array $state;
     public array $countries;
+    public string $phoneCode;
 
     ## Services
     private ProductService $productService;
@@ -50,7 +51,7 @@ class RequestDemoSection extends Component
 
         $this->state = $this->getStateDefault();
 
-        // $this->countries = $this->countryService->getCountries();
+        $this->countries = $this->countryService->getCountries();
     }
 
     private function getStateDefault(): array
@@ -65,6 +66,19 @@ class RequestDemoSection extends Component
         ];
     }
 
+
+    /**
+     * When the country_id is updated, get the phone code
+     *
+     * @param int $countryId
+     */
+    public function updatedStateCountryId($countryId)
+    {
+        // Call the getPhoneCode function and pass the selected countryId
+        $this->phoneCode = $this->countryService->getPhoneCode($countryId);
+    }
+
+
     /**
      * Render view
      *
@@ -74,7 +88,9 @@ class RequestDemoSection extends Component
     {
         $this->dataList = collect($this->productService->getStaticModels(limit: $this->limit))->pluck('title', 'id')->toArray();
 
-        $this->countries = $this->countryService->getCountries();
+        // $this->countries = $this->countryService->getCountries();
+
+        // $this->phoneCode = $this->countryService->getPhoneCode();
 
         return view('livewire.frontend.components.request-demo-section');
     }

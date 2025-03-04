@@ -46,7 +46,7 @@ class UserModelSeeder extends Seeder
             User::create([
                 'name'          => fake()->name(),
                 'email'         => fake()->unique()->safeEmail(),
-                ' is_active'    => (string) rand(0, 1),
+                'is_active'    => (string) rand(0, 1),
                 'password'      => $password,
                 'created_at'    => now(),
                 'updated_at'    => now(),
