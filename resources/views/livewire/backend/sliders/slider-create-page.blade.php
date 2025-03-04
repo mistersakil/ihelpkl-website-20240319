@@ -29,7 +29,6 @@
                             @error('slider_title')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-
                         </div>
                         @if (!$errors->has('slider_title'))
                             <div class="form-text">

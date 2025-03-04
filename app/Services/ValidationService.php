@@ -30,7 +30,7 @@ class ValidationService
                 'errors' => $validator->errors()->toArray(),
             ];
         }
-        
+
         return ['success' => true];
     }
 
@@ -69,5 +69,16 @@ class ValidationService
         }
 
         return ['success' => true];
+    }
+
+
+
+    public function validationRules(bool $isSometimes = false)
+    {
+        return [
+            'name' => ['required', 'min:10', 'max:100'],
+            'email' => ['required', 'email', 'max:255'],
+            'phone' => ['required', 'regex:/^\+?[1-9]\d{1,14}$/'],
+        ];
     }
 }

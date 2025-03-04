@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend\Components;
 
 use Livewire\Component;
+use Livewire\Attributes\Validate;
 use App\Services\CountryService;
 use App\Services\ProductService;
 use App\Services\ValidationService;
@@ -21,6 +22,14 @@ class RequestDemoSection extends Component
     public string $isShowSectionHeader;
     public int $limit;
     public array $state;
+
+    #[Validate]
+    public string $name = '';
+    #[Validate]
+    public string $email = '';
+    #[Validate]
+    public string $phone = '';
+
     public array $countries;
     public string $phoneCode;
     public array $result;
@@ -84,16 +93,21 @@ class RequestDemoSection extends Component
     }
 
 
-    public function updatedStateEmail($state)
+    // public function updatedStateEmail($state)
+    // {
+    //     $this->result = $this->ValidationService->validationRules();
+    //     $this->result = $this->ValidationService->validateFields($this->state);
+    //     $this->resultWithCollection = $this->ValidationService->validateFieldsWithCollection($this->state);
+
+    //     dd($this->result);
+    //     dd($this->resultWithCollection);
+    // }
+
+    public function rules()
     {
-        $this->result = $this->ValidationService->validateFields($this->state);
-        $this->resultWithCollection = $this->ValidationService->validateFieldsWithCollection($this->state);
-
-        dd($this->result);
-        dd($this->resultWithCollection);
+        // return $this->sliderService->validationRules();
+        return $this->ValidationService->validationRules();
     }
-
-
 
 
     /**

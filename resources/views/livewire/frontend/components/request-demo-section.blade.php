@@ -16,8 +16,11 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <input wire:model.live.debounce.500ms="state.name" type="text" name="name" id="name" class="form-control"
+                            <input wire:model.blur="state.name" wire:dirty.class="border border-warning" type="text" name="name" id="name" class="form-control"
                                 placeholder="{{ __('your name') }}" />
+                            @error('slider_title')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
