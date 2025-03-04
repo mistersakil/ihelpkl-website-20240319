@@ -5,6 +5,7 @@ namespace App\Livewire\Frontend\Components;
 use Livewire\Component;
 use App\Services\CountryService;
 use App\Services\ProductService;
+use App\Services\ValidationService;
 use Illuminate\Contracts\View\View;
 
 /**
@@ -22,15 +23,19 @@ class RequestDemoSection extends Component
     public array $state;
     public array $countries;
     public string $phoneCode;
+    public array $result;
+    public array $resultWithCollection;
 
     ## Services
     private ProductService $productService;
     private CountryService $countryService;
+    private ValidationService $ValidationService;
 
     public function boot()
     {
         $this->productService = new ProductService;
         $this->countryService = new CountryService;
+        $this->ValidationService = new ValidationService;
     }
 
     /**
@@ -78,7 +83,17 @@ class RequestDemoSection extends Component
         $this->phoneCode = $this->countryService->getPhoneCode($countryId);
     }
 
-    
+
+    public function updatedStateEmail($state)
+    {
+        $this->result = $this->ValidationService->validateFields($this->state);
+        $this->resultWithCollection = $this->ValidationService->validateFieldsWithCollection($this->state);
+
+        dd($this->result);
+        dd($this->resultWithCollection);
+    }
+
+
 
 
     /**
