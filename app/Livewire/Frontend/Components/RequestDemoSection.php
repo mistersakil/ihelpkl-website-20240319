@@ -29,6 +29,8 @@ class RequestDemoSection extends Component
     public string $email = '';
     #[Validate]
     public string $phone = '';
+    #[Validate]
+    public string $countryID = '';
 
     public array $countries;
     public string $phoneCode;
@@ -92,22 +94,21 @@ class RequestDemoSection extends Component
         $this->phoneCode = $this->countryService->getPhoneCode($countryId);
     }
 
-
-    // public function updatedStateEmail($state)
-    // {
-    //     $this->result = $this->ValidationService->validationRules();
-    //     $this->result = $this->ValidationService->validateFields($this->state);
-    //     $this->resultWithCollection = $this->ValidationService->validateFieldsWithCollection($this->state);
-
-    //     dd($this->result);
-    //     dd($this->resultWithCollection);
-    // }
-
     public function rules()
     {
-        // return $this->sliderService->validationRules();
-        return $this->ValidationService->validationRules();
+        return [
+            'name' => ['required', 'string', 'min:10', 'max:100'],
+            'email' => ['required', 'email', 'max:255'],
+            'phone' => ['required', 'regex:/^\+?[1-9]\d{1,14}$/'],
+        ];
     }
+
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
 
 
     /**
@@ -118,10 +119,6 @@ class RequestDemoSection extends Component
     public function render(): View
     {
         $this->dataList = collect($this->productService->getStaticModels(limit: $this->limit))->pluck('title', 'id')->toArray();
-
-        // $this->countries = $this->countryService->getCountries();
-
-        // $this->phoneCode = $this->countryService->getPhoneCode();
 
         return view('livewire.frontend.components.request-demo-section');
     }
