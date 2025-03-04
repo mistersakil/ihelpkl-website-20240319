@@ -431,7 +431,9 @@ if (!function_exists('_getPublicImg')) {
     function _getPublicImg(string $index)
     {
         $images = [
-            'logoDark' => 'logo-dark.svg'
+            'favicon' => 'favicon.png',
+            'logo' => 'dark.svg',
+            'logoDark' => 'logo-dark.svg',
         ];
         return asset('images/' . ($images[$index] ?? 'logo.svg'));
     }

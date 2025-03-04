@@ -19,7 +19,7 @@ class Sidebar extends Component
      */
     public function __construct()
     {
-        $this->logo =  asset('images/logo.svg');
+        $this->logo =  _getPublicImg('logo');
         $this->nav_links = $this->get_nav_links();
         $this->icon_circle = _icons("circle");
     }
