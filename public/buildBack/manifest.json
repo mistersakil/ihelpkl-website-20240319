@@ -8,12 +8,12 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/assets/backend/backend-js.js": {
-    "file": "assets/backend-js-sMaBm5FO.js",
+    "file": "assets/backend-js-CE1EWvAp.js",
     "name": "backend-js",
     "src": "resources/assets/backend/backend-js.js",
     "isEntry": true,
     "css": [
-      "assets/backend-js-IoAAaIt3.css"
+      "assets/backend-js-DLQ34h-h.css"
     ],
     "assets": [
       "assets/bootstrap-icons-BtvjY1KL.woff2",
