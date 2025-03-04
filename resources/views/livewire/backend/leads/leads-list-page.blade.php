@@ -82,8 +82,8 @@
                 <table id="example" class="table table-striped table-bordered dataTable" style="width: 100%;"
                     role="grid" aria-describedby="example_info">
                     <thead>
-                        <tr role="row">
-                            <th>SL</th>
+                        <tr role="row" class="text-capitalize">
+                            <th>{{ __('sl') }}</th>
                             <th>{{ __('name') }}</th>
                             <th>{{ __('email') }}</th>
                             <th>{{ __('country id') }}</th>
