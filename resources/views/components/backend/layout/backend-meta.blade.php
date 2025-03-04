@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/png" />
+    <link rel="icon" href="{{ _getFaviconPath() }}" type="image/png" />
     <title>
         {{ $metaTitle ?? __('meta title')  }} | {{ env('APP_NAME') }}
     </title>
