@@ -24,8 +24,6 @@ class AppServiceProvider extends ServiceProvider
 
         Vite::macro('imageWeb', fn($asset) => Vite::useHotFile('web.hot')->useBuildDirectory('buildWeb')->withEntryPoints(['resources/assets/web/web-js.js'])->asset("resources/assets/web/images/{$asset}"));
 
-        // Vite::macro('imageRoot', fn($asset) => Vite::asset("resources/images/{$asset}"));
-
         Vite::macro('showUploadedImg', function ($fileName, $module) {
             return '<img src="' . asset("storage/uploads/{$module}/{$fileName}") . '" alt="' . $module . '_' . $fileName . '" class="showUploadedImg"';
         });
