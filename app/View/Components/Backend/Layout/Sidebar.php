@@ -4,7 +4,6 @@ namespace App\View\Components\Backend\Layout;
 
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Vite;
 
 class Sidebar extends Component
 {

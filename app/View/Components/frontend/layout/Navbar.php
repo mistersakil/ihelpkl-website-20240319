@@ -5,7 +5,6 @@ namespace App\View\Components\Frontend\Layout;
 use Closure;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Vite;
 
 /**
  * Navbar Component
