@@ -45,26 +45,6 @@
                     <!-- /.col -->
                     @endif
 
-                    
-                    <div class="col-lg-6">
-                        <div class="form-group">
-                            <select name="country_id" id="country_id" class="form-control">
-                                <!-- <option value="">{{ __('select your country') }}</option>
-                                @foreach ($countries as $key => $country)
-                                <option value="{{ $country['id'] }}">{{ $country['name'] }}</option>
-                                @endforeach -->
-
-
-                                <option value="">{{ __('select your country') }}</option>
-                                @foreach ($countries as $key => $country)
-                                <option value="{{ $country['id'] }}">{{ $country['name'] }}</option>
-                                @endforeach
-                            </select>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-       
-
                     <div class="col-lg-6">
                         <div class="form-group">
                             <input type="text" name="mobile_number" id="mobile_number" class="form-control"

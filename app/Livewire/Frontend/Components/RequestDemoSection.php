@@ -50,7 +50,7 @@ class RequestDemoSection extends Component
 
         $this->state = $this->getStateDefault();
 
-        $this->countries = $this->countryService->getCountries();
+        // $this->countries = $this->countryService->getCountries();
     }
 
     private function getStateDefault(): array
