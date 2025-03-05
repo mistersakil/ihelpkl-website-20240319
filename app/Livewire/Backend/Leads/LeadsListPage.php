@@ -17,6 +17,7 @@ class LeadsListPage extends BackendComponent
     use BackendFilterTrait;
 
     # Module Props
+    public string $metaTitle = 'leads list';
     public string $module;
     public string $activeItem;
 

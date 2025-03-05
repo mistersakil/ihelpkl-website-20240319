@@ -3,25 +3,28 @@
 namespace App\Services;
 
 use App\Models\Country;
-use Nnjeim\World\World;
 
 class CountryService
 {
-
   private string $modelClass = Country::class;
+  public $phoneCode = '';
 
   /**
-   * Create a new class instance.
+   * Get a list of countries with selected fields.
+   *
+   * @return array
    */
-  public function getCountries()
+  public function getCountries(): array
   {
-    $action =  World::countries(['fields' => 'id, name, phone_code']);
-    // $action =  $this->modelClass::find(['fields' => 'id, name, phone_code']);
-    // $action =  $this->modelClass::find(['fields' => 'id, name, phone_code']);
+    $countries = $this->modelClass::select('id', 'name', 'phone_code')->get();
 
-    if ($action->success) {
-      $countries = $action->data;
-    }
-    return $countries->toArray() ?? [];
+    return $countries->isNotEmpty() ? $countries->toArray() : [];
+  }
+
+  public function getPhoneCode($countryId)
+  {
+    $country = $this->modelClass::find($countryId);
+
+    return $country ? $country->phone_code : '';
   }
 }
