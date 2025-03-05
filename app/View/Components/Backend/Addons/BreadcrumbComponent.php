@@ -21,7 +21,7 @@ class BreadcrumbComponent extends Component
      */
     public function __construct(string $title = '', string $activeItem = '')
     {
-        $this->title = $title;
+        $this->title = $title ? __($title) : __('dashboard');
         $this->active_item = $activeItem;
         $this->icons = _icons(true, true);
     }

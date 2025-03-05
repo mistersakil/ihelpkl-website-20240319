@@ -6,13 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="icon" href="{{ Vite::imageRoot('favicon.png') }}" type="image/png" />
+    {{-- <link rel="icon" href="{{ Vite::imageRoot('favicon.png') }}" type="image/png" /> --}}
     <title>{{ $title ?? 'Login' }} | {{ config('app.name') }}</title>
 
     <!-- Google fonts -->
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    @vite(['resources/assets/backend/backend-js.js'])
+
+    {{ Vite::useHotFile('back.hot')->useBuildDirectory('buildBack')->withEntryPoints(['resources/assets/backend/backend-js.js']) }}
 
     @livewireStyles
 </head>

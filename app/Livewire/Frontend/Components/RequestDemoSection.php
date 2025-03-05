@@ -3,8 +3,10 @@
 namespace App\Livewire\Frontend\Components;
 
 use Livewire\Component;
+use Livewire\Attributes\Validate;
 use App\Services\CountryService;
 use App\Services\ProductService;
+use App\Services\ValidationService;
 use Illuminate\Contracts\View\View;
 
 /**
@@ -20,16 +22,31 @@ class RequestDemoSection extends Component
     public string $isShowSectionHeader;
     public int $limit;
     public array $state;
+
+    #[Validate]
+    public string $name = '';
+    #[Validate]
+    public string $email = '';
+    #[Validate]
+    public string $phone = '';
+    #[Validate]
+    public string $country_id = '';
+    public string $phoneCode = '***';
+
     public array $countries;
+    public array $result;
+    public array $resultWithCollection;
 
     ## Services
     private ProductService $productService;
     private CountryService $countryService;
+    private ValidationService $ValidationService;
 
     public function boot()
     {
         $this->productService = new ProductService;
         $this->countryService = new CountryService;
+        $this->ValidationService = new ValidationService;
     }
 
     /**
@@ -65,6 +82,53 @@ class RequestDemoSection extends Component
         ];
     }
 
+
+    /**
+     * When the country_id is updated, get the phone code
+     *
+     * @param int $countryId
+     */
+    public function updatedCountryId($countryId)
+    {
+        // Call the getPhoneCode function and pass the selected countryId
+        $this->phoneCode = $this->countryService->getPhoneCode($countryId);
+    }
+
+
+    /**
+     * Validation rules of the component
+     * @return array
+     */
+    public function rules(): array
+    {
+        return $this->ValidationService->validationRules();
+    }
+
+    /**
+     * Validation error messages for state properties of the component
+     * @return array
+     */
+    public function messages(): array
+    {
+        return $this->ValidationService->validationErrorMessages();
+    }
+
+
+    /**
+     * Alias of state attributes
+     * @return array
+     */
+    public function validationAttributes()
+    {
+        return $this->ValidationService->validationAttributesSurname();
+    }
+
+
+    public function updating($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     /**
      * Render view
      *
@@ -73,8 +137,6 @@ class RequestDemoSection extends Component
     public function render(): View
     {
         $this->dataList = collect($this->productService->getStaticModels(limit: $this->limit))->pluck('title', 'id')->toArray();
-
-        $this->countries = $this->countryService->getCountries();
 
         return view('livewire.frontend.components.request-demo-section');
     }

@@ -286,7 +286,7 @@ class SliderService
     public function validationErrorMessages()
     {
         return [
-            'slider_title.required' => __('can not be empty', [':attribute ']),
+            'slider_title.required' => __('can not be empty', [':attribute']),
             'slider_title.min' => __('minimum character length', [':min', ':attribute']),
             'slider_title.max' => __('maximum character length', [':max', ':attribute']),
             'slider_body.required' => __('can not be empty', [':attribute']),

@@ -19,7 +19,7 @@
                 <div class="card rounded-0 m-3 shadow-none bg-transparent mb-0">
                     <div class="card-body p-sm-5">
                         <div class="mb-3 text-center">
-                            <img src="{{ Vite::imageRoot('logo.png') }}" width="160" alt="logo" />
+                            {{-- <img src="{{ Vite::imageRoot('logo.svg') }}" width="160" alt="logo" /> --}}
                         </div>
                         <div class="text-center mb-4">
                             <h5 class="">

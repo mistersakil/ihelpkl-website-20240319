@@ -4,8 +4,8 @@ import path from "path";
 export default defineConfig({
     plugins: [
         laravel({
-            hotFile: "public/hot",
-            buildDirectory: "build-back",
+            hotFile: "public/back.hot",
+            buildDirectory: "buildBack",
             input: ["resources/assets/backend/backend-js.js"],
             refresh: true,
         }),
@@ -15,7 +15,7 @@ export default defineConfig({
             "@imgBack": path.resolve(
                 __dirname,
                 "resources/assets/backend/images"
-            ),
+            )
         },
     },
 });
