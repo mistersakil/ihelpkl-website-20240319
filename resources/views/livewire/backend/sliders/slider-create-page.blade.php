@@ -132,7 +132,7 @@
                             </ul>
 
                             <input wire:model="slider_image" type="file" accept=".jpg,.jpeg,.png,.mp4" id="fileID"
-                                style="">
+                                >
 
                             <button type="button" class="btn btn-secondary">{{ __('choose file') }}</button>
                         </div>
