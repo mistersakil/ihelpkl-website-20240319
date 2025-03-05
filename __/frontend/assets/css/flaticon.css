@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?656a861666a288ebbeb24bfc35e33c73") format("truetype"),
+url("./flaticon.woff?656a861666a288ebbeb24bfc35e33c73") format("woff"),
+url("./flaticon.woff2?656a861666a288ebbeb24bfc35e33c73") format("woff2"),
+url("./flaticon.eot?656a861666a288ebbeb24bfc35e33c73#iefix") format("embedded-opentype"),
+url("./flaticon.svg?656a861666a288ebbeb24bfc35e33c73#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-customer-service:before {
+    content: "\f101";
+}
+.flaticon-project-management:before {
+    content: "\f102";
+}
+.flaticon-money-bag:before {
+    content: "\f103";
+}
+.flaticon-phone-call:before {
+    content: "\f104";
+}
+.flaticon-email:before {
+    content: "\f105";
+}
+.flaticon-arrow-pointing-to-right:before {
+    content: "\f106";
+}
+.flaticon-arrow-pointing-to-left:before {
+    content: "\f107";
+}
+.flaticon-vector:before {
+    content: "\f108";
+}
+.flaticon-digital-marketing:before {
+    content: "\f109";
+}
+.flaticon-content:before {
+    content: "\f10a";
+}
+.flaticon-document:before {
+    content: "\f10b";
+}
+.flaticon-user:before {
+    content: "\f10c";
+}
+.flaticon-wall-clock:before {
+    content: "\f10d";
+}
+.flaticon-pin:before {
+    content: "\f10e";
+}
+.flaticon-open-book:before {
+    content: "\f10f";
+}
+.flaticon-operator:before {
+    content: "\f110";
+}
+.flaticon-menu:before {
+    content: "\f111";
+}
+.flaticon-loupe:before {
+    content: "\f112";
+}
+.flaticon-phone-call-1:before {
+    content: "\f113";
+}
+.flaticon-straight-quotes:before {
+    content: "\f114";
+}
+.flaticon-smartphone:before {
+    content: "\f115";
+}
+.flaticon-smartphone-1:before {
+    content: "\f116";
+}
+.flaticon-email-1:before {
+    content: "\f117";
+}
+.flaticon-placeholder:before {
+    content: "\f118";
+}
