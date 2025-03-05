@@ -30,10 +30,10 @@ class RequestDemoSection extends Component
     #[Validate]
     public string $phone = '';
     #[Validate]
-    public string $countryID = '';
+    public string $country_id = '';
+    public string $phoneCode = '***';
 
     public array $countries;
-    public string $phoneCode;
     public array $result;
     public array $resultWithCollection;
 
@@ -88,28 +88,46 @@ class RequestDemoSection extends Component
      *
      * @param int $countryId
      */
-    public function updatedStateCountryId($countryId)
+    public function updatedCountryId($countryId)
     {
         // Call the getPhoneCode function and pass the selected countryId
         $this->phoneCode = $this->countryService->getPhoneCode($countryId);
     }
 
-    public function rules()
+
+    /**
+     * Validation rules of the component
+     * @return array
+     */
+    public function rules(): array
     {
-        return [
-            'name' => ['required', 'string', 'min:10', 'max:100'],
-            'email' => ['required', 'email', 'max:255'],
-            'phone' => ['required', 'regex:/^\+?[1-9]\d{1,14}$/'],
-        ];
+        return $this->ValidationService->validationRules();
+    }
+
+    /**
+     * Validation error messages for state properties of the component
+     * @return array
+     */
+    public function messages(): array
+    {
+        return $this->ValidationService->validationErrorMessages();
     }
 
 
-    public function updated($propertyName)
+    /**
+     * Alias of state attributes
+     * @return array
+     */
+    public function validationAttributes()
+    {
+        return $this->ValidationService->validationAttributesSurname();
+    }
+
+
+    public function updating($propertyName)
     {
         $this->validateOnly($propertyName);
     }
-
-
 
     /**
      * Render view
