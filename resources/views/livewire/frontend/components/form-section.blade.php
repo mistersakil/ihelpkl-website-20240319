@@ -80,6 +80,22 @@
             </div>
         </div>
 
+        @if ($showSubjectInput)
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <input type="text" name="msg_subject" id="msg_subject" class="form-control" required
+                        data-error="Please Enter Your Subject" placeholder="Your Subject*">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+
+            @if (!$errors->has('subject'))
+                <div class="form-text ">
+                    {{ __('your subject') }}
+                </div>
+            @endif
+        @endif
+
         <!-- /.col -->
         {{-- Show product input only if $showProductInput is true --}}
         @if ($showProductInput && is_array($dataList) && count($dataList))
@@ -115,21 +131,44 @@
         </div>
         <!-- /.col -->
 
-        <div class="col-lg-12 col-md-12">
-            <div class="agree-label form-text">
-                {{ __('demo agree text') }}
+        @if ($showTermsConditionCheck)
+            <div class="col-lg-12 col-md-12">
+                <div class="agree-label">
+                    <input type="checkbox" id="chb1">
+                    <label for="chb1">
+                        Accept <a href="javascript:void(0)">Terms & Conditions</a> And <a href="javascript:void(0)">Privacy
+                            Policy.</a>
+                    </label>
+                </div>
             </div>
-        </div>
-        <!-- /.col -->
+        @endif
 
-        <div class="col-lg-12 col-md-12">
-            <button type="submit" class="default-btn disabled">
-                {{ __('request a demo') }}
-            </button>
-            <div id="msgSubmit" class="h3 text-center hidden"></div>
-            <div class="clearfix"></div>
-        </div>
-        <!-- /.col -->
+        @if ($showSendMessageButton)
+            <div class="col-lg-12 col-md-12">
+                <button type="submit" class="default-btn">
+                    {{ __('send message') }}
+                </button>
+                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                <div class="clearfix"></div>
+            </div>
+        @endif
+
+        @if ($showRequestDemoButton)
+            <div class="col-lg-12 col-md-12">
+                <div class="agree-label form-text">
+                    {{ __('demo agree text') }}
+                </div>
+            </div>
+            <!-- /.col -->
+
+            <div class="col-lg-12 col-md-12">
+                <button type="submit" class="default-btn disabled">
+                    {{ __('request a demo') }}
+                </button>
+                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                <div class="clearfix"></div>
+            </div>
+        @endif
     </div>
     <!-- /.row -->
 </form>

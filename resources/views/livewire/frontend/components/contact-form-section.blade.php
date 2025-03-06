@@ -14,6 +14,11 @@
                 <div class="contact-widget-form pl-20">
                     <div class="contact-form">
                         <h3>{{ __('contact with us') }}!</h3>
+
+                        <livewire:frontend.components.form-section sectionTitle="request demo"
+                            sectionSubTitle="our demos" :showProductInput="false" :showRequestDemoButton="false" />
+
+                        {{--
                         <form id="contactForm">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -79,6 +84,8 @@
                             </div>
                             <!-- /.row -->
                         </form>
+                        --}}
+
                         <!-- /form -->
                     </div>
                     <!-- /.contact-form -->

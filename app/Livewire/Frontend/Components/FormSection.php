@@ -21,6 +21,10 @@ class FormSection extends Component
     public string $sectionSubTitle;
     public string $isShowSectionHeader;
     public $showProductInput;
+    public $showSubjectInput;
+    public $showRequestDemoButton;
+    public $showSendMessageButton;
+    public $showTermsConditionCheck;
     public int $limit;
     public array $state;
 
@@ -59,9 +63,14 @@ class FormSection extends Component
      * @param int $limit `Number of items to display in the section`
      * @return void
      */
-    public function mount(string $sectionTitle = '', string $sectionSubTitle = '', int $limit = 6, $showProductInput = true): void
+    public function mount(string $sectionTitle = '', string $sectionSubTitle = '', int $limit = 6, $showProductInput = true, $showSubjectInput = true, $showRequestDemoButton = true, $showSendMessageButton = true, $showTermsConditionCheck = true): void
     {
         $this->showProductInput = $showProductInput;
+        $this->showSubjectInput = $showSubjectInput;
+        $this->showRequestDemoButton = $showRequestDemoButton;
+        $this->showSendMessageButton = $showSendMessageButton;
+        $this->showTermsConditionCheck = $showTermsConditionCheck;
+
         $this->sectionTitle = $sectionTitle ? __($sectionTitle) : "";
         $this->sectionSubTitle = $sectionSubTitle ? __($sectionSubTitle) : "";
 

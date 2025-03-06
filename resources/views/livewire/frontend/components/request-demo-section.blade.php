@@ -12,7 +12,8 @@
             </div>
 
             <livewire:frontend.components.form-section sectionTitle="request demo" sectionSubTitle="our demos"
-                :showProductInput="true" />
+                :showTermsConditionCheck="false" :showSendMessageButton="false"
+                :showSubjectInput="false" />
         </div>
     </div>
 </div>
