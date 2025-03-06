@@ -10,6 +10,6 @@
 
     <livewire:frontend.components.contact-card-section />
 
-    {{-- <livewire:frontend.components.contact-form-section /> --}}
-    <livewire:frontend.components.request-demo-section />
+    <livewire:frontend.components.contact-form-section /> 
+    {{--  <livewire:frontend.components.request-demo-section :showProductInput="false" /> --}}
 </main>
