@@ -491,37 +491,5 @@
       "assets/sunny-BhaccERp.png",
       "assets/service-bg-nhTcpKmE.jpg"
     ]
-  },
-  "resources/images/_favicon.png": {
-    "file": "assets/_favicon-BOmR1YV6.png",
-    "src": "resources/images/_favicon.png"
-  },
-  "resources/images/_logo.png": {
-    "file": "assets/_logo-BP3jK-gc.png",
-    "src": "resources/images/_logo.png"
-  },
-  "resources/images/avatar.jpg": {
-    "file": "assets/avatar-D1lQrsNr.jpg",
-    "src": "resources/images/avatar.jpg"
-  },
-  "resources/images/favicon.png": {
-    "file": "assets/favicon-CVFiiegR.png",
-    "src": "resources/images/favicon.png"
-  },
-  "resources/images/logo-dark.svg": {
-    "file": "assets/logo-dark-BlFuEKih.svg",
-    "src": "resources/images/logo-dark.svg"
-  },
-  "resources/images/logo-tmp.png": {
-    "file": "assets/logo-tmp-BfMDSCFc.png",
-    "src": "resources/images/logo-tmp.png"
-  },
-  "resources/images/logo.svg": {
-    "file": "assets/logo-DmedRxRx.svg",
-    "src": "resources/images/logo.svg"
-  },
-  "resources/images/whatsapp.png": {
-    "file": "assets/whatsapp-BcfgotvT.png",
-    "src": "resources/images/whatsapp.png"
   }
 }

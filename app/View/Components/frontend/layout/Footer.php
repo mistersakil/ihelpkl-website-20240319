@@ -13,12 +13,14 @@ use Illuminate\View\Component;
  */
 class Footer extends Component
 {
+    ## Component props
+    public string $logoDark = '';
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        //
+        $this->logoDark = _getPublicImg('logoDark');
     }
 
     /**

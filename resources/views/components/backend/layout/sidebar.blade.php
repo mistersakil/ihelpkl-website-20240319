@@ -1,4 +1,5 @@
 <div class="sidebar-wrapper" data-simplebar="true">
+    
     <div class="sidebar-header">
         <div class="d-flex align-items-center justify-content-center w-100">
             <img src="{{ $logo }}" alt="logo icon" class="img-fluid" style="height: 50px;">

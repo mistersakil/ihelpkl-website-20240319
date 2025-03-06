@@ -56,7 +56,7 @@
                     <div class="footer-widget">
                         <div class="footer-logo">
                             <a wire:navigate href="{{ route('web.home') }}">
-                                <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="Images"
+                                <img src="{{ $logoDark }}" alt="Images"
                                     class="logo_footer">
                             </a>
                         </div>

@@ -4,7 +4,6 @@ namespace App\View\Components\Backend\Layout;
 
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Vite;
 
 class Sidebar extends Component
 {
@@ -19,7 +18,7 @@ class Sidebar extends Component
      */
     public function __construct()
     {
-        $this->logo =  asset('images/logo.svg');
+        $this->logo =  _getPublicImg('logo');
         $this->nav_links = $this->get_nav_links();
         $this->icon_circle = _icons("circle");
     }

@@ -416,6 +416,25 @@ if (!function_exists('_parse_url')) {
 if (!function_exists('_getFaviconPath')) {
     function _getFaviconPath()
     {
-        return Vite::asset('resources/images/favicon.png');
+        return asset('images/favicon.png');
+    }
+}
+
+/**
+ * _getPublicImg get meta favicon path
+ * 
+ * @return string 
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
+
+if (!function_exists('_getPublicImg')) {
+    function _getPublicImg(string $index)
+    {
+        $images = [
+            'favicon' => 'favicon.png',
+            'logo' => 'logo.svg',
+            'logoDark' => 'logo-dark.svg',
+        ];
+        return asset('images/' . ($images[$index] ?? 'logo.svg'));
     }
 }

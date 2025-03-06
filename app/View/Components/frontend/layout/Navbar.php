@@ -5,7 +5,6 @@ namespace App\View\Components\Frontend\Layout;
 use Closure;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Vite;
 
 /**
  * Navbar Component
@@ -26,7 +25,7 @@ class Navbar extends Component
      */
     public function __construct()
     {
-        $this->logo = Vite::asset('resources/images/logo-dark.svg');
+        $this->logo = _getPublicImg('logoDark');
         $this->navItems = $this->getNavItems();
     }
 

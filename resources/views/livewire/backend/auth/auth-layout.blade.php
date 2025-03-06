@@ -2,18 +2,7 @@
 <html lang="en" class="light-theme">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    {{-- <link rel="icon" href="{{ Vite::imageRoot('favicon.png') }}" type="image/png" /> --}}
-    <title>{{ $title ?? 'Login' }} | {{ config('app.name') }}</title>
-
-    <!-- Google fonts -->
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-    {{ Vite::useHotFile('back.hot')->useBuildDirectory('buildBack')->withEntryPoints(['resources/assets/backend/backend-js.js']) }}
+    @includeIf('components.backend.layout.backend-meta')
 
     @livewireStyles
 </head>

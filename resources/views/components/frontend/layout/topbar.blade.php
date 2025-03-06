@@ -4,7 +4,7 @@
             <div class="col-lg-2">
                 <div class="header-logo">
                     <a href="{{ route('web.home') }}" wire:navigate>
-                        <img src="{{ Vite::asset('resources/images/logo-dark.svg') }}" alt="Images" class="logo">
+                        <img src="{{ _getPublicImg('logo-dark.svg') }}" alt="Images" class="logo">
                     </a>
                 </div>
             </div>
