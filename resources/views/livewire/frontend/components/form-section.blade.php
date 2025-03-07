@@ -19,8 +19,6 @@
         </div>
 
 
-        <!-- /.col -->
-
         <div class="col-lg-6">
             <div class="form-group">
                 <input wire:model.lazy="email" wire:dirty.class="border border-warning" type="email" name="email"
@@ -37,7 +35,6 @@
                 <div class="help-block with-errors"></div>
             </div>
         </div>
-        <!-- /.col -->
 
         @if (count($countries))
             <div class="col-lg-6">
@@ -55,7 +52,6 @@
                     @endif
                 </div>
             </div>
-            <!-- /.col -->
         @endif
 
         <div class="col-lg-6">
@@ -80,24 +76,24 @@
             </div>
         </div>
 
+
         @if ($showSubjectInput)
             <div class="col-lg-12">
                 <div class="form-group">
-                    <input type="text" name="msg_subject" id="msg_subject" class="form-control" required
-                        data-error="Please Enter Your Subject" placeholder="Your Subject*">
+                    <input type="text" name="msg_subject" id="msg_subject" class="form-control" wire:model.lazy="subject"
+                        data-error="Please Enter Your Subject">
                     <div class="help-block with-errors"></div>
+
+                    @if (!$errors->has('subject'))
+                        <div class="form-text ">
+                            {{ __('your subject') }}
+                        </div>
+                    @endif
                 </div>
             </div>
-
-            @if (!$errors->has('subject'))
-                <div class="form-text ">
-                    {{ __('your subject') }}
-                </div>
-            @endif
         @endif
 
-        <!-- /.col -->
-        {{-- Show product input only if $showProductInput is true --}}
+
         @if ($showProductInput && is_array($dataList) && count($dataList))
             <div class="col-12">
                 <div class="form-group">
@@ -114,7 +110,6 @@
                     @endif
                 </div>
             </div>
-            <!-- /.col -->
         @endif
 
         <div class="col-lg-12 col-md-12">
@@ -129,7 +124,7 @@
                 @endif
             </div>
         </div>
-        <!-- /.col -->
+
 
         @if ($showTermsConditionCheck)
             <div class="col-lg-12 col-md-12">
@@ -142,6 +137,7 @@
                 </div>
             </div>
         @endif
+        
 
         @if ($showSendMessageButton)
             <div class="col-lg-12 col-md-12">
@@ -159,7 +155,6 @@
                     {{ __('demo agree text') }}
                 </div>
             </div>
-            <!-- /.col -->
 
             <div class="col-lg-12 col-md-12">
                 <button type="submit" class="default-btn disabled">
@@ -170,5 +165,4 @@
             </div>
         @endif
     </div>
-    <!-- /.row -->
 </form>
