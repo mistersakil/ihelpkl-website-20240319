@@ -167,7 +167,7 @@ class FormSection extends Component
      */
     public function render(): View
     {
-        $this->dataList = collect($this->productService->getStaticModels(limit: $this->limit))->pluck('title', 'id')->toArray();
+        $this->dataList = collect($this->productService->getStaticModels())->pluck('title', 'id')->toArray();
 
         return view('livewire.frontend.components.form-section');
     }
