@@ -2,10 +2,11 @@
 
 namespace App\Livewire\Frontend\Components;
 
+use App\Models\Lead;
 use Livewire\Component;
-use Livewire\Attributes\Validate;
 use App\Services\CountryService;
 use App\Services\ProductService;
+use Livewire\Attributes\Validate;
 use App\Services\ValidationService;
 use Illuminate\Contracts\View\View;
 
@@ -20,11 +21,7 @@ class FormSection extends Component
     public string $sectionTitle;
     public string $sectionSubTitle;
     public string $isShowSectionHeader;
-    public $showProductInput;
-    public $showSubjectInput;
-    public $showRequestDemoButton;
-    public $showSendMessageButton;
-    public $showTermsConditionCheck;
+    public $showProductInput, $showSubjectInput, $showRequestDemoButton, $showSendMessageButton, $showTermsConditionCheck;
     public int $limit;
     public array $state;
 
@@ -37,6 +34,7 @@ class FormSection extends Component
     public string $phone = '';
     #[Validate]
     public string $country_id = '';
+    public string $product_id = '';
     public string $phoneCode = '***';
     public string $message = '';
 
@@ -141,6 +139,29 @@ class FormSection extends Component
     {
         $this->validateOnly($propertyName);
     }
+
+
+    /**
+     * Handle form submission.
+     */
+    public function submitForm()
+    {
+        // $this->validate();
+
+        Lead::create([
+            'name' => $this->name,
+            'email' => $this->email,
+            'country_id' => $this->country_id,
+            'mobile_number' => $this->phone,
+            'product_id' => $this->product_id ?? null,
+            'message' => $this->message,
+        ]);
+
+        $this->reset();
+
+        session()->flash('message_', 'Your message has been sent successfully!');
+    }
+
 
     /**
      * Render view

@@ -1,10 +1,19 @@
-<form novalidate="true" wire.submit.prevent="submitForm">
+<form novalidate="true" wire:submit.prevent="submitForm">
+
+    {{-- @dump(session('message_')); --}}
+    @dump($dataList);
+    @if (session('message_'))
+        <div class="alert alert-success">
+            {{ session('message_') }}
+        </div>
+    @endif
+
     @csrf
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group input-group has-validation">
-                <input wire:model.lazy="name" wire:dirty.class="border border-warning" type="text" name="name" id="name"
-                    class="form-control @error('name') is-invalid @enderror" />
+                <input wire:model.lazy="name" wire:dirty.class="border border-warning" type="text" name="name"
+                    id="name" class="form-control @error('name') is-invalid @enderror" />
 
                 @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -57,7 +66,7 @@
         <div class="col-lg-6">
             <div class="form-group">
                 <div class="input-group flex-nowrap">
-                    @if($phoneCode)
+                    @if ($phoneCode)
                         <span class="input-group-text" id="addon-wrapping">{{ $phoneCode }}</span>
                     @endif
                     <input wire:model.lazy="phone" wire:dirty.class="border border-warning" type="text"
@@ -80,8 +89,8 @@
         @if ($showSubjectInput)
             <div class="col-lg-12">
                 <div class="form-group">
-                    <input type="text" name="msg_subject" id="msg_subject" class="form-control" wire:model.lazy="subject"
-                        data-error="Please Enter Your Subject">
+                    <input type="text" name="msg_subject" id="msg_subject" class="form-control"
+                        wire:model.lazy="subject" data-error="Please Enter Your Subject">
                     <div class="help-block with-errors"></div>
 
                     @if (!$errors->has('subject'))
@@ -131,17 +140,18 @@
                 <div class="agree-label">
                     <input type="checkbox" id="chb1">
                     <label for="chb1">
-                        Accept <a href="javascript:void(0)">Terms & Conditions</a> And <a href="javascript:void(0)">Privacy
+                        Accept <a href="javascript:void(0)">Terms & Conditions</a> And <a
+                            href="javascript:void(0)">Privacy
                             Policy.</a>
                     </label>
                 </div>
             </div>
         @endif
-        
+
 
         @if ($showSendMessageButton)
             <div class="col-lg-12 col-md-12">
-                <button type="submit" class="default-btn">
+                <button type="submit" class="default-btn" wire:click="submitForm">
                     {{ __('send message') }}
                 </button>
                 <div id="msgSubmit" class="h3 text-center hidden"></div>
@@ -157,7 +167,7 @@
             </div>
 
             <div class="col-lg-12 col-md-12">
-                <button type="submit" class="default-btn disabled">
+                <button type="submit" class="default-btn" wire:click="submitForm">
                     {{ __('request a demo') }}
                 </button>
                 <div id="msgSubmit" class="h3 text-center hidden"></div>

@@ -10,7 +10,8 @@ class ValidationService
             'name' => ['required', 'string', 'min:10', 'max:100'],
             'email' => ['required', 'email', 'max:255'],
             'phone' => ['required', 'regex:/^\+?[1-9]\d{1,14}$/'],
-            'country_id' => ['required']
+            'country_id' => ['required'],
+            'product_id' => 'nullable|exists:products,id'
         ];
     }
 
