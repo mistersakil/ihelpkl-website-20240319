@@ -13,7 +13,7 @@
 
             <livewire:frontend.components.form-section sectionTitle="request demo" sectionSubTitle="our demos"
                 :showTermsConditionCheck="false" :showSendMessageButton="false"
-                :showSubjectInput="false" />
+                :showSubjectInput="false" :limit="6"/>
         </div>
     </div>
 </div>

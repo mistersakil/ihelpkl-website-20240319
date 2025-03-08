@@ -2,6 +2,7 @@
 
     {{-- @dump(session('message_')); --}}
     @dump($dataList);
+    @dump($limit);
     @if (session('message_'))
         <div class="alert alert-success">
             {{ session('message_') }}

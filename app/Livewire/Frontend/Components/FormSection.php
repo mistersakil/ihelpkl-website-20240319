@@ -15,16 +15,14 @@ use Illuminate\Contracts\View\View;
  */
 class FormSection extends Component
 {
-
     ## Component props
+    public int $limit;
+    public array $state;
     public array $dataList;
     public string $sectionTitle;
     public string $sectionSubTitle;
     public string $isShowSectionHeader;
     public $showProductInput, $showSubjectInput, $showRequestDemoButton, $showSendMessageButton, $showTermsConditionCheck;
-    public int $limit;
-    public array $state;
-
 
     #[Validate]
     public string $name = '';
@@ -63,6 +61,7 @@ class FormSection extends Component
      */
     public function mount(string $sectionTitle = '', string $sectionSubTitle = '', int $limit = 6, $showProductInput = true, $showSubjectInput = true, $showRequestDemoButton = true, $showSendMessageButton = true, $showTermsConditionCheck = true): void
     {
+        $this->limit = $limit;
         $this->showProductInput = $showProductInput;
         $this->showSubjectInput = $showSubjectInput;
         $this->showRequestDemoButton = $showRequestDemoButton;
@@ -73,8 +72,6 @@ class FormSection extends Component
         $this->sectionSubTitle = $sectionSubTitle ? __($sectionSubTitle) : "";
 
         $this->isShowSectionHeader = (!empty($this->sectionTitle) || !empty($this->sectionSubTitle)) ? true : false;
-
-        $this->limit = $limit;
 
         $this->state = $this->getStateDefault();
 
@@ -146,7 +143,7 @@ class FormSection extends Component
      */
     public function submitForm()
     {
-        // $this->validate();
+        $this->validate();
 
         Lead::create([
             'name' => $this->name,

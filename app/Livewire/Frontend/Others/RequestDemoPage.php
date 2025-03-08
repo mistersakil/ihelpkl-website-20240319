@@ -3,7 +3,6 @@
 namespace App\Livewire\Frontend\Others;
 
 use Livewire\Component;
-
 use Illuminate\Contracts\View\View;
 
 /**

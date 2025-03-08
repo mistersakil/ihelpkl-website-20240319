@@ -11,7 +11,7 @@ use Illuminate\Contracts\View\View;
 class RequestDemoSection extends Component
 {
 
-        ## Component props
+    ## Component props
     public string $sectionTitle;
     public string $sectionSubTitle;
     public string $isShowSectionHeader;
