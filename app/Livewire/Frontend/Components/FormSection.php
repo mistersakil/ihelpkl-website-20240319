@@ -32,9 +32,11 @@ class FormSection extends Component
     public string $phone = '';
     #[Validate]
     public string $country_id = '';
+    #[Validate]
     public string $product_id = '';
-    public string $phoneCode = '***';
+    #[Validate]
     public string $message = '';
+    public string $phoneCode = '***';
 
     public array $countries;
     public array $result;
@@ -133,7 +135,12 @@ class FormSection extends Component
         return $this->ValidationService->validationAttributesSurname();
     }
 
-
+    /**
+     * Validate attribute on update
+     *
+     * @param [type] $propertyName
+     * @return void
+     */
     public function updating($propertyName)
     {
         $this->validateOnly($propertyName);

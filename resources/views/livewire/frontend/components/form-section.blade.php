@@ -1,11 +1,4 @@
 <form novalidate="true" wire:submit.prevent="submitForm">
-
-    {{-- @dump(session('message_')); --}}
-    {{-- @dump($dataList);
-    @dump($limit); --}}
-    {{-- @json($countries) --}}
-    {{-- @json($dataList) --}}
-    {{-- @dump($errors) --}}
     @if (session('message_'))
         <div class="alert alert-success">
             {{ session('message_') }}
@@ -77,9 +70,8 @@
                     @if ($phoneCode)
                         <span class="input-group-text" id="addon-wrapping">{{ $phoneCode }}</span>
                     @endif
-                    <input wire:model.lazy="phone" wire:dirty.class="border border-warning" type="text"
-                        name="mobile_number" id="mobile_number" wire:model.live="phone"
-                        class="form-control  @error('phone') is-invalid @enderror">
+                    <input wire:model.lazy="phone" wire:dirty.class="border border-warning" type="number"
+                        wire:model.live="phone" class="form-control  @error('phone') is-invalid @enderror">
                 </div>
                 @error('phone')
                     <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
@@ -114,7 +106,7 @@
         @if ($showProductInput && is_array($dataList) && count($dataList))
             <div class="col-12">
                 <div class="form-group">
-                    <select class="form-control" name="product_id" id="product_id" wire:model.lazy="product_id">
+                    <select class="form-control" wire:model.lazy="product_id">
                         <option selected></option>
                         @foreach ($dataList as $key => $value)
                             <option value="{{ $key }}">{{ $value }}</option>
