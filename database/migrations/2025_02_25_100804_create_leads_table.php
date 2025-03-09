@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('country_id');
             $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('name', 100);
-            $table->string('email', 100);
-            $table->string('mobile_number');
+            $table->string('name', 100)->index();
+            $table->string('email', 100)->index();
+            $table->string('mobile_number')->index();
             $table->longText('message');
             $table->timestamps();
         });
