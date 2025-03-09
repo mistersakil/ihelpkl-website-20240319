@@ -1,8 +1,11 @@
 <form novalidate="true" wire:submit.prevent="submitForm">
 
     {{-- @dump(session('message_')); --}}
-    @dump($dataList);
-    @dump($limit);
+    {{-- @dump($dataList);
+    @dump($limit); --}}
+    {{-- @json($countries) --}}
+    {{-- @json($dataList) --}}
+    @dump($errors)
     @if (session('message_'))
         <div class="alert alert-success">
             {{ session('message_') }}
@@ -42,7 +45,6 @@
                         {{ __('your email') }}
                     </div>
                 @endif
-                <div class="help-block with-errors"></div>
             </div>
         </div>
 
@@ -55,6 +57,11 @@
                             <option value="{{ $country['id'] }}">{{ $country['name'] }}</option>
                         @endforeach
                     </select>
+
+                    @error('country_id')
+                        <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
+                    @enderror
+
                     @if (!$errors->has('country_id'))
                         <div class="form-text ">
                             {{ __('select your country') }}
@@ -113,6 +120,11 @@
                             <option value="{{ $key }}">{{ $value }}</option>
                         @endforeach
                     </select>
+
+                    @error('product_id')
+                        <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
+                    @enderror
+
                     @if (!$errors->has('product_id'))
                         <div class="form-text ">
                             {{ __('select product') }}
@@ -124,9 +136,14 @@
 
         <div class="col-lg-12 col-md-12">
             <div class="form-group">
-                <textarea name="message" class="form-control" id="message" wire:model.lazy="message" cols="30" rows="5"
+                <textarea name="message" class="form-control" id="message" wire:model.lazy="message" cols="30" rows="2"
                     required="" data-error="Write your message"></textarea>
                 <div class="help-block with-errors"></div>
+
+                @error('message')
+                    <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
+                @enderror
+
                 @if (!$errors->has('message'))
                     <div class="form-text ">
                         {{ __('your message') }}
@@ -152,7 +169,7 @@
 
         @if ($showSendMessageButton)
             <div class="col-lg-12 col-md-12">
-                <button type="submit" class="default-btn" wire:click="submitForm">
+                <button type="submit" class="default-btn">
                     {{ __('send message') }}
                 </button>
                 <div id="msgSubmit" class="h3 text-center hidden"></div>
@@ -167,12 +184,10 @@
                 </div>
             </div>
 
-            <div class="col-lg-12 col-md-12">
-                <button type="submit" class="default-btn" wire:click="submitForm">
+            <div class="col-12">
+                <button type="submit" class="default-btn">
                     {{ __('request a demo') }}
                 </button>
-                <div id="msgSubmit" class="h3 text-center hidden"></div>
-                <div class="clearfix"></div>
             </div>
         @endif
     </div>

@@ -7,11 +7,12 @@ class ValidationService
     public function validationRules(bool $isSometimes = false)
     {
         return [
-            'name' => ['required', 'string', 'min:10', 'max:100'],
-            'email' => ['required', 'email', 'max:255'],
+            'name' => ['required', 'string', 'min:5', 'max:100'],
+            'email' => ['required', 'email', 'min:5', 'max:255'],
             'phone' => ['required', 'regex:/^\+?[1-9]\d{1,14}$/'],
+            'message' => ['required', 'string', 'min:5', 'max:1000'],
             'country_id' => ['required'],
-            'product_id' => 'nullable|exists:products,id'
+            'product_id' =>  ['required'],
         ];
     }
 
@@ -27,9 +28,11 @@ class ValidationService
             'name.max' => __('maximum character length', [':max', ':attribute']),
             'email.required' => __('can not be empty', [':attribute']),
             'email.email' => __('format is invalid', [':attribute']),
-            'name.max' => __('maximum character length', [':max', ':attribute']),
             'phone.required' => __('can not be empty', [':attribute']),
-            'phone.regex' => __('format is invalid', [':attribute'])
+            'phone.regex' => __('format is invalid', [':attribute']),
+            'country_id.required' => __('can not be empty', [':attribute']),
+            'product_id.required' => __('can not be empty', [':attribute']),
+            'message.min' => __('minimum character length', [':min', ':attribute']),
         ];
     }
 
@@ -40,9 +43,12 @@ class ValidationService
     public function validationAttributesSurname()
     {
         return [
-            'name' => __('name'),
+            'name' => __('Name'),
             'email' => __('email'),
-            'phone' => __('phone number')
+            'phone' => __('phone number'),
+            'country_id' => __('Country'),
+            'product_id' => __('Product'),
+            'message' => __('Message'),
         ];
     }
 }

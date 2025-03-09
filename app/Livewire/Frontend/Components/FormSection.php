@@ -144,6 +144,7 @@ class FormSection extends Component
     public function submitForm()
     {
         $this->validate();
+        // dd("clicked");
 
         Lead::create([
             'name' => $this->name,
