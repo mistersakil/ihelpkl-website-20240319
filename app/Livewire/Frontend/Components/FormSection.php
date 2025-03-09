@@ -151,7 +151,7 @@ class FormSection extends Component
             'country_id' => $this->country_id,
             'name' => $this->name,
             'email' => $this->email,
-            'mobile_number' => $this->phone,
+            'mobile_number' => $this->phoneCode . $this->phone,
             'message' => $this->message,
         ]);
 

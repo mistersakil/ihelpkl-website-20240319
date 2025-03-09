@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade')->onUpdate('cascade');
             $table->string('name', 100)->index();
             $table->string('email', 100)->index();
-            $table->string('mobile_number')->index();
+            $table->string('mobile_number', 25)->index();
             $table->longText('message');
             $table->timestamps();
         });
