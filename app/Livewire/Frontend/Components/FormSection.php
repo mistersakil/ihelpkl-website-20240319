@@ -73,8 +73,6 @@ class FormSection extends Component
 
         $this->isShowSectionHeader = (!empty($this->sectionTitle) || !empty($this->sectionSubTitle)) ? true : false;
 
-        $this->state = $this->getStateDefault();
-
         $this->countries = $this->countryService->getCountries();
     }
 
@@ -83,16 +81,15 @@ class FormSection extends Component
      *
      * @return array
      */
-    private function getStateDefault(): array
+    private function resetStateValues(): void
     {
-        return [
-            'name' => '',
-            'email' => '',
-            'country_id' => '',
-            'phone' => '',
-            'product_id' => '',
-            'message' => '',
-        ];
+        $this->name = '';
+        $this->email = '';
+        $this->phone = '';
+        $this->country_id = '';
+        $this->product_id = '';
+        $this->phoneCode = '';
+        $this->message = '';
     }
 
 
@@ -102,7 +99,7 @@ class FormSection extends Component
      * @param int $countryId
      */
     public function updatedCountryId($countryId)
-    {       
+    {
         $this->phoneCode = $this->countryService->getPhoneCode($countryId);
     }
 
@@ -149,19 +146,16 @@ class FormSection extends Component
     public function submitForm()
     {
         $this->validate();
-        // dd("clicked");
 
         Lead::create([
+            'country_id' => $this->country_id,
             'name' => $this->name,
             'email' => $this->email,
-            'country_id' => $this->country_id,
             'mobile_number' => $this->phone,
-            'product_id' => $this->product_id ?? null,
             'message' => $this->message,
         ]);
 
-        // $this->reset();
-        $this->state = $this->getStateDefault();
+        $this->resetStateValues();
 
         session()->flash('message_', 'Your message has been sent successfully!');
     }
