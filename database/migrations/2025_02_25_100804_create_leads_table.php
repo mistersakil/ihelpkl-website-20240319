@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->foreignId('country_id')->constrained();
+            $table->string('country_id');
             $table->string('mobile_number');
-            $table->foreignId('product_id')->constrained();
+            $table->string('product_id')->nullable();
             $table->longText('message');
             $table->timestamps();
         });
