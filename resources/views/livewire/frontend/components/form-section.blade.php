@@ -164,8 +164,6 @@
                 <button type="submit" class="default-btn">
                     {{ __('send message') }}
                 </button>
-                <div id="msgSubmit" class="h3 text-center hidden"></div>
-                <div class="clearfix"></div>
             </div>
         @endif
 

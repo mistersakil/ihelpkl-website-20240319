@@ -36,6 +36,8 @@ class FormSection extends Component
     public string $product_id = '';
     #[Validate]
     public string $message = '';
+    #[Validate]
+    public string $subject = '';
     public string $phoneCode = '***';
 
     public array $countries;
@@ -92,6 +94,7 @@ class FormSection extends Component
         $this->product_id = '';
         $this->phoneCode = '';
         $this->message = '';
+        $this->subject = '';
     }
 
 
@@ -154,12 +157,18 @@ class FormSection extends Component
     {
         $this->validate();
 
-        Lead::create([
+        $lead = Lead::create([
             'country_id' => $this->country_id,
             'name' => $this->name,
             'email' => $this->email,
             'mobile_number' => $this->phoneCode . $this->phone,
             'message' => $this->message,
+        ]);
+
+        \App\Models\Query::create([
+            'lead_id' => $lead->id,
+            'product_id' => $this->product_id ?: null,
+            'subject' => $this->showRequestDemoButton ? 'Request Demo' : 'Contact Us',
         ]);
 
         $this->resetStateValues();
