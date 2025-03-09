@@ -43,12 +43,12 @@ class ValidationService
     public function validationAttributesSurname()
     {
         return [
-            'name' => __('Name'),
+            'name' => __('name'),
             'email' => __('email'),
             'phone' => __('phone number'),
-            'country_id' => __('Country'),
-            'product_id' => __('Product'),
-            'message' => __('Message'),
+            'country_id' => __('country'),
+            'product_id' => __('product'),
+            'message' => __('message'),
         ];
     }
 }
