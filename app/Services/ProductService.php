@@ -52,8 +52,6 @@ class ProductService
     public function getStaticModels(string $slug = '', int $limit = 5)
     {
         $dataList = [
-            
-        
             [
                 'id' => 1,
                 'meta_title' => 'Point Of Sale',
@@ -421,7 +419,7 @@ class ProductService
                 ]
 
             ],
-            
+
             [
                 'id' => 4,
                 'meta_title' => 'Complain Management System',
