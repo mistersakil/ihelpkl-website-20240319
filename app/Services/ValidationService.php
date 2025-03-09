@@ -32,6 +32,7 @@ class ValidationService
             'phone.regex' => __('format is invalid', [':attribute']),
             'country_id.required' => __('can not be empty', [':attribute']),
             'product_id.required' => __('can not be empty', [':attribute']),
+            'message.required' => __('can not be empty', [':attribute']),
             'message.min' => __('minimum character length', [':min', ':attribute']),
         ];
     }

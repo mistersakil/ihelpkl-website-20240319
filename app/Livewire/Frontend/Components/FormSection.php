@@ -78,6 +78,11 @@ class FormSection extends Component
         $this->countries = $this->countryService->getCountries();
     }
 
+    /**
+     * Set state props default value
+     *
+     * @return array
+     */
     private function getStateDefault(): array
     {
         return [
@@ -97,14 +102,14 @@ class FormSection extends Component
      * @param int $countryId
      */
     public function updatedCountryId($countryId)
-    {
-        // Call the getPhoneCode function and pass the selected countryId
+    {       
         $this->phoneCode = $this->countryService->getPhoneCode($countryId);
     }
 
 
     /**
      * Validation rules of the component
+     * 
      * @return array
      */
     public function rules(): array
