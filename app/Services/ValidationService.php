@@ -7,10 +7,10 @@ class ValidationService
     public function validationRules(bool $isSometimes = false)
     {
         return [
-            'name' => ['required', 'string', 'min:5', 'max:100'],
+            'name' => ['required', 'min:5', 'max:100'],
             'email' => ['required', 'email', 'min:5', 'max:255'],
             'phone' => ['required', 'regex:/^\+?[1-9]\d{1,14}$/'],
-            'message' => ['required', 'string', 'min:5', 'max:1000'],
+            'message' => ['required', 'min:5', 'max:1000'],
             'country_id' => ['required'],
             'product_id' =>  ['required'],
         ];
@@ -34,6 +34,7 @@ class ValidationService
             'product_id.required' => __('can not be empty', [':attribute']),
             'message.required' => __('can not be empty', [':attribute']),
             'message.min' => __('minimum character length', [':min', ':attribute']),
+            'message.max' => __('maximum character length', [':max', ':attribute']),
         ];
     }
 

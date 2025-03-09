@@ -5,7 +5,7 @@
     @dump($limit); --}}
     {{-- @json($countries) --}}
     {{-- @json($dataList) --}}
-    @dump($errors)
+    {{-- @dump($errors) --}}
     @if (session('message_'))
         <div class="alert alert-success">
             {{ session('message_') }}

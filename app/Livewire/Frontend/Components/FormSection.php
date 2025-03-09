@@ -160,7 +160,8 @@ class FormSection extends Component
             'message' => $this->message,
         ]);
 
-        $this->reset();
+        // $this->reset();
+        $this->state = $this->getStateDefault();
 
         session()->flash('message_', 'Your message has been sent successfully!');
     }
