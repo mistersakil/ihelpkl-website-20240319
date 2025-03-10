@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend\Components;
 
 use App\Models\Lead;
+use App\Models\Query;
 use Livewire\Component;
 use App\Services\CountryService;
 use App\Services\ProductService;
@@ -87,14 +88,7 @@ class FormSection extends Component
      */
     private function resetStateValues(): void
     {
-        $this->name = '';
-        $this->email = '';
-        $this->phone = '';
-        $this->country_id = '';
-        $this->product_id = '';
-        $this->phoneCode = '';
-        $this->message = '';
-        $this->subject = '';
+        $this->ValidationService->stateValues();
     }
 
 
@@ -111,7 +105,7 @@ class FormSection extends Component
 
     /**
      * Validation rules of the component
-     * 
+     *
      * @return array
      */
     public function rules(): array
@@ -165,7 +159,7 @@ class FormSection extends Component
             'message' => $this->message,
         ]);
 
-        \App\Models\Query::create([
+        $query = Query::create([
             'lead_id' => $lead->id,
             'product_id' => $this->product_id ?: null,
             'subject' => $this->showRequestDemoButton ? 'Request Demo' : 'Contact Us',

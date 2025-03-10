@@ -53,4 +53,19 @@ class ValidationService
             'message' => __('message'),
         ];
     }
+
+
+    public function stateValues()
+    {
+        return [
+            'name' => '',
+            'email' => '',
+            'phone' => '',
+            'country_id' => '',
+            'product_id' => '',
+            'phoneCode' => '',
+            'message' => '',
+            'subject' => '',
+        ];
+    }
 }
