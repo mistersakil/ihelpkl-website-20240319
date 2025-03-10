@@ -4,7 +4,7 @@ namespace App\Services;
 
 class ValidationService
 {
-    public function validationRules(bool $isSometimes = false)
+    public function validationRules(bool $isSometimes = false): array
     {
         return [
             'name' => ['required', 'min:5', 'max:100'],
@@ -12,7 +12,8 @@ class ValidationService
             'phone' => ['required', 'regex:/^\+?[1-9]\d{1,14}$/'],
             'message' => ['required', 'min:5', 'max:1000'],
             'country_id' => ['required'],
-            'product_id' =>  ['required'],
+            // 'product_id' => ['required'],
+            // 'subject' => ['required', 'min:5', 'max:100'],
         ];
     }
 
@@ -20,7 +21,7 @@ class ValidationService
      * Validation error messages for state properties of the component
      * @return array
      */
-    public function validationErrorMessages()
+    public function validationErrorMessages(): array
     {
         return [
             'name.required' => __('can not be empty', [':attribute']),
@@ -35,6 +36,7 @@ class ValidationService
             'message.required' => __('can not be empty', [':attribute']),
             'message.min' => __('minimum character length', [':min', ':attribute']),
             'message.max' => __('maximum character length', [':max', ':attribute']),
+            'subject.required' => __('can not be empty', [':attribute']),
         ];
     }
 
@@ -42,7 +44,7 @@ class ValidationService
      * Alias of state attributes
      * @return array
      */
-    public function validationAttributesSurname()
+    public function validationAttributesSurname(): array
     {
         return [
             'name' => __('name'),
@@ -51,11 +53,12 @@ class ValidationService
             'country_id' => __('country'),
             'product_id' => __('product'),
             'message' => __('message'),
+            'subject' => __('subject'),
         ];
     }
 
 
-    public function resetStateValues()
+    public function resetStateValues(): array
     {
         return [
             'name' => '',

@@ -9,8 +9,8 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group input-group has-validation">
-                <input wire:model.lazy="name" wire:dirty.class="border border-warning" type="text" name="name"
-                    id="name" class="form-control @error('name') is-invalid @enderror" />
+                <input wire:model.lazy="name" wire:dirty.class="border border-warning" type="text" name="name" id="name"
+                    class="form-control @error('name') is-invalid @enderror" />
 
                 @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -71,7 +71,7 @@
                         <span class="input-group-text" id="addon-wrapping">{{ $phoneCode }}</span>
                     @endif
                     <input wire:model.lazy="phone" wire:dirty.class="border border-warning" type="number"
-                        wire:model.live="phone" class="form-control  @error('phone') is-invalid @enderror">
+                        class="form-control  @error('phone') is-invalid @enderror">
                 </div>
                 @error('phone')
                     <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
@@ -89,9 +89,12 @@
         @if ($showSubjectInput)
             <div class="col-lg-12">
                 <div class="form-group">
-                    <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                        wire:model.lazy="subject" data-error="Please Enter Your Subject">
-                    <div class="help-block with-errors"></div>
+                    <input type="text" name="subject" id="subject"
+                        class="form-control  @error('message') is-invalid @enderror" wire:model.lazy="subject">
+
+                    @error('subject')
+                        <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
+                    @enderror
 
                     @if (!$errors->has('subject'))
                         <div class="form-text ">
@@ -150,8 +153,7 @@
                 <div class="agree-label">
                     <input type="checkbox" id="chb1">
                     <label for="chb1">
-                        Accept <a href="javascript:void(0)">Terms & Conditions</a> And <a
-                            href="javascript:void(0)">Privacy
+                        Accept <a href="javascript:void(0)">Terms & Conditions</a> And <a href="javascript:void(0)">Privacy
                             Policy.</a>
                     </label>
                 </div>

@@ -117,7 +117,17 @@ class FormSection extends Component
      */
     public function rules(): array
     {
-        return $this->ValidationService->validationRules();
+        $rules = $this->ValidationService->validationRules();
+
+        if ($this->showProductInput) {
+            $rules['product_id'] = 'required'; // Or any other rules you need
+        }
+
+        if ($this->showSubjectInput) {
+            $rules['subject'] = 'required|min:5|max:100'; // Or any other rules you need
+        }
+
+        return $rules;
     }
 
     /**
