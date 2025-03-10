@@ -55,7 +55,7 @@ class ValidationService
     }
 
 
-    public function stateValues()
+    public function resetStateValues()
     {
         return [
             'name' => '',

@@ -88,7 +88,14 @@ class FormSection extends Component
      */
     private function resetStateValues(): void
     {
-        $this->ValidationService->stateValues();
+        $this->name = '';
+        $this->email = '';
+        $this->phone = '';
+        $this->country_id = '';
+        $this->product_id = '';
+        $this->phoneCode = '';
+        $this->message = '';
+        $this->subject = '';
     }
 
 
