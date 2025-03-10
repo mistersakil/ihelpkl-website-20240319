@@ -2,19 +2,34 @@
 
 namespace App\Services;
 
+/**
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
 class ValidationService
 {
-    public function validationRules(bool $isSometimes = false): array
+    public function validationRules(array $componentProps = []): array
     {
-        return [
+        $rules = [
             'name' => ['required', 'min:5', 'max:100'],
             'email' => ['required', 'email', 'min:5', 'max:255'],
             'phone' => ['required', 'regex:/^\+?[1-9]\d{1,14}$/'],
             'message' => ['required', 'min:5', 'max:1000'],
             'country_id' => ['required'],
-            // 'product_id' => ['required'],
-            // 'subject' => ['required', 'min:5', 'max:100'],
         ];
+
+        if (isset($componentProps['showProductInput']) && $componentProps['showProductInput']) {
+            $rules['product_id'] = 'required';
+        }
+
+        if (isset($componentProps['showSubjectInput']) && $componentProps['showSubjectInput']) {
+            $rules['subject'] = 'required|min:5|max:100';
+        }
+
+        if (isset($componentProps['showTermsConditionCheck']) && $componentProps['showTermsConditionCheck']) {
+            $rules['termsAccepted'] = 'accepted';
+        }
+
+        return $rules;
     }
 
     /**
@@ -37,6 +52,7 @@ class ValidationService
             'message.min' => __('minimum character length', [':min', ':attribute']),
             'message.max' => __('maximum character length', [':max', ':attribute']),
             'subject.required' => __('can not be empty', [':attribute']),
+            'termsAccepted.accepted' => __('You must accept the terms and conditions.'),
         ];
     }
 
@@ -54,21 +70,7 @@ class ValidationService
             'product_id' => __('product'),
             'message' => __('message'),
             'subject' => __('subject'),
-        ];
-    }
-
-
-    public function resetStateValues(): array
-    {
-        return [
-            'name' => '',
-            'email' => '',
-            'phone' => '',
-            'country_id' => '',
-            'product_id' => '',
-            'phoneCode' => '',
-            'message' => '',
-            'subject' => '',
+            'termsAccepted' => __('terms and conditions'),
         ];
     }
 }

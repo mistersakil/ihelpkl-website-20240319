@@ -40,6 +40,7 @@ class FormSection extends Component
     #[Validate]
     public string $subject = '';
     public string $phoneCode = '***';
+    public bool $termsAccepted = false;
 
     public array $countries;
     public array $result;
@@ -117,17 +118,11 @@ class FormSection extends Component
      */
     public function rules(): array
     {
-        $rules = $this->ValidationService->validationRules();
-
-        if ($this->showProductInput) {
-            $rules['product_id'] = 'required'; // Or any other rules you need
-        }
-
-        if ($this->showSubjectInput) {
-            $rules['subject'] = 'required|min:5|max:100'; // Or any other rules you need
-        }
-
-        return $rules;
+        return $this->ValidationService->validationRules([
+            'showProductInput' => $this->showProductInput,
+            'showSubjectInput' => $this->showSubjectInput,
+            'showTermsConditionCheck' => $this->showTermsConditionCheck,
+        ]);
     }
 
     /**
