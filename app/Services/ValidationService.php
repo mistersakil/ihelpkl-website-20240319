@@ -26,7 +26,7 @@ class ValidationService
         }
 
         if (isset($componentProps['showTermsConditionCheck']) && $componentProps['showTermsConditionCheck']) {
-            $rules['termsAccepted'] = 'accepted';
+            $rules['termsAccepted'] = 'required|accepted';
         }
 
         return $rules;

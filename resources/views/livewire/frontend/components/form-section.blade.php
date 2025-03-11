@@ -5,6 +5,10 @@
         </div>
     @endif
 
+    <?php
+    @dump($errors)
+    ?>
+
     @csrf
     <div class="row">
         <div class="col-lg-6">
@@ -157,7 +161,7 @@
                             Policy.</a>
                     </label>
 
-                    @error('termsAccepted') 
+                    @error('termsAccepted')
                         <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
                     @enderror
                 </div>
