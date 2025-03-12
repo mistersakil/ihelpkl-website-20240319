@@ -2,25 +2,41 @@
 
 namespace App\Services;
 
+/**
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
 class ValidationService
 {
-    public function validationRules(bool $isSometimes = false)
+    public function validationRules(array $componentProps = []): array
     {
-        return [
-            'name' => ['required', 'string', 'min:5', 'max:100'],
+        $rules = [
+            'name' => ['required', 'min:5', 'max:100'],
             'email' => ['required', 'email', 'min:5', 'max:255'],
             'phone' => ['required', 'regex:/^\+?[1-9]\d{1,14}$/'],
-            'message' => ['required', 'string', 'min:5', 'max:1000'],
+            'message' => ['required', 'min:5', 'max:1000'],
             'country_id' => ['required'],
-            'product_id' =>  ['required'],
         ];
+
+        if (isset($componentProps['showProductInput']) && $componentProps['showProductInput']) {
+            $rules['product_id'] = 'required';
+        }
+
+        if (isset($componentProps['showSubjectInput']) && $componentProps['showSubjectInput']) {
+            $rules['subject'] = 'required|min:5|max:100';
+        }
+
+        if (isset($componentProps['showTermsConditionCheck']) && $componentProps['showTermsConditionCheck']) {
+            $rules['termsAccepted'] = 'required|accepted';
+        }
+
+        return $rules;
     }
 
     /**
      * Validation error messages for state properties of the component
      * @return array
      */
-    public function validationErrorMessages()
+    public function validationErrorMessages(): array
     {
         return [
             'name.required' => __('can not be empty', [':attribute']),
@@ -32,7 +48,11 @@ class ValidationService
             'phone.regex' => __('format is invalid', [':attribute']),
             'country_id.required' => __('can not be empty', [':attribute']),
             'product_id.required' => __('can not be empty', [':attribute']),
+            'message.required' => __('can not be empty', [':attribute']),
             'message.min' => __('minimum character length', [':min', ':attribute']),
+            'message.max' => __('maximum character length', [':max', ':attribute']),
+            'subject.required' => __('can not be empty', [':attribute']),
+            'termsAccepted.accepted' => __('You must accept the terms and conditions.'),
         ];
     }
 
@@ -40,7 +60,7 @@ class ValidationService
      * Alias of state attributes
      * @return array
      */
-    public function validationAttributesSurname()
+    public function validationAttributesSurname(): array
     {
         return [
             'name' => __('name'),
@@ -49,6 +69,8 @@ class ValidationService
             'country_id' => __('country'),
             'product_id' => __('product'),
             'message' => __('message'),
+            'subject' => __('subject'),
+            'termsAccepted' => __('terms and conditions'),
         ];
     }
 }

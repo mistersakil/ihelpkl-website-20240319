@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend\Components;
 
 use App\Models\Lead;
+use App\Models\Query;
 use Livewire\Component;
 use App\Services\CountryService;
 use App\Services\ProductService;
@@ -32,9 +33,14 @@ class FormSection extends Component
     public string $phone = '';
     #[Validate]
     public string $country_id = '';
+    #[Validate]
     public string $product_id = '';
-    public string $phoneCode = '***';
+    #[Validate]
     public string $message = '';
+    #[Validate]
+    public string $subject = '';
+    public string $phoneCode = '***';
+    public bool $termsAccepted = false;
 
     public array $countries;
     public array $result;
@@ -73,21 +79,24 @@ class FormSection extends Component
 
         $this->isShowSectionHeader = (!empty($this->sectionTitle) || !empty($this->sectionSubTitle)) ? true : false;
 
-        $this->state = $this->getStateDefault();
-
         $this->countries = $this->countryService->getCountries();
     }
 
-    private function getStateDefault(): array
+    /**
+     * Set state props default value
+     *
+     * @return array
+     */
+    private function resetStateValues(): void
     {
-        return [
-            'name' => '',
-            'email' => '',
-            'country_id' => '',
-            'phone' => '',
-            'product_id' => '',
-            'message' => '',
-        ];
+        $this->name = '';
+        $this->email = '';
+        $this->phone = '';
+        $this->country_id = '';
+        $this->product_id = '';
+        $this->phoneCode = '';
+        $this->message = '';
+        $this->subject = '';
     }
 
 
@@ -98,18 +107,22 @@ class FormSection extends Component
      */
     public function updatedCountryId($countryId)
     {
-        // Call the getPhoneCode function and pass the selected countryId
         $this->phoneCode = $this->countryService->getPhoneCode($countryId);
     }
 
 
     /**
      * Validation rules of the component
+     *
      * @return array
      */
     public function rules(): array
     {
-        return $this->ValidationService->validationRules();
+        return $this->ValidationService->validationRules([
+            'showProductInput' => $this->showProductInput,
+            'showSubjectInput' => $this->showSubjectInput,
+            'showTermsConditionCheck' => $this->showTermsConditionCheck,
+        ]);
     }
 
     /**
@@ -131,7 +144,12 @@ class FormSection extends Component
         return $this->ValidationService->validationAttributesSurname();
     }
 
-
+    /**
+     * Validate attribute on update
+     *
+     * @param [type] $propertyName
+     * @return void
+     */
     public function updating($propertyName)
     {
         $this->validateOnly($propertyName);
@@ -144,18 +162,22 @@ class FormSection extends Component
     public function submitForm()
     {
         $this->validate();
-        // dd("clicked");
 
-        Lead::create([
+        $lead = Lead::create([
+            'country_id' => $this->country_id,
             'name' => $this->name,
             'email' => $this->email,
-            'country_id' => $this->country_id,
-            'mobile_number' => $this->phone,
-            'product_id' => $this->product_id ?? null,
+            'mobile_number' => $this->phoneCode . $this->phone,
             'message' => $this->message,
         ]);
 
-        $this->reset();
+        $query = Query::create([
+            'lead_id' => $lead->id,
+            'product_id' => $this->product_id ?: null,
+            'subject' => $this->showRequestDemoButton ? 'Request Demo' : 'Contact Us',
+        ]);
+
+        $this->resetStateValues();
 
         session()->flash('message_', 'Your message has been sent successfully!');
     }

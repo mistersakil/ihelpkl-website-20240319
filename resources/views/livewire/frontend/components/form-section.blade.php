@@ -1,11 +1,4 @@
 <form novalidate="true" wire:submit.prevent="submitForm">
-
-    {{-- @dump(session('message_')); --}}
-    {{-- @dump($dataList);
-    @dump($limit); --}}
-    {{-- @json($countries) --}}
-    {{-- @json($dataList) --}}
-    @dump($errors)
     @if (session('message_'))
         <div class="alert alert-success">
             {{ session('message_') }}
@@ -77,8 +70,7 @@
                     @if ($phoneCode)
                         <span class="input-group-text" id="addon-wrapping">{{ $phoneCode }}</span>
                     @endif
-                    <input wire:model.lazy="phone" wire:dirty.class="border border-warning" type="text"
-                        name="mobile_number" id="mobile_number" wire:model.live="phone"
+                    <input wire:model.lazy="phone" wire:dirty.class="border border-warning" type="number"
                         class="form-control  @error('phone') is-invalid @enderror">
                 </div>
                 @error('phone')
@@ -97,9 +89,12 @@
         @if ($showSubjectInput)
             <div class="col-lg-12">
                 <div class="form-group">
-                    <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                        wire:model.lazy="subject" data-error="Please Enter Your Subject">
-                    <div class="help-block with-errors"></div>
+                    <input type="text" name="subject" id="subject"
+                        class="form-control  @error('message') is-invalid @enderror" wire:model.lazy="subject">
+
+                    @error('subject')
+                        <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
+                    @enderror
 
                     @if (!$errors->has('subject'))
                         <div class="form-text ">
@@ -114,7 +109,7 @@
         @if ($showProductInput && is_array($dataList) && count($dataList))
             <div class="col-12">
                 <div class="form-group">
-                    <select class="form-control" name="product_id" id="product_id" wire:model.lazy="product_id">
+                    <select class="form-control" wire:model.lazy="product_id">
                         <option selected></option>
                         @foreach ($dataList as $key => $value)
                             <option value="{{ $key }}">{{ $value }}</option>
@@ -156,12 +151,16 @@
         @if ($showTermsConditionCheck)
             <div class="col-lg-12 col-md-12">
                 <div class="agree-label">
-                    <input type="checkbox" id="chb1">
+                    <input type="checkbox" id="chb1" wire:model.live="termsAccepted">
                     <label for="chb1">
                         Accept <a href="javascript:void(0)">Terms & Conditions</a> And <a
                             href="javascript:void(0)">Privacy
                             Policy.</a>
                     </label>
+
+                    @error('termsAccepted')
+                        <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
+                    @enderror
                 </div>
             </div>
         @endif
@@ -172,8 +171,6 @@
                 <button type="submit" class="default-btn">
                     {{ __('send message') }}
                 </button>
-                <div id="msgSubmit" class="h3 text-center hidden"></div>
-                <div class="clearfix"></div>
             </div>
         @endif
 

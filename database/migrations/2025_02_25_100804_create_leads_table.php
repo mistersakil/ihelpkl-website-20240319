@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('leads', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('country_id');
-            $table->string('mobile_number');
-            $table->string('product_id')->nullable();
+            $table->unsignedBigInteger('country_id');
+            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('name', 100)->index();
+            $table->string('email', 100)->index();
+            $table->string('mobile_number', 25)->index();
             $table->longText('message');
             $table->timestamps();
         });
