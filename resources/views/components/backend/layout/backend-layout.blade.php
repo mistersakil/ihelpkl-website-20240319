@@ -32,16 +32,6 @@
     @stack('dynamic_js')
     @livewireScripts
     <script type="module">
-        /* Toast notification after any action */
-        window.addEventListener('toastAlert', event => {
-            event.preventDefault();
-            Toast.fire({
-                icon: event.detail.type,
-                title: event.detail.message,
-            });
-        })
-        /* End: Toast notification after success */
-
 
         /* Notify a confirmation alert before proceed any further action */
         window.addEventListener('are_you_sure', event => {
