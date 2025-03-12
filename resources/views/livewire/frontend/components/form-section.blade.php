@@ -153,10 +153,11 @@
                 <div class="agree-label">
                     <input type="checkbox" id="chb1" wire:model.live="termsAccepted">
                     <label for="chb1">
-                        Accept __('Accept')<a href="javascript:void(0)">Terms & Conditions</a> And <a
-                            href="javascript:void(0)">Privacy
-                            Policy.</a>
+                        {{ __('accept') }} <a href="javascript:void(0)">{{ __('terms and conditions') }}</a>
+                        {{ __('and') }} <a href="javascript:void(0)">{{ __('privacy policy') }}.</a>
                     </label>
+
+                    <br>
 
                     @error('termsAccepted')
                         <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
