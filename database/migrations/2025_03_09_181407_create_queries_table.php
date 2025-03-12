@@ -13,12 +13,9 @@ return new class extends Migration {
         Schema::create('queries', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('lead_id');
-            $table->unsignedBigInteger('product_id')->nullable();
-            $table->string('subject', 255)->nullable();
+            $table->string('subject', 255);
             $table->timestamps();
-
             $table->foreign('lead_id')->references('id')->on('leads')->onDelete('cascade');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('set null');
         });
     }
 

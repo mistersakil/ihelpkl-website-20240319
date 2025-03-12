@@ -4,6 +4,7 @@ namespace App\Livewire\Frontend\Components;
 
 use App\Models\Lead;
 use App\Models\Query;
+use App\Models\LeadProduct;
 use Livewire\Component;
 use App\Services\CountryService;
 use App\Services\ProductService;
@@ -157,6 +158,25 @@ class FormSection extends Component
 
 
     /**
+     * Retrieves the title of the selected product based on the product ID.
+     * If the product is not found, a default title is returned.
+     *
+     * @return string The title of the selected product or a default title.
+     */
+    public function getProductTitle()
+    {
+        $product = collect($this->productService->getStaticModels())->firstWhere('id', $this->product_id);
+
+        if ($product) {
+            $title = $product['title'];
+        } else {
+            $title = 'Default Title';
+        }
+
+        return $title;
+    }
+
+    /**
      * Handle form submission.
      */
     public function submitForm()
@@ -171,10 +191,16 @@ class FormSection extends Component
             'message' => $this->message,
         ]);
 
-        $query = Query::create([
+        $Lead_products = LeadProduct::create([
             'lead_id' => $lead->id,
             'product_id' => $this->product_id ?: null,
-            'subject' => $this->showRequestDemoButton ? 'Request Demo' : 'Contact Us',
+        ]);
+
+        $subject = $this->getProductTitle();
+
+        $query = Query::create([
+            'lead_id' => $lead->id,
+            'subject' => $subject,
         ]);
 
         $this->resetStateValues();
