@@ -92,7 +92,6 @@ class LeadService
                 ->orWhere('email', 'like', $searchText)
                 ->orWhere('country_id', 'like', $searchText)
                 ->orWhere('mobile_number', 'like', $searchText)
-                ->orWhere('product_id', 'like', $searchText)
                 ->orWhere('message', 'like', $searchText);
         })
             ->when(isset($select), function ($query) use ($select) {

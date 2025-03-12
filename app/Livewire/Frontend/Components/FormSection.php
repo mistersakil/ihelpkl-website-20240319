@@ -208,7 +208,8 @@ class FormSection extends Component
 
         $this->resetStateValues();
 
-        session()->flash('message_', 'Your message has been sent successfully!');
+        ## Dispatch events
+        $this->dispatch('toastAlert', message: __('your query has been submitted successfully'), type: 'success');
     }
 
 

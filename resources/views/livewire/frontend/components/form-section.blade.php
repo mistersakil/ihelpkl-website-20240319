@@ -1,9 +1,4 @@
 <form novalidate="true" wire:submit.prevent="submitForm">
-    @if (session('message_'))
-        <div class="alert alert-success">
-            {{ session('message_') }}
-        </div>
-    @endif
 
     @csrf
     <div class="row">

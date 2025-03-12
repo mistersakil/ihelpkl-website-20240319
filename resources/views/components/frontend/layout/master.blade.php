@@ -36,7 +36,7 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <x-frontend.layout.topbar></x-frontend.layout.topbar>
+    {{-- <x-frontend.layout.topbar></x-frontend.layout.topbar> --}}
     <x-frontend.layout.navbar></x-frontend.layout.navbar>
 
     @if (!request()->routeIs('web.home'))
