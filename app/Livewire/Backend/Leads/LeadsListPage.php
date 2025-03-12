@@ -5,6 +5,7 @@ namespace App\Livewire\Backend\Leads;
 use Livewire\Attributes\Url;
 use Livewire\Attributes\Title;
 use App\Services\LeadService;
+use App\Services\CountryService;
 use Livewire\Attributes\Layout;
 use App\Traits\BackendFilterTrait;
 use Illuminate\Contracts\View\View;
@@ -29,6 +30,7 @@ class LeadsListPage extends BackendComponent
 
     # Services
     private LeadService $leadService;
+    private CountryService $countryService;
 
     /**
      * Create a new component instance
@@ -37,8 +39,8 @@ class LeadsListPage extends BackendComponent
      */
     public function boot(): void
     {
-        // $this->sliderService = new SliderService();
         $this->leadService = new leadService();
+        $this->countryService = new CountryService();
     }
 
     /**
@@ -88,6 +90,29 @@ class LeadsListPage extends BackendComponent
         $lowerOrderModel = $this->leadService->getOnlyModelByOrderDirection('asc');
         $highestOrderModel = $this->leadService->getOnlyModelByOrderDirection('desc');
 
-        return view('livewire.backend.leads.leads-list-page', compact('leads', 'models', 'countModel', 'lowerOrderModel', 'highestOrderModel'));
+        // $viewData = [];
+        // foreach ($models as $key => $model) {
+        //     $viewData[] = [
+        //         'country_id' => $model->id,
+        //     ];
+        // }
+
+        // $countries = $this->countryService->getCountryNameById($this->viewData);
+        // dd($viewData);
+
+
+        $viewData = [];
+        foreach ($models as $key => $model) {
+            $viewData[] = [
+                'country_id' => $model->country_id,
+                'country_name' => $this->countryService->getCountryNameById($model->country_id)
+            ];
+        }
+
+        $countryName = $viewData[0]['country_name'];
+
+        // dd($countryName);
+
+        return view('livewire.backend.leads.leads-list-page', compact('leads', 'models', 'countryName', 'countModel', 'lowerOrderModel', 'highestOrderModel'));
     }
 }

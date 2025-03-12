@@ -107,7 +107,7 @@
                                         {{ $model->email }}
                                     </td>
                                     <td>
-                                        {{ $model->country_id }}
+                                        {{ $countryName }}
                                     </td>
                                     <td>
                                         {{ $model->mobile_number }}
