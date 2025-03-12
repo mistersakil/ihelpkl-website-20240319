@@ -4,6 +4,7 @@ namespace App\Livewire\Frontend\Components;
 
 use App\Models\Lead;
 use App\Models\Query;
+use App\Models\LeadProduct;
 use Livewire\Component;
 use App\Services\CountryService;
 use App\Services\ProductService;
@@ -171,9 +172,13 @@ class FormSection extends Component
             'message' => $this->message,
         ]);
 
-        $query = Query::create([
+        $Lead_products = LeadProduct::create([
             'lead_id' => $lead->id,
             'product_id' => $this->product_id ?: null,
+        ]);
+
+        $query = Query::create([
+            'lead_id' => $lead->id,
             'subject' => $this->showRequestDemoButton ? 'Request Demo' : 'Contact Us',
         ]);
 
