@@ -98,6 +98,7 @@ class FormSection extends Component
         $this->phoneCode = '';
         $this->message = '';
         $this->subject = '';
+        $this->termsAccepted = '';
     }
 
 
