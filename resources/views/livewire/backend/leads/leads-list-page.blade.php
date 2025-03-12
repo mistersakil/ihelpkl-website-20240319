@@ -46,7 +46,7 @@
                         <option value="email">{{ __('email') }}</option>
                         <option value="country_id">{{ __('country id') }}</option>
                         <option value="mobile_number">{{ __('mobile number') }}</option>
-                        <option value="product_id">{{ __('product id') }}</option>
+                        {{-- <option value="product_id">{{ __('product id') }}</option> --}}
                         <option value="message">{{ __('message') }}</option>
                     </select>
                 </div>
@@ -89,7 +89,7 @@
                                 <th>{{ __('email') }}</th>
                                 <th>{{ __('country id') }}</th>
                                 <th class="text-center">{{ __('mobile number') }}</th>
-                                <th>{{ __('product id') }}</th>
+                                {{-- <th>{{ __('product id') }}</th> --}}
                                 <th class="text-center">{{ __('message') }}</th>
                             </tr>
                         </thead>
@@ -112,9 +112,9 @@
                                     <td>
                                         {{ $model->mobile_number }}
                                     </td>
-                                    <td>
+                                    {{-- <td>
                                         {{ $model->product_id }}
-                                    </td>
+                                    </td> --}}
                                     <td>
                                         {{ $model->message }}
                                     </td>
