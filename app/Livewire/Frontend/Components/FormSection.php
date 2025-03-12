@@ -170,7 +170,7 @@ class FormSection extends Component
         if ($product) {
             $title = $product['title'];
         } else {
-            $title = 'Default Title';
+            $title = $this->subject;
         }
 
         return $title;

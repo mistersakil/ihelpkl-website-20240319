@@ -52,6 +52,7 @@ class ValidationService
             'message.min' => __('minimum character length', [':min', ':attribute']),
             'message.max' => __('maximum character length', [':max', ':attribute']),
             'subject.required' => __('can not be empty', [':attribute']),
+            'subject.min' => __('minimum character length', [':min', ':attribute']),
             'termsAccepted.accepted' => __('You must accept the terms and conditions.'),
         ];
     }

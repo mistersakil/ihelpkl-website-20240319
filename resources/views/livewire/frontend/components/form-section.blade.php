@@ -153,7 +153,7 @@
                 <div class="agree-label">
                     <input type="checkbox" id="chb1" wire:model.live="termsAccepted">
                     <label for="chb1">
-                        Accept <a href="javascript:void(0)">Terms & Conditions</a> And <a
+                        Accept __('Accept')<a href="javascript:void(0)">Terms & Conditions</a> And <a
                             href="javascript:void(0)">Privacy
                             Policy.</a>
                     </label>
