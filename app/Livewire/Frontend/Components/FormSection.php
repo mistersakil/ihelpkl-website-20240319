@@ -158,6 +158,25 @@ class FormSection extends Component
 
 
     /**
+     * Retrieves the title of the selected product based on the product ID.
+     * If the product is not found, a default title is returned.
+     *
+     * @return string The title of the selected product or a default title.
+     */
+    public function getProductTitle()
+    {
+        $product = collect($this->productService->getStaticModels())->firstWhere('id', $this->product_id);
+
+        if ($product) {
+            $title = $product['title'];
+        } else {
+            $title = 'Default Title';
+        }
+
+        return $title;
+    }
+
+    /**
      * Handle form submission.
      */
     public function submitForm()
@@ -177,9 +196,11 @@ class FormSection extends Component
             'product_id' => $this->product_id ?: null,
         ]);
 
+        $subject = $this->getProductTitle();
+
         $query = Query::create([
             'lead_id' => $lead->id,
-            'subject' => $this->showRequestDemoButton ? 'Request Demo' : 'Contact Us',
+            'subject' => $subject,
         ]);
 
         $this->resetStateValues();
