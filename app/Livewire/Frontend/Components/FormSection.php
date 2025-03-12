@@ -98,6 +98,7 @@ class FormSection extends Component
         $this->phoneCode = '';
         $this->message = '';
         $this->subject = '';
+        $this->termsAccepted = '';
     }
 
 
@@ -170,7 +171,7 @@ class FormSection extends Component
         if ($product) {
             $title = $product['title'];
         } else {
-            $title = 'Default Title';
+            $title = $this->subject;
         }
 
         return $title;
@@ -184,24 +185,26 @@ class FormSection extends Component
         $this->validate();
 
         $lead = Lead::create([
-            'country_id' => $this->country_id,
             'name' => $this->name,
             'email' => $this->email,
             'mobile_number' => $this->phoneCode . $this->phone,
+            'country_id' => $this->country_id,
             'message' => $this->message,
         ]);
 
-        $Lead_products = LeadProduct::create([
-            'lead_id' => $lead->id,
-            'product_id' => $this->product_id ?: null,
-        ]);
+        if (!$this->showSendMessageButton) {
+            $Lead_products = LeadProduct::create([
+                'lead_id' => $lead->id,
+                'product_id' => $this->product_id ?: null,
+            ]);
+        }
 
-        $subject = $this->getProductTitle();
-
-        $query = Query::create([
-            'lead_id' => $lead->id,
-            'subject' => $subject,
-        ]);
+        if ($this->showSendMessageButton) {
+            $query = Query::create([
+                'lead_id' => $lead->id,
+                'subject' => $this->subject,
+            ]);
+        }
 
         $this->resetStateValues();
 
