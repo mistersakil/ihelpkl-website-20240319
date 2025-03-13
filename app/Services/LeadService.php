@@ -29,71 +29,25 @@ class LeadService
 
 
     /**
-     *  Method to get the previous record
-     */
-    public function previousModel($orderNo)
-    {
-        return $this->modelClass::where('order', '<', $orderNo)->orderBy('order', 'desc')->first();
-    }
-
-
-    /*
-     *  Method to get the next record
-     */
-    public function nextModel($orderNo)
-    {
-        return $this->modelClass::where('order', '>', $orderNo)->orderBy('order', 'asc')->first();
-    }
-
-
-    /*
-     * Swapping two model order
-     * @return bool
-     */
-    public function swapOrder(int $modelId, string $type): bool
-    {
-        $targetedModel = $this->getModelById($modelId);
-        $targetedModelOrder = $targetedModel->order;
-        if ($type === 'UP') {
-            $previousModel = $this->previousModel($targetedModel->order);
-            $targetedModel->order = $previousModel->order;
-            $targetedModel->save();
-
-            ## Update previous model order
-            $previousModel->order = $targetedModelOrder;
-            $previousModel->save();
-            return true;
-        } else if ($type === 'DOWN') {
-            $nextModel = $this->nextModel($targetedModel->order);
-            $targetedModel->order = $nextModel->order;
-            $targetedModel->save();
-
-            ## Update next model order
-            $nextModel->order = $targetedModelOrder;
-            $nextModel->save();
-
-            return true;
-        }
-        return false;
-    }
-
-    /**
      * Collections of model with search and filter
      * @param array $filterOptions
      * @return mixed
      */
     public function getFilteredModels(array $filterOptions = []): mixed
     {
-        @['perPage' => $perPage, 'select' => $select, 'orderBy' => $orderBy, 'orderDirection' => $orderDirection, 'searchText' => $searchText] = $filterOptions;
+        @['perPage' => $perPage, 'select' => $select, 'orderBy' => $orderBy, 'orderDirection' => $orderDirection, 'searchText' => $searchText, 'with' => $with] = $filterOptions;
 
-        return $this->modelClass::when(isset($searchText), function ($query) use ($searchText) {
-            $searchText = "%$searchText%";
-            return $query->where('name', 'like', $searchText)
-                ->orWhere('email', 'like', $searchText)
-                ->orWhere('country_id', 'like', $searchText)
-                ->orWhere('mobile_number', 'like', $searchText)
-                ->orWhere('message', 'like', $searchText);
+        return $this->modelClass::when(is_array($with) && !empty($with), function ($query) use ($with) {
+            return $query->with($with);
         })
+            ->when(isset($searchText), function ($query) use ($searchText) {
+                $searchText = "%$searchText%";
+                return $query->where('name', 'like', $searchText)
+                    ->orWhere('email', 'like', $searchText)
+                    ->orWhere('country_id', 'like', $searchText)
+                    ->orWhere('mobile_number', 'like', $searchText)
+                    ->orWhere('message', 'like', $searchText);
+            })
             ->when(isset($select), function ($query) use ($select) {
                 return $query->select($select);
             })
@@ -130,16 +84,5 @@ class LeadService
     public function getOnlyModelByOrderDirection(string $orderDirection = 'asc'): mixed
     {
         return $this->modelClass::orderBy('id', $orderDirection)->first();
-    }
-
-
-    /**
-     * To generate last order number when to insert new model
-     * @return int
-     */
-    public function generateLastOrderNo()
-    {
-        $lastModelBasedOnOrderAttribute = $this->getOnlyModelByOrderDirection('desc');
-        return $lastModelBasedOnOrderAttribute ? $lastModelBasedOnOrderAttribute->order + 1 : 1;
     }
 }

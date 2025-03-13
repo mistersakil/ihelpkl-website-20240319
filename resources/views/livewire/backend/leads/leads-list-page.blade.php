@@ -1,6 +1,4 @@
 <main>
-    {{-- @dump($search) --}}
-    {{-- @dump($filter) --}}
     <x-slot:metaTitle> {{ __($metaTitle) }} </x-slot:metaTitle>
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
@@ -87,9 +85,8 @@
                                 <th>{{ __('sl') }}</th>
                                 <th>{{ __('name') }}</th>
                                 <th>{{ __('email') }}</th>
-                                <th>{{ __('country id') }}</th>
+                                <th>{{ __('country name') }}</th>
                                 <th class="text-center">{{ __('mobile number') }}</th>
-                                {{-- <th>{{ __('product id') }}</th> --}}
                                 <th class="text-center">{{ __('message') }}</th>
                             </tr>
                         </thead>
@@ -107,14 +104,11 @@
                                         {{ $model->email }}
                                     </td>
                                     <td>
-                                        {{ $countryName }}
+                                        {{ $model->country->name }}
                                     </td>
                                     <td>
                                         {{ $model->mobile_number }}
                                     </td>
-                                    {{-- <td>
-                                        {{ $model->product_id }}
-                                    </td> --}}
                                     <td>
                                         {{ $model->message }}
                                     </td>

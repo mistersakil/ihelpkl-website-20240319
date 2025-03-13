@@ -3,9 +3,7 @@
 namespace App\Livewire\Backend\Leads;
 
 use Livewire\Attributes\Url;
-use Livewire\Attributes\Title;
 use App\Services\LeadService;
-use App\Services\CountryService;
 use Livewire\Attributes\Layout;
 use App\Traits\BackendFilterTrait;
 use Illuminate\Contracts\View\View;
@@ -18,7 +16,7 @@ class LeadsListPage extends BackendComponent
     use BackendFilterTrait;
 
     # Module Props
-    public string $metaTitle = 'leads list';
+    public string $metaTitle = 'lead list';
     public string $module;
     public string $activeItem;
 
@@ -30,7 +28,6 @@ class LeadsListPage extends BackendComponent
 
     # Services
     private LeadService $leadService;
-    private CountryService $countryService;
 
     /**
      * Create a new component instance
@@ -40,7 +37,6 @@ class LeadsListPage extends BackendComponent
     public function boot(): void
     {
         $this->leadService = new leadService();
-        $this->countryService = new CountryService();
     }
 
     /**
@@ -54,65 +50,19 @@ class LeadsListPage extends BackendComponent
         $this->filter = $this->filterDefaultValues();
     }
 
-    /**
-     * Swap order between two model
-     *
-     * @param integer $modelId
-     * @param string $type
-     * @return void
-     */
-    public function swapOrder(int $modelId, string $type): void
-    {
-        $this->filter = [
-            ...$this->filter,
-            'orderBy' => 'order',
-            'orderDirection' => 'asc',
-        ];
-        $this->leadService->swapOrder(modelId: $modelId, type: $type);
-    }
-
 
     /**
      * Render view
      * @return \Illuminate\Contracts\View\View
      */
     #[Layout('components.backend.layout.backend-layout')]
-    #[Title('Leads List')]
-    public function render()
+    public function render(): View
     {
-        // Correctly calling the method using the instance
-        $leads = $this->leadService->getAll();
-
         $models = $this->leadService->getFilteredModels(
-            [...$this->filter, 'searchText' => $this->search]
+            [...$this->filter, 'searchText' => $this->search, 'with' => ['country']]
         );
-        $countModel = $this->leadService->countAllModel();
-        $lowerOrderModel = $this->leadService->getOnlyModelByOrderDirection('asc');
-        $highestOrderModel = $this->leadService->getOnlyModelByOrderDirection('desc');
+        $countModel = $models->count();
 
-        // $viewData = [];
-        // foreach ($models as $key => $model) {
-        //     $viewData[] = [
-        //         'country_id' => $model->id,
-        //     ];
-        // }
-
-        // $countries = $this->countryService->getCountryNameById($this->viewData);
-        // dd($viewData);
-
-
-        $viewData = [];
-        foreach ($models as $key => $model) {
-            $viewData[] = [
-                'country_id' => $model->country_id,
-                'country_name' => $this->countryService->getCountryNameById($model->country_id)
-            ];
-        }
-
-        $countryName = $viewData[0]['country_name'];
-
-        // dd($countryName);
-
-        return view('livewire.backend.leads.leads-list-page', compact('leads', 'models', 'countryName', 'countModel', 'lowerOrderModel', 'highestOrderModel'));
+        return view('livewire.backend.leads.leads-list-page', compact( 'models', 'countModel'));
     }
 }
