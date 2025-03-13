@@ -72,7 +72,7 @@ trait BackendFilterTrait
     public function getPerPageList(): array
     {
         return [
-            ['number' => 5, 'label' => __('five'), 'default' => true],
+            ['number' => 5, 'label' => __('five'), 'default' => false],
             ['number' => 10, 'label' => __('ten'), 'default' => true],
             ['number' => 25, 'label' => __('twenty five'), 'default' => false],
             ['number' => 50, 'label' => __('fifty'), 'default' => false],
