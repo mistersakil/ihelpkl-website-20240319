@@ -27,4 +27,11 @@ class CountryService
 
     return $country ? $country->phone_code : '';
   }
+
+  public function getCountryNameById(int $countryId): ?string
+  {
+    $country = $this->modelClass::find($countryId);
+
+    return $country ? $country->name : '';
+  }
 }

@@ -3,7 +3,6 @@
 namespace App\Livewire\Backend\Leads;
 
 use Livewire\Attributes\Url;
-use Livewire\Attributes\Title;
 use App\Services\LeadService;
 use Livewire\Attributes\Layout;
 use App\Traits\BackendFilterTrait;
@@ -17,7 +16,7 @@ class LeadsListPage extends BackendComponent
     use BackendFilterTrait;
 
     # Module Props
-    public string $metaTitle = 'leads list';
+    public string $metaTitle = 'lead list';
     public string $module;
     public string $activeItem;
 
@@ -37,7 +36,6 @@ class LeadsListPage extends BackendComponent
      */
     public function boot(): void
     {
-        // $this->sliderService = new SliderService();
         $this->leadService = new leadService();
     }
 
@@ -52,42 +50,19 @@ class LeadsListPage extends BackendComponent
         $this->filter = $this->filterDefaultValues();
     }
 
-    /**
-     * Swap order between two model
-     *
-     * @param integer $modelId
-     * @param string $type
-     * @return void
-     */
-    public function swapOrder(int $modelId, string $type): void
-    {
-        $this->filter = [
-            ...$this->filter,
-            'orderBy' => 'order',
-            'orderDirection' => 'asc',
-        ];
-        $this->leadService->swapOrder(modelId: $modelId, type: $type);
-    }
-
 
     /**
      * Render view
      * @return \Illuminate\Contracts\View\View
      */
     #[Layout('components.backend.layout.backend-layout')]
-    #[Title('Leads List')]
-    public function render()
+    public function render(): View
     {
-        // Correctly calling the method using the instance
-        $leads = $this->leadService->getAll();
-
         $models = $this->leadService->getFilteredModels(
-            [...$this->filter, 'searchText' => $this->search]
+            [...$this->filter, 'searchText' => $this->search, 'with' => ['country']]
         );
-        $countModel = $this->leadService->countAllModel();
-        $lowerOrderModel = $this->leadService->getOnlyModelByOrderDirection('asc');
-        $highestOrderModel = $this->leadService->getOnlyModelByOrderDirection('desc');
+        $countModel = $models->count();
 
-        return view('livewire.backend.leads.leads-list-page', compact('leads', 'models', 'countModel', 'lowerOrderModel', 'highestOrderModel'));
+        return view('livewire.backend.leads.leads-list-page', compact( 'models', 'countModel'));
     }
 }
