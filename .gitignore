@@ -18,5 +18,5 @@ yarn-error.log
 /.vscode
 /storage/debugbar
 /_______
-/public/back.hot
-/public/web.hot
+public/back.hot
+public/web.hot
