@@ -181,13 +181,11 @@ Banner Area Two
 .banner-area-two {
     position: relative;
     z-index: 1;
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(#f5f4f4),
-        to(#f5f4f400)
-    );
+    background-image: -webkit-gradient(linear,
+            left top,
+            left bottom,
+            from(#f5f4f4),
+            to(#f5f4f400));
     background-image: linear-gradient(#f5f4f4, #f5f4f400);
 }
 
@@ -778,37 +776,19 @@ Project Area Two
     z-index: 1;
 }
 
-.project-area-two
-    .thumbs-wrap
-    .owl-thumbs.project-area-thumb.active
-    .owl-thumb-item
-    .content {
+.project-area-two .thumbs-wrap .owl-thumbs.project-area-thumb.active .owl-thumb-item .content {
     margin-bottom: 30px;
 }
 
-.project-area-two
-    .thumbs-wrap
-    .owl-thumbs.project-area-thumb.active
-    .owl-thumb-item
-    .content::before {
+.project-area-two .thumbs-wrap .owl-thumbs.project-area-thumb.active .owl-thumb-item .content::before {
     width: 100%;
 }
 
-.project-area-two
-    .thumbs-wrap
-    .owl-thumbs.project-area-thumb.active
-    .owl-thumb-item
-    .content
-    h3 {
+.project-area-two .thumbs-wrap .owl-thumbs.project-area-thumb.active .owl-thumb-item .content h3 {
     color: var(--whiteColor);
 }
 
-.project-area-two
-    .thumbs-wrap
-    .owl-thumbs.project-area-thumb.active
-    .owl-thumb-item
-    .content
-    p {
+.project-area-two .thumbs-wrap .owl-thumbs.project-area-thumb.active .owl-thumb-item .content p {
     color: var(--whiteColor);
 }
 
@@ -846,11 +826,7 @@ Project Area Two
     margin-bottom: 0;
 }
 
-.project-area-two
-    .thumbs-wrap
-    .owl-thumbs
-    .owl-thumb-item.active
-    .content::before {
+.project-area-two .thumbs-wrap .owl-thumbs .owl-thumb-item.active .content::before {
     width: 100%;
 }
 
@@ -862,11 +838,7 @@ Project Area Two
     color: var(--whiteColor);
 }
 
-.project-area-two
-    .thumbs-wrap
-    .owl-thumbs
-    .owl-thumb-item:hover
-    .content::before {
+.project-area-two .thumbs-wrap .owl-thumbs .owl-thumb-item:hover .content::before {
     width: 100%;
 }
 
@@ -1263,7 +1235,7 @@ Contact Area
     right: 0;
     height: 100%;
     width: 47%;
-    background-image: url(@imgWeb/contact-bg.jpg);
+    background-image: url(@imgWeb/Request-demo.png);
     background-size: cover;
     background-position: center center;
 }
@@ -1404,107 +1376,135 @@ Contact Area
 Contact Area End
 ===================================*/
 @media only screen and (max-width: 767px) {
+
     /* Top Header Area */
     .top-header-bg-two {
         position: relative;
         border-bottom: 1px dashed #ffc7a8;
     }
+
     .top-header-bg-two::before {
         display: none;
     }
+
     .top-header-bg-two::after {
         display: none;
     }
+
     .top-header-bg-two .top-line {
         display: none;
     }
+
     .top-header-bg-two .top-line::before {
         display: none;
     }
+
     .top-header-bg-two .top-line::after {
         display: none;
     }
+
     .top-header-bg-two .top-line2 {
         display: none;
     }
+
     .header-logo {
         display: none;
     }
+
     .head-middle {
         margin-top: 10px;
     }
+
     .head-middle .head-list-item li {
         margin: 7px;
     }
+
     .head-middle .head-list-item li:last-child {
         margin-right: 7px;
     }
+
     .head-middle .head-list-item li .content h3 {
         font-size: 15px;
     }
+
     .head-middle .head-list-item li .content p {
         font-size: 12px;
     }
+
     .header-btn {
         margin-top: 7px;
         float: left;
     }
+
     /* Top Header Area End */
     /* Banner Area Two */
     .banner-area-two {
         background-image: none;
         padding: 50px 0;
     }
+
     .banner-area-two::before {
         width: 100%;
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 50px;
     }
+
     .banner-area-two::after {
         width: 100%;
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 50px;
     }
+
     .banner-content-two {
         max-width: 100%;
     }
+
     .banner-content-two h1 {
         font-size: 30px;
         margin-bottom: 20px;
     }
+
     .banner-content-two p {
         font-size: 16px;
         margin-bottom: 20px;
     }
+
     .banner-content-two .social-link {
         bottom: -50px;
     }
+
     .banner-content-two .social-link li {
         margin-right: 10px;
     }
+
     .banner-img-two {
         padding: 0;
         margin-top: 30px;
         margin-bottom: 30px;
     }
+
     .banner-slider {
         position: relative;
     }
+
     .banner-slider .owl-nav {
         margin-top: 0;
         width: 100% !important;
         position: inherit;
     }
+
     .banner-slider .owl-nav .owl-prev {
         position: inherit;
         bottom: 0;
         right: 0;
     }
+
     .banner-slider .owl-nav .owl-next {
         position: inherit;
         bottom: 0;
         right: 0;
     }
+
     .banner-slider .owl-nav .owl-prev,
     .banner-slider .owl-nav .owl-next {
         width: 30px !important;
@@ -1512,15 +1512,18 @@ Contact Area End
         line-height: 30px !important;
         font-size: 12px !important;
     }
+
     .banner-slider .owl-nav .owl-prev i,
     .banner-slider .owl-nav .owl-next i {
         left: 0;
         right: 0;
     }
+
     /* Banner Area Two End */
     .services-slider-two {
         margin-bottom: 30px;
     }
+
     .services-slider-two .owl-nav .owl-prev {
         position: inherit;
         top: 0;
@@ -1528,6 +1531,7 @@ Contact Area End
         transform: translateY(0);
         left: 0;
     }
+
     .services-slider-two .owl-nav .owl-next {
         position: inherit;
         top: 0;
@@ -1535,6 +1539,7 @@ Contact Area End
         transform: translateY(0);
         right: 0;
     }
+
     .services-slider-two .owl-nav .owl-prev,
     .services-slider-two .owl-nav .owl-next {
         width: 30px !important;
@@ -1542,33 +1547,41 @@ Contact Area End
         line-height: 30px !important;
         font-size: 12px !important;
     }
+
     .services-slider-two .owl-nav .owl-prev i,
     .services-slider-two .owl-nav .owl-next i {
         left: 0;
         right: 0;
     }
+
     .services-card {
         padding: 30px 20px;
     }
+
     .services-card .top img {
         width: 85px !important;
     }
+
     .project-slider-two {
         margin-bottom: 30px;
     }
+
     .project-slider-two .owl-nav {
         margin-top: 0;
     }
+
     .project-slider-two .owl-nav .owl-prev {
         position: inherit;
         bottom: 0;
         left: 0;
     }
+
     .project-slider-two .owl-nav .owl-next {
         position: inherit;
         bottom: 0;
         left: 0;
     }
+
     .project-slider-two .owl-nav .owl-prev,
     .project-slider-two .owl-nav .owl-next {
         width: 30px !important;
@@ -1576,51 +1589,65 @@ Contact Area End
         line-height: 30px !important;
         font-size: 12px !important;
     }
+
     .project-slider-two .owl-nav .owl-prev i,
     .project-slider-two .owl-nav .owl-next i {
         left: 0;
         right: 0;
     }
+
     .about-counter {
         padding: 25px 15px;
     }
+
     .pricing-card {
         padding: 35px;
     }
+
     .pricing-card .top img {
         width: 55px !important;
     }
+
     .pricing-card h3 {
         font-size: 17px;
     }
+
     .pricing-card h4 {
         margin-bottom: 20px;
     }
+
     .pricing-card .price-btn-area {
         margin-top: 20px;
     }
+
     .pricing-card .price-btn-area .price-btn {
         padding: 10px 20px;
     }
+
     .pricing-card:hover .top img {
         width: 55px !important;
     }
+
     .testimonial-slider-two {
         margin-bottom: 30px;
     }
+
     .testimonial-slider-two .owl-nav {
         margin-top: 0;
     }
+
     .testimonial-slider-two .owl-nav .owl-prev {
         position: inherit;
         bottom: 0;
         right: 0;
     }
+
     .testimonial-slider-two .owl-nav .owl-next {
         position: inherit;
         bottom: 0;
         right: 0;
     }
+
     .testimonial-slider-two .owl-nav .owl-prev,
     .testimonial-slider-two .owl-nav .owl-next {
         width: 30px !important;
@@ -1628,150 +1655,188 @@ Contact Area End
         line-height: 30px !important;
         font-size: 12px !important;
     }
+
     .testimonial-slider-two .owl-nav .owl-prev i,
     .testimonial-slider-two .owl-nav .owl-next i {
         left: 0;
         right: 0;
     }
+
     .testimonial-item-img .testimonial-item-box {
         margin-left: 0;
         margin-bottom: 30px;
     }
+
     .testimonial-item-img .testimonial-shape {
         display: none;
     }
+
     .testimonial-item-content {
         margin-bottom: 20px;
     }
+
     .testimonial-item-content .quote {
         font-size: 35px;
         margin-bottom: 5px;
     }
+
     .testimonial-item-content p {
         font-size: 16px;
         margin-bottom: 10px;
         max-width: 565px;
     }
+
     .testimonial-item-content h3 {
         font-size: 18px;
     }
+
     .contact-area::before {
         display: none;
     }
+
     .contact-form {
         max-width: 100%;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
     /* Top Header Area */
     .top-header-bg-two {
         position: relative;
         border-bottom: 1px dashed #ffc7a8;
     }
+
     .top-header-bg-two::before {
         display: none;
     }
+
     .top-header-bg-two::after {
         display: none;
     }
+
     .top-header-bg-two .top-line {
         display: none;
     }
+
     .top-header-bg-two .top-line::before {
         display: none;
     }
+
     .top-header-bg-two .top-line::after {
         display: none;
     }
+
     .top-header-bg-two .top-line2 {
         display: none;
     }
+
     .header-logo {
         display: none;
     }
+
     .head-middle {
         margin-top: 10px;
     }
+
     .head-middle .head-list-item li {
         margin-right: 10px;
         padding-left: 45px;
     }
+
     .head-middle .head-list-item li .icon i {
         width: 35px;
         height: 35px;
         line-height: 40px;
         font-size: 18px;
     }
+
     .head-middle .head-list-item li:last-child {
         margin-right: 7px;
     }
+
     .head-middle .head-list-item li .content h3 {
         font-size: 14px;
     }
+
     .head-middle .head-list-item li .content p {
         font-size: 12px;
     }
+
     /* Top Header Area End */
     /* Banner Area Two */
     .banner-area-two {
         background-image: none;
         padding: 50px 0;
     }
+
     .banner-area-two::before {
         width: 100%;
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 50px;
     }
+
     .banner-area-two::after {
         width: 100%;
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 50px;
     }
+
     .banner-content-two {
         max-width: 100%;
     }
+
     .banner-content-two h1 {
         font-size: 35px;
         margin-bottom: 20px;
     }
+
     .banner-content-two p {
         font-size: 16px;
         margin-bottom: 20px;
     }
+
     .banner-content-two .social-link {
         bottom: -50px;
     }
+
     .banner-content-two .social-link li {
         margin-right: 10px;
     }
+
     .banner-img-two {
         padding: 0;
         margin-top: 30px;
         margin-bottom: 30px;
     }
+
     .banner-slider {
         position: relative;
     }
+
     .banner-slider .owl-nav {
         margin-top: 0;
         width: 100% !important;
         position: inherit;
     }
+
     .banner-slider .owl-nav .owl-prev {
         position: inherit;
         bottom: 0;
         right: 0;
     }
+
     .banner-slider .owl-nav .owl-next {
         position: inherit;
         bottom: 0;
         right: 0;
     }
+
     /* Banner Area Two End */
     .services-slider-two {
         margin-bottom: 30px;
     }
+
     .services-slider-two .owl-nav .owl-prev {
         position: inherit;
         top: 0;
@@ -1779,6 +1844,7 @@ Contact Area End
         transform: translateY(0);
         left: 0;
     }
+
     .services-slider-two .owl-nav .owl-next {
         position: inherit;
         top: 0;
@@ -1786,90 +1852,115 @@ Contact Area End
         transform: translateY(0);
         right: 0;
     }
+
     .services-card {
         padding: 20px;
     }
+
     .services-card .top img {
         width: 85px !important;
     }
+
     .project-slider-two {
         margin-bottom: 30px;
     }
+
     .project-slider-two .owl-nav {
         margin-top: 0;
     }
+
     .project-slider-two .owl-nav .owl-prev {
         position: inherit;
         bottom: 0;
         left: 0;
     }
+
     .project-slider-two .owl-nav .owl-next {
         position: inherit;
         bottom: 0;
         left: 0;
     }
+
     .about-counter {
         padding: 25px 15px;
     }
+
     .pricing-card {
         padding: 35px;
     }
+
     .pricing-card .top img {
         width: 55px !important;
     }
+
     .pricing-card h4 {
         margin-bottom: 20px;
     }
+
     .pricing-card .price-btn-area {
         margin-top: 20px;
     }
+
     .pricing-card .price-btn-area .price-btn {
         padding: 10px 20px;
     }
+
     .pricing-card:hover .top img {
         width: 55px !important;
     }
+
     .testimonial-slider-two {
         margin-bottom: 30px;
     }
+
     .testimonial-slider-two .owl-nav {
         margin-top: 0;
     }
+
     .testimonial-slider-two .owl-nav .owl-prev {
         position: inherit;
         bottom: 0;
         right: 0;
     }
+
     .testimonial-slider-two .owl-nav .owl-next {
         position: inherit;
         bottom: 0;
         right: 0;
     }
+
     .testimonial-item-img .testimonial-item-box {
         margin-left: 0;
         margin-bottom: 30px;
     }
+
     .testimonial-item-img .testimonial-shape {
         display: none;
     }
+
     .testimonial-item-content {
         margin-bottom: 20px;
     }
+
     .testimonial-item-content .quote {
         font-size: 35px;
         margin-bottom: 5px;
     }
+
     .testimonial-item-content p {
         font-size: 16px;
         margin-bottom: 10px;
         max-width: 565px;
     }
+
     .testimonial-item-content h3 {
         font-size: 18px;
     }
+
     .contact-area::before {
         display: none;
     }
+
     .contact-form {
         max-width: 100%;
     }
@@ -1880,88 +1971,114 @@ Contact Area End
         padding-left: 47px;
         margin-right: 10px;
     }
+
     .head-middle .head-list-item li .icon i {
         width: 35px;
         height: 35px;
         line-height: 45px;
         font-size: 18px;
     }
+
     .head-middle .head-list-item li .content h3 {
         font-size: 15px;
         margin-bottom: 0;
     }
+
     .head-middle .head-list-item li .content p {
         font-size: 12px;
     }
+
     .header-btn .default-btn {
         padding: 10px 25px;
         font-size: 15px;
     }
+
     .banner-content-two h1 {
         font-size: 40px;
     }
+
     .banner-slider {
         position: relative;
     }
+
     .banner-slider .owl-nav {
         margin-top: 0;
         width: 980px !important;
         position: inherit;
     }
+
     .about-counter {
         padding: 25px 10px;
     }
+
     .services-card {
         padding: 30px 35px;
     }
+
     .services-card .top img {
         width: 85px !important;
     }
+
     .services-card h3 {
         font-size: 18px;
     }
+
     .project-area-two .thumbs-wrap {
         z-index: 1;
     }
+
     .project-area-two .thumbs-wrap .owl-thumbs .owl-thumb-item .content {
         padding: 15px;
     }
+
     .project-area-two .thumbs-wrap .owl-thumbs .owl-thumb-item .content h3 {
         font-size: 18px;
     }
+
     .project-area-two .thumbs-wrap .owl-thumbs .owl-thumb-item .content p {
         font-size: 15px;
     }
+
     .pricing-card {
         padding: 35px;
     }
+
     .pricing-card .top img {
         width: 85px !important;
     }
+
     .pricing-card h4 {
         margin-bottom: 20px;
     }
+
     .pricing-card .price-btn-area {
         margin-top: 20px;
     }
+
     .pricing-card .price-btn-area .price-btn {
         padding: 10px 20px;
     }
+
     .pricing-card:hover .top img {
         width: 85px !important;
     }
+
     .testimonial-slider-two {
         margin-bottom: 30px;
     }
+
     .testimonial-slider-two .owl-nav .owl-prev {
         bottom: 30px;
     }
+
     .testimonial-slider-two .owl-nav .owl-next {
         bottom: 30px;
     }
+
     .contact-area::before {
         display: none;
     }
+
     .contact-form {
         max-width: 100%;
     }
@@ -1971,53 +2088,69 @@ Contact Area End
     .banner-slider {
         position: relative;
     }
+
     .banner-slider .owl-nav {
         margin-top: 0;
         width: 1140px !important;
         position: inherit;
     }
+
     .banner-content-two h1 {
         font-size: 40px;
     }
+
     .about-counter {
         padding: 25px 10px;
     }
+
     .services-card {
         padding: 30px 35px;
     }
+
     .services-card .top img {
         width: 85px !important;
     }
+
     .project-area-two .thumbs-wrap {
         z-index: 1;
     }
+
     .project-area-two .thumbs-wrap .owl-thumbs .owl-thumb-item .content {
         padding: 20px;
     }
+
     .pricing-card {
         padding: 35px;
     }
+
     .pricing-card .top img {
         width: 85px !important;
     }
+
     .pricing-card h4 {
         margin-bottom: 20px;
     }
+
     .pricing-card .price-btn-area {
         margin-top: 20px;
     }
+
     .pricing-card .price-btn-area .price-btn {
         padding: 10px 20px;
     }
+
     .pricing-card:hover .top img {
         width: 85px !important;
     }
+
     .testimonial-slider-two .owl-nav .owl-prev {
         bottom: 40px;
     }
+
     .testimonial-slider-two .owl-nav .owl-next {
         bottom: 40px;
     }
+
     .contact-area::before {
         width: 40%;
     }
@@ -2029,26 +2162,33 @@ Contact Area End
         margin-left: auto !important;
         margin-right: auto !important;
     }
+
     .banner-content-two h1 {
         font-size: 52px;
     }
+
     .banner-slider .owl-nav {
         margin-top: 0;
         width: 1280px !important;
         position: inherit;
     }
+
     .services-slider-two .owl-nav {
         margin-top: 0;
     }
+
     .services-slider-two .owl-nav .owl-prev {
         left: -10px;
     }
+
     .services-slider-two .owl-nav .owl-next {
         right: -10px;
     }
+
     .services-card {
         padding: 40px 50px;
     }
+
     .services-card .top img {
         width: 85px !important;
     }
@@ -2064,6 +2204,7 @@ Contact Area End
     .banner-content-two {
         margin-bottom: 0;
     }
+
     .banner-content-two .social-link {
         position: absolute;
         bottom: auto;
@@ -2074,13 +2215,16 @@ Contact Area End
         margin: 0;
         padding: 0;
     }
+
     .banner-content-two .social-link li {
         display: block;
         margin-right: 0;
         margin-bottom: 20px;
     }
+
     .banner-content-two .social-link li:last-child {
         margin-bottom: 0;
     }
 }
+
 /*# sourceMappingURL=home-two.css.map */
