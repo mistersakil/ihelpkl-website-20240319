@@ -27,6 +27,18 @@
     "file": "assets/boxicons-CeGEncwm.woff2",
     "src": "node_modules/boxicons/fonts/boxicons.woff2"
   },
+  "resources/assets/web/images/Custom-CRM-Software-Development.jpg": {
+    "file": "assets/Custom-CRM-Software-Development-ni8qKQHR.jpg",
+    "src": "resources/assets/web/images/Custom-CRM-Software-Development.jpg"
+  },
+  "resources/assets/web/images/Get-price-quotation.jpg": {
+    "file": "assets/Get-price-quotation-3n21U2JS.jpg",
+    "src": "resources/assets/web/images/Get-price-quotation.jpg"
+  },
+  "resources/assets/web/images/Key-Skills-and-Insights-Comprehensive-Guide-to-Web-Development.jpg": {
+    "file": "assets/Key-Skills-and-Insights-Comprehensive-Guide-to-Web-Development--PY6hO8-.jpg",
+    "src": "resources/assets/web/images/Key-Skills-and-Insights-Comprehensive-Guide-to-Web-Development.jpg"
+  },
   "resources/assets/web/images/about-img1.jpg": {
     "file": "assets/about-img1-P0DKEOwX.jpg",
     "src": "resources/assets/web/images/about-img1.jpg"
@@ -38,6 +50,10 @@
   "resources/assets/web/images/about-line.png": {
     "file": "assets/about-line-UIarbPhD.png",
     "src": "resources/assets/web/images/about-line.png"
+  },
+  "resources/assets/web/images/about-us.jpg": {
+    "file": "assets/about-us-DKwyuXPR.jpg",
+    "src": "resources/assets/web/images/about-us.jpg"
   },
   "resources/assets/web/images/about_hero.jpg": {
     "file": "assets/about_hero-CYw6lYnS.jpg",
@@ -75,6 +91,10 @@
     "file": "assets/blog-img2-D0HTpbX-.jpg",
     "src": "resources/assets/web/images/blog-img6.jpg"
   },
+  "resources/assets/web/images/blog-list.jpg": {
+    "file": "assets/blog-list-C3ExaqbK.jpg",
+    "src": "resources/assets/web/images/blog-list.jpg"
+  },
   "resources/assets/web/images/blog-sub1.jpg": {
     "file": "assets/blog-sub1-cp7QvtOR.jpg",
     "src": "resources/assets/web/images/blog-sub1.jpg"
@@ -110,6 +130,10 @@
   "resources/assets/web/images/contact-bg.jpg": {
     "file": "assets/contact-bg-DIbvJNDk.jpg",
     "src": "resources/assets/web/images/contact-bg.jpg"
+  },
+  "resources/assets/web/images/contact-us.jpg": {
+    "file": "assets/contact-us-CGUFkdoM.jpg",
+    "src": "resources/assets/web/images/contact-us.jpg"
   },
   "resources/assets/web/images/crm-solution-1.jpg": {
     "file": "assets/crm-solution-1-DP_qXAv6.jpg",
