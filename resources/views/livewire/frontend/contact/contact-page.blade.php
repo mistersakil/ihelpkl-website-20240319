@@ -5,11 +5,11 @@
 
 
     <x-slot:innerBanner>
-        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
+        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" :imageUrl="'contact-us.jpg'" />
     </x-slot:innerBanner>
 
     <livewire:frontend.components.contact-card-section />
 
-    <livewire:frontend.components.contact-form-section /> 
+    <livewire:frontend.components.contact-form-section />
     {{--  <livewire:frontend.components.request-demo-section :showProductInput="false" /> --}}
 </main>

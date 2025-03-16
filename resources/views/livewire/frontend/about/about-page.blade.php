@@ -3,13 +3,10 @@
     <x-slot:metaDescription> {{ __($metaDescription) }} </x-slot:metaDescription>
 
     <x-slot:innerBanner>
-        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
+        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" :imageUrl="'about-us.jpg'" />
     </x-slot:innerBanner>
-
 
     <livewire:frontend.partials.home-about-section :item="$data" />
 
-
     <livewire:frontend.partials.home-projects :item="$data" />
-
 </main>
