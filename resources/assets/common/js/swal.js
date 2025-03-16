@@ -24,3 +24,12 @@ window.addEventListener('toastAlert', event => {
         title: event.detail.message,
     });
 })
+
+window.addEventListener('sweetAlert', event => {
+    event.preventDefault();
+    Swal.fire({
+        icon: event.detail.type,
+        title: event.detail.title,
+        text: event.detail.message,
+    });
+})
