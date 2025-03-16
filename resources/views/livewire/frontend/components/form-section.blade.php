@@ -9,8 +9,8 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group input-group has-validation">
-                <input wire:model.lazy="name" wire:dirty.class="border border-warning" type="text" name="name" id="name"
-                    class="form-control @error('name') is-invalid @enderror" />
+                <input wire:model.lazy="name" wire:dirty.class="border border-warning" type="text" name="name"
+                    id="name" class="form-control @error('name') is-invalid @enderror" />
 
                 @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -151,13 +151,14 @@
         @if ($showTermsConditionCheck)
             <div class="col-lg-12 col-md-12">
                 <div class="agree-label">
-                    <input type="checkbox" id="chb1" wire:model.live="termsAccepted">
+                    <input type="checkbox" id="chb1" wire:model="termsAccepted">
                     <label for="chb1">
-                        Accept <a href="javascript:void(0)">Terms & Conditions</a> And <a href="javascript:void(0)">Privacy
+                        Accept <a href="javascript:void(0)">Terms & Conditions</a> And <a
+                            href="javascript:void(0)">Privacy
                             Policy.</a>
-                    </label>
+                    </label> <br>
 
-                    @error('termsAccepted') 
+                    @error('termsAccepted')
                         <span class="form-text" style="color: #dc3545;">{{ $message }}</span>
                     @enderror
                 </div>
