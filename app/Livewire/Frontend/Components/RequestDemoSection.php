@@ -18,25 +18,6 @@ class RequestDemoSection extends Component
     public $showProductInput;
     public int $limit;
 
-    // /**
-    //  * Create a new component instance.
-    //  * @param string $sectionTitle `Title of the section`
-    //  * @param string $sectionSubTitle `Sub title of the section`
-    //  * @param int $limit `Number of items to display in the section`
-    //  * @return void
-    //  */
-    // public function mount(string $sectionTitle = '', string $sectionSubTitle = '', int $limit = 6, $showProductInput = true): void
-    // {
-    //     $this->showProductInput = $showProductInput;
-    //     $this->sectionTitle = $sectionTitle ? __($sectionTitle) : "";
-    //     $this->sectionSubTitle = $sectionSubTitle ? __($sectionSubTitle) : "";
-
-    //     $this->isShowSectionHeader = (!empty($this->sectionTitle) || !empty($this->sectionSubTitle)) ? true : false;
-
-    //     $this->limit = $limit;
-    // }
-
-
     /**
      * Render view
      *

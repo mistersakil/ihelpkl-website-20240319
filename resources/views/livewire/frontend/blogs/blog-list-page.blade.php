@@ -2,7 +2,7 @@
     <x-slot:metaTitle> {{ __($metaTitle) }} </x-slot:metaTitle>
 
     <x-slot:innerBanner>
-        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
+        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" :imageUrl="'blog-list.jpg'" />
     </x-slot:innerBanner>
 
     @if (is_array($dataList) && count($dataList))
@@ -58,7 +58,7 @@
                         <div class="side-bar-area pl-20">
 
                             <x-frontend.partials.recent-data-sidebar-widget title="recent blogs" :dataList="$dataList" />
-                      
+
                             <!-- /.side-bar-widget -->
 
                             <div class="side-bar-widget side-bar-categories">

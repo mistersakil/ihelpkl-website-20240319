@@ -3,7 +3,7 @@
     <x-slot:metaDescription> {{ __($metaDescription) }} </x-slot:metaDescription>
 
     <x-slot:innerBanner>
-        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
+        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" :imageUrl="'Key-Skills-and-Insights-Comprehensive-Guide-to-Web-Development.jpg'" />
     </x-slot:innerBanner>
 
     {{-- @dd($itemDetails) --}}

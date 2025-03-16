@@ -1,5 +1,5 @@
-@props(['metaTitle' => 'default page title', 'module' => 'default module'])
-<div class="inner-banner" style="background-image:url({{ Vite::imageWeb('Get-price-quotation.jpg') }})">
+@props(['metaTitle' => 'default page title', 'module' => 'default module', 'imageUrl'])
+<div class="inner-banner" style="background-image:url({{ $imageUrl }})">
     <div class="container">
         <div class="inner-title text-center">
             <h3>

@@ -1,6 +1,6 @@
 <main>
     <x-slot:innerBanner>
-        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
+        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" :imageUrl="'Custom-CRM-Software-Development.jpg'" />
     </x-slot:innerBanner>
 
     <section class="privacy-policy-area pt-100 pb-70">

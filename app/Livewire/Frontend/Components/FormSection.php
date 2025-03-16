@@ -209,7 +209,9 @@ class FormSection extends Component
         $this->resetStateValues();
 
         ## Dispatch events
-        $this->dispatch('toastAlert', message: __('your query has been submitted successfully'), type: 'success');
+        // $this->dispatch('toastAlert', message: __('your query has been submitted successfully'), type: 'success');
+
+        $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
     }
 
 
