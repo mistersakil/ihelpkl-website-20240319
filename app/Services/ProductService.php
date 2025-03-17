@@ -286,7 +286,7 @@ class ProductService
                 'characteristics' => [
                     'title' => 'Paid Key Features',
                     'subTitle' => 'Unlock Advanced Capabilities with Paid Features',
-                    'shortDetails' => ' Ready to supercharge your omni-channel strategy? Our paid features are designed for businesses that want to go above and beyond. With these tools, you can create a holistic retail experience that delights customers and drives growth.',
+                    'shortDetails' => 'Ready to supercharge your omni-channel strategy? Our paid features are designed for businesses that want to go above and beyond. With these tools, you can create a holistic retail experience that delights customers and drives growth.',
                     'items' => [
                         [
                             'heading' => 'Omni-Channel CRM',
@@ -314,6 +314,16 @@ class ProductService
                             'icon' =>  _icons('agent'),
                         ],
                     ]
+                ],
+
+                'imageOne' => [
+                    'title' => 'Why Need Omni-Channel?',
+                    'subTitle' => 'Why Your Business Needs an Omni-Channel Strategy',
+                    'shortDetails' => "In a world where customers interact with brands through multiple channels, an omni-channel approach is no longer optional it's essential. From multi-channel retail software to unified commerce platforms, our solution empowers you to meet these needs and thrive in today's market.",
+                    'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
+                    'imgThumb' => null,
+                    'imgFrame' => Vite::imageWeb('choose-line.png'),
+
                 ],
 
                 'faqs' => [
