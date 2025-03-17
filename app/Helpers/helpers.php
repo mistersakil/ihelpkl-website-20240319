@@ -55,7 +55,7 @@ if (!function_exists('_icons')) {
             'bin'                       => 'bi bi-trash2',
             'business'                  => 'bi bi-building',
             'body'                      => 'bi bi-body-text',
-            'boost'                      => 'bi bi-rocket',
+            'boost'                     => 'bi bi-rocket',
             'back'                      => 'bi bi-chevron-left',
             'circle'                    => 'bi bi-circle',
             'clients'                   => 'bi bi-person-hearts',

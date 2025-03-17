@@ -254,6 +254,68 @@ class ProductService
                     ]
                 ],
 
+                'services2' => [
+                    'title' => 'Key Features',
+                    'subTitle' => 'Free Key Features to Get You Started',
+                    'shortDetails' => 'Our omni-channel platform offers powerful free features to help you kickstart your journey toward effortless customer engagement. These features are just the beginning. Upgrade to unlock even more advanced tools designed to take your business to the next level.',
+                    'items' => [
+                        [
+                            'heading' => 'Multi-Channel Integration',
+                            'body' => 'Connect your website, social media, and email campaigns effortlessly.',
+                            'icon' =>  _icons('database'),
+                        ],
+                        [
+                            'heading' => "Real-Time Analytics",
+                            'body' => "Track customer interactions and gain actionable insights.",
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Basic CRM Tools',
+                            'body' => 'Manage customer data and interactions in one place.',
+                            'icon' =>  _icons('database_gear'),
+                        ],
+                        [
+                            'heading' => '24/7 Customer Support',
+                            'body' => 'Get assistance whenever you need it.',
+                            'icon' =>  _icons('headset'),
+                        ],
+
+                    ]
+                ],
+
+                'characteristics' => [
+                    'title' => 'Paid Key Features',
+                    'subTitle' => 'Unlock Advanced Capabilities with Paid Features',
+                    'shortDetails' => ' Ready to supercharge your omni-channel strategy? Our paid features are designed for businesses that want to go above and beyond. With these tools, you can create a holistic retail experience that delights customers and drives growth.',
+                    'items' => [
+                        [
+                            'heading' => 'Omni-Channel CRM',
+                            'body' => ' Gain a 360-degree view of your customers for hyper-personalized experiences.',
+                            'icon' =>  _icons('clients'),
+                        ],
+                        [
+                            'heading' => 'Cross-Channel Campaigns',
+                            'body' => 'Launch synchronized marketing campaigns across all platforms.',
+                            'icon' =>  _icons('business'),
+                        ],
+                        [
+                            'heading' => 'Advanced Analytics',
+                            'body' => 'Dive deeper into customer behavior and preferences.',
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Unified Commerce',
+                            'body' => 'Integrate your POS, inventory, and e-commerce systems for smooth operations.',
+                            'icon' =>  _icons('cart'),
+                        ],
+                        [
+                            'heading' => 'Omni-Channel Call Center',
+                            'body' => 'Provide consistent support across phone, email, chat, and social media.',
+                            'icon' =>  _icons('agent'),
+                        ],
+                    ]
+                ],
+
                 'faqs' => [
                     'title' => 'FAQ',
                     'subTitle' => "Frequently Asked Questions About Omni-Channel Solutions",
