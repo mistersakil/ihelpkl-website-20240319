@@ -215,42 +215,42 @@ class ProductService
 
             [
                 'id' => 2,
-                'meta_title' => 'Omni-channel Contact Center',
-                'meta_description' => 'Integrated Customer Communication: Omni-channel Contact Center Solution',
+                'meta_title' => 'Omni-Channel Solution: Better Customer Experience for Your Business',
+                'meta_description' => 'Transform your business with our omni-channel platform. Unify customer experiences, boost sales, and smooth operations. Explore free & paid features today',
                 'title' => 'Omni-channel Contact Center',
-                'subTitle' => 'Integrated Customer Communication: Omni-channel Contact Center Solution',
-                'slug' => route('web.products.details', ['slug' => 'omni-channel']),
-                'body' => "",
+                'subTitle' => 'Effortlessly Connect Every Customer Touchpoint for a Unified Experience',
+                'slug' => route('web.products.details', ['slug' => 'omni-channel-marketing-platform']),
+                'short_details' => "Transform your business with our omni-channel platform. Unify customer experiences, boost sales, and smooth operations. Explore free & paid features today",
                 'img_featured' => Vite::imageWeb('omni-contact.jpg'),
                 'img_thumb' => Vite::imageWeb('omni-contact-2.jpg'),
-                'keyPoints' => [
-                    "Whatsapp",
-                    "Email",
-                    "SMS",
-                    "Voice chat",
-                    "Web chat",
 
-                ],
-
-                'projects' => [
-                    'title' => 'Innovative',
-                    'subTitle' => 'iHelP offers the solution',
+                'choose1' => [
+                    'title' => 'Why Choose?',
+                    'subTitle' => 'Why Choose Our Omni-Channel Solution?',
+                    'shortDetails' => "In today's fast-paced digital world, customers expect consistent experiences across every channel, whether they're shopping online, visiting your store, or reaching out via social media. Our omni-channel platform is designed to help you meet these expectations and stay ahead of the competition.",
+                    'imgFeatured' => 'choose-img1.png',
                     'items' => [
                         [
-                            'heading' => '',
-                            'body' => "An advanced Omni-channel contact center is vital to prevent business loss. iHelpBD's solution integrates voice, chat, email, and CRM into one platform, ensuring a seamless customer journey.",
-                            'img' =>  Vite::imageWeb('omni-contact-thumb-1.jpg'),
+                            'heading' => 'Unified Customer Experience',
+                            'body' => 'Deliver consistent messaging and service across all touch points.',
+                            'icon' =>  _icons('customer'),
                         ],
                         [
-                            'heading' => '',
-                            'body' => "This solution gives agents access to a customer's full interaction history for personalized service, allowing customers to use their preferred communication channels for a better experience.",
-                            'img' =>  Vite::imageWeb('omni-contact-thumb-2.jpg'),
+                            'heading' => 'Boost Customer Loyalty',
+                            'body' => 'Create personalized interactions that keep customers coming back.',
+                            'icon' =>  _icons('boost'),
                         ],
                         [
-                            'heading' => '',
-                            'body' => "iHelpKL's Omni-channel contact center streamlines operations, helping businesses meet customer expectations, improve satisfaction, and foster loyalty to stay competitive.",
-                            'img' =>  Vite::imageWeb('omni-contact-thumb-3.jpg'),
-                        ]
+                            'heading' => 'Increase Sales',
+                            'body' => "Convert more leads by meeting customers where they are.",
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Optimize Operations',
+                            'body' => 'Manage all channels from one centralized platform. With our solution, you can transform your business into a holistic retail powerhouse, ensuring every customer feels valued and understood.',
+                            'icon' =>  _icons('cog'),
+                        ],
+
                     ]
                 ],
 
@@ -259,29 +259,6 @@ class ProductService
                     'subTitle' => "Learn more",
                     'items' => []
                 ],
-                'articles' => [
-                    [
-                        'title' => 'Omni-channel Benefits',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img4.jpg'),
-                        'items' => [
-                            "The main goal of an Omni-channel contact center is to enhance customer experience.",
-                            "Customers can easily switch to text to send images without repeating their issue.",
-                            "Agents can access prior interactions via CRM, ensuring consistent service.",
-                        ]
-                    ],
-                    [
-                        'title' => 'Omni-channel Advantages',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img5.jpg'),
-                        'items' => [
-                            "Customers can choose from channels like Facebook Messenger, WhatsApp, email, or web chat, preventing lost opportunities.",
-                            "iHelpKL is committed to providing a seamless customer journey through its Omni-channel solution on a single platform."
-
-
-                        ]
-                    ]
-                ]
 
             ],
 

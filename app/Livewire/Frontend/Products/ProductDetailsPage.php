@@ -35,7 +35,7 @@ class ProductDetailsPage extends Component
      */
     public function mount(string $slug): void
     {
-        $this->metaTitle = 'product details';
+        $this->metaTitle = __('product details');
         $this->metaDescription = __('meta description');
         $this->slug = $slug;
         $generateModelUrl = route('web.products.details', ['slug' => $slug]);
