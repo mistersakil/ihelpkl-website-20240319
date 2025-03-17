@@ -256,8 +256,33 @@ class ProductService
 
                 'faqs' => [
                     'title' => 'FAQ',
-                    'subTitle' => "Learn more",
-                    'items' => []
+                    'subTitle' => "Frequently Asked Questions About Omni-Channel Solutions",
+                    'items' => [
+                        [
+                            'heading' => 'What is omni-channel marketing?',
+                            'body' => 'A: Omni-channel marketing is a strategy that provides a smooth and integrated customer experience across all channels, including online, offline, and social media.',
+                        ],
+                        [
+                            'heading' => 'How is omni-channel different from multi-channel?',
+                            'body' => 'While multi-channel uses multiple platforms independently, omni-channel integrates all channels into a unified system for a consistent customer experience',
+                        ],
+                        [
+                            'heading' => 'Can small businesses benefit from omni-channel solutions?',
+                            'body' => 'Absolutely! Our platform is scalable and designed to meet the needs of businesses of all sizes.',
+                        ],
+                        [
+                            'heading' => 'What is unified commerce?',
+                            'body' => 'Unified commerce refers to the integration of all systems (e.g., POS, inventory, CRM) to provide a frictionless customer experience.',
+                        ],
+                        [
+                            'heading' => 'How does omni-channel improve customer service?',
+                            'body' => 'By integrating all communication channels (phone, email, chat, social media), you can provide consistent and efficient support, enhancing customer satisfaction.',
+                        ],
+                        [
+                            'heading' => 'Is there a free trial available?',
+                            'body' => 'Yes, you can start with our free features and upgrade to paid plans as your business grows.',
+                        ],
+                    ]
                 ],
 
             ],
