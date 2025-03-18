@@ -6,6 +6,14 @@
 
 
                     <li class="nav-item d-sm-flex">
+                        <a class="nav-link" href="{{ route('web.home') }}" title="{{ __('Notification') }}"
+                            target="_blank">
+                            <i class="{{ _icons('email') }}"></i>
+                        </a>
+                    </li>
+                    <!-- /.nav-item  -->
+
+                    <li class="nav-item d-sm-flex">
                         <a class="nav-link" href="{{ route('web.home') }}" title="{{ __('Visit Website') }}"
                             target="_blank">
                             <i class="{{ _icons('website') }}"></i>
