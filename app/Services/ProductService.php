@@ -69,30 +69,30 @@ class ProductService
                     'Generate detailed reports to make data-driven decisions.',
                 ],
                 'choose1' => [
-                    'title' => 'Why Choose?',
-                    'subTitle' => 'Why Choose Our Omni-Channel Solution?',
-                    'shortDetails' => "In today's fast-paced digital world, customers expect consistent experiences across every channel, whether they're shopping online, visiting your store, or reaching out via social media. Our omni-channel platform is designed to help you meet these expectations and stay ahead of the competition.",
+                    'title' => 'Grow & Succeed!',
+                    'subTitle' => 'Benefits of iHelpKL',
+                    'shortDetails' => "",
                     'imgFeatured' => 'choose-img1.png',
                     'items' => [
                         [
-                            'heading' => 'Unified Customer Experience',
-                            'body' => 'Deliver consistent messaging and service across all touch points.',
-                            'icon' =>  _icons('customer'),
-                        ],
-                        [
-                            'heading' => 'Boost Customer Loyalty',
-                            'body' => 'Create personalized interactions that keep customers coming back.',
+                            'heading' => 'Boost Efficiency',
+                            'body' => "Automate your sales, inventory, and expense management with iHelpKL's cloud-based POS system. Save time and focus on growing your business.",
                             'icon' =>  _icons('boost'),
                         ],
                         [
-                            'heading' => 'Increase Sales',
-                            'body' => "Convert more leads by meeting customers where they are.",
-                            'icon' =>  _icons('realtime'),
+                            'heading' => 'Enhance Customer Experience',
+                            'body' => "Use iHelpKL's customer management tools to build stronger relationships and improve customer satisfaction.",
+                            'icon' =>  _icons('customer'),
                         ],
                         [
-                            'heading' => 'Optimize Operations',
-                            'body' => 'Manage all channels from one centralized platform. With our solution, you can transform your business into a holistic retail powerhouse, ensuring every customer feels valued and understood.',
-                            'icon' =>  _icons('cog'),
+                            'heading' => 'Make Smarter Decisions',
+                            'body' => "With advanced reporting tools, gain valuable insights into your business performance and make data-driven decisions.",
+                            'icon' =>  _icons('robot'),
+                        ],
+                        [
+                            'heading' => 'Stay Competitive',
+                            'body' => 'From payment terminal integration to self-service kiosks, iHelpKL equips your business with the latest technology to stay ahead of the competition.',
+                            'icon' =>  _icons('car'),
                         ],
 
                     ]
@@ -100,28 +100,38 @@ class ProductService
 
                 'services2' => [
                     'title' => 'Key Features',
-                    'subTitle' => 'Free Key Features to Get You Started',
-                    'shortDetails' => 'Our omni-channel platform offers powerful free features to help you kickstart your journey toward effortless customer engagement. These features are just the beginning. Upgrade to unlock even more advanced tools designed to take your business to the next level.',
+                    'subTitle' => "Get Started with iHelpKL's Free Features",
+                    'shortDetails' => '',
                     'items' => [
                         [
-                            'heading' => 'Multi-Channel Integration',
-                            'body' => 'Connect your website, social media, and email campaigns effortlessly.',
+                            'heading' => 'Basic POS System',
+                            'body' => 'Add, edit, and manage your products easily. Perfect for kedai runcit and small businesses.',
                             'icon' =>  _icons('database'),
                         ],
                         [
-                            'heading' => "Real-Time Analytics",
-                            'body' => "Track customer interactions and gain actionable insights.",
+                            'heading' => "Customer Management",
+                            'body' => "Store and manage customer information for better engagement.",
+                            'icon' =>  _icons('customer2'),
+                        ],
+                        [
+                            'heading' => 'Sales Tracking',
+                            'body' => 'Track your sales and monitor performance in real-time.',
                             'icon' =>  _icons('realtime'),
                         ],
                         [
-                            'heading' => 'Basic CRM Tools',
-                            'body' => 'Manage customer data and interactions in one place.',
-                            'icon' =>  _icons('database_gear'),
+                            'heading' => 'Expense Management',
+                            'body' => 'Keep track of your business expenses effortlessly.',
+                            'icon' =>  _icons('money'),
                         ],
                         [
-                            'heading' => '24/7 Customer Support',
-                            'body' => 'Get assistance whenever you need it.',
-                            'icon' =>  _icons('headset'),
+                            'heading' => 'Basic Reporting',
+                            'body' => 'Generate simple reports to understand your business performance.',
+                            'icon' =>  _icons('reports'),
+                        ],
+                        [
+                            'heading' => 'Cloud-Based Access',
+                            'body' => 'Use iHelpKL from anywhere, anytime, with our cloud-based system.',
+                            'icon' =>  _icons('upload'),
                         ],
 
                     ]
