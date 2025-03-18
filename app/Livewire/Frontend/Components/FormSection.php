@@ -11,6 +11,7 @@ use App\Services\ProductService;
 use Livewire\Attributes\Validate;
 use App\Services\ValidationService;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -206,10 +207,12 @@ class FormSection extends Component
             ]);
         }
 
-        $this->resetStateValues();
 
-        ## Dispatch events
-        // $this->dispatch('toastAlert', message: __('your query has been submitted successfully'), type: 'success');
+        Mail::to($this->email)->send(new WelcomeMail($this->name));
+
+        broadcast(new FormSubmitted($this->name, $this->message));
+
+        $this->resetStateValues();
 
         $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
     }
