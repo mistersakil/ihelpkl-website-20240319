@@ -325,7 +325,7 @@ class ProductService
                 'imageOne' => [
                     'title' => 'Why Need Omni-Channel?',
                     'subTitle' => 'Why Your Business Needs an Omni-Channel Strategy',
-                    'shortDetails' => "In a world where customers interact with brands through multiple channels, an omni-channel approach is no longer optional it's essential. From multi-channel retail software to unified commerce platforms, our solution empowers you to meet these needs and thrive in today's market.",
+                    'shortDetails' => "<p>In a world where customers interact with brands through multiple channels, an omni-channel approach is no longer optional it's essential. Here's why:</p>"."<p><strong>Customer Expectations:</strong> Modern shoppers demand frictionless experiences, whether they're online or in-store.</p>"."<p><strong>Competitive Edge:</strong>  Stand out by offering a unified, personalized journey across all touchpoints.</p>"."<p><strong>Increased Revenue:</strong>  Businesses with strong omni-channel strategies see higher customer retention and sales.</p>"."<p><strong>Efficient Operations:</strong>  Simplify your processes with integrated tools that save time and resources.</p>",
                     'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
                     'imgThumb' => null,
                     'imgFrame' => Vite::imageWeb('choose-line.png'),
