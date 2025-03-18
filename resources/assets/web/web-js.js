@@ -14,7 +14,7 @@ new WOW().init();
 import "../common/js/swal.js";
 
 /* Custom Bootstrap JS */
-import "../common/js/bootstrap.js";
+import "../../js/echo.js";
 
 import "../../../node_modules/boxicons/dist/boxicons";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min";

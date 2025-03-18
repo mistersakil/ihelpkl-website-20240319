@@ -11,7 +11,7 @@ import "./js/bootstrap.bundle.min";
 import "../common/js/swal.js";
 
 /* Custom Bootstrap JS */
-import "../common/js/bootstrap.js";
+import "../../js/echo.js";
 
 /* Import jQuery */
 import $ from "jquery";

@@ -9,3 +9,9 @@ window.Echo = new Echo({
     cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
     forceTLS: true
 });
+
+
+window.Echo.channel("form-submissions")
+    .listen(".newSubmission", (event) => {
+        alert("New Form Submission: " + event.name);
+    });

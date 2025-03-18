@@ -4,8 +4,10 @@ namespace App\Livewire\Frontend\Components;
 
 use App\Models\Lead;
 use App\Models\Query;
-use App\Models\LeadProduct;
 use Livewire\Component;
+use App\Mail\WelcomeMail;
+use App\Models\LeadProduct;
+use App\Events\FormSubmitted;
 use App\Services\CountryService;
 use App\Services\ProductService;
 use Livewire\Attributes\Validate;
