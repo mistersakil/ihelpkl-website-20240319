@@ -10,6 +10,9 @@ import "./js/bootstrap.bundle.min";
 /* Swal */
 import "../common/js/swal.js";
 
+/* Custom Bootstrap JS */
+import "../common/js/bootstrap.js";
+
 /* Import jQuery */
 import $ from "jquery";
 window.jQuery = window.$ = $;

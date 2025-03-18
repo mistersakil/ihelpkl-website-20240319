@@ -27,6 +27,10 @@
     "file": "assets/boxicons-CeGEncwm.woff2",
     "src": "node_modules/boxicons/fonts/boxicons.woff2"
   },
+  "resources/assets/web/images/1contact-bg.jpg": {
+    "file": "assets/1contact-bg-DIbvJNDk.jpg",
+    "src": "resources/assets/web/images/1contact-bg.jpg"
+  },
   "resources/assets/web/images/Custom-CRM-Software-Development.jpg": {
     "file": "assets/Custom-CRM-Software-Development-ni8qKQHR.jpg",
     "src": "resources/assets/web/images/Custom-CRM-Software-Development.jpg"
@@ -38,6 +42,10 @@
   "resources/assets/web/images/Key-Skills-and-Insights-Comprehensive-Guide-to-Web-Development.jpg": {
     "file": "assets/Key-Skills-and-Insights-Comprehensive-Guide-to-Web-Development--PY6hO8-.jpg",
     "src": "resources/assets/web/images/Key-Skills-and-Insights-Comprehensive-Guide-to-Web-Development.jpg"
+  },
+  "resources/assets/web/images/Request-demo.png": {
+    "file": "assets/Request-demo-H1pIdEio.png",
+    "src": "resources/assets/web/images/Request-demo.png"
   },
   "resources/assets/web/images/about-img1.jpg": {
     "file": "assets/about-img1-P0DKEOwX.jpg",
@@ -126,14 +134,6 @@
   "resources/assets/web/images/contact-bg---.jpg": {
     "file": "assets/contact-bg----C2PyLlzC.jpg",
     "src": "resources/assets/web/images/contact-bg---.jpg"
-  },
-  "resources/assets/web/images/contact-bg.jpg": {
-    "file": "assets/contact-bg-DIbvJNDk.jpg",
-    "src": "resources/assets/web/images/contact-bg.jpg"
-  },
-  "resources/assets/web/images/Request-demo.png": {
-    "file": "assets/contact-bg-DIbvJNDk.jpg",
-    "src": "resources/assets/web/images/Request-demo.png"
   },
   "resources/assets/web/images/contact-us.jpg": {
     "file": "assets/contact-us-CGUFkdoM.jpg",
@@ -480,12 +480,12 @@
     "src": "resources/assets/web/images/work-line.png"
   },
   "resources/assets/web/web-js.js": {
-    "file": "assets/web-js-BqYPJxUD.js",
+    "file": "assets/web-js-BbfLciXw.js",
     "name": "web-js",
     "src": "resources/assets/web/web-js.js",
     "isEntry": true,
     "css": [
-      "assets/web-js-CAI8j5OG.css"
+      "assets/web-js-BwADx_r_.css"
     ],
     "assets": [
       "assets/bootstrap-icons-BtvjY1KL.woff2",
@@ -500,7 +500,7 @@
       "assets/services-large2-D1LfKix7.jpg",
       "assets/services-large3-CsTY0ije.jpg",
       "assets/home-two-bg-BHyBd39w.png",
-      "assets/contact-bg-DIbvJNDk.jpg",
+      "assets/Request-demo-H1pIdEio.png",
       "assets/home-three-bg-BFzvLI6l.jpg",
       "assets/work-img2-CoqQ4hfJ.jpg",
       "assets/inner-banner1-BOyEVr7a.jpg",

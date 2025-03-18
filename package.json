@@ -11,7 +11,9 @@
     },
     "devDependencies": {
         "axios": "^1.6.4",
+        "laravel-echo": "^2.0.2",
         "laravel-vite-plugin": "^1.0",
+        "pusher-js": "^8.4.0",
         "vite": "^5.0"
     },
     "dependencies": {
@@ -23,13 +25,11 @@
         "jquery": "^3.7.1",
         "jquery-ui": "^1.13.2",
         "js-cookie": "^3.0.1",
-        "laravel-echo": "^1.15.1",
         "metismenu": "^3.0.7",
         "pace-js": "^1.2.4",
         "path": "^0.12.7",
         "perfect-scrollbar": "^1.5.5",
         "progress": "^2.0.3",
-        "pusher-js": "^8.0.2",
         "sweetalert2": "^11.10.6",
         "toastr": "^2.1.4",
         "wow.js": "^1.2.2"

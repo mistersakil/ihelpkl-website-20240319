@@ -13,6 +13,9 @@ new WOW().init();
 /* Swal */
 import "../common/js/swal.js";
 
+/* Custom Bootstrap JS */
+import "../common/js/bootstrap.js";
+
 import "../../../node_modules/boxicons/dist/boxicons";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
 // import "./js/magnific-popup.min";
