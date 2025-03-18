@@ -54,164 +54,154 @@ class ProductService
         $dataList = [
             [
                 'id' => 1,
-                'meta_title' => 'Point Of Sale',
-                'meta_description' => 'The ultimate omni-channel approach to sales and customer management',
+                'meta_title' => 'POS System for Retail, Restaurants & SMEs in Malaysia',
+                'meta_description' => 'iHelpKL offers a cloud-based POS system for Malaysian businesses. Manage sales, expenses, and inventory effortlessly. Perfect for retail stores and restaurants',
                 'title' => 'Point Of Sale',
-                'subTitle' => 'The ultimate omni-channel approach to sales and customer management',
-                'slug' => route('web.products.details', ['slug' => 'point-of-sale']),
-                'body' => "",
+                'subTitle' => 'Optimize your business operations with iHelpKL’s cloud-based POS software',
+                'slug' => route('web.products.details', ['slug' => 'cloud-pos-system-malaysia']),
+                'short_details' => "Designed for Malaysian businesses, iHelpKL helps you manage sales, expenses, customers, and inventory effortlessly. Whether you run a kedai runcit, restaurant, or small enterprise, iHelpKL is the ultimate solution for your business needs.",
                 'img_featured' => Vite::imageWeb('pos.png'),
                 'img_thumb' => Vite::imageWeb('pos.png'),
                 'keyPoints' => [
-                    'Provide a centralized solution for maintaining sales &  customer data',
-                    'Facilitate efficient and accurate transaction management.',
-                    'Enable effective tracking of customer details and purchase history.',
-                    'Ensure robust security measures to protect sensitive data.',
-                    'Monitor inventory levels and alert for low stock to prevent shortages.',
-                    'Design an intuitive user interface for ease of use by all staff.',
-                    'Insightful reports on sales performance and customer activity.',
-
+                    'Control user access and permissions for better security.',
+                    'Set up workflows based on category, subcategory, and status.',
+                    'Manage products, customers, sales, and expenses in one place.',
+                    'Generate detailed reports to make data-driven decisions.',
                 ],
-                'projects' => [
-                    'title' => 'Projection',
-                    'subTitle' => 'Why Choose the iPOS System?',
+                'choose1' => [
+                    'title' => 'Why Choose?',
+                    'subTitle' => 'Why Choose Our Omni-Channel Solution?',
+                    'shortDetails' => "In today's fast-paced digital world, customers expect consistent experiences across every channel, whether they're shopping online, visiting your store, or reaching out via social media. Our omni-channel platform is designed to help you meet these expectations and stay ahead of the competition.",
+                    'imgFeatured' => 'choose-img1.png',
                     'items' => [
                         [
-                            // 'heading' => 'Comprehensive Functionality',
-                            'body' => 'This POS system integrates essential features such as sales processing, customer management, and inventory tracking into a single platform, streamlining operations and reducing the need for multiple systems',
-                            'img' =>  Vite::imageWeb('pos-thumb-1.png'),
+                            'heading' => 'Unified Customer Experience',
+                            'body' => 'Deliver consistent messaging and service across all touch points.',
+                            'icon' =>  _icons('customer'),
                         ],
                         [
-                            // 'heading' => 'Enhanced Data Security',
-                            'body' => 'With robust security protocols in place, this solution ensures that sensitive customer and transaction data is protected, fostering trust and compliance with data protection regulations',
-                            'img' =>  Vite::imageWeb('pos-thumb-2.png'),
+                            'heading' => 'Boost Customer Loyalty',
+                            'body' => 'Create personalized interactions that keep customers coming back.',
+                            'icon' =>  _icons('boost'),
                         ],
                         [
-                            // 'heading' => 'Actionable Insights',
-                            'body' => "The system's reporting and analytics capabilities provide valuable insights into sales trends and customer behavior, enabling data-driven decision-making that can enhance business performance and drive growth",
-                            'img' =>  Vite::imageWeb('pos-thumb-3.png'),
-                        ]
+                            'heading' => 'Increase Sales',
+                            'body' => "Convert more leads by meeting customers where they are.",
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Optimize Operations',
+                            'body' => 'Manage all channels from one centralized platform. With our solution, you can transform your business into a holistic retail powerhouse, ensuring every customer feels valued and understood.',
+                            'icon' =>  _icons('cog'),
+                        ],
+
+                    ]
+                ],
+
+                'services2' => [
+                    'title' => 'Key Features',
+                    'subTitle' => 'Free Key Features to Get You Started',
+                    'shortDetails' => 'Our omni-channel platform offers powerful free features to help you kickstart your journey toward effortless customer engagement. These features are just the beginning. Upgrade to unlock even more advanced tools designed to take your business to the next level.',
+                    'items' => [
+                        [
+                            'heading' => 'Multi-Channel Integration',
+                            'body' => 'Connect your website, social media, and email campaigns effortlessly.',
+                            'icon' =>  _icons('database'),
+                        ],
+                        [
+                            'heading' => "Real-Time Analytics",
+                            'body' => "Track customer interactions and gain actionable insights.",
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Basic CRM Tools',
+                            'body' => 'Manage customer data and interactions in one place.',
+                            'icon' =>  _icons('database_gear'),
+                        ],
+                        [
+                            'heading' => '24/7 Customer Support',
+                            'body' => 'Get assistance whenever you need it.',
+                            'icon' =>  _icons('headset'),
+                        ],
+
                     ]
                 ],
 
                 'characteristics' => [
-                    'title' => 'Free Core Features',
-                    'subTitle' => 'Key Features of the iPOS System',
+                    'title' => 'Paid Key Features',
+                    'subTitle' => 'Unlock Advanced Capabilities with Paid Features',
+                    'shortDetails' => 'Ready to supercharge your omni-channel strategy? Our paid features are designed for businesses that want to go above and beyond. With these tools, you can create a holistic retail experience that delights customers and drives growth.',
                     'items' => [
                         [
-                            'heading' => 'Sales Processing',
-                            'body' => 'Supports transactions for product sales with capabilities for applying discounts, tax calculations, and generating digital receipts',
-                            'icon' =>  _icons('sales'),
+                            'heading' => 'Omni-Channel CRM',
+                            'body' => ' Gain a 360-degree view of your customers for hyper-personalized experiences.',
+                            'icon' =>  _icons('clients'),
                         ],
                         [
-                            'heading' => 'Customer Management',
-                            'body' => 'Stores customer information, such as contact details, purchase history, and preferences, to personalize future engagements and enhance customer experience',
-                            'icon' =>  _icons('customer'),
+                            'heading' => 'Cross-Channel Campaigns',
+                            'body' => 'Launch synchronized marketing campaigns across all platforms.',
+                            'icon' =>  _icons('business'),
                         ],
                         [
-                            'heading' => 'Inventory Management',
-                            'body' => 'Monitors product stock levels, alerts for low inventory, and allows for adjustments in real-time',
-                            'icon' =>  _icons('products'),
+                            'heading' => 'Advanced Analytics',
+                            'body' => 'Dive deeper into customer behavior and preferences.',
+                            'icon' =>  _icons('realtime'),
                         ],
                         [
-                            'heading' => 'User Authentication and Security',
-                            'body' => 'Ensures only authorized personnel access the system, with security protocols in place for data protection',
-                            'icon' =>  _icons('user'),
+                            'heading' => 'Unified Commerce',
+                            'body' => 'Integrate your POS, inventory, and e-commerce systems for smooth operations.',
+                            'icon' =>  _icons('cart'),
                         ],
                         [
-                            'heading' => 'User Interface (UI) Design',
-                            'body' => 'A user-friendly and intuitive design that enables ease of use for staff at all experience levels',
-                            'icon' =>  _icons('tv'),
+                            'heading' => 'Omni-Channel Call Center',
+                            'body' => 'Provide consistent support across phone, email, chat, and social media.',
+                            'icon' =>  _icons('agent'),
                         ],
-
                     ]
                 ],
-                'services2' => [
-                    'title' => 'Paid Core Features',
-                    'subTitle' => 'Paid Key Features of the iPOS',
-                    'items' => [
-                        [
-                            'heading' => 'Payment Integration',
-                            'body' => 'Supports multiple payment options, including credit/debit cards, mobile payments, and cash',
-                            'icon' =>  _icons('dollar'),
-                        ],
-                        [
-                            'heading' => 'Reporting and Analytics',
-                            'body' => 'Offers detailed reports on sales, revenue, and customer behavior for informed decisions',
-                            'icon' =>  _icons('reports'),
-                        ],
-                        [
-                            'heading' => 'Data Segmentation and Marketing',
-                            'body' => 'Enables customer/product segmentation for targeted marketing campaigns',
-                            'icon' =>  _icons('database'),
-                        ],
-                        [
-                            'heading' => 'Complaint Management',
-                            'body' => 'Streamlines the handling of customer complaints to enhance service quality',
-                            'icon' =>  _icons('question2'),
-                        ],
-                        [
-                            'heading' => 'Staff Activity Log',
-                            'body' => 'Tracks user activity within the system for accountability and performance evaluation',
-                            'icon' =>  _icons('users'),
-                        ],
-                        [
-                            'heading' => 'Exportable Reports',
-                            'body' => 'Allows reports to be exported in multiple formats (e.g., PDF, Excel)',
-                            'icon' =>  _icons('reports'),
-                        ],
-                        [
-                            'heading' => 'Data Backup and Recovery',
-                            'body' => 'Automates backups and ensures quick recovery from potential data loss',
-                            'icon' =>  _icons('download'),
-                        ],
-                        [
-                            'heading' => 'Mobile Apps ',
-                            'body' => 'Provides mobile versions of the POS system for on-the-go access and usability',
-                            'icon' =>  _icons('google_play'),
-                        ],
-                    ],
-                    'characteristics' => [],
-                ],
-                'choose2' => [
-                    'title' => 'CRM Benefits & Advantages',
-                    'subTitle' => 'An Overview of Why We Need iPOS System',
-                    'imgFeatured' => Vite::imageWeb('choose-img2.jpg'),
+
+                'imageOne' => [
+                    'title' => 'Why Need Omni-Channel?',
+                    'subTitle' => 'Why Your Business Needs an Omni-Channel Strategy',
+                    'shortDetails' => "In a world where customers interact with brands through multiple channels, an omni-channel approach is no longer optional it's essential. From multi-channel retail software to unified commerce platforms, our solution empowers you to meet these needs and thrive in today's market.",
+                    'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
                     'imgThumb' => null,
                     'imgFrame' => Vite::imageWeb('choose-line.png'),
-                    'list' => [
-                        [
-                            'title' => 'Benefits',
-                            'progress' => 100,
-                            'items' => [
-                                'Efficiency',
-                                'Integration',
-                                'Usability',
-                                'Security',
-                                'Tracking',
-                                'Flexibility',
-                                'Insights',
-                                'Scalability',
 
-                            ]
+                ],
+
+                'faqs' => [
+                    'title' => 'FAQ',
+                    'subTitle' => "Frequently Asked Questions About Omni-Channel Solutions",
+                    'items' => [
+                        [
+                            'heading' => 'What is omni-channel marketing?',
+                            'body' => 'A: Omni-channel marketing is a strategy that provides a smooth and integrated customer experience across all channels, including online, offline, and social media.',
                         ],
                         [
-                            'title' => 'Advantages',
-                            'progress' => 100,
-                            'items' => [
-                                'Automation',
-                                'Accessibility',
-                                'Reliability',
-                                'Customization',
-                                'Support',
-                                'Analytics',
-                                'Performance',
-                            ]
-                        ]
+                            'heading' => 'How is omni-channel different from multi-channel?',
+                            'body' => 'While multi-channel uses multiple platforms independently, omni-channel integrates all channels into a unified system for a consistent customer experience',
+                        ],
+                        [
+                            'heading' => 'Can small businesses benefit from omni-channel solutions?',
+                            'body' => 'Absolutely! Our platform is scalable and designed to meet the needs of businesses of all sizes.',
+                        ],
+                        [
+                            'heading' => 'What is unified commerce?',
+                            'body' => 'Unified commerce refers to the integration of all systems (e.g., POS, inventory, CRM) to provide a frictionless customer experience.',
+                        ],
+                        [
+                            'heading' => 'How does omni-channel improve customer service?',
+                            'body' => 'By integrating all communication channels (phone, email, chat, social media), you can provide consistent and efficient support, enhancing customer satisfaction.',
+                        ],
+                        [
+                            'heading' => 'Is there a free trial available?',
+                            'body' => 'Yes, you can start with our free features and upgrade to paid plans as your business grows.',
+                        ],
                     ]
-
-                ]
+                ],
             ],
+
 
             [
                 'id' => 2,
