@@ -187,6 +187,8 @@ class FormSection extends Component
     {
         $this->validate();
 
+        $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
+
         $lead = Lead::create([
             'name' => $this->name,
             'email' => $this->email,
@@ -209,14 +211,11 @@ class FormSection extends Component
             ]);
         }
 
-
-        Mail::to($this->email)->send(new WelcomeMail($this->name));
-
         broadcast(new FormSubmitted($this->name, $this->message));
 
-        $this->resetStateValues();
+        Mail::to($this->email)->queue(new WelcomeMail($this->name));
 
-        $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
+        $this->resetStateValues();
     }
 
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d63088fa7c28302986aec610f54a222d",
+    "content-hash": "e6030bb8136d3fcc3fdd9739b810ef5b",
     "packages": [
         {
             "name": "brick/math",
@@ -1432,6 +1432,71 @@
                 }
             ],
             "time": "2025-02-27T13:08:55+00:00"
+        },
+        {
+            "name": "kssadi/log-tracker",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KsSadi/Laravel-Log-Tracker.git",
+                "reference": "c871f83ff85ffcbb69ceb42581ebd7c54b3cc306"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KsSadi/Laravel-Log-Tracker/zipball/c871f83ff85ffcbb69ceb42581ebd7c54b3cc306",
+                "reference": "c871f83ff85ffcbb69ceb42581ebd7c54b3cc306",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.1",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "orchestra/testbench": ">=3.6 <=9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "LogTracker": "Kssadi\\LogTracker\\Facades\\LogTracker"
+                    },
+                    "providers": [
+                        "Kssadi\\LogTracker\\LogTrackerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kssadi\\LogTracker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KsSadi",
+                    "email": "mdsadi4@gmail.com",
+                    "homepage": "https://github.com/kssadi",
+                    "role": "Programmer"
+                }
+            ],
+            "description": "A powerful, intuitive, and efficient log viewer for Laravel applications.",
+            "homepage": "https://github.com/kssadi/log-tracker",
+            "keywords": [
+                "debugging",
+                "laravel",
+                "log tracker",
+                "log viewer",
+                "logs",
+                "monitoring"
+            ],
+            "support": {
+                "issues": "https://github.com/kssadi/log-tracker/issues",
+                "source": "https://github.com/kssadi/log-tracker"
+            },
+            "time": "2025-03-17T10:23:06+00:00"
         },
         {
             "name": "laravel/framework",
