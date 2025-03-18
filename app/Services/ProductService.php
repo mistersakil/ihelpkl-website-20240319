@@ -139,41 +139,46 @@ class ProductService
 
                 'characteristics' => [
                     'title' => 'Paid Key Features',
-                    'subTitle' => 'Unlock Advanced Capabilities with Paid Features',
-                    'shortDetails' => 'Ready to supercharge your omni-channel strategy? Our paid features are designed for businesses that want to go above and beyond. With these tools, you can create a holistic retail experience that delights customers and drives growth.',
+                    'subTitle' => 'Unlock the Full Potential of iHelpKL Paid Features',
+                    'shortDetails' => '',
                     'items' => [
                         [
-                            'heading' => 'Omni-Channel CRM',
-                            'body' => ' Gain a 360-degree view of your customers for hyper-personalized experiences.',
+                            'heading' => "Cloud-Based POS System",
+                            'body' => "Real-time sales tracking and inventory management for retail stores and restaurants.",
                             'icon' =>  _icons('clients'),
                         ],
                         [
-                            'heading' => 'Cross-Channel Campaigns',
-                            'body' => 'Launch synchronized marketing campaigns across all platforms.',
+                            'heading' => "Payment Terminal Integration",
+                            'body' => "Accept payments securely with integrated payment terminals.",
                             'icon' =>  _icons('business'),
                         ],
                         [
-                            'heading' => 'Advanced Analytics',
-                            'body' => 'Dive deeper into customer behavior and preferences.',
-                            'icon' =>  _icons('realtime'),
+                            'heading' => "Self-Service Kiosk Support",
+                            'body' => "Enable self-service options for faster customer transactions.",
+                            'icon' =>  _icons('business'),
                         ],
                         [
-                            'heading' => 'Unified Commerce',
-                            'body' => 'Integrate your POS, inventory, and e-commerce systems for smooth operations.',
-                            'icon' =>  _icons('cart'),
+                            'heading' => "Advanced Access Role Permission",
+                            'body' => "Assign specific roles and permissions to your team for better control.",
+                            'icon' =>  _icons('business'),
                         ],
                         [
-                            'heading' => 'Omni-Channel Call Center',
-                            'body' => 'Provide consistent support across phone, email, chat, and social media.',
-                            'icon' =>  _icons('agent'),
+                            'heading' => "Custom Business Logic",
+                            'body' => "Set up workflows based on category, subcategory, and status to match your business needs.",
+                            'icon' =>  _icons('business'),
+                        ],
+                        [
+                            'heading' => "Detailed Reporting Tools",
+                            'body' => "Access advanced reports for sales, expenses, and customer insights.",
+                            'icon' =>  _icons('business'),
                         ],
                     ]
                 ],
 
                 'imageOne' => [
-                    'title' => 'Why Need Omni-Channel?',
-                    'subTitle' => 'Why Your Business Needs an Omni-Channel Strategy',
-                    'shortDetails' => "In a world where customers interact with brands through multiple channels, an omni-channel approach is no longer optional it's essential. From multi-channel retail software to unified commerce platforms, our solution empowers you to meet these needs and thrive in today's market.",
+                    'title' => 'Why iHelpKL?',
+                    'subTitle' => 'Why Choose iHelpKL?',
+                    'shortDetails' => "<p><strong>Tailored for Malaysian Businesses:</strong> iHelpKL is designed specifically for Malaysian SMEs, retail stores, and restaurants. Whether you run a kedai runcit or a restaurant, iHelpKL adapts to your unique business needs.</p>" . "<p><strong>Affordable and Scalable:</strong>  Start with our free plan and upgrade as your business grows. iHelpKL offers flexible pricing to suit businesses of all sizes.</p>" . "<p><strong>User-Friendly and Reliable: </strong> With an intuitive interface and cloud-based technology, iHelpKL is easy to use and accessible from anywhere. Plus, our dedicated support team is always here to help.</p>",
                     'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
                     'imgThumb' => null,
                     'imgFrame' => Vite::imageWeb('choose-line.png'),
@@ -185,29 +190,30 @@ class ProductService
                     'subTitle' => "Frequently Asked Questions About Omni-Channel Solutions",
                     'items' => [
                         [
-                            'heading' => 'What is omni-channel marketing?',
-                            'body' => 'A: Omni-channel marketing is a strategy that provides a smooth and integrated customer experience across all channels, including online, offline, and social media.',
+                            'heading' => "What is iHelpKL?",
+                            'body' => "iHelpKL is a cloud-based POS and business management system designed for Malaysian businesses, including retail stores, restaurants, and SMEs. It simplifies sales, expense tracking, and customer management.",
                         ],
                         [
-                            'heading' => 'How is omni-channel different from multi-channel?',
-                            'body' => 'While multi-channel uses multiple platforms independently, omni-channel integrates all channels into a unified system for a consistent customer experience',
+                            'heading' => "Can I use iHelpKL for my kedai runcit (retail store)?",
+                            'body' => "Yes! iHelpKL is perfect for retail stores, restaurants, and small businesses. It supports product management, sales tracking, and expense management tailored to your needs.",
                         ],
                         [
-                            'heading' => 'Can small businesses benefit from omni-channel solutions?',
-                            'body' => 'Absolutely! Our platform is scalable and designed to meet the needs of businesses of all sizes.',
+                            'heading' => "Does iHelpKL support online payments?",
+                            'body' => "Yes, iHelpKL integrates with payment terminals and supports secure payment processing for effortless transactions.",
                         ],
                         [
-                            'heading' => 'What is unified commerce?',
-                            'body' => 'Unified commerce refers to the integration of all systems (e.g., POS, inventory, CRM) to provide a frictionless customer experience.',
+                            'heading' => "Is there a free version of iHelpKL?",
+                            'body' => "Yes, iHelpKL offers a free plan with basic features. For advanced functionality, you can upgrade to a paid plan.",
                         ],
                         [
-                            'heading' => 'How does omni-channel improve customer service?',
-                            'body' => 'By integrating all communication channels (phone, email, chat, social media), you can provide consistent and efficient support, enhancing customer satisfaction.',
+                            'heading' => "Can I use iHelpKL as an online POS system for my restaurant?",
+                            'body' => "Absolutely! iHelpKL supports online POS systems for restaurants and retail stores, making it easy to manage orders and payments.",
                         ],
                         [
-                            'heading' => 'Is there a free trial available?',
-                            'body' => 'Yes, you can start with our free features and upgrade to paid plans as your business grows.',
+                            'heading' => "Does iHelpKL work for self-service kiosks?",
+                            'body' => "Yes, iHelpKL supports self-service kiosks, enabling faster and more efficient customer transactions.",
                         ],
+                        
                     ]
                 ],
             ],
