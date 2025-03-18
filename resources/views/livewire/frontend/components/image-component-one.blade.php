@@ -18,7 +18,7 @@
                             </div>
 
                             <div class="col-lg-7 offset-lg-1">
-                                <div class="testimonial-item-content pl-20">
+                                <div class="about-content pl-20">
                                     <div class="section-title">
                                         @if (isset($title))
                                             <h1 class="sp-title">{{ ucwords($title) }}</h1>
@@ -29,7 +29,7 @@
                                     </div>
 
                                     @if (isset($shortDetails))
-                                        <p>{{ ucwords($shortDetails) }}</p>
+                                        <div class="fs-6">{!! ucwords($shortDetails) !!}</div>
                                     @endif
                                 </div>
                             </div>

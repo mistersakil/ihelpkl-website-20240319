@@ -22,7 +22,7 @@
                             @endif
                         </div>
                         @if ($shortDetails)
-                            {{ $shortDetails }}
+                           <p> {{ $shortDetails }}</p>
                         @endif
                         @if (count($items))
                             <ul class="about-list">
