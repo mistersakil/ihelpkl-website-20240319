@@ -16,6 +16,7 @@ class HomeAboutSection extends Component
     public string $shortDetails;
     public array $items;
     public string $img;
+    public string $imgAlt;
 
     /**
      * Create a new component instance.
@@ -31,6 +32,7 @@ class HomeAboutSection extends Component
         $this->shortDetails = isset($item['short_details']) ? ($item['short_details']) : '';
         $this->items = isset($item['keyPoints']) ? $item['keyPoints'] : [];
         $this->img = isset($item['img_featured']) ? $item['img_featured'] : '';
+        $this->imgAlt = isset($item['img_featured_alt']) ? $item['img_featured_alt'] : 'img_featured_alt';
     }
 
     /**
