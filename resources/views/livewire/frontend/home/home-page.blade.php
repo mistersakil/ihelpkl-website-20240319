@@ -15,8 +15,11 @@
     <livewire:frontend.components.home-products-section sectionTitle="products"
         sectionSubTitle="our most valuable products" :limit="6" />
 
-    <livewire:frontend.components.why-choose-us-section sectionTitle="why choose us"
-        sectionSubTitle="why you will give us priority" />
+    {{-- <livewire:frontend.components.why-choose-us-section sectionTitle="why choose us"
+        sectionSubTitle="why you will give us priority" :item="$itemDetails" /> --}}
+
+        <livewire:frontend.components.why-choose-us-section :item="$data" />
+    
 
     <livewire:frontend.components.request-demo-section sectionTitle="request demo"
         sectionSubTitle="our demos" />

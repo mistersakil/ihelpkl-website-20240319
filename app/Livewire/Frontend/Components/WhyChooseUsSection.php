@@ -32,6 +32,7 @@ class WhyChooseUsSection extends Component
      */
     public function mount(array $item = []): void
     {
+        dump($item['choose1']);
         if (!isset($item['choose1']) || empty($item['choose1'])) {
             $this->isDisplaySection =  false;
         } else {

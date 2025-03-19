@@ -218,7 +218,6 @@ class ProductService
                 ],
             ],
 
-
             [
                 'id' => 2,
                 'meta_title' => 'Omni-Channel Solution: Better Customer Experience for Your Business',
@@ -364,7 +363,6 @@ class ProductService
                 ],
 
             ],
-
 
             [
                 'id' => 3,
