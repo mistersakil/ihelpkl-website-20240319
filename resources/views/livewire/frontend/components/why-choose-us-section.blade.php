@@ -1,8 +1,16 @@
 <section class="choose-area pt-100 pb-70">
+
     <div class="container-fluid">
         <div class="section-title text-center">
-            <span class="sp-title">{{ $sectionTitle }}</span>
-            <h2>{{ $sectionSubTitle }}</h2>
+            @if (!empty($title))
+                <h1 class="sp-title">{{ ucwords($title) }}</h1>
+            @endif
+            @if (!empty($subTitle))
+                <h2>{{ ucwords($subTitle) }}</h2>
+            @endif
+            @if (!empty($shortDetails))
+                <p>{{ ucwords($shortDetails) }}</p>
+            @endif
         </div>
         <!-- /.section-title  -->
         <div class="row pt-45 align-items-center justify-content-center">
@@ -15,51 +23,23 @@
             <div class="col-lg-7">
                 <div class="choose-leftside">
                     <div class="row">
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="choose-card">
-                                <h3>Your Budget, Your Way</h3>
-                                <p>Our collaboration models have been refined to deliver customized, cost-effective
-                                    solutions.</p>
-                                <i class="{{ _icons('headset') }}"></i>
-                                <div class="circle"></div>
-                            </div>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="choose-card">
-                                <h3>Dedicated Teams</h3>
-                                <p>We excel in delivering dedicated development teams by centering our efforts on your
-                                    unique business.
-                                </p>
-                                <i class="{{ _icons('document') }}"></i>
-                                <div class="circle"></div>
-                            </div>
-                        </div>
-                        <!-- /.col -->
-
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="choose-card">
-                                <h3>Long-Term Partnerships</h3>
-                                <p>Our focus on nurturing long-term business relationships is evident in our
-                                    consistently high client retention rate.
-                                </p>
-                                <i class="{{ _icons('watch') }}"></i>
-                                <div class="circle"></div>
-                            </div>
-                        </div>
-                        <!-- /.col -->
-
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="choose-card">
-                                <h3>Innovation Driven Results
-                                </h3>
-                                <p>Each of our dedicated development teams is committed to crafting innovative
-                                    solutions.</p>
-                                <i class="{{ _icons('user_heart') }}"></i>
-                                <div class="circle"></div>
-                            </div>
-                        </div>
-                        <!-- /.col -->
+                        @if (is_array($items) && count($items))
+                            @foreach ($items as $item)
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="choose-card">
+                                        <h3>
+                                            {{ $item['heading'] }}
+                                        </h3>
+                                        <p>
+                                            {{ $item['body'] }}    
+                                        </p>
+                                        <i class="{{ $item['icon'] }}"></i>
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+                            @endforeach
+                        @endif
 
                     </div>
                     <!-- /.row -->

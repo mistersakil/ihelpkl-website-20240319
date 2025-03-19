@@ -86,7 +86,6 @@ class SolutionService
                     'imgThumb' => null,
                     'imgFrame' => Vite::imageWeb('choose-line.png'),
 
-
                 ],
                 'imageOne' => [
                     'title' => 'Effective sales strategies',

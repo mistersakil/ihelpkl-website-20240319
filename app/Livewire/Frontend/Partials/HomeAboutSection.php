@@ -25,7 +25,7 @@ class HomeAboutSection extends Component
     public function mount(array $item = []): void
     {
         $item =  isset($item['about']) && array_key_exists('about', $item) ? ($item['about']) : $item;
-        // dump($item);
+
         $this->title = isset($item['title']) ? __($item['title']) : '';
         $this->subTitle = isset($item['subTitle']) ? __($item['subTitle']) : '';
         $this->shortDetails = isset($item['short_details']) ? ($item['short_details']) : '';

@@ -54,237 +54,315 @@ class ProductService
         $dataList = [
             [
                 'id' => 1,
-                'meta_title' => 'Point Of Sale',
-                'meta_description' => 'The ultimate omni-channel approach to sales and customer management',
+                'meta_title' => 'POS System for Retail, Restaurants & SMEs in Malaysia',
+                'meta_description' => 'iHelpKL offers a cloud-based POS system for Malaysian businesses. Manage sales, expenses, and inventory effortlessly. Perfect for retail stores and restaurants',
                 'title' => 'Point Of Sale',
-                'subTitle' => 'The ultimate omni-channel approach to sales and customer management',
-                'slug' => route('web.products.details', ['slug' => 'point-of-sale']),
-                'body' => "",
+                'subTitle' => 'Optimize your business operations with iHelpKL’s cloud-based POS software',
+                'slug' => route('web.products.details', ['slug' => 'cloud-pos-system-malaysia']),
+                'short_details' => "Designed for Malaysian businesses, iHelpKL helps you manage sales, expenses, customers, and inventory effortlessly. Whether you run a kedai runcit, restaurant, or small enterprise, iHelpKL is the ultimate solution for your business needs.",
                 'img_featured' => Vite::imageWeb('pos.png'),
                 'img_thumb' => Vite::imageWeb('pos.png'),
                 'keyPoints' => [
-                    'Provide a centralized solution for maintaining sales &  customer data',
-                    'Facilitate efficient and accurate transaction management.',
-                    'Enable effective tracking of customer details and purchase history.',
-                    'Ensure robust security measures to protect sensitive data.',
-                    'Monitor inventory levels and alert for low stock to prevent shortages.',
-                    'Design an intuitive user interface for ease of use by all staff.',
-                    'Insightful reports on sales performance and customer activity.',
-
+                    'Control user access and permissions for better security.',
+                    'Set up workflows based on category, subcategory, and status.',
+                    'Manage products, customers, sales, and expenses in one place.',
+                    'Generate detailed reports to make data-driven decisions.',
                 ],
-                'projects' => [
-                    'title' => 'Projection',
-                    'subTitle' => 'Why Choose the iPOS System?',
+                'choose1' => [
+                    'title' => 'Grow & Succeed!',
+                    'subTitle' => 'Benefits of iHelpKL',
+                    'shortDetails' => "",
+                    'imgFeatured' => 'choose-img1.png',
                     'items' => [
                         [
-                            // 'heading' => 'Comprehensive Functionality',
-                            'body' => 'This POS system integrates essential features such as sales processing, customer management, and inventory tracking into a single platform, streamlining operations and reducing the need for multiple systems',
-                            'img' =>  Vite::imageWeb('pos-thumb-1.png'),
+                            'heading' => 'Boost Efficiency',
+                            'body' => "Automate your sales, inventory, and expense management with iHelpKL's cloud-based POS system. Save time and focus on growing your business.",
+                            'icon' =>  _icons('boost'),
                         ],
                         [
-                            // 'heading' => 'Enhanced Data Security',
-                            'body' => 'With robust security protocols in place, this solution ensures that sensitive customer and transaction data is protected, fostering trust and compliance with data protection regulations',
-                            'img' =>  Vite::imageWeb('pos-thumb-2.png'),
+                            'heading' => 'Enhance Customer Experience',
+                            'body' => "Use iHelpKL's customer management tools to build stronger relationships and improve customer satisfaction.",
+                            'icon' =>  _icons('customer'),
                         ],
                         [
-                            // 'heading' => 'Actionable Insights',
-                            'body' => "The system's reporting and analytics capabilities provide valuable insights into sales trends and customer behavior, enabling data-driven decision-making that can enhance business performance and drive growth",
-                            'img' =>  Vite::imageWeb('pos-thumb-3.png'),
-                        ]
+                            'heading' => 'Make Smarter Decisions',
+                            'body' => "With advanced reporting tools, gain valuable insights into your business performance and make data-driven decisions.",
+                            'icon' =>  _icons('robot'),
+                        ],
+                        [
+                            'heading' => 'Stay Competitive',
+                            'body' => 'From payment terminal integration to self-service kiosks, iHelpKL equips your business with the latest technology to stay ahead of the competition.',
+                            'icon' =>  _icons('car'),
+                        ],
+
+                    ]
+                ],
+
+                'services2' => [
+                    'title' => 'Key Features',
+                    'subTitle' => "Get Started with iHelpKL's Free Features",
+                    'shortDetails' => '',
+                    'items' => [
+                        [
+                            'heading' => 'Basic POS System',
+                            'body' => 'Add, edit, and manage your products easily. Perfect for kedai runcit and small businesses.',
+                            'icon' =>  _icons('database'),
+                        ],
+                        [
+                            'heading' => "Customer Management",
+                            'body' => "Store and manage customer information for better engagement.",
+                            'icon' =>  _icons('customer2'),
+                        ],
+                        [
+                            'heading' => 'Sales Tracking',
+                            'body' => 'Track your sales and monitor performance in real-time.',
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Expense Management',
+                            'body' => 'Keep track of your business expenses effortlessly.',
+                            'icon' =>  _icons('money'),
+                        ],
+                        [
+                            'heading' => 'Basic Reporting',
+                            'body' => 'Generate simple reports to understand your business performance.',
+                            'icon' =>  _icons('reports'),
+                        ],
+                        [
+                            'heading' => 'Cloud-Based Access',
+                            'body' => 'Use iHelpKL from anywhere, anytime, with our cloud-based system.',
+                            'icon' =>  _icons('upload'),
+                        ],
+
                     ]
                 ],
 
                 'characteristics' => [
-                    'title' => 'Free Core Features',
-                    'subTitle' => 'Key Features of the iPOS System',
+                    'title' => 'Paid Key Features',
+                    'subTitle' => 'Unlock the Full Potential of iHelpKL Paid Features',
+                    'shortDetails' => '',
                     'items' => [
                         [
-                            'heading' => 'Sales Processing',
-                            'body' => 'Supports transactions for product sales with capabilities for applying discounts, tax calculations, and generating digital receipts',
-                            'icon' =>  _icons('sales'),
+                            'heading' => "Cloud-Based POS System",
+                            'body' => "Real-time sales tracking and inventory management for retail stores and restaurants.",
+                            'icon' =>  _icons('clients'),
                         ],
                         [
-                            'heading' => 'Customer Management',
-                            'body' => 'Stores customer information, such as contact details, purchase history, and preferences, to personalize future engagements and enhance customer experience',
-                            'icon' =>  _icons('customer'),
+                            'heading' => "Payment Terminal Integration",
+                            'body' => "Accept payments securely with integrated payment terminals.",
+                            'icon' =>  _icons('business'),
                         ],
                         [
-                            'heading' => 'Inventory Management',
-                            'body' => 'Monitors product stock levels, alerts for low inventory, and allows for adjustments in real-time',
-                            'icon' =>  _icons('products'),
+                            'heading' => "Self-Service Kiosk Support",
+                            'body' => "Enable self-service options for faster customer transactions.",
+                            'icon' =>  _icons('business'),
                         ],
                         [
-                            'heading' => 'User Authentication and Security',
-                            'body' => 'Ensures only authorized personnel access the system, with security protocols in place for data protection',
-                            'icon' =>  _icons('user'),
+                            'heading' => "Advanced Access Role Permission",
+                            'body' => "Assign specific roles and permissions to your team for better control.",
+                            'icon' =>  _icons('business'),
                         ],
                         [
-                            'heading' => 'User Interface (UI) Design',
-                            'body' => 'A user-friendly and intuitive design that enables ease of use for staff at all experience levels',
-                            'icon' =>  _icons('tv'),
+                            'heading' => "Custom Business Logic",
+                            'body' => "Set up workflows based on category, subcategory, and status to match your business needs.",
+                            'icon' =>  _icons('business'),
                         ],
-
+                        [
+                            'heading' => "Detailed Reporting Tools",
+                            'body' => "Access advanced reports for sales, expenses, and customer insights.",
+                            'icon' =>  _icons('business'),
+                        ],
                     ]
                 ],
-                'services2' => [
-                    'title' => 'Paid Core Features',
-                    'subTitle' => 'Paid Key Features of the iPOS',
-                    'items' => [
-                        [
-                            'heading' => 'Payment Integration',
-                            'body' => 'Supports multiple payment options, including credit/debit cards, mobile payments, and cash',
-                            'icon' =>  _icons('dollar'),
-                        ],
-                        [
-                            'heading' => 'Reporting and Analytics',
-                            'body' => 'Offers detailed reports on sales, revenue, and customer behavior for informed decisions',
-                            'icon' =>  _icons('reports'),
-                        ],
-                        [
-                            'heading' => 'Data Segmentation and Marketing',
-                            'body' => 'Enables customer/product segmentation for targeted marketing campaigns',
-                            'icon' =>  _icons('database'),
-                        ],
-                        [
-                            'heading' => 'Complaint Management',
-                            'body' => 'Streamlines the handling of customer complaints to enhance service quality',
-                            'icon' =>  _icons('question2'),
-                        ],
-                        [
-                            'heading' => 'Staff Activity Log',
-                            'body' => 'Tracks user activity within the system for accountability and performance evaluation',
-                            'icon' =>  _icons('users'),
-                        ],
-                        [
-                            'heading' => 'Exportable Reports',
-                            'body' => 'Allows reports to be exported in multiple formats (e.g., PDF, Excel)',
-                            'icon' =>  _icons('reports'),
-                        ],
-                        [
-                            'heading' => 'Data Backup and Recovery',
-                            'body' => 'Automates backups and ensures quick recovery from potential data loss',
-                            'icon' =>  _icons('download'),
-                        ],
-                        [
-                            'heading' => 'Mobile Apps ',
-                            'body' => 'Provides mobile versions of the POS system for on-the-go access and usability',
-                            'icon' =>  _icons('google_play'),
-                        ],
-                    ],
-                    'characteristics' => [],
-                ],
-                'choose2' => [
-                    'title' => 'CRM Benefits & Advantages',
-                    'subTitle' => 'An Overview of Why We Need iPOS System',
-                    'imgFeatured' => Vite::imageWeb('choose-img2.jpg'),
+
+                'imageOne' => [
+                    'title' => 'Why iHelpKL?',
+                    'subTitle' => 'Why Choose iHelpKL?',
+                    'shortDetails' => "<p><strong>Tailored for Malaysian Businesses:</strong> iHelpKL is designed specifically for Malaysian SMEs, retail stores, and restaurants. Whether you run a kedai runcit or a restaurant, iHelpKL adapts to your unique business needs.</p>" . "<p><strong>Affordable and Scalable:</strong>  Start with our free plan and upgrade as your business grows. iHelpKL offers flexible pricing to suit businesses of all sizes.</p>" . "<p><strong>User-Friendly and Reliable: </strong> With an intuitive interface and cloud-based technology, iHelpKL is easy to use and accessible from anywhere. Plus, our dedicated support team is always here to help.</p>",
+                    'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
                     'imgThumb' => null,
                     'imgFrame' => Vite::imageWeb('choose-line.png'),
-                    'list' => [
-                        [
-                            'title' => 'Benefits',
-                            'progress' => 100,
-                            'items' => [
-                                'Efficiency',
-                                'Integration',
-                                'Usability',
-                                'Security',
-                                'Tracking',
-                                'Flexibility',
-                                'Insights',
-                                'Scalability',
 
-                            ]
-                        ],
-                        [
-                            'title' => 'Advantages',
-                            'progress' => 100,
-                            'items' => [
-                                'Automation',
-                                'Accessibility',
-                                'Reliability',
-                                'Customization',
-                                'Support',
-                                'Analytics',
-                                'Performance',
-                            ]
-                        ]
-                    ]
-
-                ]
-            ],
-
-            [
-                'id' => 2,
-                'meta_title' => 'Omni-channel Contact Center',
-                'meta_description' => 'Integrated Customer Communication: Omni-channel Contact Center Solution',
-                'title' => 'Omni-channel Contact Center',
-                'subTitle' => 'Integrated Customer Communication: Omni-channel Contact Center Solution',
-                'slug' => route('web.products.details', ['slug' => 'omni-channel']),
-                'body' => "",
-                'img_featured' => Vite::imageWeb('omni-contact.jpg'),
-                'img_thumb' => Vite::imageWeb('omni-contact-2.jpg'),
-                'keyPoints' => [
-                    "Whatsapp",
-                    "Email",
-                    "SMS",
-                    "Voice chat",
-                    "Web chat",
-
-                ],
-
-                'projects' => [
-                    'title' => 'Innovative',
-                    'subTitle' => 'iHelP offers the solution',
-                    'items' => [
-                        [
-                            'heading' => '',
-                            'body' => "An advanced Omni-channel contact center is vital to prevent business loss. iHelpBD's solution integrates voice, chat, email, and CRM into one platform, ensuring a seamless customer journey.",
-                            'img' =>  Vite::imageWeb('omni-contact-thumb-1.jpg'),
-                        ],
-                        [
-                            'heading' => '',
-                            'body' => "This solution gives agents access to a customer's full interaction history for personalized service, allowing customers to use their preferred communication channels for a better experience.",
-                            'img' =>  Vite::imageWeb('omni-contact-thumb-2.jpg'),
-                        ],
-                        [
-                            'heading' => '',
-                            'body' => "iHelpKL's Omni-channel contact center streamlines operations, helping businesses meet customer expectations, improve satisfaction, and foster loyalty to stay competitive.",
-                            'img' =>  Vite::imageWeb('omni-contact-thumb-3.jpg'),
-                        ]
-                    ]
                 ],
 
                 'faqs' => [
                     'title' => 'FAQ',
-                    'subTitle' => "Learn more",
-                    'items' => []
-                ],
-                'articles' => [
-                    [
-                        'title' => 'Omni-channel Benefits',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img4.jpg'),
-                        'items' => [
-                            "The main goal of an Omni-channel contact center is to enhance customer experience.",
-                            "Customers can easily switch to text to send images without repeating their issue.",
-                            "Agents can access prior interactions via CRM, ensuring consistent service.",
-                        ]
-                    ],
-                    [
-                        'title' => 'Omni-channel Advantages',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img5.jpg'),
-                        'items' => [
-                            "Customers can choose from channels like Facebook Messenger, WhatsApp, email, or web chat, preventing lost opportunities.",
-                            "iHelpKL is committed to providing a seamless customer journey through its Omni-channel solution on a single platform."
-
-
-                        ]
+                    'subTitle' => "Frequently Asked Questions About Omni-Channel Solutions",
+                    'items' => [
+                        [
+                            'heading' => "What is iHelpKL?",
+                            'body' => "iHelpKL is a cloud-based POS and business management system designed for Malaysian businesses, including retail stores, restaurants, and SMEs. It simplifies sales, expense tracking, and customer management.",
+                        ],
+                        [
+                            'heading' => "Can I use iHelpKL for my kedai runcit (retail store)?",
+                            'body' => "Yes! iHelpKL is perfect for retail stores, restaurants, and small businesses. It supports product management, sales tracking, and expense management tailored to your needs.",
+                        ],
+                        [
+                            'heading' => "Does iHelpKL support online payments?",
+                            'body' => "Yes, iHelpKL integrates with payment terminals and supports secure payment processing for effortless transactions.",
+                        ],
+                        [
+                            'heading' => "Is there a free version of iHelpKL?",
+                            'body' => "Yes, iHelpKL offers a free plan with basic features. For advanced functionality, you can upgrade to a paid plan.",
+                        ],
+                        [
+                            'heading' => "Can I use iHelpKL as an online POS system for my restaurant?",
+                            'body' => "Absolutely! iHelpKL supports online POS systems for restaurants and retail stores, making it easy to manage orders and payments.",
+                        ],
+                        [
+                            'heading' => "Does iHelpKL work for self-service kiosks?",
+                            'body' => "Yes, iHelpKL supports self-service kiosks, enabling faster and more efficient customer transactions.",
+                        ],
+                        
                     ]
-                ]
-
+                ],
             ],
 
+            [
+                'id' => 2,
+                'meta_title' => 'Omni-Channel Solution: Better Customer Experience for Your Business',
+                'meta_description' => 'Transform your business with our omni-channel platform. Unify customer experiences, boost sales, and smooth operations. Explore free & paid features today',
+                'title' => 'Omni-channel Contact Center',
+                'subTitle' => 'Effortlessly Connect Every Customer Touchpoint for a Unified Experience',
+                'slug' => route('web.products.details', ['slug' => 'omni-channel-marketing-platform']),
+                'short_details' => "Transform your business with our omni-channel platform. Unify customer experiences, boost sales, and smooth operations. Explore free & paid features today",
+                'img_featured' => Vite::imageWeb('omni-contact.jpg'),
+                'img_thumb' => Vite::imageWeb('omni-contact-2.jpg'),
+
+                'choose1' => [
+                    'title' => 'Why Choose?',
+                    'subTitle' => 'Why Choose Our Omni-Channel Solution?',
+                    'shortDetails' => "In today's fast-paced digital world, customers expect consistent experiences across every channel, whether they're shopping online, visiting your store, or reaching out via social media. Our omni-channel platform is designed to help you meet these expectations and stay ahead of the competition.",
+                    'imgFeatured' => 'choose-img1.png',
+                    'items' => [
+                        [
+                            'heading' => 'Unified Customer Experience',
+                            'body' => 'Deliver consistent messaging and service across all touch points.',
+                            'icon' =>  _icons('customer'),
+                        ],
+                        [
+                            'heading' => 'Boost Customer Loyalty',
+                            'body' => 'Create personalized interactions that keep customers coming back.',
+                            'icon' =>  _icons('boost'),
+                        ],
+                        [
+                            'heading' => 'Increase Sales',
+                            'body' => "Convert more leads by meeting customers where they are.",
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Optimize Operations',
+                            'body' => 'Manage all channels from one centralized platform. With our solution, you can transform your business into a holistic retail powerhouse, ensuring every customer feels valued and understood.',
+                            'icon' =>  _icons('cog'),
+                        ],
+
+                    ]
+                ],
+
+                'services2' => [
+                    'title' => 'Key Features',
+                    'subTitle' => 'Free Key Features to Get You Started',
+                    'shortDetails' => 'Our omni-channel platform offers powerful free features to help you kickstart your journey toward effortless customer engagement. These features are just the beginning. Upgrade to unlock even more advanced tools designed to take your business to the next level.',
+                    'items' => [
+                        [
+                            'heading' => 'Multi-Channel Integration',
+                            'body' => 'Connect your website, social media, and email campaigns effortlessly.',
+                            'icon' =>  _icons('database'),
+                        ],
+                        [
+                            'heading' => "Real-Time Analytics",
+                            'body' => "Track customer interactions and gain actionable insights.",
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Basic CRM Tools',
+                            'body' => 'Manage customer data and interactions in one place.',
+                            'icon' =>  _icons('database_gear'),
+                        ],
+                        [
+                            'heading' => '24/7 Customer Support',
+                            'body' => 'Get assistance whenever you need it.',
+                            'icon' =>  _icons('headset'),
+                        ],
+
+                    ]
+                ],
+
+                'characteristics' => [
+                    'title' => 'Paid Key Features',
+                    'subTitle' => 'Unlock Advanced Capabilities with Paid Features',
+                    'shortDetails' => 'Ready to supercharge your omni-channel strategy? Our paid features are designed for businesses that want to go above and beyond. With these tools, you can create a holistic retail experience that delights customers and drives growth.',
+                    'items' => [
+                        [
+                            'heading' => 'Omni-Channel CRM',
+                            'body' => ' Gain a 360-degree view of your customers for hyper-personalized experiences.',
+                            'icon' =>  _icons('clients'),
+                        ],
+                        [
+                            'heading' => 'Cross-Channel Campaigns',
+                            'body' => 'Launch synchronized marketing campaigns across all platforms.',
+                            'icon' =>  _icons('business'),
+                        ],
+                        [
+                            'heading' => 'Advanced Analytics',
+                            'body' => 'Dive deeper into customer behavior and preferences.',
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Unified Commerce',
+                            'body' => 'Integrate your POS, inventory, and e-commerce systems for smooth operations.',
+                            'icon' =>  _icons('cart'),
+                        ],
+                        [
+                            'heading' => 'Omni-Channel Call Center',
+                            'body' => 'Provide consistent support across phone, email, chat, and social media.',
+                            'icon' =>  _icons('agent'),
+                        ],
+                    ]
+                ],
+
+                'imageOne' => [
+                    'title' => 'Why Need Omni-Channel?',
+                    'subTitle' => 'Why Your Business Needs an Omni-Channel Strategy',
+                    'shortDetails' => "<p>In a world where customers interact with brands through multiple channels, an omni-channel approach is no longer optional it's essential. Here's why:</p>"."<p><strong>Customer Expectations:</strong> Modern shoppers demand frictionless experiences, whether they're online or in-store.</p>"."<p><strong>Competitive Edge:</strong>  Stand out by offering a unified, personalized journey across all touchpoints.</p>"."<p><strong>Increased Revenue:</strong>  Businesses with strong omni-channel strategies see higher customer retention and sales.</p>"."<p><strong>Efficient Operations:</strong>  Simplify your processes with integrated tools that save time and resources.</p>",
+                    'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
+                    'imgThumb' => null,
+                    'imgFrame' => Vite::imageWeb('choose-line.png'),
+
+                ],
+
+                'faqs' => [
+                    'title' => 'FAQ',
+                    'subTitle' => "Frequently Asked Questions About Omni-Channel Solutions",
+                    'items' => [
+                        [
+                            'heading' => 'What is omni-channel marketing?',
+                            'body' => 'A: Omni-channel marketing is a strategy that provides a smooth and integrated customer experience across all channels, including online, offline, and social media.',
+                        ],
+                        [
+                            'heading' => 'How is omni-channel different from multi-channel?',
+                            'body' => 'While multi-channel uses multiple platforms independently, omni-channel integrates all channels into a unified system for a consistent customer experience',
+                        ],
+                        [
+                            'heading' => 'Can small businesses benefit from omni-channel solutions?',
+                            'body' => 'Absolutely! Our platform is scalable and designed to meet the needs of businesses of all sizes.',
+                        ],
+                        [
+                            'heading' => 'What is unified commerce?',
+                            'body' => 'Unified commerce refers to the integration of all systems (e.g., POS, inventory, CRM) to provide a frictionless customer experience.',
+                        ],
+                        [
+                            'heading' => 'How does omni-channel improve customer service?',
+                            'body' => 'By integrating all communication channels (phone, email, chat, social media), you can provide consistent and efficient support, enhancing customer satisfaction.',
+                        ],
+                        [
+                            'heading' => 'Is there a free trial available?',
+                            'body' => 'Yes, you can start with our free features and upgrade to paid plans as your business grows.',
+                        ],
+                    ]
+                ],
+
+            ],
 
             [
                 'id' => 3,

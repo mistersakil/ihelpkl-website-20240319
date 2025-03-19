@@ -4,13 +4,16 @@ namespace App\Livewire\Frontend\Components;
 
 use App\Models\Lead;
 use App\Models\Query;
-use App\Models\LeadProduct;
 use Livewire\Component;
+use App\Mail\WelcomeMail;
+use App\Models\LeadProduct;
+use App\Events\FormSubmitted;
 use App\Services\CountryService;
 use App\Services\ProductService;
 use Livewire\Attributes\Validate;
 use App\Services\ValidationService;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -184,6 +187,8 @@ class FormSection extends Component
     {
         $this->validate();
 
+        $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
+
         $lead = Lead::create([
             'name' => $this->name,
             'email' => $this->email,
@@ -206,12 +211,11 @@ class FormSection extends Component
             ]);
         }
 
+        broadcast(new FormSubmitted());
+
+        Mail::to($this->email)->queue(new WelcomeMail($this->name));
+
         $this->resetStateValues();
-
-        ## Dispatch events
-        // $this->dispatch('toastAlert', message: __('your query has been submitted successfully'), type: 'success');
-
-        $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
     }
 
 

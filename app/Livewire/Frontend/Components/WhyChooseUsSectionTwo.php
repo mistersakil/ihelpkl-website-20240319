@@ -25,9 +25,8 @@ class WhyChooseUsSectionTwo extends Component
 
     /**
      * Create a new component instance.
-     * @param string $sectionTitle `Title of the section`
-     * @param string $sectionSubTitle `Sub title of the section`
-     * @param int $limit `Number of items to display in the section`
+     *
+     * @param string $item array of values     
      * @return void
      */
     public function mount(array $item = []): void
