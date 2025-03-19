@@ -43,22 +43,22 @@ class HomePage extends Component
                 [
                     "heading" => "Your Budget, Your Way",
                     "body" => "Our collaboration models have been refined to deliver customized, cost-effective solutions.",
-                    "icon" => "",
+                    "icon" => _icons('money'),
                 ],
                 [
                     "heading" => "Dedicated Teams",
                     "body" => "We excel in delivering dedicated development teams by centering our efforts on your unique business.",
-                    "icon" => "",
+                    "icon" => _icons('teams'),
                 ],
                 [
                     "heading" => "Long-Term Partnerships",
                     "body" => "Our focus on nurturing long-term business relationships is evident in our consistently high client retention rate.",
-                    "icon" => "",
+                    "icon" => _icons('partnership'),
                 ],
                 [
                     "heading" => "Innovation Driven Results",
                     "body" => "Each of our dedicated development teams is committed to crafting innovative solutions.",
-                    "icon" => "",
+                    "icon" => _icons('attributes'),
                 ],
             ]
         ];
