@@ -18,17 +18,16 @@ class FormSubmitted implements ShouldBroadcastNow
     public function __construct()
     {
         $this->count = Lead::count();
+        // dump('Hello from FormSubmitted');
     }
 
     public function broadcastOn()
     {
         return new Channel('form-submissions');
-        // return ['my-channel'];
     }
 
     public function broadcastAs()
     {
         return 'newSubmission';
-        // return 'my-event';
     }
 }

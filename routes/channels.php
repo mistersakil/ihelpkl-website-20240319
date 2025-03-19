@@ -9,4 +9,3 @@ use Illuminate\Support\Facades\Broadcast;
 Broadcast::channel('form-submissions', function () {
     return true; // Replace with actual authentication logic
 });
-
