@@ -12,7 +12,7 @@
     <!-- Google fonts -->
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    
+
     {{ Vite::useHotFile('back.hot')->useBuildDirectory('buildBack')->withEntryPoints(['resources/assets/backend/backend-js.js']) }}
 
     @livewireStyles

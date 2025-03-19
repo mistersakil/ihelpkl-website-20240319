@@ -211,9 +211,9 @@ class FormSection extends Component
             ]);
         }
 
-        broadcast(new FormSubmitted($this->name, $this->message));
+        broadcast(new FormSubmitted());
 
-        Mail::to($this->email)->queue(new WelcomeMail($this->name));
+        // Mail::to($this->email)->queue(new WelcomeMail($this->name));
 
         $this->resetStateValues();
     }

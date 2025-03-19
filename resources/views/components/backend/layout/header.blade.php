@@ -6,10 +6,10 @@
 
 
                     <li class="nav-item d-sm-flex">
-                        <a class="nav-link" href="{{ route('web.home') }}" title="{{ __('Notification') }}"
-                            target="_blank">
+                        <span class="nav-link" title="{{ __('Notification') }}">
                             <i class="{{ _icons('email') }}"></i>
-                        </a>
+                            <span id="submission-count">0</span>
+                        </span>
                     </li>
                     <!-- /.nav-item  -->
 

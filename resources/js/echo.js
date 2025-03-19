@@ -1,6 +1,6 @@
 import Echo from 'laravel-echo';
-
 import Pusher from 'pusher-js';
+
 window.Pusher = Pusher;
 
 window.Echo = new Echo({
@@ -13,5 +13,13 @@ window.Echo = new Echo({
 
 window.Echo.channel("form-submissions")
     .listen(".newSubmission", (event) => {
-        alert("New Form Submission: " + event.name);
+        console.log("New Submission Event Received:", event);
+
+        let submissionCount = document.getElementById("submission-count");
+
+        if (submissionCount) {
+            let currentCount = parseInt(submissionCount.textContent);
+
+            submissionCount.textContent = currentCount + 1;
+        }
     });

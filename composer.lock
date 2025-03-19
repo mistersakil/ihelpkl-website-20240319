@@ -1233,16 +1233,16 @@
         },
         {
             "name": "illuminate/broadcasting",
-            "version": "v12.2.0",
+            "version": "v12.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/broadcasting.git",
-                "reference": "b784c772836c48b8471f8cf5b84ab29dd3bc34ec"
+                "reference": "f09abbfe0c78b1e65177c03ddd1488d57da16dc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/broadcasting/zipball/b784c772836c48b8471f8cf5b84ab29dd3bc34ec",
-                "reference": "b784c772836c48b8471f8cf5b84ab29dd3bc34ec",
+                "url": "https://api.github.com/repos/illuminate/broadcasting/zipball/f09abbfe0c78b1e65177c03ddd1488d57da16dc3",
+                "reference": "f09abbfe0c78b1e65177c03ddd1488d57da16dc3",
                 "shasum": ""
             },
             "require": {
@@ -1287,7 +1287,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-03-12T14:22:47+00:00"
+            "time": "2025-03-17T20:11:07+00:00"
         },
         {
             "name": "intervention/gif",
