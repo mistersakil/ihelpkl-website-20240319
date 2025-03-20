@@ -51,6 +51,7 @@ class ProductsSection extends Component
     public function render(): View
     {
         $this->dataList = $this->productService->getStaticModels(limit: $this->limit);
+        
         return view('livewire.frontend.partials.products-section');
     }
 }

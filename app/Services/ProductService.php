@@ -368,8 +368,8 @@ class ProductService
             [
                 'id' => 3,
                 'meta_title' => 'Project & Task Management Software for Malaysian Businesses',
-                'meta_description' => "Optimize workflows with iHelpKL's Project and Task Management Software. Kanban Boards, Gantt Charts, Collaboration Tools & more for Malaysian Teams!',
-                'title' => 'Task Management",
+                'meta_description' => "Optimize workflows with iHelpKL's Project and Task Management Software. Kanban Boards, Gantt Charts, Collaboration Tools & more for Malaysian Teams!",
+                'title' => "Task Management",
                 'subTitle' => 'Best Project Management Software in Malaysia | iHelpKL',
                 'slug' => route('web.products.details', ['slug' => 'project-task-management-software']),
                 'short_details' => "Struggling to keep up with tasks, deadlines, projects, and team collaboration? iHelpKL is here to transform the way you work. As Malaysia’s leading Project Management Software, we offer a suite of tools designed to simplify task management, enhance team collaboration, and boost productivity. From Kanban Boards to Gantt Charts, iHelpKL has everything you need to stay organized and efficient",

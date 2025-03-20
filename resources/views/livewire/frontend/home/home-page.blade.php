@@ -11,9 +11,11 @@
 
     {{-- <livewire:frontend.partials.products-section sectionTitle="products"
         sectionSubTitle="Our most valuable next-gen products" :limit="3" /> --}}
-
+{{-- 
     <livewire:frontend.components.home-products-section sectionTitle="products"
-        sectionSubTitle="our most valuable products" :limit="6" />
+        sectionSubTitle="our most valuable products" :limit="6" /> --}}
+
+    <livewire:frontend.partials.products-section sectionTitle="products" sectionSubTitle="our most valuable products" :limit="6" />
 
     <livewire:frontend.components.why-choose-us-section :item="$data" />
 
