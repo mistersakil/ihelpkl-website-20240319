@@ -156,6 +156,7 @@ if (!function_exists('_icons')) {
             'sliders'                   => 'bi bi-sliders',
             'speedometer'               => 'bi bi-speedometer2',
             'search'                    => 'bi bi-search',
+            'speaker'                   => 'bi bi-speaker',
             'sales'                     => 'bi bi-receipt-cutoff',
             'twitter'                   => 'bi bi-twitter',
             'ticket'                    => 'bi bi-ticket',

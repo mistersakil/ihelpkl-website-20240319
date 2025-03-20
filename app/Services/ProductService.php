@@ -372,17 +372,16 @@ class ProductService
                 'title' => "Task Management",
                 'subTitle' => 'Best Project Management Software in Malaysia | iHelpKL',
                 'slug' => route('web.products.details', ['slug' => 'project-task-management-software']),
-                'short_details' => "Struggling to keep up with tasks, deadlines, projects, and team collaboration? iHelpKL is here to transform the way you work. As Malaysia’s leading Project Management Software, we offer a suite of tools designed to simplify task management, enhance team collaboration, and boost productivity. From Kanban Boards to Gantt Charts, iHelpKL has everything you need to stay organized and efficient",
+                'short_details' => "Struggling to keep up with tasks, deadlines, projects, and team collaboration? iHelpKL is here to transform the way you work. As Malaysia's leading Project Management Software, we offer a suite of tools designed to simplify task management, enhance team collaboration, and boost productivity. From Kanban Boards to Gantt Charts, iHelpKL has everything you need to stay organized and efficient",
                 'img_featured' => Vite::imageWeb('task-management.png'),
                 'img_featured_alt' => "Kanban Boards in iHelpKL Project Management Software Malaysia",
 
                 'keyPoints' => [],
 
-
                 'choose1' => [
                     'title' => 'Why Choose?',
                     'subTitle' => 'Why Choose iHelpKL?',
-                    'shortDetails' => "iHelpKL isn't just another Task Management Software—it’s a complete solution designed for Malaysian businesses. Here’s why we stand out",
+                    'shortDetails' => "iHelpKL isn't just another Task Management Software—it's a complete solution designed for Malaysian businesses. Here's why we stand out",
                     'imgFeatured' => 'choose-img1.png',
                     'items' => [
                         [
@@ -509,8 +508,7 @@ class ProductService
                             'heading' => "Is iHelpKL available in Bahasa Malaysia?",
                             'body' => " Yes, we offer localized support and language options for Malaysian users."
                         ],
-                      
-                      
+
                     ]
                 ]
 
@@ -518,140 +516,161 @@ class ProductService
 
             [
                 'id' => 4,
-                'meta_title' => 'Complain Management System',
-                'meta_description' => 'All-in-one solution for help desk and customer service operation',
+                'meta_title' => 'Optimize Complaint Management for Malaysian Businesses',
+                'meta_description' => 'iHelpKL offers advanced Complaint Management tools like Ticketing Systems, CRM, and VoC Platforms to enhance customer support and satisfaction',
                 'title' => 'Complain Management System',
-                'subTitle' => 'All-in-one solution for help desk and customer service operations',
-                'slug' => route('web.products.details', ['slug' => 'complain-management']),
-                'body' => "",
+                'subTitle' => "Transform Complaint Management with iHelpKL's All-in-One Solutions",
+                'slug' => route('web.products.details', ['slug' => 'complaint-management-software']),
+                'short_details' => "iHelpKL offers a comprehensive suite of tools, including Complaint Management, Ticketing Systems, Customer Experience Management (CEM), and CRM, designed to optimize operations, enhance customer satisfaction, and drive growth. Whether you're managing customer queries, service requests, or feedback, iHelpKL has you covered.",
                 'img_featured' => Vite::imageWeb('ticket.png'),
-                'img_thumb' => Vite::imageWeb('ticket.png'),
-                'keyPoints' => [
-                    'Unified platform for managing all customer support interactions',
-                    'Streamlined workflows to enhance efficiency and response times',
-                    'Centralized knowledge base for easy information access',
-                    'Automated ticketing system to track and prioritize customer inquiries',
-                    'Integrations with other business tools for seamless workflows',
-                    'Reporting and analytics to measure performance and identify trends',
-                    'Scalable solution to meet growing customer needs',
-                    'Customer satisfaction metrics to assess customer happiness',
-                    '24/7 support for technical assistance and troubleshooting',
-                    'Customization options to tailor the software to specific requirements',
-                ],
+                'img_featured_alt' => "iHelpKL's Complaint Management Dashboard for Malaysian Businesses",
 
-                'projects' => [
-                    'title' => 'Projects',
-                    'subTitle' => 'Our recent projects',
+                'keyPoints' => [],
+
+
+                'choose1' => [
+                    'title' => 'Why Choose?',
+                    'subTitle' => 'Why Choose iHelpKL?',
+                    'shortDetails' => "iHelpKL is the perfect choice for Malaysian businesses looking for a scalable, user-friendly, and data-driven solution to manage Complaint Management and operations. The Ultimate Solution for Complaint Management in Malaysian Businesses",
+                    'imgFeatured' => 'choose-img1.png',
                     'items' => [
                         [
-                            'heading' => 'Simplified SLA Oversight',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
-                            'img' =>  Vite::imageWeb('ticket-thumb-1.png'),
+                            'heading' => 'All-in-One Platform',
+                            'body' => 'Combines CRM, Help Desk Software, and Customer Experience Management (CEM) for effective complaint handling.',
+                            'icon' =>  _icons('robot'),
                         ],
                         [
-                            'heading' => 'Automated Task Assignment',
-                            'body' => 'Let the system automatically delegate customer tickets to your team. Enhance efficiency with full end-to-end visibility',
-                            'img' =>  Vite::imageWeb('ticket-thumb-2.png'),
+                            'heading' => 'Scalable Solutions',
+                            'body' => 'Grow your business without worrying about outgrowing your tools.',
+                            'icon' =>  _icons('services'),
                         ],
                         [
-                            'heading' => 'Automated Ticket Notifications',
-                            'body' => 'Receive instant alerts for active, unresponsive, or automatically completed tickets',
-                            'img' =>  Vite::imageWeb('ticket-thumb-3.png'),
-                        ]
+                            'heading' => 'Data-Driven Insights',
+                            'body' => "Make smarter decisions with real-time analytics and reporting on complaint trends.",
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Localized Support',
+                            'body' => 'Designed for Malaysian businesses with dedicated customer service.',
+                            'icon' =>  _icons('flag'),
+                        ],
+
                     ]
                 ],
-                'characteristics' => [
-                    'title' => 'How we feel',
-                    'subTitle' => 'Unified Success',
+
+                'services2' => [
+                    'title' => 'Key Features',
+                    'subTitle' => 'Get Started with Our Free Tools',
+                    'shortDetails' => 'Start with our free tools to handle customer queries, feedback, and complaints efficiently. Perfect for small businesses or those new to Complaint Management Software',
                     'items' => [
                         [
-                            'heading' => 'Ticket Tracking and Prioritization',
-                            'body' => 'Assess the urgency of each ticket to determine its priority, and assign it to the appropriate agents for efficient resolution',
-                            'icon' =>  _icons('tracking'),
+                            'heading' => "Basic Ticketing System",
+                            'body' => "Effortlessly track and manage customer queries and complaints.",
+                            'icon' =>  _icons('realtime'),
                         ],
                         [
-                            'heading' => 'Email and Phone Management',
-                            'body' => 'Record each customers email and phone number on the ticket for real-time tracking and efficient communication',
-                            'icon' =>  _icons('email'),
+                            'heading' => "Help Desk Software",
+                            'body' => "Provide quick and efficient support to resolve customer issues.",
+                            'icon' =>  _icons('info'),
                         ],
                         [
-                            'heading' => 'Agent and Team Management',
-                            'body' => 'Clearly define the responsibilities of each team and agent to ensure that incoming tickets are directed to the appropriate agent for prompt resolution',
-                            'icon' =>  _icons('users'),
+                            'heading' => "Customer Feedback Management System",
+                            'body' => "Collect and analyze feedback to improve Complaint Management.",
+                            'icon' =>  _icons('tools'),
                         ],
                         [
-                            'heading' => 'Ticket Portal',
-                            'body' => 'Simplify the ticket submission process for your customers and enable them to track the progress of their tickets effortlessly',
+                            'heading' => "Issue Tracking System (ITS)",
+                            'body' => "Monitor and resolve complaints with ease.",
+                            'icon' =>  _icons('question'),
+                        ],
+                        [
+                            'heading' => "Basic CRM",
+                            'body' => "Manage customer interactions and complaints effectively.",
+                            'icon' =>  _icons('lead'),
+                        ],
+
+                    ]
+                ],
+
+                'characteristics' => [
+                    'title' => 'Paid Features Section',
+                    'subTitle' => 'Upgrade to Advanced Features of Complaint Management',
+                    'shortDetails' => 'Unlock advanced tools like CMS, VoC Platform, and QMS to streamline Complaint Management, improve customer satisfaction, and ensure compliance',
+                    'items' => [
+                        [
+                            'heading' => 'Advanced Ticketing System',
+                            'body' => ' Automate workflows and prioritize tasks for faster complaint resolution.',
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Case Management System (CMS)',
+                            'body' => 'Organize and resolve complex complaints efficiently.',
+                            'icon' =>  _icons('activity_log'),
+                        ],
+                        [
+                            'heading' => 'Voice of the Customer (VoC) Platform',
+                            'body' => 'Gain deep insights into customer complaints and preferences.',
+                            'icon' =>  _icons('speaker'),
+                        ],
+                        [
+                            'heading' => 'Quality Management System (QMS)',
+                            'body' => ' Ensure high-quality complaint resolution and compliance.',
+                            'icon' =>  _icons('testimonials'),
+                        ],
+                        [
+                            'heading' => 'Grievance Redressal System (GRS)',
+                            'body' => ' Address and resolve customer grievances effectively.',
+                            'icon' =>  _icons('speedometer'),
+                        ],
+                        [
+                            'heading' => 'Service Request Management System (SRMS)',
+                            'body' => 'Handle service requests and complaints smoothly.',
+                            'icon' =>  _icons('services'),
+                        ],
+                        [
+                            'heading' => 'Resolution Management System (RMS)',
+                            'body' => 'Track and ensure timely complaint resolution.',
                             'icon' =>  _icons('portal'),
                         ],
-                        [
-                            'heading' => 'Live Chat Support',
-                            'body' => 'Deliver exceptional customer service through direct interactions between the admin and the customer, ensuring immediate assistance and support',
-                            'icon' =>  _icons('live_chat'),
-                        ],
-                        [
-                            'heading' => 'In-Depth Report Generation',
-                            'body' => 'Effortlessly generate reports on ticket progress, team performance, and issues using the reporting feature',
-                            'icon' =>  _icons('reports'),
-                        ]
                     ]
                 ],
+
+                'imageOne' => [
+                    'title' => 'Benefits of iHelpKL',
+                    'subTitle' => 'Why iHelpKL is the Best Choice for Complaint Management',
+                    'shortDetails' => "<p>From boosting efficiency to enhancing customer satisfaction, iHelpKL helps businesses save time, reduce costs, and scale confidently in Complaint Management.</p>" . "<p><strong>Boost Efficiency:</strong>  Automate repetitive tasks and enhance workflows to resolve complaints faster.</p>" . "<p><strong>Enhance Customer Satisfaction:</strong> Deliver personalized and timely support to keep customers happy.</p>" . "<p><strong>Improve Team Collaboration:</strong> Keep your team aligned and productive with collaborative tools for complaint resolution.</p>" . "<p><strong>Save Time and Costs:</strong> Reduce manual effort and operational expenses with automated Complaint Management Systems.</p>" . "<p><strong>Scale with Confidence:</strong> Handle growing customer complaints effortlessly with scalable solutions.</p>",
+                    'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
+                    'imgThumb' => null,
+                    'imgFrame' => Vite::imageWeb('choose-line.png'),
+
+                ],
+
                 'faqs' => [
                     'title' => 'FAQ',
-                    'subTitle' => "Learn more",
+                    'subTitle' => "Complaint Management FAQ's",
                     'items' => [
                         [
-                            'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                            'heading' => "Is iHelpKL suitable for small businesses handling complaints?",
+                            'body' => "Absolutely! iHelpKL is designed for businesses of all sizes, from startups to enterprises."
                         ],
                         [
-                            'heading' => 'Real-Time Integration',
-                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                            'heading' => "Can I try iHelpKL’s Complaint Management tools before purchasing?",
+                            'body' => "Yes, we offer free features and a trial of our premium plans."
                         ],
                         [
-                            'heading' => 'Data Security and Compliances',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                            'heading' => "Does iHelpKL integrate with other tools for complaint tracking?",
+                            'body' => "Yes, iHelpKL effortlessly integrates with popular productivity and collaboration tools."
                         ],
                         [
-                            'heading' => 'Data Security and Compliances two',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
-                        ]
+                            'heading' => "Is iHelpKL available in Bahasa Malaysia for local businesses?",
+                            'body' => "Yes, we offer localized support and language options for Malaysian users."
+                        ],
+                        [
+                            'heading' => "What industries can benefit from iHelpKL’s Complaint Management System?",
+                            'body' => "iHelpKL is versatile and suitable for industries like retail, IT, healthcare, education, and more."
+                        ],
                     ]
                 ],
-                'articles' => [
-                    [
-                        'title' => 'Benefits',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img4.jpg'),
-                        'items' => [
-                            'Automated Ticket Assignment: Automatically route tickets to the appropriate agent or team',
-                            'Priority Levels: Assign priority to tickets based on urgency and importance',
-                            'SLA Management: Monitor and enforce service level agreements for timely resolution',
-                            'Real-Time Notifications: Receive alerts for new, overdue, or resolved tickets',
-                            'Customizable Workflows: Tailor ticket workflows to match your business processes',
-                            'Multi-Channel Support: Handle tickets from various channels like email, phone, and chat',
-                            'Knowledge Base Integration: Access and link relevant articles directly within tickets',
-                            'Reporting & Analytics: Track performance metrics, resolution times, and trends',
-
-                        ]
-                    ],
-                    [
-                        'title' => 'Advantages',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img5.jpg'),
-                        'items' => [
-
-                            'Collaborative Tools: Enable team collaboration on complex tickets with internal notes and comments',
-                            'Customer Portal: Allow customers to submit and track tickets through a dedicated portal',
-                            'Ticket Status Tracking: Monitor the progress and current status of each ticket',
-                            'Historical Records: Maintain a log of all interactions and actions taken on each ticket',
-                            'Custom Fields: Add specific fields to capture relevant information unique to your organization',
-                            'Escalation Rules: Automatically escalate tickets that are unresolved within a certain time frame',
-                            'Integrations: Connect with other tools like CRM, project management, or communication platforms',
-
-                        ]
-                    ]
-                ]
 
             ],
 
