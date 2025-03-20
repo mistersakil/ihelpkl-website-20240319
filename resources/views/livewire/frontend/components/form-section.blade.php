@@ -153,8 +153,8 @@
                 <div class="agree-label">
                     <input type="checkbox" id="chb1" wire:model="termsAccepted">
                     <label for="chb1">
-                        {{ __('accept') }} <a href="javascript:void(0)">{{ __('terms and conditions') }}</a> {{ __('and')}} <a
-                            href="javascript:void(0)">{{ __('privacy policy') }}.</a>
+                        {{ __('accept') }} <a href="javascript:void(0)">{{ __('terms and conditions') }}</a>
+                        {{ __('and') }} <a href="javascript:void(0)">{{ __('privacy policy') }}.</a>
                     </label> <br>
 
                     @error('termsAccepted')
@@ -167,8 +167,11 @@
 
         @if ($showSendMessageButton)
             <div class="col-lg-12 col-md-12">
-                <button type="submit" class="default-btn">
-                    {{ __('send message') }}
+                <button wire:loading.class="btn-secondary" wire:target="save" wire:click="save" type="submit"
+                    class="default-btn">
+                    <span wire:loading.remove>{{ __('send message') }}</span>
+                    <span wire:loading>{{ __('processing...') }} <span class="spinner-border spinner-border-sm"
+                            role="status" aria-hidden="true"></span></span>
                 </button>
             </div>
         @endif
@@ -181,8 +184,11 @@
             </div>
 
             <div class="col-12">
-                <button type="submit" class="default-btn">
-                    {{ __('request a demo') }}
+                <button wire:loading.class="btn-secondary" wire:target="save" wire:click="save" type="submit"
+                    class="default-btn">
+                    <span wire:loading.remove>{{ __('request a demo') }}</span>
+                    <span wire:loading>{{ __('processing...') }} <span class="spinner-border spinner-border-sm"
+                            role="status" aria-hidden="true"></span></span>
                 </button>
             </div>
         @endif

@@ -10,7 +10,6 @@ window.Echo = new Echo({
     forceTLS: true
 });
 
-
 window.Echo.channel("form-submissions")
     .listen(".newSubmission", (event) => {
         console.log("New Submission Event Received:", event);

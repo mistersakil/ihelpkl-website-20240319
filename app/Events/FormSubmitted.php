@@ -18,7 +18,6 @@ class FormSubmitted implements ShouldBroadcastNow
     public function __construct()
     {
         $this->count = Lead::count();
-        // dump('Hello from FormSubmitted');
     }
 
     public function broadcastOn()
