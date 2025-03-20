@@ -167,8 +167,11 @@
 
         @if ($showSendMessageButton)
             <div class="col-lg-12 col-md-12">
-                <button type="submit" class="default-btn">
-                    {{ __('send message') }}
+                <button wire:loading.class="btn-secondary" wire:target="save" wire:click="save" type="submit"
+                    class="default-btn">
+                    <span wire:loading.remove>{{ __('send message') }}</span>
+                    <span wire:loading>{{ __('processing...') }} <span class="spinner-border spinner-border-sm"
+                            role="status" aria-hidden="true"></span></span>
                 </button>
             </div>
         @endif
@@ -179,13 +182,6 @@
                     {{ __('demo agree text') }}
                 </div>
             </div>
-
-            {{-- <div wire:target="demo" wire:loading class="col">
-                <button class="btn btn-success" type="button" disabled>
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    {{ __('processing') }}
-                </button>
-            </div> --}}
 
             <div class="col-12">
                 <button wire:loading.class="btn-secondary" wire:target="save" wire:click="save" type="submit"
