@@ -8,6 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
+use Illuminate\Support\Facades\Log;
 
 class FormSubmitted implements ShouldBroadcastNow
 {
@@ -18,6 +19,7 @@ class FormSubmitted implements ShouldBroadcastNow
     public function __construct()
     {
         $this->count = Lead::count();
+        Log::info(json_encode($this->count));
         // dump('Hello from FormSubmitted');
     }
 

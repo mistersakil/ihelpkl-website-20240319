@@ -26,16 +26,16 @@ $(function () {
         $(".toggle-icon").click(function () {
             $(".wrapper").hasClass("toggled")
                 ? ($(".wrapper").removeClass("toggled"),
-                  $(".sidebar-wrapper").unbind("hover"))
+                    $(".sidebar-wrapper").unbind("hover"))
                 : ($(".wrapper").addClass("toggled"),
-                  $(".sidebar-wrapper").hover(
-                      function () {
-                          $(".wrapper").addClass("sidebar-hovered");
-                      },
-                      function () {
-                          $(".wrapper").removeClass("sidebar-hovered");
-                      }
-                  ));
+                    $(".sidebar-wrapper").hover(
+                        function () {
+                            $(".wrapper").addClass("sidebar-hovered");
+                        },
+                        function () {
+                            $(".wrapper").removeClass("sidebar-hovered");
+                        }
+                    ));
         }),
         $(document).ready(function () {
             $(window).on("scroll", function () {
@@ -58,13 +58,13 @@ $(function () {
         $(function () {
             for (
                 var e = window.location,
-                    o = $(".metismenu li a")
-                        .filter(function () {
-                            return this.href == e;
-                        })
-                        .addClass("")
-                        .parent()
-                        .addClass("mm-active");
+                o = $(".metismenu li a")
+                    .filter(function () {
+                        return this.href == e;
+                    })
+                    .addClass("")
+                    .parent()
+                    .addClass("mm-active");
                 o.is("li");
 
             )
@@ -78,3 +78,5 @@ $(function () {
             $("#menu").metisMenu();
         });
 });
+
+

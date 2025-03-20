@@ -14,6 +14,7 @@ use Livewire\Attributes\Validate;
 use App\Services\ValidationService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -211,7 +212,8 @@ class FormSection extends Component
             ]);
         }
 
-        // broadcast(new FormSubmitted());
+        Log::info('FormSubmitted event is being broadcast.');
+        broadcast(new FormSubmitted());
 
         Mail::to($this->email)->send(new WelcomeMail($this->name));
 
