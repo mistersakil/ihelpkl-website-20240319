@@ -10,7 +10,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="project-item">
                         <a wire:navigate href="{{ $item['slug'] }}">
-                            <img src="{{ $item['img_thumb'] }}" alt="Project Images">
+                            <img src="{{ $item['img_featured'] }}" alt="Project Images">
                         </a>
                         <div class="content content-max">
                             <h3>

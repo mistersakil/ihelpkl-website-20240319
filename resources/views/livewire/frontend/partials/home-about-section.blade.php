@@ -5,7 +5,7 @@
                 <div class="col-lg-6">
                     <div class="about-img-two">
                         @if ($img)
-                            <img src="{{ $img }}" alt="About Images">
+                            <img src="{{ $img }}" alt="{{ $imgAlt }}">
                         @endif
                     </div>
                 </div>

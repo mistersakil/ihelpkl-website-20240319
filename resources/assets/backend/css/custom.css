@@ -2,15 +2,13 @@
 .page-content {
     padding: 0.5rem;
 }
-.page-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+
+.page-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
     font-family: "Bootstrap-icons";
     content: "\F285";
 }
 
-.input-group
-    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
-        .valid-feedback
-    ):not(.invalid-tooltip):not(.invalid-feedback) {
+.input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
     box-shadow: none;
 }
 
@@ -77,6 +75,7 @@
     border-radius: 5px;
     position: relative;
 }
+
 .file_upload_container .drop_box input[type="file"] {
     position: absolute;
     left: 0;
@@ -85,4 +84,16 @@
     width: 100%;
     opacity: 0;
     cursor: pointer;
+}
+
+.nav-item .nav-link .notification-count {
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: bold;
 }

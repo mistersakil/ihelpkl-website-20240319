@@ -60,8 +60,9 @@ class ProductService
                 'subTitle' => 'Optimize your business operations with iHelpKL’s cloud-based POS software',
                 'slug' => route('web.products.details', ['slug' => 'cloud-pos-system-malaysia']),
                 'short_details' => "Designed for Malaysian businesses, iHelpKL helps you manage sales, expenses, customers, and inventory effortlessly. Whether you run a kedai runcit, restaurant, or small enterprise, iHelpKL is the ultimate solution for your business needs.",
-                'img_featured' => Vite::imageWeb('pos.png'),
-                'img_thumb' => Vite::imageWeb('pos.png'),
+                'img_featured' => Vite::imageWeb('pos.png'),               
+                'img_featured_alt' => "",
+                
                 'keyPoints' => [
                     'Control user access and permissions for better security.',
                     'Set up workflows based on category, subcategory, and status.',
@@ -227,8 +228,8 @@ class ProductService
                 'slug' => route('web.products.details', ['slug' => 'omni-channel-marketing-platform']),
                 'short_details' => "Transform your business with our omni-channel platform. Unify customer experiences, boost sales, and smooth operations. Explore free & paid features today",
                 'img_featured' => Vite::imageWeb('omni-contact.jpg'),
-                'img_thumb' => Vite::imageWeb('omni-contact-2.jpg'),
-
+                'img_featured_alt' => "",
+                
                 'choose1' => [
                     'title' => 'Why Choose?',
                     'subTitle' => 'Why Choose Our Omni-Channel Solution?',
@@ -366,21 +367,16 @@ class ProductService
 
             [
                 'id' => 3,
-                'meta_title' => 'Task Management',
-                'meta_description' => 'The ultimate solution for task refinement and process improvement',
-                'title' => 'Task Management',
-                'subTitle' => 'The ultimate solution for task refinement and process improvement',
-                'slug' => route('web.products.details', ['slug' => 'task-management']),
-                'body' => "",
+                'meta_title' => 'Project & Task Management Software for Malaysian Businesses',
+                'meta_description' => "Optimize workflows with iHelpKL's Project and Task Management Software. Kanban Boards, Gantt Charts, Collaboration Tools & more for Malaysian Teams!',
+                'title' => 'Task Management",
+                'subTitle' => 'Best Project Management Software in Malaysia | iHelpKL',
+                'slug' => route('web.products.details', ['slug' => 'project-task-management-software']),
+                'short_details' => "Struggling to keep up with tasks, deadlines, projects, and team collaboration? iHelpKL is here to transform the way you work. As Malaysia’s leading Project Management Software, we offer a suite of tools designed to simplify task management, enhance team collaboration, and boost productivity. From Kanban Boards to Gantt Charts, iHelpKL has everything you need to stay organized and efficient",
                 'img_featured' => Vite::imageWeb('task-management.png'),
-                'img_thumb' => Vite::imageWeb('task-management.png'),
+                'img_featured_alt' => "Kanban Boards in iHelpKL Project Management Software Malaysia",
+                
                 'keyPoints' => [
-                    'Align work with company objectives',
-                    'Automate processes across all departments',
-                    'Track progress and eliminate bottlenecks',
-                    'Enhance and regulate work order processes',
-                    'Automatically schedule job reminders and alerts',
-                    'Gather performance insights and reports',
                 ],
 
                 'projects' => [

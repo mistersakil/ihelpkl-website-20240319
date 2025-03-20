@@ -10,7 +10,7 @@
                 @forelse ($dataList as $item)
                     <div class="project-item">
                         <a href="{{ url($item['slug']) }}">
-                            <img src="{{ asset($item['img_thumb']) }}" alt="Project Images">
+                            <img src="{{ asset($item['img_featured']) }}" alt="Project Images">
                         </a>
                         <div class="content">
                             <h3>
