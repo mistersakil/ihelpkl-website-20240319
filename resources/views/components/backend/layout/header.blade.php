@@ -4,11 +4,10 @@
             <div class="top-menu ms-auto">
                 <ul class="navbar-nav align-items-center gap-1">
 
-
                     <li class="nav-item d-sm-flex">
-                        <span class="nav-link" title="{{ __('Notification') }}">
+                        <span class="nav-link position-relative" title="{{ __('Notification') }}">
                             <i class="{{ _icons('email') }}"></i>
-                            <span id="submission-count">0</span>
+                            <span id="submission-count" class="notification-count">0</span>
                         </span>
                     </li>
                     <!-- /.nav-item  -->
