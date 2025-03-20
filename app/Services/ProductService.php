@@ -60,9 +60,9 @@ class ProductService
                 'subTitle' => 'Optimize your business operations with iHelpKL’s cloud-based POS software',
                 'slug' => route('web.products.details', ['slug' => 'cloud-pos-system-malaysia']),
                 'short_details' => "Designed for Malaysian businesses, iHelpKL helps you manage sales, expenses, customers, and inventory effortlessly. Whether you run a kedai runcit, restaurant, or small enterprise, iHelpKL is the ultimate solution for your business needs.",
-                'img_featured' => Vite::imageWeb('pos.png'),               
+                'img_featured' => Vite::imageWeb('pos.png'),
                 'img_featured_alt' => "",
-                
+
                 'keyPoints' => [
                     'Control user access and permissions for better security.',
                     'Set up workflows based on category, subcategory, and status.',
@@ -214,7 +214,7 @@ class ProductService
                             'heading' => "Does iHelpKL work for self-service kiosks?",
                             'body' => "Yes, iHelpKL supports self-service kiosks, enabling faster and more efficient customer transactions.",
                         ],
-                        
+
                     ]
                 ],
             ],
@@ -229,7 +229,7 @@ class ProductService
                 'short_details' => "Transform your business with our omni-channel platform. Unify customer experiences, boost sales, and smooth operations. Explore free & paid features today",
                 'img_featured' => Vite::imageWeb('omni-contact.jpg'),
                 'img_featured_alt' => "",
-                
+
                 'choose1' => [
                     'title' => 'Why Choose?',
                     'subTitle' => 'Why Choose Our Omni-Channel Solution?',
@@ -325,7 +325,7 @@ class ProductService
                 'imageOne' => [
                     'title' => 'Why Need Omni-Channel?',
                     'subTitle' => 'Why Your Business Needs an Omni-Channel Strategy',
-                    'shortDetails' => "<p>In a world where customers interact with brands through multiple channels, an omni-channel approach is no longer optional it's essential. Here's why:</p>"."<p><strong>Customer Expectations:</strong> Modern shoppers demand frictionless experiences, whether they're online or in-store.</p>"."<p><strong>Competitive Edge:</strong>  Stand out by offering a unified, personalized journey across all touchpoints.</p>"."<p><strong>Increased Revenue:</strong>  Businesses with strong omni-channel strategies see higher customer retention and sales.</p>"."<p><strong>Efficient Operations:</strong>  Simplify your processes with integrated tools that save time and resources.</p>",
+                    'shortDetails' => "<p>In a world where customers interact with brands through multiple channels, an omni-channel approach is no longer optional it's essential. Here's why:</p>" . "<p><strong>Customer Expectations:</strong> Modern shoppers demand frictionless experiences, whether they're online or in-store.</p>" . "<p><strong>Competitive Edge:</strong>  Stand out by offering a unified, personalized journey across all touchpoints.</p>" . "<p><strong>Increased Revenue:</strong>  Businesses with strong omni-channel strategies see higher customer retention and sales.</p>" . "<p><strong>Efficient Operations:</strong>  Simplify your processes with integrated tools that save time and resources.</p>",
                     'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
                     'imgThumb' => null,
                     'imgFrame' => Vite::imageWeb('choose-line.png'),
@@ -375,68 +375,110 @@ class ProductService
                 'short_details' => "Struggling to keep up with tasks, deadlines, projects, and team collaboration? iHelpKL is here to transform the way you work. As Malaysia’s leading Project Management Software, we offer a suite of tools designed to simplify task management, enhance team collaboration, and boost productivity. From Kanban Boards to Gantt Charts, iHelpKL has everything you need to stay organized and efficient",
                 'img_featured' => Vite::imageWeb('task-management.png'),
                 'img_featured_alt' => "Kanban Boards in iHelpKL Project Management Software Malaysia",
-                
-                'keyPoints' => [
-                ],
 
-                'projects' => [
-                    'title' => 'Projects',
-                    'subTitle' => 'Our recent projects',
+                'keyPoints' => [],
+
+
+                'choose1' => [
+                    'title' => 'Why Choose?',
+                    'subTitle' => 'Why Choose iHelpKL?',
+                    'shortDetails' => "iHelpKL isn't just another Task Management Software—it’s a complete solution designed for Malaysian businesses. Here’s why we stand out",
+                    'imgFeatured' => 'choose-img1.png',
                     'items' => [
                         [
-                            'heading' => '',
-                            'body' => 'AI-driven automated service management (AISM) capabilities allow for quicker, more accurate, and efficient delivery of service innovations',
-                            'img' =>  Vite::imageWeb('task-management-thumb-1.png'),
+                            'heading' => 'All-in-One Platform',
+                            'body' => 'Combines Kanban Boards, Gantt Charts, and Collaboration Tools in one place.',
+                            'icon' =>  _icons('tools'),
                         ],
                         [
-                            'heading' => '',
-                            'body' => 'Incoming calls, emails, and tickets can be automatically managed from a single platform',
-                            'img' =>  Vite::imageWeb('task-management-thumb-2.png'),
+                            'heading' => 'User-Friendly Interface',
+                            'body' => 'Easy to use, even for non-tech-savvy users.',
+                            'icon' =>  _icons('tv'),
                         ],
                         [
-                            'heading' => '',
-                            'body' => 'Simplify priorities with clear project alignment to strategic goals, manage multiple projects efficiently, and speed up progress with enhanced stakeholder visibility',
-                            'img' =>  Vite::imageWeb('task-management-thumb-3.png'),
-                        ]
+                            'heading' => 'Customizable Workflows',
+                            'body' => "Adapt the system to fit your unique needs.",
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Localized Support',
+                            'body' => 'Dedicated customer service for Malaysian users.',
+                            'icon' =>  _icons('flag'),
+                        ],
+
+                    ]
+                ],
+
+                'services2' => [
+                    'title' => 'Key Features',
+                    'subTitle' => 'Organize Your Workflow with Free Tools',
+                    'shortDetails' => '',
+                    'items' => [
+                        [
+                            'heading' => "Kanban Boards",
+                            'body' => "Visualize and manage tasks effortlessly for better project tracking.",
+                            'icon' =>  _icons('products'),
+                        ],
+                        [
+                            'heading' => "To-Do List Apps",
+                            'body' => "Track customer interactions and gain actionable insights.",
+                            'icon' =>  _icons('list'),
+                        ],
+                        [
+                            'heading' => "Basic Collaboration Tools",
+                            'body' => "Share files, assign tasks, and communicate in real-time.",
+                            'icon' =>  _icons('tools'),
+                        ],
+                        [
+                            'heading' => "Task Management System",
+                            'body' => "Organize, prioritize, and track tasks to boost productivity.",
+                            'icon' =>  _icons('edit'),
+                        ],
+
                     ]
                 ],
 
                 'characteristics' => [
-                    'title' => 'Unified Success',
-                    'subTitle' => 'Key Features',
+                    'title' => 'Paid Key Features',
+                    'subTitle' => 'Access Advanced Features for Project Management',
+                    'shortDetails' => '',
                     'items' => [
                         [
-                            'heading' => 'Plan',
-                            'body' => 'organize, and collaborate on any company objective using customizable task management tools tailored to meet diverse needs at every level',
-                            'icon' =>  _icons('plan'),
+                            'heading' => 'Advanced Gantt Chart Software',
+                            'body' => 'Plan, schedule, and monitor projects with precision.',
+                            'icon' =>  _icons('realtime'),
                         ],
                         [
-                            'heading' => 'Docs',
-                            'body' => 'Outline business cases, define project scope, and document requirements to ensure everyone has the necessary information to keep work progressing smoothly',
-                            'icon' =>  _icons('docs'),
+                            'heading' => 'Time Management Software',
+                            'body' => 'Track time spent on tasks and optimize team efficiency.',
+                            'icon' =>  _icons('activity_log'),
                         ],
                         [
-                            'heading' => 'Relationships',
-                            'body' => 'Connect tasks, documents, integrations, and more to access related resources and tasks in a centralized location',
-                            'icon' =>  _icons('relationship'),
+                            'heading' => 'Enhanced Collaboration Tools',
+                            'body' => 'Foster teamwork with advanced communication and file-sharing features.',
+                            'icon' =>  _icons('tools'),
                         ],
                         [
-                            'heading' => 'In-Depth Report Generation',
-                            'body' => 'Effortlessly generate reports on ticket progress, team performance, and issues using the reporting feature',
+                            'heading' => 'Customizable Dashboards',
+                            'body' => 'Tailor your workspace to suit your unique project needs.',
+                            'icon' =>  _icons('cog'),
+                        ],
+                        [
+                            'heading' => 'Analytics & Reporting',
+                            'body' => 'Gain actionable insights into project performance and team productivity.',
                             'icon' =>  _icons('reports'),
                         ],
-                        [
-                            'heading' => 'More focused on accountability',
-                            'body' => 'Monitor changes to ensure transparency and accountability',
-                            'icon' =>  _icons('focus'),
-                        ],
-                        [
-                            'heading' => 'Team Management & Assignment',
-                            'body' => 'Save time and skip meetings with digital job scheduling, ensuring each job includes all the necessary information',
-                            'icon' =>  _icons('users'),
-                        ]
-
                     ]
+                ],
+
+                'imageOne' => [
+                    'title' => 'Benefits of iHelpKL',
+                    'subTitle' => 'Transform Your Workflow with iHelpKL',
+                    'shortDetails' => "<p><strong>Optimize Task Management:</strong> Stay on top of tasks with Task Management Software.</p>" . "<p><strong>Enhance Team Collaboration:</strong> Use Collaboration Tools to keep everyone aligned.</p>" . "<p><strong>Save Time:</strong>  Automate repetitive tasks and focus on what matters.</p>" . "<p><strong>Improve Project Visibility:</strong> Track progress with Kanban Boards and Gantt Charts.</p>". "<p><strong>Boost Productivity:</strong> Achieve more with Time Management Software and Productivity Tools.</p>",
+                    'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
+                    'imgThumb' => null,
+                    'imgFrame' => Vite::imageWeb('choose-line.png'),
+
                 ],
 
                 'faqs' => [

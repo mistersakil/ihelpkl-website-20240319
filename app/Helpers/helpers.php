@@ -140,7 +140,7 @@ if (!function_exists('_icons')) {
             'remove'                    => 'bi bi-x-lg',
             'robot'                     => 'bi bi-robot',
             'reports'                   => 'bi bi-reception-3',
-            'realtime'                  => 'bi bi-graph-up',
+            'realtime'                  => 'bi bi-graph-up-arrow',
             'relationship'              => 'bi bi-heart',
             'save'                      => 'bi bi-save2',
             'save2'                     => 'bi bi-check2-circle',
