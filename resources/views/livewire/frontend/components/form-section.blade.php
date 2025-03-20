@@ -153,8 +153,8 @@
                 <div class="agree-label">
                     <input type="checkbox" id="chb1" wire:model="termsAccepted">
                     <label for="chb1">
-                        {{ __('accept') }} <a href="javascript:void(0)">{{ __('terms and conditions') }}</a> {{ __('and')}} <a
-                            href="javascript:void(0)">{{ __('privacy policy') }}.</a>
+                        {{ __('accept') }} <a href="javascript:void(0)">{{ __('terms and conditions') }}</a>
+                        {{ __('and') }} <a href="javascript:void(0)">{{ __('privacy policy') }}.</a>
                     </label> <br>
 
                     @error('termsAccepted')
@@ -180,9 +180,19 @@
                 </div>
             </div>
 
+            {{-- <div wire:target="demo" wire:loading class="col">
+                <button class="btn btn-success" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    {{ __('processing') }}
+                </button>
+            </div> --}}
+
             <div class="col-12">
-                <button type="submit" class="default-btn">
-                    {{ __('request a demo') }}
+                <button wire:loading.class="btn-secondary" wire:target="save" wire:click="save" type="submit"
+                    class="default-btn">
+                    <span wire:loading.remove>{{ __('request a demo') }}</span>
+                    <span wire:loading>{{ __('processing...') }} <span class="spinner-border spinner-border-sm"
+                            role="status" aria-hidden="true"></span></span>
                 </button>
             </div>
         @endif

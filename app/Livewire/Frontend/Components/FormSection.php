@@ -160,24 +160,19 @@ class FormSection extends Component
         $this->validateOnly($propertyName);
     }
 
-
     /**
-     * Retrieves the title of the selected product based on the product ID.
-     * If the product is not found, a default title is returned.
-     *
-     * @return string The title of the selected product or a default title.
+     * Save new record
+     * @return void
      */
-    public function getProductTitle()
+    public function save(): void
     {
-        $product = collect($this->productService->getStaticModels())->firstWhere('id', $this->product_id);
-
-        if ($product) {
-            $title = $product['title'];
-        } else {
-            $title = $this->subject;
+        // $validated = $this->validate();
+        $this->validate();
+        try {
+            $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
+        } catch (\Throwable $th) {
+            $this->dispatch('sweetAlert', title: __('thank you'), message: $th->getMessage(), type: 'error');
         }
-
-        return $title;
     }
 
     /**
@@ -187,7 +182,7 @@ class FormSection extends Component
     {
         $this->validate();
 
-        $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
+        // $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
 
         $lead = Lead::create([
             'name' => $this->name,
