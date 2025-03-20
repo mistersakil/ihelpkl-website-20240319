@@ -474,7 +474,7 @@ class ProductService
                 'imageOne' => [
                     'title' => 'Benefits of iHelpKL',
                     'subTitle' => 'Transform Your Workflow with iHelpKL',
-                    'shortDetails' => "<p><strong>Optimize Task Management:</strong> Stay on top of tasks with Task Management Software.</p>" . "<p><strong>Enhance Team Collaboration:</strong> Use Collaboration Tools to keep everyone aligned.</p>" . "<p><strong>Save Time:</strong>  Automate repetitive tasks and focus on what matters.</p>" . "<p><strong>Improve Project Visibility:</strong> Track progress with Kanban Boards and Gantt Charts.</p>". "<p><strong>Boost Productivity:</strong> Achieve more with Time Management Software and Productivity Tools.</p>",
+                    'shortDetails' => "<p><strong>Optimize Task Management:</strong> Stay on top of tasks with Task Management Software.</p>" . "<p><strong>Enhance Team Collaboration:</strong> Use Collaboration Tools to keep everyone aligned.</p>" . "<p><strong>Save Time:</strong>  Automate repetitive tasks and focus on what matters.</p>" . "<p><strong>Improve Project Visibility:</strong> Track progress with Kanban Boards and Gantt Charts.</p>" . "<p><strong>Boost Productivity:</strong> Achieve more with Time Management Software and Productivity Tools.</p>",
                     'imgFeatured' => Vite::imageWeb('testimonial-img2.jpg'),
                     'imgThumb' => null,
                     'imgFrame' => Vite::imageWeb('choose-line.png'),
@@ -483,54 +483,34 @@ class ProductService
 
                 'faqs' => [
                     'title' => 'FAQ',
-                    'subTitle' => "Learn more",
+                    'subTitle' => "Task Management FAQ's",
                     'items' => [
                         [
-                            'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                            'heading' => "Is iHelpKL suitable for small teams?",
+                            'body' => "Yes! iHelpKL is perfect for teams of all sizes, from startups to large enterprises."
                         ],
                         [
-                            'heading' => 'Real-Time Integration',
-                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                            'heading' => "Can I use iHelpKL for personal task management?",
+                            'body' => "Absolutely! Our To-Do List Apps and Time Management Software are great for personal use."
                         ],
                         [
-                            'heading' => 'Data Security and Compliances',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                            'heading' => " Does iHelpKL integrate with other tools?",
+                            'body' => "Yes, iHelpKL seamlessly integrates with popular productivity and collaboration tools."
                         ],
                         [
-                            'heading' => 'Data Security and Compliances two',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
-                        ]
-                    ]
-                ],
-                'articles' => [
-                    [
-                        'title' => 'Benefits',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img4.jpg'),
-                        'items' => [
-                            'Adjusting Timeliness',
-                            'Breaking down project ',
-                            'Track dependencies',
-                            'Archiving complete task',
-                            'Seeing history across all changes',
-                            'Custom filters',
-                        ]
-                    ],
-                    [
-                        'title' => 'Advantages',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img5.jpg'),
-                        'items' => [
-                            'Manage team',
-                            'Auto-scheduling',
-                            'Auto Notification',
-                            'Easily get access to your customers history and job records',
-                            'Client relationship maintaining via email, sms notification',
-                            'Lead Management',
-
-
-                        ]
+                            'heading' => "Is there a free trial available?",
+                            'body' => "Yes, you can explore our free features or sign up for a premium trial."
+                        ],
+                        [
+                            'heading' => "Is my data secure with iHelpKL?",
+                            'body' => "We prioritize data security and use advanced encryption to protect your information."
+                        ],
+                        [
+                            'heading' => "Is iHelpKL available in Bahasa Malaysia?",
+                            'body' => " Yes, we offer localized support and language options for Malaysian users."
+                        ],
+                      
+                      
                     ]
                 ]
 
