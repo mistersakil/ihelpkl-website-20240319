@@ -1,14 +1,16 @@
-// import Echo from 'laravel-echo';
-// import Pusher from 'pusher-js';
+import Echo from "laravel-echo";
+import Pusher from "pusher-js";
 
-// window.Pusher = Pusher;
+window.Pusher = Pusher;
 
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: import.meta.env.VITE_PUSHER_APP_KEY,
-//     cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
-//     forceTLS: true
-// });
+window.Echo = new Echo({
+    broadcaster: "pusher",
+    key: import.meta.env.VITE_PUSHER_APP_KEY,
+    cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
+    forceTLS: true,
+});
+
+
 
 // window.Echo.channel("form-submissions")
 //     .listen(".newSubmission", (event) => {
@@ -22,8 +24,6 @@
 //             submissionCount.textContent = currentCount + 1;
 //         }
 //     });
-
-
 
 // Livewire.on('form-submitted', () => {
 //     console.log('Form Submitted');

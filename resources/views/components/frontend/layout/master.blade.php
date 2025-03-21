@@ -23,9 +23,7 @@
 
     @includeIf('components.frontend.layout.meta')
 
-    {{ Vite::useHotFile('web.hot')
-    ->useBuildDirectory('buildWeb')
-    ->withEntryPoints(['resources/assets/web/web-js.js'])}}
+    {{ Vite::useHotFile('web.hot')->useBuildDirectory('buildWeb')->withEntryPoints(['resources/assets/web/web-js.js']) }}
 
     @livewireStyles
 </head>
@@ -58,6 +56,13 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FWTNFD3" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <script type="module">
+        // console.log(Echo);
+        Echo.channel("form-submissions").listen("FormSubmitted", (e) => {
+            console.log(e);
+        });
+    </script>
 </body>
 
 </html>

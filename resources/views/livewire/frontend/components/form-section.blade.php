@@ -184,14 +184,14 @@
             </div>
 
             <div class="col-12">
-                <button wire:loading.class="btn-secondary" wire:target="save" wire:click="save" type="submit"
+                <button wire:loading.class="btn-secondary" type="submit"
                     class="default-btn">
                     <span wire:loading.remove>{{ __('request a demo') }}</span>
-                    <span wire:loading>{{ __('processing...') }} <span class="spinner-border spinner-border-sm"
-                            role="status" aria-hidden="true"></span></span>
+                    <span wire:loading>{{ __('processing...') }}
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </span>
                 </button>
             </div>
         @endif
     </div>
 </form>
-

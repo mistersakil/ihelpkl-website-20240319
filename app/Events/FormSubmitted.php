@@ -25,8 +25,8 @@ class FormSubmitted implements ShouldBroadcastNow
         return new Channel('form-submissions');
     }
 
-    public function broadcastAs()
-    {
-        return 'newSubmission';
-    }
+    // public function broadcastAs()
+    // {
+    //     return 'newSubmission';
+    // }
 }

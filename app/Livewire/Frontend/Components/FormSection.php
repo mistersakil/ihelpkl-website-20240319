@@ -169,9 +169,9 @@ class FormSection extends Component
     {
         $this->validate();
 
-        $this->sendEvent();
+        // $this->sendEvent();
         try {
-            $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
+            $this->dispatch('sweetAlert', title: __('thank you'), message: __("we've received your request. please check your email for further information"), type: 'success');
         } catch (\Throwable $th) {
             $this->dispatch('sweetAlert', title: __('thank you'), message: $th->getMessage(), type: 'error');
         }
@@ -185,32 +185,33 @@ class FormSection extends Component
     {
         $this->validate();
 
-        $this->dispatch('submitted');
+        FormSubmitted::dispatch();
+        // $this->dispatch('submitted');
 
-        $this->dispatch('form-submitted')->to(CountNotification::class);
+        // $this->dispatch('form-submitted')->to(CountNotification::class);
         // dd('form submitted');
 
-        $lead = Lead::create([
-            'name' => $this->name,
-            'email' => $this->email,
-            'mobile_number' => $this->phoneCode . $this->phone,
-            'country_id' => $this->country_id,
-            'message' => $this->message,
-        ]);
+        // $lead = Lead::create([
+        //     'name' => $this->name,
+        //     'email' => $this->email,
+        //     'mobile_number' => $this->phoneCode . $this->phone,
+        //     'country_id' => $this->country_id,
+        //     'message' => $this->message,
+        // ]);
 
-        if (!$this->showSendMessageButton) {
-            $Lead_products = LeadProduct::create([
-                'lead_id' => $lead->id,
-                'product_id' => $this->product_id ?: null,
-            ]);
-        }
+        // if (!$this->showSendMessageButton) {
+        //     $Lead_products = LeadProduct::create([
+        //         'lead_id' => $lead->id,
+        //         'product_id' => $this->product_id ?: null,
+        //     ]);
+        // }
 
-        if ($this->showSendMessageButton) {
-            $query = Query::create([
-                'lead_id' => $lead->id,
-                'subject' => $this->subject,
-            ]);
-        }
+        // if ($this->showSendMessageButton) {
+        //     $query = Query::create([
+        //         'lead_id' => $lead->id,
+        //         'subject' => $this->subject,
+        //     ]);
+        // }
 
         // Mail::to($this->email)->send(new WelcomeMail($this->name));
 
