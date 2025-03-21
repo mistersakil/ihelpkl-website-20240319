@@ -19,15 +19,10 @@ use App\Livewire\Backend\Addons\CountNotification;
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
-class FormSection extends Component
+class VisitorsQueryFormSection extends Component
 {
     ## Component props
-    public int $limit;
-    public array $state;
     public array $dataList;
-    public string $sectionTitle;
-    public string $sectionSubTitle;
-    public string $isShowSectionHeader;
     public $showProductInput, $showSubjectInput, $showRequestDemoButton, $showSendMessageButton, $showTermsConditionCheck;
 
     #[Validate]
@@ -65,25 +60,16 @@ class FormSection extends Component
 
     /**
      * Create a new component instance.
-     * @param string $sectionTitle `Title of the section`
-     * @param string $sectionSubTitle `Sub title of the section`
-     * @param int $limit `Number of items to display in the section`
+     *
      * @return void
      */
-    public function mount(string $sectionTitle = '', string $sectionSubTitle = '', int $limit = 6, $showProductInput = true, $showSubjectInput = true, $showRequestDemoButton = true, $showSendMessageButton = true, $showTermsConditionCheck = true): void
+    public function mount($showProductInput = true, $showSubjectInput = true, $showRequestDemoButton = true, $showSendMessageButton = true, $showTermsConditionCheck = true): void
     {
-        $this->limit = $limit;
         $this->showProductInput = $showProductInput;
         $this->showSubjectInput = $showSubjectInput;
         $this->showRequestDemoButton = $showRequestDemoButton;
         $this->showSendMessageButton = $showSendMessageButton;
         $this->showTermsConditionCheck = $showTermsConditionCheck;
-
-        $this->sectionTitle = $sectionTitle ? __($sectionTitle) : "";
-        $this->sectionSubTitle = $sectionSubTitle ? __($sectionSubTitle) : "";
-
-        $this->isShowSectionHeader = (!empty($this->sectionTitle) || !empty($this->sectionSubTitle)) ? true : false;
-
         $this->countries = $this->countryService->getCountries();
     }
 
@@ -232,6 +218,6 @@ class FormSection extends Component
     {
         $this->dataList = collect($this->productService->getStaticModels())->pluck('title', 'id')->toArray();
 
-        return view('livewire.frontend.components.form-section');
+        return view('livewire.frontend.components.visitors-query-form-section');
     }
 }

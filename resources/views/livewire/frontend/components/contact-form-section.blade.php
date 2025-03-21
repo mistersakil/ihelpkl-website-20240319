@@ -15,7 +15,7 @@
                     <div class="contact-form">
                         <h3>{{ __('contact with us') }}!</h3>
 
-                        <livewire:frontend.components.form-section sectionTitle="request demo"
+                        <livewire:frontend.components.visitors-query-form-section sectionTitle="request demo"
                             sectionSubTitle="our demos" :showProductInput="false" :showRequestDemoButton="false" />
                     </div>
                 </div>
