@@ -59,7 +59,7 @@
 
     <script type="module">
         // console.log(Echo);
-        Echo.channel("form-submissions").listen("FormSubmitted", (e) => {
+        Echo.channel("visitorsQueryChannel").listen("VisitorsQueryEvent", (e) => {
             console.log(e);
         });
     </script>

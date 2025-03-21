@@ -9,7 +9,7 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 
-class FormSubmitted implements ShouldBroadcastNow
+class VisitorsQueryEvent implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -22,7 +22,7 @@ class FormSubmitted implements ShouldBroadcastNow
 
     public function broadcastOn()
     {
-        return new Channel('form-submissions');
+        return new Channel('visitorsQueryChannel');
     }
 
     // public function broadcastAs()

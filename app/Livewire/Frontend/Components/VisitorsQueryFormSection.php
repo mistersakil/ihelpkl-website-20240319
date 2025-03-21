@@ -7,7 +7,7 @@ use App\Models\Query;
 use Livewire\Component;
 use App\Mail\WelcomeMail;
 use App\Models\LeadProduct;
-use App\Events\FormSubmitted;
+use App\Events\VisitorsQueryEvent;
 use App\Services\CountryService;
 use App\Services\ProductService;
 use Livewire\Attributes\Validate;
@@ -171,7 +171,7 @@ class VisitorsQueryFormSection extends Component
     {
         $this->validate();
 
-        FormSubmitted::dispatch();
+        VisitorsQueryEvent::dispatch();
         // $this->dispatch('submitted');
 
         // $this->dispatch('form-submitted')->to(CountNotification::class);
@@ -201,7 +201,7 @@ class VisitorsQueryFormSection extends Component
 
         // Mail::to($this->email)->send(new WelcomeMail($this->name));
 
-        // broadcast(new FormSubmitted());
+        // broadcast(new VisitorsQueryEvent());
 
         // $this->dispatch('form-submitted');
 
