@@ -17,9 +17,7 @@ import "../../js/echo.js";
 import $ from "jquery";
 window.jQuery = window.$ = $;
 
-/** PerfectScrollbar */
-import PerfectScrollbar from "perfect-scrollbar";
-window.PerfectScrollbar = PerfectScrollbar;
+
 
 /* Plugins */
 import "./js/simplebar.min";

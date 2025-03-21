@@ -34,6 +34,7 @@
     @stack('dynamic_js')
     @livewireScripts
     <script type="module">
+
         /* Notify a confirmation alert before proceed any further action */
         window.addEventListener('are_you_sure', event => {
             const {
