@@ -14,6 +14,7 @@ use Livewire\Attributes\Validate;
 use App\Services\ValidationService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Mail;
+use App\Livewire\Backend\Addons\CountNotification;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -166,14 +167,16 @@ class FormSection extends Component
      */
     public function save(): void
     {
-        // $validated = $this->validate();
         $this->validate();
+
+        $this->sendEvent();
         try {
             $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
         } catch (\Throwable $th) {
             $this->dispatch('sweetAlert', title: __('thank you'), message: $th->getMessage(), type: 'error');
         }
     }
+
 
     /**
      * Handle form submission.
@@ -182,7 +185,10 @@ class FormSection extends Component
     {
         $this->validate();
 
-        // $this->dispatch('sweetAlert', title: __('thank you'), message: __('we’ve received your request. please check your email for further information'), type: 'success');
+        $this->dispatch('submitted');
+
+        $this->dispatch('form-submitted')->to(CountNotification::class);
+        // dd('form submitted');
 
         $lead = Lead::create([
             'name' => $this->name,
@@ -206,9 +212,11 @@ class FormSection extends Component
             ]);
         }
 
-        broadcast(new FormSubmitted());
+        // Mail::to($this->email)->send(new WelcomeMail($this->name));
 
-        Mail::to($this->email)->send(new WelcomeMail($this->name));
+        // broadcast(new FormSubmitted());
+
+        // $this->dispatch('form-submitted');
 
         $this->resetStateValues();
     }
