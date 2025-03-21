@@ -57,7 +57,7 @@ class ProductService
                 'meta_title' => 'POS System for Retail, Restaurants & SMEs in Malaysia',
                 'meta_description' => 'iHelpKL offers a cloud-based POS system for Malaysian businesses. Manage sales, expenses, and inventory effortlessly. Perfect for retail stores and restaurants',
                 'title' => 'Point Of Sale',
-                'subTitle' => 'Optimize your business operations with iHelpKL’s cloud-based POS software',
+                'subTitle' => "Optimize your business operations with iHelpKL's cloud-based POS software",
                 'slug' => route('web.products.details', ['slug' => 'cloud-pos-system-malaysia']),
                 'short_details' => "Designed for Malaysian businesses, iHelpKL helps you manage sales, expenses, customers, and inventory effortlessly. Whether you run a kedai runcit, restaurant, or small enterprise, iHelpKL is the ultimate solution for your business needs.",
                 'img_featured' => Vite::imageWeb('pos.png'),

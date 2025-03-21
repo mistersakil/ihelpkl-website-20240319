@@ -1,11 +1,10 @@
 <?php
-
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\Facades\Route;
 
 /**
  * dateFormat function format date as user needs
+ * 
  * @param string $date date('Y-m-d')
  * @param string $format "Y-m-d"
  * @return string $date
@@ -202,7 +201,7 @@ if (!function_exists('_icons')) {
 
 /**
  * Created strConversion function convert string as required
- * @param string $string null
+ * @param string $string 
  * @param string $type ucfirst
  * @param bool $remove_dash false
  * @param bool $is_file false
@@ -210,7 +209,7 @@ if (!function_exists('_icons')) {
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
 if (!function_exists('strConversion')) {
-    function strConversion(string $string = null, string $type = 'ucfirst', bool $remove_dash = false, bool $is_file = false)
+    function strConversion(string $string = '', string $type = 'ucfirst', bool $remove_dash = false, bool $is_file = false)
     {
         $string = strtolower(trim($string));
         if ($remove_dash) {
@@ -246,6 +245,7 @@ if (!function_exists('osRelevantFileUploadPath')) {
 
 /**
  * subString function returns specific length of characters
+ * 
  * @param string $str
  * @param int $length 50
  * @param bool $dots true
@@ -280,6 +280,7 @@ if (!function_exists('subString')) {
 
 /**
  * localList function returns all available locals or a specific local
+ * 
  * @param string $localKey [Key of available local
  * @return mixed
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -301,6 +302,7 @@ if (!function_exists('localList')) {
 
 /**
  * generateHexColor function generate a random hexadecimal color code
+ * 
  * @param string $localKey [Key of available local
  * @return mixed
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -383,7 +385,8 @@ if (!function_exists('_social_media_links')) {
 
 
 /**
- * _parse_url function format date as user needs
+ * _parse_url function parse url based on route
+ * 
  * @return string $date
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
@@ -415,7 +418,8 @@ if (!function_exists('_parse_url')) {
 
 
 /**
- * _getFaviconPath get meta favicon path
+ * _getFaviconPath get favicon image path
+ * 
  * @return string 
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
@@ -428,7 +432,7 @@ if (!function_exists('_getFaviconPath')) {
 }
 
 /**
- * _getPublicImg get meta favicon path
+ * _getPublicImg get public image path
  * 
  * @return string 
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
