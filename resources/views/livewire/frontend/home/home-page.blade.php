@@ -9,18 +9,25 @@
     <livewire:frontend.partials.solutions-section sectionTitle="solutions" sectionSubTitle="Our provided best solutions"
         :limit="5" />
 
-    {{-- <livewire:frontend.partials.products-section sectionTitle="products"
-        sectionSubTitle="Our most valuable next-gen products" :limit="3" /> --}}
-{{-- 
-    <livewire:frontend.components.home-products-section sectionTitle="products"
-        sectionSubTitle="our most valuable products" :limit="6" /> --}}
-
-    <livewire:frontend.partials.products-section sectionTitle="products" sectionSubTitle="our most valuable products" :limit="6" />
+    <livewire:frontend.partials.products-section sectionTitle="products" sectionSubTitle="our most valuable products"
+        :limit="6" />
 
     <livewire:frontend.components.why-choose-us-section :item="$data" />
 
+    <div class="contact-area my-4">
 
-    <livewire:frontend.components.request-demo-section sectionTitle="request demo" sectionSubTitle="our demos" />
+        <div class="container">
+            <div class="contact-form">
+                <div class="section-title">
+                    <span class="sp-title2">{{ __('request demo') }}</span>
+                    <h2>{{ __('demo heading text') }}</h2>
+                </div>
+
+                <livewire:frontend.components.visitors-query-form-section :showTermsConditionCheck="false" :showSendMessageButton="false"
+                    :showSubjectInput="false" />
+            </div>
+        </div>
+    </div>
 
     {{-- <livewire:frontend.partials.home-work-process-section /> --}}
 
