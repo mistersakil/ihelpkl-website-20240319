@@ -3,17 +3,9 @@
         <nav class="navbar navbar-expand gap-3">
             <div class="top-menu ms-auto">
                 <ul class="navbar-nav align-items-center gap-1">
-
-                    {{-- <li class="nav-item d-sm-flex">
-                        <span class="nav-link position-relative" title="{{ __('Notification') }}">
-                            <i class="{{ _icons('email') }}"></i>
-                            <span id="submission-count" class="notification-count">0</span>
-                        </span>
-                    </li> --}}
-                    <!-- /.nav-item  -->
                     <li class="nav-item dropdown dropdown-large">
                         <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">8</span>
-                            <i class='bx bx-shopping-bag'></i>
+                            <i class="{{ _icons('stop') }}"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
                             <a href="javascript:;">
@@ -41,150 +33,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="position-relative">
-                                            <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/02.png" class="" alt="product image">
-                                            </div>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
-                                            <p class="cart-product-price mb-0">1 X $29.00</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="cart-price mb-0">$250</p>
-                                        </div>
-                                        <div class="cart-product-cancel"><i class="bx bx-x"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="position-relative">
-                                            <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/03.png" class="" alt="product image">
-                                            </div>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
-                                            <p class="cart-product-price mb-0">1 X $29.00</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="cart-price mb-0">$250</p>
-                                        </div>
-                                        <div class="cart-product-cancel"><i class="bx bx-x"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="position-relative">
-                                            <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/04.png" class="" alt="product image">
-                                            </div>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
-                                            <p class="cart-product-price mb-0">1 X $29.00</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="cart-price mb-0">$250</p>
-                                        </div>
-                                        <div class="cart-product-cancel"><i class="bx bx-x"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="position-relative">
-                                            <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/05.png" class="" alt="product image">
-                                            </div>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
-                                            <p class="cart-product-price mb-0">1 X $29.00</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="cart-price mb-0">$250</p>
-                                        </div>
-                                        <div class="cart-product-cancel"><i class="bx bx-x"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="position-relative">
-                                            <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/06.png" class="" alt="product image">
-                                            </div>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
-                                            <p class="cart-product-price mb-0">1 X $29.00</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="cart-price mb-0">$250</p>
-                                        </div>
-                                        <div class="cart-product-cancel"><i class="bx bx-x"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="position-relative">
-                                            <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/07.png" class="" alt="product image">
-                                            </div>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
-                                            <p class="cart-product-price mb-0">1 X $29.00</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="cart-price mb-0">$250</p>
-                                        </div>
-                                        <div class="cart-product-cancel"><i class="bx bx-x"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="position-relative">
-                                            <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/08.png" class="" alt="product image">
-                                            </div>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
-                                            <p class="cart-product-price mb-0">1 X $29.00</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="cart-price mb-0">$250</p>
-                                        </div>
-                                        <div class="cart-product-cancel"><i class="bx bx-x"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="position-relative">
-                                            <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/09.png" class="" alt="product image">
-                                            </div>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
-                                            <p class="cart-product-price mb-0">1 X $29.00</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="cart-price mb-0">$250</p>
-                                        </div>
-                                        <div class="cart-product-cancel"><i class="bx bx-x"></i>
-                                        </div>
-                                    </div>
-                                </a>
+                                
                             </div>
                             <a href="javascript:;">
                                 <div class="text-center msg-footer">
