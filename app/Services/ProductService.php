@@ -227,14 +227,14 @@ class ProductService
                 'subTitle' => 'Effortlessly Connect Every Customer Touchpoint for a Unified Experience',
                 'slug' => route('web.products.details', ['slug' => 'omni-channel-marketing-platform']),
                 'short_details' => "Transform your business with our omni-channel platform. Unify customer experiences, boost sales, and smooth operations. Explore free & paid features today",
-                'img_featured' => Vite::imageWeb('omni-contact.jpg'),
+                'img_featured' => Vite::imageWeb('omni-contact.png'),
                 'img_featured_alt' => "",
 
                 'choose1' => [
                     'title' => 'Why Choose?',
                     'subTitle' => 'Why Choose Our Omni-Channel Solution?',
                     'shortDetails' => "In today's fast-paced digital world, customers expect consistent experiences across every channel, whether they're shopping online, visiting your store, or reaching out via social media. Our omni-channel platform is designed to help you meet these expectations and stay ahead of the competition.",
-                    'imgFeatured' => 'choose-img1.png',
+                    'imgFeatured' => 'omni-contact-why-choose.png',
                     'items' => [
                         [
                             'heading' => 'Unified Customer Experience',
@@ -264,6 +264,7 @@ class ProductService
                     'title' => 'Key Features',
                     'subTitle' => 'Free Key Features to Get You Started',
                     'shortDetails' => 'Our omni-channel platform offers powerful free features to help you kickstart your journey toward effortless customer engagement. These features are just the beginning. Upgrade to unlock even more advanced tools designed to take your business to the next level.',
+                    'serviceAreaBgDynamic' => 'omni-contact-key-features.jpg',
                     'items' => [
                         [
                             'heading' => 'Multi-Channel Integration',
