@@ -26,11 +26,16 @@ class HomeSlider extends Component
         $this->sliderService = new SliderService();
     }
 
+    /**
+     * Component instance
+     *
+     * @return void
+     */
     public function mount(): void
     {
-        // $this->sliders = $this->sliderService->getStaticModels() ;
         $this->sliders = Slider::where('is_active', 1)->orderBy('id', 'desc')->limit(2)->get()->toArray();
     }
+
     /**
      * Render view
      *
@@ -38,8 +43,6 @@ class HomeSlider extends Component
      */
     public function render(): View
     {
-        // $sliders = Slider::where(['is_active' => 1])->orderBy('id', 'desc')->get()->toArray();
-        
         return view('livewire.frontend.partials.home-slider');
     }
 }
