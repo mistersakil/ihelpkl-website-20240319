@@ -58,7 +58,6 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <script type="module">
-        // console.log(Echo);
         Echo.channel("visitorsQueryChannel").listen("VisitorsQueryEvent", (e) => {
             console.log(e);
         });
