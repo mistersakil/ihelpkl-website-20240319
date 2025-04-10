@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Auth;
  */
 class LoginPage extends Component
 {
+
+    ## Component props
+    public string $metaTitle = 'admin login';    
+
+    ## State props
     public string $email;
     public string $password;
     public bool $remember_me;

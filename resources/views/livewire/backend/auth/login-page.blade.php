@@ -1,4 +1,6 @@
 <div class="wrapper">
+    <x-slot:metaTitle> {{ __($metaTitle) }} </x-slot:metaTitle>
+
     <div class="section-authentication-cover">
 
         <div class="row g-0">

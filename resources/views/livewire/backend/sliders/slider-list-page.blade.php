@@ -1,6 +1,4 @@
 <main>
-    {{-- @dump($search) --}}
-    {{-- @dump($filter) --}}
     <x-slot:metaTitle> {{ __($metaTitle) }} </x-slot:metaTitle>
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
