@@ -174,5 +174,6 @@
     "enter password": "Enter password",
     "show or hide password": "Show or hide password",
     "remember me": "Remember me",
-    "login":"Login"
+    "login":"Login",
+    "password":"Password"
 }

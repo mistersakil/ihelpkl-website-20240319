@@ -17,44 +17,71 @@ class LoginPage extends Component
 {
 
     ## Component props
-    public string $metaTitle = 'admin login';    
+    public string $metaTitle = 'admin login';
+    public string $logo;
 
     ## State props
-    public string $email;
-    public string $password;
-    public bool $remember_me;
+    public string $email = '';
+    public string $password = '';
+    public bool $remember_me = false;
 
-    /**
-     * Validation rules
-     * @var array
-     */
-    protected $rules = [
-        'email'             => ['required', 'email'],
-        'password'          => ['required', 'min:8'],
-    ];
-
-    /**
-     * Customize the validation messages
-     * @var array
-     */
-    protected $messages = [
-        'email.required'    => 'Email can not be empty',
-        'email.email'       => 'Email format is invalid',
-        'password.required' => 'Password can not be empty',
-        'password.min'      => 'Password minimum length is 8',
-    ];
 
     /**
      * To initialize value just for once
+     * 
      * @return void
      */
 
     public function mount()
     {
-        $this->email = 'sakil@gmail.com';
-        $this->password = '12345678#';
+        // $this->email = 'sakil@gmail.com';
+        // $this->password = '12345678#';
         $this->remember_me = false;
+        $this->logo =  _getPublicImg('logo');
     }
+
+
+    /**
+     * Validation rules
+     * 
+     * @return array
+     */
+    protected function rules(): array
+    {
+        return [
+            'email'             => ['required', 'email'],
+            'password'          => ['required', 'min:8'],
+        ];
+    }
+
+    /**
+     * Customize the validation messages
+     * 
+     * @return array
+     */
+    protected function messages(): array
+    {
+        return [
+            'email.required'    => __('can not be empty', [':attribute']),
+            'email.email'       => 'Email format is invalid',
+            'password.required' => __('can not be empty', [':attribute']),
+            'password.min'      => 'Password minimum length is 8',
+        ];
+    }
+
+    /**
+     * Alias of state attributes
+     * 
+     * @return array
+     */
+    public function validationAttributes()
+    {
+        return [
+            'email' => __('email'),
+            'password' => __('password'),
+        ];
+    }
+
 
     /**
      * To validate an input field after every update

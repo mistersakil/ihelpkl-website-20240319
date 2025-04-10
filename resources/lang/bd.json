@@ -179,5 +179,6 @@
     "enter password": "পাসওয়ার্ড দিন",
     "show or hide password": "পাসওয়ার্ড দেখান বা লুকান",
     "remember me": "আমাকে মনে রেখো",
-    "login":"লগইন"
+    "login": "লগইন",
+    "password": "পাসওয়ার্ড"
 }

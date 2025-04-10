@@ -76,6 +76,7 @@ class SliderCreatePage extends BackendComponent
 
     /**
      * Validation rules of the component
+     * 
      * @return array
      */
     public function rules()
@@ -86,6 +87,7 @@ class SliderCreatePage extends BackendComponent
 
     /**
      * Validation error messages for state properties of the component
+     * 
      * @return array
      */
     public function messages()
@@ -95,6 +97,7 @@ class SliderCreatePage extends BackendComponent
 
     /**
      * Alias of state attributes
+     * 
      * @return array
      */
     public function validationAttributes()

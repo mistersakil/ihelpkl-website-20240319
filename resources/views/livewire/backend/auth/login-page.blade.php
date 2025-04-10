@@ -21,7 +21,7 @@
                 <div class="card rounded-0 m-3 shadow-none bg-transparent mb-0">
                     <div class="card-body p-sm-5">
                         <div class="mb-3 text-center">
-                            {{-- <img src="{{ Vite::imageRoot('logo.svg') }}" width="160" alt="logo" /> --}}
+                            <img src="{{ $logo }}" width="160" alt="logo" />
                         </div>
                         <div class="text-center mb-4">
                             <h4>
@@ -44,8 +44,7 @@
                                             <i class="{{ _icons('email') }}"></i>
                                         </div>
                                         <input wire:model.lazy="email" type="text"
-                                            class="form-control @error('email') is-invalid @enderror" id="email"
-                                            placeholder="{{ __('enter your email address') }}">
+                                            class="form-control @error('email') is-invalid @enderror">
 
                                         @error('email')
                                             <div class="invalid-feedback">
@@ -66,8 +65,7 @@
                                             <i class="{{ _icons('hide') }}"></i>
                                         </div>
                                         <input wire:model.lazy="password" type="password"
-                                            class="form-control @error('password') is-invalid @enderror" id="password"
-                                            value="12345678#" placeholder="{{ __('Enter your password') }}">
+                                            class="form-control @error('password') is-invalid @enderror">
                                         @error('password')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
