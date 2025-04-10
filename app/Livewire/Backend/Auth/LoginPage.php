@@ -49,8 +49,8 @@ class LoginPage extends Component
     protected function rules(): array
     {
         return [
-            'email'             => ['required', 'email'],
-            'password'          => ['required', 'min:8'],
+            'email'             => ['required', 'email', 'min:10', 'max:50'],
+            'password'          => ['required', 'min:6', 'max:20'],
         ];
     }
 
@@ -63,9 +63,12 @@ class LoginPage extends Component
     {
         return [
             'email.required'    => __('can not be empty', [':attribute']),
-            'email.email'       => 'Email format is invalid',
+            'email.email'    => __('format is invalid', [':attribute']),
+            'email.min'      => __('minimum character length', [':attribute', ':min']),
+            'email.max'      => __('maximum character length', [':attribute', ':max']),
             'password.required' => __('can not be empty', [':attribute']),
-            'password.min'      => 'Password minimum length is 8',
+            'password.min'      => __('minimum character length', [':attribute', ':min']),
+            'password.max'      => __('maximum character length', [':attribute', ':max']),
         ];
     }
 
