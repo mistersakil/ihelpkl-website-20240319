@@ -9,6 +9,11 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 
+/**
+ * VisitorsQueryEvent event
+ * 
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
 class VisitorsQueryEvent implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
