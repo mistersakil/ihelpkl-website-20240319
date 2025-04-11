@@ -34,8 +34,8 @@ class LoginPage extends Component
 
     public function mount()
     {
-        // $this->email = 'sakil@gmail.com';
-        // $this->password = '12345678#';
+        $this->email = 'sakil@gmail.com';
+        $this->password = '12345678#';
         $this->remember_me = false;
         $this->logo =  _getPublicImg('logo');
     }
@@ -112,7 +112,7 @@ class LoginPage extends Component
             request()->session()->regenerate();
             return redirect()->intended('admin');
         } else {
-            $this->dispatchBrowserEvent('invalid', ['message' => __('Invalid email or password')]);
+            $this->dispatch('invalid', ['message' => __('invalid email or password'), 'code' => 404]);
         }
     }
 
