@@ -445,6 +445,7 @@ if (!function_exists('_getPublicImg')) {
             'favicon' => 'favicon.png',
             'logo' => 'logo.svg',
             'logoDark' => 'logo-dark.svg',
+            'loader' => 'loader.svg',
         ];
         return asset('images/' . ($images[$index] ?? 'logo.svg'));
     }

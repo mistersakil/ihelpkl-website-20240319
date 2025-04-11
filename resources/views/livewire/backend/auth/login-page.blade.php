@@ -87,13 +87,11 @@
                                 </div>
                                 <!-- /.col -->
 
-                                <div class="col-12">
-                                    <div class="d-grid">
-                                        <button type="submit" class="btn btn-primary">
-                                            <i class="bx bxs-lock-open"></i>
-                                            {{ __('login') }}
-                                        </button>
-                                    </div>
+                                <div class="col-12 d-grid">
+                                    <button type="submit" class="btn btn-primary" wire:loading.remove.class="btn-primary" wire:loading.class="btn-secondary">
+                                        <img src="{{ $loader }}" alt="loader" width="20" class="opacity-0" wire:loading.class="opacity-100">
+                                        {{ __('login') }}
+                                    </button>
                                 </div>
                                 <!-- /.col -->
 

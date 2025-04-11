@@ -19,6 +19,7 @@ class LoginPage extends Component
     ## Component props
     public string $metaTitle = 'admin login';
     public string $logo;
+    public string $loader;
 
     ## State props
     public string $email = '';
@@ -34,10 +35,11 @@ class LoginPage extends Component
 
     public function mount()
     {
-        $this->email = 'sakil@gmail.com';
+        $this->email = 'sakil@gmail.coma';
         $this->password = '12345678#';
         $this->remember_me = false;
         $this->logo =  _getPublicImg('logo');
+        $this->loader =  _getPublicImg('loader');
     }
 
 
