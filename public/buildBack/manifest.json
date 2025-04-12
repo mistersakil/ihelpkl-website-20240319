@@ -1,0 +1,71 @@
+{
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "resources/assets/backend/backend-js.js": {
+    "file": "assets/backend-js-B0rWGS1L.js",
+    "name": "backend-js",
+    "src": "resources/assets/backend/backend-js.js",
+    "isEntry": true,
+    "css": [
+      "assets/backend-js-Bjhw8HTb.css"
+    ],
+    "assets": [
+      "assets/bootstrap-icons-BtvjY1KL.woff2",
+      "assets/bootstrap-icons-BOrJxbIo.woff"
+    ]
+  },
+  "resources/assets/backend/fonts/LineIcons.eot": {
+    "file": "assets/LineIcons-BJUrqD8W.eot",
+    "src": "resources/assets/backend/fonts/LineIcons.eot"
+  },
+  "resources/assets/backend/fonts/LineIcons.svg": {
+    "file": "assets/LineIcons--A_6HXRF.svg",
+    "src": "resources/assets/backend/fonts/LineIcons.svg"
+  },
+  "resources/assets/backend/fonts/LineIcons.ttf": {
+    "file": "assets/LineIcons-Cqb3QtOe.ttf",
+    "src": "resources/assets/backend/fonts/LineIcons.ttf"
+  },
+  "resources/assets/backend/fonts/LineIcons.woff": {
+    "file": "assets/LineIcons-DrihXZZM.woff",
+    "src": "resources/assets/backend/fonts/LineIcons.woff"
+  },
+  "resources/assets/backend/fonts/LineIcons.woff2": {
+    "file": "assets/LineIcons-BZgAh_1U.woff2",
+    "src": "resources/assets/backend/fonts/LineIcons.woff2"
+  },
+  "resources/assets/backend/fonts/boxicons.eot": {
+    "file": "assets/boxicons-CASQlNmZ.eot",
+    "src": "resources/assets/backend/fonts/boxicons.eot"
+  },
+  "resources/assets/backend/fonts/boxicons.svg": {
+    "file": "assets/boxicons-Cv8c-MCu.svg",
+    "src": "resources/assets/backend/fonts/boxicons.svg"
+  },
+  "resources/assets/backend/fonts/boxicons.ttf": {
+    "file": "assets/boxicons-BDxpaK7B.ttf",
+    "src": "resources/assets/backend/fonts/boxicons.ttf"
+  },
+  "resources/assets/backend/fonts/boxicons.woff": {
+    "file": "assets/boxicons-BRXHbA3Z.woff",
+    "src": "resources/assets/backend/fonts/boxicons.woff"
+  },
+  "resources/assets/backend/fonts/boxicons.woff2": {
+    "file": "assets/boxicons-D-9kh4JX.woff2",
+    "src": "resources/assets/backend/fonts/boxicons.woff2"
+  },
+  "resources/assets/backend/images/avatar-2.png": {
+    "file": "assets/avatar-2-BjHJVy24.png",
+    "src": "resources/assets/backend/images/avatar-2.png"
+  },
+  "resources/assets/backend/images/register-cover.svg": {
+    "file": "assets/register-cover-CBvYJtEf.svg",
+    "src": "resources/assets/backend/images/register-cover.svg"
+  }
+}

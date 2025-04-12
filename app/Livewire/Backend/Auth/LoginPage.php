@@ -35,7 +35,7 @@ class LoginPage extends Component
 
     public function mount()
     {
-        $this->email = 'sakil@gmail.coma';
+        $this->email = 'sakil@gmail.com';
         $this->password = '12345678#';
         $this->remember_me = false;
         $this->logo =  _getPublicImg('logo');
@@ -90,6 +90,7 @@ class LoginPage extends Component
 
     /**
      * To validate an input field after every update
+     * 
      * @return void
      */
 
@@ -100,6 +101,8 @@ class LoginPage extends Component
 
     /**
      * Login process
+     * 
+     * @return void
      */
     public function login_process()
     {
@@ -123,7 +126,6 @@ class LoginPage extends Component
      * @return \Illuminate\Contracts\View\View
      */
     #[Layout('livewire.backend.auth.auth-layout')]
-    #[Title('Admin Login')]
     public function render(): View
     {
         return view('livewire.backend.auth.login-page');
