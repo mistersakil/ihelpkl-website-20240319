@@ -22,7 +22,6 @@ class DashboardPage extends BackendComponent
     #[Layout('components.backend.layout.backend-layout')]
     public function render(): View
     {
-        sleep(2);
         return view('livewire.backend.dashboard.dashboard-page');
     }
 }

@@ -10,6 +10,9 @@ use Illuminate\Contracts\View\View;
 use App\Traits\BackendPaginationTrait;
 use App\Livewire\Backend\BackendComponent;
 
+/**
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
 class LeadsListPage extends BackendComponent
 {
     use BackendPaginationTrait;
@@ -63,6 +66,6 @@ class LeadsListPage extends BackendComponent
         );
         $countModel = $models->count();
 
-        return view('livewire.backend.leads.leads-list-page', compact( 'models', 'countModel'));
+        return view('livewire.backend.leads.leads-list-page', compact('models', 'countModel'));
     }
 }
