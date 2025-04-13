@@ -19,7 +19,7 @@
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="position-relative">
                                             <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/11.png" class="" alt="product image">
+                                                {{-- <img src="assets/images/products/11.png" class="" alt="product image"> --}}
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">

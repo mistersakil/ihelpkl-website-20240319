@@ -4,7 +4,6 @@ namespace App\Livewire\Backend\Auth;
 
 use App\Models\User;
 use Livewire\Component;
-use Livewire\Attributes\Title;
 use Livewire\Attributes\Layout;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;

@@ -2,8 +2,8 @@
 <html lang="en" class="light-theme">
 
 <head>
-    @includeIf('components.backend.layout.backend-meta')
     @livewireStyles
+    @includeIf('components.backend.layout.backend-meta')
 </head>
 
 <body>

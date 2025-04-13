@@ -16,4 +16,9 @@ class BackendComponent extends Component
     {
         $this->authId = Auth::check() ? Auth::id() : 0;
     }
+
+    public function placeholder()
+    {
+        return view('livewire.backend.addons.full-page-loader');
+    }
 }
