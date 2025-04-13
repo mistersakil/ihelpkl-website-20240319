@@ -18,7 +18,7 @@ class LeadsListPage extends BackendComponent
     use BackendPaginationTrait;
     use BackendFilterTrait;
 
-    # Module Props
+    # Component Props
     public string $metaTitle = 'lead list';
     public string $module;
     public string $activeItem;

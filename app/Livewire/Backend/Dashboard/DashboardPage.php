@@ -13,6 +13,8 @@ use Livewire\Attributes\Lazy;
 #[Lazy]
 class DashboardPage extends BackendComponent
 {
+    ## Component props
+    public string $metaTitle = 'dashboard';
 
     /**
      * Render view

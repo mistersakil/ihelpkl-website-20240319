@@ -5,7 +5,7 @@
     <!-- Favicon -->
     <link rel="icon" href="{{ _getFaviconPath() }}" type="image/png" />
     <title>
-        {{ $metaTitle ?? __('meta title')  }} | {{ env('APP_NAME') }}
+        {{ $metaTitle ?? __('dashboard')  }} | {{ env('APP_NAME') }}
     </title>
 
     <!-- Vite asset -->
