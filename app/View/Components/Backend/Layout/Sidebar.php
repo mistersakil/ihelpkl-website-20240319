@@ -48,8 +48,8 @@ class Sidebar extends Component
             ],
             [
                 'nav_url' => route('admin.leads.list'),
-                'nav_icon' => _icons('lead'),
-                'nav_title' => __('leads'),
+                'nav_icon' => _icons('query'),
+                'nav_title' => __('query'),
                 'nav_is_readonly' => false,
                 'nav_has_children' => false,
                 'nav_children' => false

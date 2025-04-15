@@ -180,5 +180,7 @@
     "visitors query": "Visitors query",
     "items":"Items",
     "view all":"View all",
-    "mark as read":"Mark as read"
+    "mark as read":"Mark as read",
+    "load more":"Load more",
+    "query":"Query"
 }

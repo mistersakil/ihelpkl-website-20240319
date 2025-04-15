@@ -9,7 +9,8 @@
         <a href="javascript:;">
             <div class="msg-header">
                 <p class="msg-header-title">{{ __('visitors query') }}</p>
-                <p class="msg-header-badge">{{ $unreadQueryCount }} {{ __('items') }}</p>
+                {{-- <p class="msg-header-badge">{{ $unreadQueryCount }} {{ __('items') }}</p> --}}
+                <p class="msg-header-badge">{{ __('view all') }}</p>
             </div>
         </a>
         <div class="header-message-list">
@@ -39,11 +40,11 @@
             </article>
 
         </div>
-        <a href="javascript:;">
-            <div class="text-center msg-footer">
-                <button class="btn btn-primary w-100">{{ __('view all') }}</button>
-            </div>
-        </a>
+
+        <div class="text-center msg-footer">
+            <button class="btn btn-primary w-100">{{ __('load more') }}</button>
+        </div>
+
     </div>
 </li>
 

@@ -132,6 +132,7 @@ if (!function_exists('_icons')) {
             'partnership'               => 'bi bi-hearts',
             'question'                  => 'bi bi-question-circle',
             'question2'                 => 'bi bi-patch-question',
+            'query'                     => 'bi bi-search-heart',
             'quote'                     => 'bi bi-quote',
             'reboot'                    => 'bi bi-bootstrap-reboot',
             'resume'                    => 'bi bi-file-diff',
