@@ -18,15 +18,15 @@ class VisitorsQueryEvent implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $count;
+    // public $count;
 
     /**
      * Create a new event instance.
      */
-    public function __construct()
-    {
-        $this->count = Lead::count();
-    }
+    // public function __construct()
+    // {
+    //     $this->count = Lead::count();
+    // }
 
     /**
      * Get the channels the event should broadcast on

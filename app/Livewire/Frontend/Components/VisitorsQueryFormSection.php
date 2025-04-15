@@ -11,6 +11,9 @@ use App\Services\ValidationService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Mail;
 use App\Livewire\Backend\Addons\CountNotification;
+use App\Models\Country;
+use App\Models\Lead;
+use App\Models\Notification;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -167,19 +170,29 @@ class VisitorsQueryFormSection extends Component
     {
         $this->validate();
 
-        VisitorsQueryEvent::dispatch();
+        // VisitorsQueryEvent::dispatch();
         // $this->dispatch('submitted');
 
         // $this->dispatch('form-submitted')->to(CountNotification::class);
         // dd('form submitted');
 
-        // $lead = Lead::create([
-        //     'name' => $this->name,
-        //     'email' => $this->email,
-        //     'mobile_number' => $this->phoneCode . $this->phone,
-        //     'country_id' => $this->country_id,
-        //     'message' => $this->message,
-        // ]);
+        $lead = Lead::create([
+            'name' => $this->name,
+            'email' => $this->email,
+            'mobile_number' => $this->phoneCode . $this->phone,
+            'country_id' => $this->country_id,
+            'message' => $this->message,
+        ]);
+
+        $countryName = Country::find($lead->country_id)?->name ?? 'no country name';
+
+        $notification = Notification::create([
+            'body' => "New query received from <b>{$lead->name}</b> (<em>{$lead->email}</em>
+                            ), based in <b>{$countryName}</b>"
+        ]);
+
+
+        VisitorsQueryEvent::dispatch($lead);
 
         // if (!$this->showSendMessageButton) {
         //     $Lead_products = LeadProduct::create([
