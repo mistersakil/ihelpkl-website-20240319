@@ -2,11 +2,7 @@
 
 namespace App\Livewire\Frontend\Components;
 
-use App\Models\Lead;
-use App\Models\Query;
 use Livewire\Component;
-use App\Mail\WelcomeMail;
-use App\Models\LeadProduct;
 use App\Events\VisitorsQueryEvent;
 use App\Services\CountryService;
 use App\Services\ProductService;
@@ -205,7 +201,7 @@ class VisitorsQueryFormSection extends Component
 
         // $this->dispatch('form-submitted');
 
-        $this->resetStateValues();
+        // $this->resetStateValues();
     }
 
 

@@ -20,18 +20,33 @@ class VisitorsQueryEvent implements ShouldBroadcastNow
 
     public $count;
 
+    /**
+     * Create a new event instance.
+     */
     public function __construct()
     {
         $this->count = Lead::count();
     }
 
-    public function broadcastOn()
+    /**
+     * Get the channels the event should broadcast on
+     *
+     * @return array<int, \Illuminate\Broadcasting\Channel>
+     */
+    public function broadcastOn(): array
     {
-        return new Channel('visitorsQueryChannel');
+        return [
+            new Channel('visitorsQueryChannel')
+        ];
     }
 
-    // public function broadcastAs()
-    // {
-    //     return 'newSubmission';
-    // }
+    /**
+     * The event's broadcast name
+     * 
+     * @return string
+     */
+    public function broadcastAs(): String
+    {
+        return 'createLeadByVisitorsQueryEvent';
+    }
 }

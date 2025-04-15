@@ -10,7 +10,7 @@ use Livewire\Attributes\Lazy;
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
-#[Lazy]
+// #[Lazy]
 class DashboardPage extends BackendComponent
 {
     ## Component props

@@ -58,6 +58,12 @@
         /* End: Notify a confirmation alert before proceed any further action */
     </script>
 
+
+    <script type="module">
+        Echo.channel("visitorsQueryChannel").listen(".createLeadByVisitorsQueryEvent", (e) => {
+            console.log(e);
+        });
+    </script>
 </body>
 
 </html>

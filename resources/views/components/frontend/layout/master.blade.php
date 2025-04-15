@@ -58,7 +58,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <script type="module">
-        Echo.channel("visitorsQueryChannel").listen("VisitorsQueryEvent", (e) => {
+        Echo.channel("visitorsQueryChannel").listen(".createLeadByVisitorsQueryEvent", (e) => {
             console.log(e);
         });
     </script>
