@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class NewLeadCreatedNotification extends Notification
+class VisitorsQueryNotification extends Notification
 {
     use Queueable;
 

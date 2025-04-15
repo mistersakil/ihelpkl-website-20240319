@@ -13,24 +13,30 @@
             </div>
         </a>
         <div class="header-message-list">
-            <a class="dropdown-item" href="javascript:;">
-                <div class="d-flex align-items-center gap-3">
-                    <div class="position-relative">
-                        {{-- <div class="cart-product rounded-circle bg-light"> --}}
-                        <i class="rounded-circle bg-info p-1 {{ _icons('bell') }}"></i>
-                        {{-- </div> --}}
-                    </div>
-                    <div class="flex-grow-1">
-                        <h6 class="cart-product-title mb-0">Men White T-Shirt</h6>
-                        <p class="cart-product-price mb-0">1 X $29.00</p>
+            <article class="dropdown-item">
+                <div class="d-flex align-items-center w-100 gap-1">
+
+                    <!-- Icon section (10%) -->
+                    <div class="position-relative flex-shrink-0" style="width: 10%;">
+                        <i class="rounded-circle bg-info p-1 {{ _icons('bell') }} text-white"></i>
                     </div>
 
-                    <div class="form-check form-check-warning">
+                    <!-- Content section (80%) -->
+                    <div class="dropdownContent text-wrap" style="width: 80%;">
+                        <p class="cart-product-price mb-0">
+                            New query received from <b>Sakil Mahmud</b> (<em>sakil@ihelpbd.com</em>
+                            ), based in <b>Bangladesh</b>
+                        </p>
+                    </div>
+
+                    <!-- Radio button section (10%) -->
+                    <div class="form-check form-check-success flex-shrink-0 text-end" style="width: 10%;"
+                        title="{{ __('mark as read') }}">
                         <input class="form-check-input" type="radio" checked />
                     </div>
 
                 </div>
-            </a>
+            </article>
 
         </div>
         <a href="javascript:;">

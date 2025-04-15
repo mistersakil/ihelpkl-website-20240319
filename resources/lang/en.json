@@ -174,7 +174,11 @@
     "enter password": "Enter password",
     "show or hide password": "Show or hide password",
     "remember me": "Remember me",
-    "login":"Login",
-    "password":"Password",
-    "invalid email or password" : "Invalid email or password"
+    "login": "Login",
+    "password": "Password",
+    "invalid email or password": "Invalid email or password",
+    "visitors query": "Visitors query",
+    "items":"Items",
+    "view all":"View all",
+    "mark as read":"Mark as read"
 }

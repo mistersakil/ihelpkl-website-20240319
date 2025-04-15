@@ -181,5 +181,9 @@
     "remember me": "আমাকে মনে রেখো",
     "login": "লগইন",
     "password": "পাসওয়ার্ড",
-    "invalid email or password": "ইনভ্যালিড ইমেল বা পাসওয়ার্ড"
+    "invalid email or password": "ইনভ্যালিড ইমেল বা পাসওয়ার্ড",
+    "visitors query": "দর্শকদের প্রশ্ন",
+    "items":"আইটেমগুলি",
+    "view all":"সবগুলো দেখুন",
+    "mark as read":"পঠিত হিসেবে চিহ্নিত করুন"
 }
