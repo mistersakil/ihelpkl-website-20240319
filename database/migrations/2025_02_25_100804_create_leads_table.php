@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('email', 100)->index();
             $table->string('mobile_number', 25)->index();
             $table->longText('message');
-            $table->boolean('is_read')->comment('is this query read by admins')->default(0);
             $table->timestamps();
         });
     }

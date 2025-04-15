@@ -15,8 +15,7 @@ class Lead extends Model
         'name',
         'email',
         'mobile_number',
-        'message',
-        'is_read'
+        'message'
     ];
 
     /**
