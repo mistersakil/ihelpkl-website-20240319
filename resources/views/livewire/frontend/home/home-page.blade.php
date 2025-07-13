@@ -7,8 +7,10 @@
     {{-- <livewire:frontend.partials.home-banner /> --}}
     {{-- <livewire:frontend.partials.home-projects /> --}}
 
-    <livewire:frontend.partials.solutions-section sectionTitle="solutions" sectionSubTitle="Our provided best solutions"
+    <livewire:frontend.partials.our-experties-section sectionTitle="solutions" sectionSubTitle="Our provided best solutions"
         :limit="5" />
+    {{-- <livewire:frontend.partials.solutions-section sectionTitle="solutions" sectionSubTitle="Our provided best solutions"
+        :limit="5" /> --}}
 
     <livewire:frontend.partials.products-section sectionTitle="products" sectionSubTitle="our most valuable products"
         :limit="6" />
