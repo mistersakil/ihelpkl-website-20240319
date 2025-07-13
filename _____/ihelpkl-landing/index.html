@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page – Bootstrap</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Owl Carousel CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; }
+    .scrolled { backdrop-filter: blur(40px); border-bottom: 1px solid #B5B3B3; }
+    .estimate-btn {
+      box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+      border: 1px solid #d1d9e6;
+    }
+    .estimate-btn:hover {
+      box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+    }
+    .expert-card {
+      box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+      border: 1px solid #d1d9e6;
+    }
+    .text-blue-medium { color: rgba(60,121,189,1); }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav id="mainHeader" class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="logo.png" width="140" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mobileMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Work</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Mobile App Development</a></li>
+            <li><a class="dropdown-item text-warning" href="#">Web Development</a></li>
+            <li><a class="dropdown-item" href="#">Cloud Services</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Process</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item">
+          <a class="btn estimate-btn ms-lg-4 px-4 py-2" href="#">Get an estimate</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-5 pt-lg-3 pb-5 bg-white mt-5">
+  <div class="container">
+    <div class="row align-items-center gy-2">
+      <div class="col-md-6 order-md-2">
+        <img src="hero.jpg" alt="Web Preview" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6 order-md-1">
+        <h1 class="display-6 fw-bold">Custom Web Development Company in Malaysia</h1>
+        <p class="text-warning fw-medium mt-3">iHelpKL is an expert web development company based in Malaysia.</p>
+        <p>Building effective yet affordable web application is our forte… deployment to AWS.</p>
+        <p>Whether you’re a startup or an established business… tailored to meet your specific requirements.</p>
+        <p>We leverage cutting-edge technologies … committed to transforming your ideas into powerful web solutions...</p>
+        <div class="d-flex flex-column flex-sm-row gap-2 mt-4">
+          <a href="#" class="btn btn-warning text-white">Get Free Consultation</a>
+          <a href="#" class="link-warning align-self-center">See our works →</a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-secondary mt-0">A proven track record since 2012.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+      <img src="7.jpg" width="160" alt="Client Logo">
+      <img src="7.jpg" width="160" alt="Client Logo">
+      <img src="7.jpg" width="160" alt="Client Logo">
+      <img src="7.jpg" width="160" alt="Client Logo">
+      <img src="7.jpg" width="160" alt="Client Logo">
+    </div>
+  </div>
+</section>
+
+<!-- Our Expertise -->
+<section class="bg-light py-5">
+  <div class="container text-center">
+    <h2 class="text-blue-medium fw-bold mb-4 position-relative d-inline-block">
+      Our expertise <span class="position-absolute top-0 left-3 text-info fs-2">✨</span>
+    </h2>
+    <div class="row gx-4 gy-4 justify-content-center">
+      <div class="col-md-8">
+        <div class="expert-card p-4 rounded-3 d-flex align-items-start gap-3">
+          <div class="fs-3 text-primary">✔️</div>
+          <div class="text-start">
+            <h3 class="h5 fw-semibold">Customer Relationship Management (CRM) System</h3>
+            <p class="text-secondary small">Custom CRM systems to help businesses manage ... driving sales growth.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="expert-card p-4 rounded-3 d-flex align-items-start gap-3">
+          <div class="fs-3 text-primary">✔️</div>
+          <div class="text-start">
+            <h3 class="h5 fw-semibold">Ticket Booking System</h3>
+            <p class="text-secondary small">Create web-based ticket booking systems ... increasing operational efficiency.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="expert-card p-4 rounded-3 d-flex align-items-start gap-3">
+          <div class="fs-3 text-primary">✔️</div>
+          <div class="text-start">
+            <h3 class="h5 fw-semibold">Software as a Service (SaaS)</h3>
+            <p class="text-secondary small">Build robust SaaS web applications ... scalability, flexibility, and cost-efficiency.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 text-center mt-3">
+        <a href="#" class="btn btn-warning">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Speed & Performance Highlights -->
+<section class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="h2 fw-bold">Web development optimized for speed<br class="d-none d-sm-block">and high performance</h2>
+    <p class="lead text-secondary mt-3">Your web platform gives the first impression... fantastic and easy to use.</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+      <div class="col text-center p-4 rounded">
+        <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 d-inline-block"><i class="fas fa-cloud fa-2x"></i></div>
+        <h3 class="h5">Cloud Technology</h3>
+        <p class="text-secondary">Specializing in AWS services... corporate systems.</p>
+      </div>
+      <div class="col text-center p-4 rounded">
+        <div class="bg-success bg-opacity-10 text-success rounded-circle p-3 mb-3 d-inline-block"><i class="fas fa-bolt fa-2x"></i></div>
+        <h3 class="h5">Real-time technology</h3>
+        <p class="text-secondary">We leverage Redis Pub/Sub architecture...</p>
+      </div>
+      <div class="col text-center p-4 rounded">
+        <div class="bg-purple bg-opacity-10 text-purple rounded-circle p-3 mb-3 d-inline-block"><i class="fas fa-chart-line fa-2x"></i></div>
+        <h3 class="h5">SEO optimized</h3>
+        <p class="text-secondary">We practice SEO guidelines & SSR to improve visibility.</p>
+      </div>
+      <div class="col text-center p-4 rounded">
+        <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 d-inline-block"><i class="fas fa-cloud fa-2x"></i></div>
+        <h3 class="h5">Cloud Technology</h3>
+        <p class="text-secondary">Specializing in AWS services... corporate systems.</p>
+      </div>
+      <div class="col text-center p-4 rounded">
+        <div class="bg-success bg-opacity-10 text-success rounded-circle p-3 mb-3 d-inline-block"><i class="fas fa-bolt fa-2x"></i></div>
+        <h3 class="h5">Real-time technology</h3>
+        <p class="text-secondary">We leverage Redis Pub/Sub architecture...</p>
+      </div>
+      <div class="col text-center p-4 rounded">
+        <div class="bg-purple bg-opacity-10 text-purple rounded-circle p-3 mb-3 d-inline-block"><i class="fas fa-chart-line fa-2x"></i></div>
+        <h3 class="h5">SEO optimized</h3>
+        <p class="text-secondary">We practice SEO guidelines & SSR to improve visibility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Carousel -->
+<section class="bg-white py-5">
+  <div class="container text-center">
+    <h2 class="h2 fw-bold">Why Our Clients Love Us</h2>
+    <p class="text-secondary lead mb-4">Read some of the reviews from our clients.</p>
+    <div id="testimonial-carousel" class="owl-carousel owl-theme">
+      <!-- Item A -->
+      <div class="item p-3">
+        <div class="bg-white shadow rounded p-4 h-100 d-flex flex-column justify-content-between">
+          <div class="mb-3 text-warning fs-4"><i class="fas fa-star me-1"></i><i class="fas fa-star me-1"></i><i class="fas fa-star me-1"></i><i class="fas fa-star me-1"></i><i class="fas fa-star me-1"></i></div>
+          <p class="fw-semibold">"Their workflow is very agile and to me it worked!"</p>
+          <h5 class="mt-2">Client A</h5>
+          <p class="small text-secondary">We were satisfied with the final product... highly responsive.</p>
+        </div>
+      </div>
+      <!-- (Additional slides continue in Part 2) -->
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold display-5">Got Question?</h2>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="accordion" id="faqLeft">
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                I want to keep my web development idea confidential. Will you sign an NDA with me?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+              <div class="accordion-body">
+                Yes, absolutely. We prioritize the confidentiality of your ideas...
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                Do I have full ownership of my completed product?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+              <div class="accordion-body">
+                Yes, upon full payment for our services, you will have complete ownership...
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                How long will it take to complete my product?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+              <div class="accordion-body">
+                The timeline for product completion varies depending on the complexity...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mt-4 mt-md-0">
+        <div class="accordion" id="faqRight">
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                What is iHelpKL approach to web development?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+              <div class="accordion-body">
+                At iHelpKL, our approach to web development is client-centric and agile...
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                What is the importance of SEO optimization in web development?
+              </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+              <div class="accordion-body">
+                SEO optimization is crucial as it helps your web platform rank higher...
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                How do you ensure the security of the web applications?
+              </button>
+            </h2>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+              <div class="accordion-body">
+                Security is paramount in our development process...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-white py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold display-6 mb-5">Our successful web development projects</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100 d-flex flex-row align-items-start text-start">
+          <div class="col-5">
+            <img src="hero.jpg" class="img-fluid rounded-start w-100 h-100 object-fit-cover" alt="PlayerWan Web Platform Mockup">
+          </div>
+          <div class="col-7 p-4">
+            <h5 class="fw-semibold">PlayerWan</h5>
+            <p class="text-muted mb-0">
+              PlayerWan is an e-sport web platform which enable users to win game
+              matches and earn rewards.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100 d-flex flex-row align-items-start text-start">
+          <div class="col-5">
+            <img src="about.jpg" class="img-fluid rounded-start w-100 h-100 object-fit-cover" alt="Kanzen Suite CRM Mockup">
+          </div>
+          <div class="col-7 p-4">
+            <h5 class="fw-semibold">Kanzen Suite <span class="text-orange-600">&rarr;</span></h5>
+            <p class="text-muted mb-0">
+              Similar to Hubspot, Kanzensuite is a robust CRM web platform built to streamline workflows for users.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5">
+      <a href="#" class="btn btn-lg btn-orange text-white">See our successful projects</a>
+    </div>
+  </div>
+</section>
+<section class="bg-secondary py-5 d-flex align-items-center justify-content-center min-vh-100">
+  <div class="container position-relative bg-white p-4 p-md-5 rounded shadow-lg" style="max-width: 600px;">
+    <h2 class="text-center fw-bold mb-3">Need A Consultation?</h2>
+    <p class="text-center text-muted mb-4">
+      Do you want to make a mobile app or drive traffic to your website?
+      Reach out to us and step-up your project with ease. Our consultant will contact you within the next business day.
+    </p>
+    <form>
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <input type="text" class="form-control" placeholder="Name" name="name" required>
+        </div>
+        <div class="col-sm-6">
+          <input type="email" class="form-control" placeholder="Email" name="email" required>
+        </div>
+        <div class="col-sm-6">
+          <input type="tel" class="form-control" placeholder="Phone No" name="phone" required>
+        </div>
+        <div class="col-sm-6">
+          <select class="form-select" name="budget" required>
+            <option selected disabled>Project budget</option>
+            <option>Less than $5,000</option>
+            <option>$5,000 - $10,000</option>
+            <option>More than $10,000</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <textarea class="form-control" name="message" rows="4" placeholder="Tell us about your idea. What problem can we solve?"></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-orange w-100 text-white fw-medium">Get a free consultation</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<footer class="bg-light py-5">
+  <div class="container">
+    <div class="row text-center text-md-start gy-4">
+      <div class="col-lg-2">
+        <img src="https://via.placeholder.com/100x40?text=iHelpKLLogo" alt="iHelpKL Logo" class="mb-3">
+        <p class="text-muted small">Digitizing businesses since 2012</p>
+      </div>
+      <div class="col-lg-2">
+        <h6 class="text-uppercase fw-bold">Company</h6>
+        <ul class="list-unstyled mt-3">
+          <li><a href="#" class="text-muted text-decoration-none">About</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Process</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Careers</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2">
+        <h6 class="text-uppercase fw-bold">Services</h6>
+        <ul class="list-unstyled mt-3">
+          <li><a href="#" class="text-muted text-decoration-none">Mobile App Development</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Web App Development</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="text-uppercase fw-bold">Case Studies</h6>
+        <ul class="list-unstyled mt-3">
+          <li><a href="#" class="text-muted text-decoration-none">SPARQ Coffee</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Electcoms</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">LADAP Plus</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Kanzensuite</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Thryffy</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">IDW Super App</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Stokk Marketplace</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">ASP Xperience</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Koiko</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">iExpress</a></li>
+          <li><a href="#" class="text-muted text-decoration-none">Apigate Storefront - Boost</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="text-uppercase fw-bold">Let's talk</h6>
+        <p class="text-muted mt-3">Or email us at</p>
+        <p class="fw-bold text-orange-600">iHelpKL@gmail.com</p>
+      </div>
+    </div>
+    <hr class="mt-5">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="mb-3 mb-md-0">
+        <a href="#" class="me-3 text-secondary fs-5"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="me-3 text-secondary fs-5"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="text-secondary fs-5"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p class="text-muted small">&copy; 2025 iHelpKL | All rights reserved</p>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  // Sticky header toggle
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Initialize carousel
+  $('#testimonial-carousel').owlCarousel({
+    loop: true,
+    margin: 24,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: { items: 1 },
+      640: { items: 2 },
+      1024: { items: 3 }
+    }
+  });
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Select all buttons with the class 'faq-item-button'
+    const faqButtons = document.querySelectorAll('.faq-item-button');
+
+    faqButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Get the answer div which is the next sibling element to the button
+        const answer = this.nextElementSibling;
+        // Get the SVG path element inside the button's icon span
+        const iconPath = this.querySelector('svg path');
+
+        // Toggle the 'hidden' class on the answer div to show/hide it
+        answer.classList.toggle('hidden');
+
+        // Check the current state of 'aria-expanded' for accessibility
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+        // Update the 'aria-expanded' attribute
+        this.setAttribute('aria-expanded', !isExpanded);
+
+        // Change the SVG icon based on the expanded state
+        if (isExpanded) {
+          // If it was expanded, now collapsing: change to plus icon
+          iconPath.setAttribute('d', 'M12 6v6m0 0v6m0-6h6m-6 0H6');
+        } else {
+          // If it was collapsed, now expanding: change to minus icon
+          iconPath.setAttribute('d', 'M18 12H6');
+        }
+      });
+    });
+  });
+  </script>
+
+</body>
+</html>
