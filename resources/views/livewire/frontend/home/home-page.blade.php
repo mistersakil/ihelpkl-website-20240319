@@ -12,10 +12,13 @@
     {{-- <livewire:frontend.partials.solutions-section sectionTitle="solutions" sectionSubTitle="Our provided best solutions"
         :limit="5" /> --}}
 
-    <livewire:frontend.partials.products-section sectionTitle="products" sectionSubTitle="our most valuable products"
+    <livewire:frontend.partials.performance-highlights-section sectionTitle="products" sectionSubTitle="our most valuable products"
         :limit="6" />
+    {{-- <livewire:frontend.partials.products-section sectionTitle="products" sectionSubTitle="our most valuable products"
+        :limit="6" /> --}}
 
-    <livewire:frontend.components.why-choose-us-section :item="$data" />
+    <livewire:frontend.components.testimonials-carousel-section :item="$data" />
+    {{-- <livewire:frontend.components.why-choose-us-section :item="$data" /> --}}
 
     <div class="contact-area my-4">
 
