@@ -2,7 +2,8 @@
     <x-slot:metaTitle> {{ __($metaTitle) }} </x-slot:metaTitle>
     <x-slot:metaDescription> {{ __($metaDescription) }} </x-slot:metaDescription>
 
-    <livewire:frontend.partials.home-slider />
+    {{-- <livewire:frontend.partials.home-slider /> --}}
+    <livewire:frontend.partials.home-hero-section />
     {{-- <livewire:frontend.partials.home-banner /> --}}
     {{-- <livewire:frontend.partials.home-projects /> --}}
 
