@@ -1,7 +1,6 @@
 <main>
-    {{-- @dd($sliders) --}}
     @if (is_array($sliders) && count($sliders))
-        <div class="banner-area-two">
+        <div class="banner-area-two" style="min-height: calc(100vh);">
             <div class="banner-slider owl-carousel owl-theme" id="banner-slider">
                 @foreach ($sliders as $key => $item)
                     <div :key="sliders_{{ $key }}" class="banner-item">
@@ -18,7 +17,7 @@
 
                                 <div class="col-lg-6">
                                     <div class="banner-img-two">
-                                        <img src="{{ $item['slider_image_link'] }}" alt="slider-image-{{ $key }}">
+                                        <img src="{{ $item['slider_image_link'] }}" alt="slider-image-{{ $key }}"  style="min-height: calc(100vh);">
                                     </div>
                                 </div>
                                 <!-- /.col -->

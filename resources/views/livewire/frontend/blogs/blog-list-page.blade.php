@@ -14,14 +14,16 @@
                             @foreach ($dataList as $key => $item)
                                 <div class="col-lg-6 col-md-6" key="{{ $key }}">
                                     <div class="blog-card-two">
-                                        <a href="{{ $item['slug'] }}">
+                                        <a wire:navigate href="{{ $item['slug'] }}">
                                             <img src="{{ $item['img_thumb'] }}" alt="Blog Images">
                                         </a>
                                         <div class="content">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ $item['slug'] }}">
-                                                        <i class="{{ _icons('user') }}"></i> {{ $item['author'] }}</a>
+                                                    <a wire:navigate href="javascript:void(0)">
+                                                        <i class="{{ _icons('user') }}"></i>
+                                                        {{ $item['author'] }}
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <i class="{{ _icons('calendar') }}"></i>
@@ -36,11 +38,11 @@
                                                 </li>
                                             </ul>
                                             <h3>
-                                                <a href="{{ $item['slug'] }}">
+                                                <a wire:navigate href="{{ $item['slug'] }}" >
                                                     {{ ucfirst($item['title']) }}
                                                 </a>
                                             </h3>
-                                            <a href="{{ $item['slug'] }}" class="read-btn">Read More</a>
+                                            <a wire:navigate href="{{ $item['slug'] }}" class="read-btn">Read More</a>
                                         </div>
                                         <!-- /.content -->
                                     </div>

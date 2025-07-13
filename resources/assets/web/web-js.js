@@ -13,7 +13,7 @@ new WOW().init();
 /* Swal */
 import "../common/js/swal.js";
 
-/* Custom Bootstrap JS */
+/* Echo JS */
 // import "../../js/echo.js";
 
 import "../../../node_modules/boxicons/dist/boxicons";

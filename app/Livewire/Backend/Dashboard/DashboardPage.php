@@ -2,17 +2,19 @@
 
 namespace App\Livewire\Backend\Dashboard;
 
-use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Illuminate\Contracts\View\View;
 use App\Livewire\Backend\BackendComponent;
-use Livewire\Attributes\Title;
+use Livewire\Attributes\Lazy;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
+// #[Lazy]
 class DashboardPage extends BackendComponent
 {
+    ## Component props
+    public string $metaTitle = 'dashboard';
 
     /**
      * Render view
@@ -20,7 +22,6 @@ class DashboardPage extends BackendComponent
      * @return  \Illuminate\Contracts\View\View
      */
     #[Layout('components.backend.layout.backend-layout')]
-    #[Title('Dashboard')]
     public function render(): View
     {
         return view('livewire.backend.dashboard.dashboard-page');

@@ -35,7 +35,7 @@
                             @foreach ($dataList as $tabContentindex => $data)
                                 <div class="tabs_item {{ $loop->first ? 'current' : '' }}"
                                     wire:key="tab_content_{{ $tabContentindex }}">
-                                    
+
                                     <div class="row align-items-center">
                                         <div class="col-lg-6">
                                             <div class="services-tab-img">
@@ -48,11 +48,11 @@
                                         <div class="col-lg-6">
                                             <div class="services-tab-content pl-20">
                                                 <h2>{{ ucwords($data['subTitle']) }}</h2>
-                                                
+
                                                 <p>
                                                     {{ ucwords($data['short_details']) }}
                                                 </p>
-                                     
+
                                                 <a wire:navigate href="{{ $data['slug'] }}"
                                                     class="default-btn border-radius-5">
                                                     {{ __('read more') }}

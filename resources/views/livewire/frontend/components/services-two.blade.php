@@ -1,6 +1,6 @@
 <section>
     @if ($isDisplaySection)
-        <div class="services-area-two services-area-bg pt-100 pb-70">
+        <div class="services-area-two services-area-bg pt-100 pb-70" style="background: url({{ $serviceAreaBgDynamic }})">
             <div class="container">
                 <div class="section-title text-center">
                     <h1 class="sp-title2">{{ $title }}</h1>
@@ -22,7 +22,7 @@
                                     {{ $item['heading'] }}
                                 </h3>
                                 <p>
-                                    {{ $item['body'] ?? ''}}
+                                    {{ $item['body'] ?? '' }}
                                 </p>
                                 <div class="top">
                                     <img src="{{ $img }}" alt="services-top" />

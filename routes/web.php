@@ -52,7 +52,7 @@ $backendMiddleware = [
 
 ## Backend routes
 Route::middleware($backendMiddleware)->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/', DashboardPage::class)->name('dashboard');
+    Route::get('/', DashboardPage::class)->name('dashboard')->lazy();
     ### Sliders 
     Route::get('/sliders', SliderListPage::class)->name('sliders.list');
     Route::get('/sliders/create', SliderCreatePage::class)->name('sliders.create');

@@ -20,3 +20,5 @@ yarn-error.log
 /_______
 public/back.hot
 public/web.hot
+public/buildBack/
+public/buildWeb

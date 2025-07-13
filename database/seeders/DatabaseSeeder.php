@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             UserModelSeeder::class,
             WorldSeeder::class,
             SliderModelSeeder::class,
-            // LeadModelSeeder::class
+            LeadModelSeeder::class
         ]);
     }
 }

@@ -4,7 +4,7 @@
 <head>
     <!-- Google Tag Manager -->
     <script>
-        (function(w, d, s, l, i) {
+        (function (w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
                 'gtm.start': new Date().getTime(),
@@ -23,9 +23,7 @@
 
     @includeIf('components.frontend.layout.meta')
 
-    {{ Vite::useHotFile('web.hot')
-    ->useBuildDirectory('buildWeb')
-    ->withEntryPoints(['resources/assets/web/web-js.js'])}}
+    {{ Vite::useHotFile('web.hot')->useBuildDirectory('buildWeb')->withEntryPoints(['resources/assets/web/web-js.js']) }}
 
     @livewireStyles
 </head>
@@ -58,6 +56,12 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FWTNFD3" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <script type="module">
+        // Echo.channel("visitorsQueryChannel").listen(".createLeadByVisitorsQueryEvent", (e) => {
+        //     console.log(e);
+        // });
+    </script>
 </body>
 
 </html>

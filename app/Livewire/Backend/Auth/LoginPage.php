@@ -4,7 +4,6 @@ namespace App\Livewire\Backend\Auth;
 
 use App\Models\User;
 use Livewire\Component;
-use Livewire\Attributes\Title;
 use Livewire\Attributes\Layout;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;
@@ -15,32 +14,21 @@ use Illuminate\Support\Facades\Auth;
  */
 class LoginPage extends Component
 {
-    public string $email;
-    public string $password;
-    public bool $remember_me;
 
-    /**
-     * Validation rules
-     * @var array
-     */
-    protected $rules = [
-        'email'             => ['required', 'email'],
-        'password'          => ['required', 'min:8'],
-    ];
+    ## Component props
+    public string $metaTitle = 'admin login';
+    public string $logo;
+    public string $loader;
 
-    /**
-     * Customize the validation messages
-     * @var array
-     */
-    protected $messages = [
-        'email.required'    => 'Email can not be empty',
-        'email.email'       => 'Email format is invalid',
-        'password.required' => 'Password can not be empty',
-        'password.min'      => 'Password minimum length is 8',
-    ];
+    ## State props
+    public string $email = '';
+    public string $password = '';
+    public bool $remember_me = false;
+
 
     /**
      * To initialize value just for once
+     * 
      * @return void
      */
 
@@ -49,10 +37,59 @@ class LoginPage extends Component
         $this->email = 'sakil@gmail.com';
         $this->password = '12345678#';
         $this->remember_me = false;
+        $this->logo =  _getPublicImg('logo');
+        $this->loader =  _getPublicImg('loader');
+    }
+
+
+    /**
+     * Validation rules
+     * 
+     * @return array
+     */
+    protected function rules(): array
+    {
+        return [
+            'email'             => ['required', 'email', 'min:10', 'max:50'],
+            'password'          => ['required', 'min:6', 'max:20'],
+        ];
     }
 
     /**
+     * Customize the validation messages
+     * 
+     * @return array
+     */
+    protected function messages(): array
+    {
+        return [
+            'email.required'    => __('can not be empty', [':attribute']),
+            'email.email'    => __('format is invalid', [':attribute']),
+            'email.min'      => __('minimum character length', [':attribute', ':min']),
+            'email.max'      => __('maximum character length', [':attribute', ':max']),
+            'password.required' => __('can not be empty', [':attribute']),
+            'password.min'      => __('minimum character length', [':attribute', ':min']),
+            'password.max'      => __('maximum character length', [':attribute', ':max']),
+        ];
+    }
+
+    /**
+     * Alias of state attributes
+     * 
+     * @return array
+     */
+    public function validationAttributes()
+    {
+        return [
+            'email' => __('email'),
+            'password' => __('password'),
+        ];
+    }
+
+
+    /**
      * To validate an input field after every update
+     * 
      * @return void
      */
 
@@ -63,6 +100,8 @@ class LoginPage extends Component
 
     /**
      * Login process
+     * 
+     * @return void
      */
     public function login_process()
     {
@@ -77,7 +116,7 @@ class LoginPage extends Component
             request()->session()->regenerate();
             return redirect()->intended('admin');
         } else {
-            $this->dispatchBrowserEvent('invalid', ['message' => __('Invalid email or password')]);
+            $this->dispatch('invalid', ['message' => __('invalid email or password'), 'code' => 404]);
         }
     }
 
@@ -86,7 +125,6 @@ class LoginPage extends Component
      * @return \Illuminate\Contracts\View\View
      */
     #[Layout('livewire.backend.auth.auth-layout')]
-    #[Title('Admin Login')]
     public function render(): View
     {
         return view('livewire.backend.auth.login-page');

@@ -19,7 +19,7 @@ class SliderListPage extends BackendComponent
     use BackendFilterTrait;
 
     ## Component props
-    public string $metaTitle = 'sliders list';
+    public string $metaTitle = 'slider list';
     public string $module = 'sliders';
     public string $activeItem;
 

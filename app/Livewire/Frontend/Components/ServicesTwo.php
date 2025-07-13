@@ -18,6 +18,7 @@ class ServicesTwo extends Component
     public array $items;
     public string $img;
     public string $img2;
+    public string $serviceAreaBgDynamic;
     public bool $isDisplaySection = true;
 
     /**
@@ -36,8 +37,10 @@ class ServicesTwo extends Component
         $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
         $this->shortDetails = isset($model['shortDetails']) ? __($model['shortDetails']) : '';
         $this->items = isset($model['items']) ? $model['items'] : [];
-        $this->img = Vite::imageWeb('services-top.png') ;
-        $this->img2 = Vite::imageWeb('services-top2.png') ;
+        $this->img = Vite::imageWeb('services-top.png');
+        $this->img2 = Vite::imageWeb('services-top2.png');
+        $this->serviceAreaBgDynamic = isset($model['serviceAreaBgDynamic']) && !empty($model['serviceAreaBgDynamic']) ?  Vite::imageWeb($model['serviceAreaBgDynamic'])  : Vite::imageWeb('service-bg.jpg');
+        // dump($this->img, $this->img2);
     }
 
 

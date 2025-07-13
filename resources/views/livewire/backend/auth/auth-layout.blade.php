@@ -31,6 +31,8 @@
             /* Toast notification for invalid request */
 
             window.addEventListener('invalid', event => {
+                console.log(event);
+
 
                 event.preventDefault();
                 const Toast = Swal.mixin({
@@ -48,7 +50,7 @@
 
                 Toast.fire({
                     icon: "error",
-                    title: event.detail.message,
+                    title: event.detail[0].message,
                 });
             });
 

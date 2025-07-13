@@ -1,11 +1,10 @@
 <?php
-
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\Facades\Route;
 
 /**
  * dateFormat function format date as user needs
+ *
  * @param string $date date('Y-m-d')
  * @param string $format "Y-m-d"
  * @return string $date
@@ -23,7 +22,7 @@ if (!function_exists('dateFormat')) {
 
 
 /**
- * _icons function returns necessary icons 
+ * _icons function returns necessary icons
  * @param string $icon_name
  * @param bool $all
  * @return array <mixed>
@@ -34,158 +33,160 @@ if (!function_exists('_icons')) {
     function _icons(string $icon_name = 'user', bool $all = false)
     {
         $icon_list = [
-            'api'                       => 'bi bi-code-slash',
-            'activity'                  => 'bi bi-activity',
-            'about'                     => 'bi bi-person-badge',
-            'activity_log'              => 'bi bi-clock-history',
-            'add'                       => 'bi bi-plus-lg',
-            'attachments'               => 'bi bi-folder-symlink',
-            'arrow_right'               => 'bi bi-arrow-right-short',
-            'arrow_right2'              => 'bi bi-chevron-right',
-            'arrow_right3'              => 'bi bi-chevron-double-right',
-            'arrow_left'                => 'bi bi-arrow-left-short',
-            'arrow_left2'               => 'bi bi-chevron-left',
-            'arrow_left3'               => 'bi bi-chevron-double-left',
-            'arrow_down'                => 'bi bi-chevron-double-down',
-            'arrow_up'                  => 'bi bi-chevron-double-up',
-            'attributes'                => 'bi bi-boxes',
-            'agent'                     => 'bi bi-headset',
-            'blog'                      => 'bi bi-newspaper',
-            'bell'                      => 'bi bi-bell',
-            'bin'                       => 'bi bi-trash2',
-            'business'                  => 'bi bi-building',
-            'body'                      => 'bi bi-body-text',
-            'boost'                     => 'bi bi-rocket',
-            'boost2'                     => 'bi bi-rocket-takeoff',
-            'back'                      => 'bi bi-chevron-left',
-            'circle'                    => 'bi bi-circle',
-            'clients'                   => 'bi bi-person-hearts',
-            'cog'                       => 'bi bi-gear',
-            'contact'                   => 'bi bi-envelope-open',
-            'conversations'             => 'bi bi-person',
-            'close'                     => 'bi bi-x-square',
-            'chat'                      => 'bi bi-chat',
-            'calendar'                  => 'bi bi-calendar-day',
-            'collection'                => 'bi bi-collection',
-            'cart'                      => 'bi bi-cart',
-            'car'                       => 'bi bi-car-front-fill',
-            'corporate'                 => 'bi bi-buildings',
-            'category'                  => 'bi bi-trophy',
-            'customer'                  => 'bi bi-person-standing',
-            'customer2'                  => 'bi bi-person-walking',
-            'dashboard'                 => 'bi bi-speedometer2',
-            'dark'                      => 'bi bi-lightbulb-fill',
-            'default'                   => 'bi bi-info-circle',
-            'delete'                    => 'bi bi-trash3',
-            'delete_all'                => 'bi bi-trash2',
-            'document'                  => 'bi bi-journals',
-            'dollar'                    => 'bi bi-currency-dollar',
-            'database'                  => 'bi bi-database',
-            'database_gear'             => 'bi bi-database-gear',
-            'database_lock'             => 'bi bi-database-lock',
-            'docs'                      => 'bi bi-file-earmark-text',
-            'display'                   => 'bi bi-display',
-            'download'                   => 'bi bi-cloud-download',
-            'email'                     => 'bi bi-envelope',
-            'edit'                      => 'bi bi-pen',
-            'example'                   => 'bi bi-example',
-            'facebook'                  => 'bi bi-facebook',
-            'flag'                      => 'bi bi-flag',
-            'focus'                     => 'bi bi-eye',
-            'globe'                     => 'bi bi-globe2',
-            'google_play'               => 'bi bi-google-play',
-            'heart'                     => 'bi bi-heart',
-            'home'                      => 'bi bi-house-door',
-            'history'                   => 'bi bi-clock-history',
-            'hide'                      => 'bi bi-eye-slash',
-            'headset'                   => 'bi bi-headset',
-            'headphones'                => 'bi bi-headphones',
-            'image'                     => 'bi bi-card-image',
-            'images'                    => 'bi bi-images',
-            'instagram'                 => 'bi bi-instagram',
-            'lead'                      => 'bi bi-person-gear',
-            'light'                     => 'bi bi-lightbulb',
-            'linkedin'                  => 'bi bi-linkedin',
-            'link'                      => 'bi bi-link',
-            'link45'                    => 'bi bi-link-45deg',
-            'link_text'                 => 'bi bi-text-wrap',
-            'logout'                    => 'bi bi-box-arrow-right',
-            'list'                      => 'bi bi-list-nested',
-            'location'                  => 'bi bi-geo-alt-fill',
-            'lock'                      => 'bi bi-lock',
-            'live_chat'                 => 'bi bi-headset',
-            'laptop'                    => 'bi bi-laptop',
-            'layers'                    => 'bi bi-layers',
-            'messages'                  => 'bi bi-chat-dots',
-            'mobile'                    => 'bi bi-phone',
-            'money'                     => 'bi bi-cash-coin',
-            'magic'                     => 'bi bi-magic',
-            'order_by'                  => 'bi bi-boxes',
-            'order_direction'           => 'bi bi-sort-alpha-down',
-            'portfolio'                 => 'bi bi-briefcase',
-            'products'                  => 'bi bi-boxes',
-            'pinterest'                 => 'bi bi-pinterest',
-            'per_page'                  => 'bi bi-sort-numeric-up',
-            'phone'                     => 'bi bi-telephone-outbound',
-            'phone2'                    => 'bi bi-telephone',
-            'plan'                      => 'bi bi-clipboard-check',
-            'portal'                    => 'bi bi-door-open',
-            'partnership'               => 'bi bi-hearts',
-            'question'                  => 'bi bi-question-circle',
-            'question2'                 => 'bi bi-patch-question',
-            'quote'                     => 'bi bi-quote',
-            'reboot'                    => 'bi bi-bootstrap-reboot',
-            'resume'                    => 'bi bi-file-diff',
-            'reset'                     => 'bi bi-arrow-repeat',
-            'remove'                    => 'bi bi-x-lg',
-            'robot'                     => 'bi bi-robot',
-            'reports'                   => 'bi bi-reception-3',
-            'realtime'                  => 'bi bi-graph-up',
-            'relationship'              => 'bi bi-heart',
-            'save'                      => 'bi bi-save2',
-            'save2'                     => 'bi bi-check2-circle',
-            'save3'                     => 'bi bi-check-lg',
-            'save4'                     => 'bi bi-check2',
-            'sections'                  => 'bi bi-puzzle',
-            'services'                  => 'bi bi-tools',
-            'service'                   => 'bi bi-hammer',
-            'sidebar'                   => 'bi bi-layout-sidebar',
-            'setting'                   => 'bi bi-wrench-adjustable',
-            'settings'                  => 'bi bi-wrench-adjustable-circle',
-            'skill'                     => 'bi bi-mortarboard',
-            'sliders'                   => 'bi bi-sliders',
-            'speedometer'               => 'bi bi-speedometer2',
-            'search'                    => 'bi bi-search',
-            'sales'                     => 'bi bi-receipt-cutoff',
-            'twitter'                   => 'bi bi-twitter',
-            'ticket'                    => 'bi bi-ticket',
-            'tracking'                  => 'bi bi-compass',
-            'stop'                      => 'bi bi-person-raised-hand',
-            'tags'                      => 'bi bi-tags',
-            'tag'                       => 'bi bi-tag',
-            'template'                  => 'bi bi-code-slash',
-            'testimonials'              => 'bi bi-vector-pen',
-            'trash'                     => 'bi bi-trash3',
-            'tools'                     => 'bi bi-tools',
-            'title'                     => 'bi bi-signpost',
-            'tv'                        => 'bi bi-tv',
-            'tiktok'                    => 'bi bi-tiktok',
-            'teams'                     => 'bi bi-diagram-3',
-            'upload'                    => 'bi bi-cloud-upload',
-            'user'                      => 'bi bi-person',
-            'users'                     => 'bi bi-people',
-            'user_heart'                => 'bi bi-person-hearts',
-            'user_lock'                 => 'bi bi-person-lock',
-            'user_gear'                 => 'bi bi-person-gear',
-            'user_slash'                => 'bi bi-person-slash',
-            'user_slash'                => 'bi bi-person-slash',
-            'view'                      => 'bi bi-eye',
-            'website'                   => 'bi bi-globe-asia-australia',
-            'welcome'                   => 'bi bi-megaphone',
-            'watch'                     => 'bi bi-watch',
-            'wallet'                    => 'bi bi-wallet2',
-            'warning'                   => 'bi bi-exclamation-triangle',
-            'youtube'                   => 'bi bi-youtube',
+            'api' => 'bi bi-code-slash',
+            'activity' => 'bi bi-activity',
+            'about' => 'bi bi-person-badge',
+            'activity_log' => 'bi bi-clock-history',
+            'add' => 'bi bi-plus-lg',
+            'attachments' => 'bi bi-folder-symlink',
+            'arrow_right' => 'bi bi-arrow-right-short',
+            'arrow_right2' => 'bi bi-chevron-right',
+            'arrow_right3' => 'bi bi-chevron-double-right',
+            'arrow_left' => 'bi bi-arrow-left-short',
+            'arrow_left2' => 'bi bi-chevron-left',
+            'arrow_left3' => 'bi bi-chevron-double-left',
+            'arrow_down' => 'bi bi-chevron-double-down',
+            'arrow_up' => 'bi bi-chevron-double-up',
+            'attributes' => 'bi bi-boxes',
+            'agent' => 'bi bi-headset',
+            'blog' => 'bi bi-newspaper',
+            'bell' => 'bi bi-bell',
+            'bin' => 'bi bi-trash2',
+            'business' => 'bi bi-building',
+            'body' => 'bi bi-body-text',
+            'boost' => 'bi bi-rocket',
+            'boost2' => 'bi bi-rocket-takeoff',
+            'back' => 'bi bi-chevron-left',
+            'circle' => 'bi bi-circle',
+            'clients' => 'bi bi-person-hearts',
+            'cog' => 'bi bi-gear',
+            'contact' => 'bi bi-envelope-open',
+            'conversations' => 'bi bi-person',
+            'close' => 'bi bi-x-square',
+            'chat' => 'bi bi-chat',
+            'calendar' => 'bi bi-calendar-day',
+            'collection' => 'bi bi-collection',
+            'cart' => 'bi bi-cart',
+            'car' => 'bi bi-car-front-fill',
+            'corporate' => 'bi bi-buildings',
+            'category' => 'bi bi-trophy',
+            'customer' => 'bi bi-person-standing',
+            'customer2' => 'bi bi-person-walking',
+            'dashboard' => 'bi bi-speedometer2',
+            'dark' => 'bi bi-lightbulb-fill',
+            'default' => 'bi bi-info-circle',
+            'delete' => 'bi bi-trash3',
+            'delete_all' => 'bi bi-trash2',
+            'document' => 'bi bi-journals',
+            'dollar' => 'bi bi-currency-dollar',
+            'database' => 'bi bi-database',
+            'database_gear' => 'bi bi-database-gear',
+            'database_lock' => 'bi bi-database-lock',
+            'docs' => 'bi bi-file-earmark-text',
+            'display' => 'bi bi-display',
+            'download' => 'bi bi-cloud-download',
+            'email' => 'bi bi-envelope',
+            'edit' => 'bi bi-pen',
+            'example' => 'bi bi-example',
+            'facebook' => 'bi bi-facebook',
+            'flag' => 'bi bi-flag',
+            'focus' => 'bi bi-eye',
+            'globe' => 'bi bi-globe2',
+            'google_play' => 'bi bi-google-play',
+            'heart' => 'bi bi-heart',
+            'home' => 'bi bi-house-door',
+            'history' => 'bi bi-clock-history',
+            'hide' => 'bi bi-eye-slash',
+            'headset' => 'bi bi-headset',
+            'headphones' => 'bi bi-headphones',
+            'image' => 'bi bi-card-image',
+            'images' => 'bi bi-images',
+            'instagram' => 'bi bi-instagram',
+            'lead' => 'bi bi-person-gear',
+            'light' => 'bi bi-lightbulb',
+            'linkedin' => 'bi bi-linkedin',
+            'link' => 'bi bi-link',
+            'link45' => 'bi bi-link-45deg',
+            'link_text' => 'bi bi-text-wrap',
+            'logout' => 'bi bi-box-arrow-right',
+            'list' => 'bi bi-list-nested',
+            'location' => 'bi bi-geo-alt-fill',
+            'lock' => 'bi bi-lock',
+            'live_chat' => 'bi bi-headset',
+            'laptop' => 'bi bi-laptop',
+            'layers' => 'bi bi-layers',
+            'messages' => 'bi bi-chat-dots',
+            'mobile' => 'bi bi-phone',
+            'money' => 'bi bi-cash-coin',
+            'magic' => 'bi bi-magic',
+            'order_by' => 'bi bi-boxes',
+            'order_direction' => 'bi bi-sort-alpha-down',
+            'portfolio' => 'bi bi-briefcase',
+            'products' => 'bi bi-boxes',
+            'pinterest' => 'bi bi-pinterest',
+            'per_page' => 'bi bi-sort-numeric-up',
+            'phone' => 'bi bi-telephone-outbound',
+            'phone2' => 'bi bi-telephone',
+            'plan' => 'bi bi-clipboard-check',
+            'portal' => 'bi bi-door-open',
+            'partnership' => 'bi bi-hearts',
+            'question' => 'bi bi-question-circle',
+            'question2' => 'bi bi-patch-question',
+            'query' => 'bi bi-search-heart',
+            'quote' => 'bi bi-quote',
+            'reboot' => 'bi bi-bootstrap-reboot',
+            'resume' => 'bi bi-file-diff',
+            'reset' => 'bi bi-arrow-repeat',
+            'remove' => 'bi bi-x-lg',
+            'robot' => 'bi bi-robot',
+            'reports' => 'bi bi-reception-3',
+            'realtime' => 'bi bi-graph-up-arrow',
+            'relationship' => 'bi bi-heart',
+            'save' => 'bi bi-save2',
+            'save2' => 'bi bi-check2-circle',
+            'save3' => 'bi bi-check-lg',
+            'save4' => 'bi bi-check2',
+            'sections' => 'bi bi-puzzle',
+            'services' => 'bi bi-tools',
+            'service' => 'bi bi-hammer',
+            'sidebar' => 'bi bi-layout-sidebar',
+            'setting' => 'bi bi-wrench-adjustable',
+            'settings' => 'bi bi-wrench-adjustable-circle',
+            'skill' => 'bi bi-mortarboard',
+            'sliders' => 'bi bi-sliders',
+            'speedometer' => 'bi bi-speedometer2',
+            'search' => 'bi bi-search',
+            'speaker' => 'bi bi-speaker',
+            'sales' => 'bi bi-receipt-cutoff',
+            'twitter' => 'bi bi-twitter',
+            'ticket' => 'bi bi-ticket',
+            'tracking' => 'bi bi-compass',
+            'stop' => 'bi bi-person-raised-hand',
+            'tags' => 'bi bi-tags',
+            'tag' => 'bi bi-tag',
+            'template' => 'bi bi-code-slash',
+            'testimonials' => 'bi bi-vector-pen',
+            'trash' => 'bi bi-trash3',
+            'tools' => 'bi bi-tools',
+            'title' => 'bi bi-signpost',
+            'tv' => 'bi bi-tv',
+            'tiktok' => 'bi bi-tiktok',
+            'teams' => 'bi bi-diagram-3',
+            'upload' => 'bi bi-cloud-upload',
+            'user' => 'bi bi-person',
+            'users' => 'bi bi-people',
+            'user_heart' => 'bi bi-person-hearts',
+            'user_lock' => 'bi bi-person-lock',
+            'user_gear' => 'bi bi-person-gear',
+            'user_slash' => 'bi bi-person-slash',
+            'user_slash' => 'bi bi-person-slash',
+            'view' => 'bi bi-eye',
+            'website' => 'bi bi-globe-asia-australia',
+            'welcome' => 'bi bi-megaphone',
+            'watch' => 'bi bi-watch',
+            'wallet' => 'bi bi-wallet2',
+            'warning' => 'bi bi-exclamation-triangle',
+            'youtube' => 'bi bi-youtube',
 
         ];
         if ($all) {
@@ -201,7 +202,7 @@ if (!function_exists('_icons')) {
 
 /**
  * Created strConversion function convert string as required
- * @param string $string null
+ * @param string $string
  * @param string $type ucfirst
  * @param bool $remove_dash false
  * @param bool $is_file false
@@ -209,7 +210,7 @@ if (!function_exists('_icons')) {
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
 if (!function_exists('strConversion')) {
-    function strConversion(string $string = null, string $type = 'ucfirst', bool $remove_dash = false, bool $is_file = false)
+    function strConversion(string $string = '', string $type = 'ucfirst', bool $remove_dash = false, bool $is_file = false)
     {
         $string = strtolower(trim($string));
         if ($remove_dash) {
@@ -234,7 +235,7 @@ if (!function_exists('strConversion')) {
 if (!function_exists('osRelevantFileUploadPath')) {
     function osRelevantFileUploadPath($path)
     {
-        $path = str_replace('\\', '/',  $path);
+        $path = str_replace('\\', '/', $path);
         $path = str_replace('///', '/', $path);
         $path = str_replace('//', '/', $path);
         $path = str_replace('\/', '/', $path);
@@ -245,6 +246,7 @@ if (!function_exists('osRelevantFileUploadPath')) {
 
 /**
  * subString function returns specific length of characters
+ *
  * @param string $str
  * @param int $length 50
  * @param bool $dots true
@@ -268,7 +270,7 @@ if (!function_exists('subString')) {
             }
         }
 
-        ## Convert string 
+        ## Convert string
         if (!empty($convert)) {
             $str = $convert($str);
         }
@@ -279,6 +281,7 @@ if (!function_exists('subString')) {
 
 /**
  * localList function returns all available locals or a specific local
+ *
  * @param string $localKey [Key of available local
  * @return mixed
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -300,6 +303,7 @@ if (!function_exists('localList')) {
 
 /**
  * generateHexColor function generate a random hexadecimal color code
+ *
  * @param string $localKey [Key of available local
  * @return mixed
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -382,7 +386,8 @@ if (!function_exists('_social_media_links')) {
 
 
 /**
- * _parse_url function format date as user needs
+ * _parse_url function parse url based on route
+ *
  * @return string $date
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
@@ -414,8 +419,9 @@ if (!function_exists('_parse_url')) {
 
 
 /**
- * _getFaviconPath get meta favicon path
- * @return string 
+ * _getFaviconPath get favicon image path
+ *
+ * @return string
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
 
@@ -427,9 +433,9 @@ if (!function_exists('_getFaviconPath')) {
 }
 
 /**
- * _getPublicImg get meta favicon path
- * 
- * @return string 
+ * _getPublicImg get public image path
+ *
+ * @return string
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
 
@@ -440,6 +446,8 @@ if (!function_exists('_getPublicImg')) {
             'favicon' => 'favicon.png',
             'logo' => 'logo.svg',
             'logoDark' => 'logo-dark.svg',
+            'loader' => 'loader.svg',
+            'homeHeroImg' => 'hero.jpg',
         ];
         return asset('images/' . ($images[$index] ?? 'logo.svg'));
     }

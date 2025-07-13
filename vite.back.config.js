@@ -15,7 +15,10 @@ export default defineConfig({
             "@imgBack": path.resolve(
                 __dirname,
                 "resources/assets/backend/images"
-            )
+            ),
         },
+    },
+    optimizeDeps: {
+        include: ["perfect-scrollbar"],
     },
 });

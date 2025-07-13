@@ -6,6 +6,6 @@ use Illuminate\Support\Facades\Broadcast;
 //     return (int) $user->id === (int) $id;
 // });
 
-Broadcast::channel('form-submissions', function () {
-    return true; // Replace with actual authentication logic
+Broadcast::channel('visitorsQueryChannel', function () {
+    return true;
 });

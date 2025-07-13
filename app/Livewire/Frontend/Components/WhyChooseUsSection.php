@@ -42,6 +42,7 @@ class WhyChooseUsSection extends Component
         $this->shortDetails = isset($model['shortDetails']) ? __($model['shortDetails']) : '';
         $this->imgFeatured = isset($model['imgFeatured']) ? Vite::imageWeb($model['imgFeatured']) : Vite::imageWeb('choose-img1.png');
         $this->items = isset($model['items']) ? $model['items'] : [];
+
     }
 
     /**
